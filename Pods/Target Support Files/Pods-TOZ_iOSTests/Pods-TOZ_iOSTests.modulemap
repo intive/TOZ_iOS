@@ -1,0 +1,6 @@
+framework module Pods_TOZ_iOSTests {
+  umbrella header "Pods-TOZ_iOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
