@@ -37,7 +37,7 @@ class ProfilePhotoView : UIView {
         super.layoutSubviews()
         let margin: CGFloat = 10
         
-        self.photo = UIImageView.init(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        self.photo = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         self.name = UILabel(frame: CGRect(x: margin, y: frame.size.height * 0.7, width: frame.size.width - margin, height: 20))
         self.age = UILabel(frame: CGRect(x: margin, y: frame.size.height * 0.7 + name.frame.size.height + margin/2 , width: frame.size.width - margin, height: 15))
         
