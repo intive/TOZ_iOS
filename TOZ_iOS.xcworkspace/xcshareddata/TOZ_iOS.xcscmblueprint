@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A8F7362996BF4AAFD631C279E8FF8FF9954563D8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "169FD0EF68D36A14153A47B7BDAC18081406F3D7" : 9223372036854775807,
+    "A8F7362996BF4AAFD631C279E8FF8FF9954563D8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9346611D-4AA5-43BD-946E-2FF250C43B4A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "169FD0EF68D36A14153A47B7BDAC18081406F3D7" : "",
+    "A8F7362996BF4AAFD631C279E8FF8FF9954563D8" : "TOZ_iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TOZ_iOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TOZ_iOS.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wobrak\/patronage2017.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "169FD0EF68D36A14153A47B7BDAC18081406F3D7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/blstream\/TOZ_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A8F7362996BF4AAFD631C279E8FF8FF9954563D8"
+    }
+  ]
+}

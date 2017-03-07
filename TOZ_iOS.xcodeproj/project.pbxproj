@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5484186A1E6C1BA500E08961 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548418691E6C1BA500E08961 /* NewsViewController.swift */; };
+		5484186E1E6C3F0B00E08961 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5484186D1E6C3F0B00E08961 /* NewsTableViewCell.swift */; };
+		548418711E6C3F9A00E08961 /* NewsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548418701E6C3F9A00E08961 /* NewsDataSource.swift */; };
+		548418731E6C86A800E08961 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548418721E6C86A800E08961 /* News.swift */; };
+		548418771E6C973800E08961 /* NewsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548418761E6C973800E08961 /* NewsTableView.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* FirstViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* SecondViewController.swift */; };
@@ -30,6 +35,11 @@
 
 /* Begin PBXFileReference section */
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		548418691E6C1BA500E08961 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		5484186D1E6C3F0B00E08961 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		548418701E6C3F9A00E08961 /* NewsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDataSource.swift; sourceTree = "<group>"; };
+		548418721E6C86A800E08961 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		548418761E6C973800E08961 /* NewsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableView.swift; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +89,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5484186F1E6C3F6B00E08961 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				5484186D1E6C3F0B00E08961 /* NewsTableViewCell.swift */,
+				548418691E6C1BA500E08961 /* NewsViewController.swift */,
+				548418701E6C3F9A00E08961 /* NewsDataSource.swift */,
+				548418721E6C86A800E08961 /* News.swift */,
+				548418761E6C973800E08961 /* NewsTableView.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +133,7 @@
 		A1CABBF11E6AEB1F009A06F8 /* TOZ_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5484186F1E6C3F6B00E08961 /* News */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* FirstViewController.swift */,
 				A1CABBF61E6AEB1F009A06F8 /* SecondViewController.swift */,
@@ -335,7 +358,12 @@
 			files = (
 				A1CABBF71E6AEB1F009A06F8 /* SecondViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
+				5484186E1E6C3F0B00E08961 /* NewsTableViewCell.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* FirstViewController.swift in Sources */,
+				548418731E6C86A800E08961 /* News.swift in Sources */,
+				5484186A1E6C1BA500E08961 /* NewsViewController.swift in Sources */,
+				548418771E6C973800E08961 /* NewsTableView.swift in Sources */,
+				548418711E6C3F9A00E08961 /* NewsDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +571,7 @@
 				A1CABC101E6AEB1F009A06F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1CABC111E6AEB1F009A06F8 /* Build configuration list for PBXNativeTarget "TOZ_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +580,7 @@
 				A1CABC131E6AEB1F009A06F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
