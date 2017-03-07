@@ -34,7 +34,8 @@ extension NewsDataSource: UITableViewDataSource {
         
         //cell configuration
         cell.title.text = news[indexPath.row].title
-        
+        cell.messageShort.text = news[indexPath.row].messageShort
+        cell.dataPublish.text = String(describing: news[indexPath.row].dataPublish)
         return cell
         
     }
