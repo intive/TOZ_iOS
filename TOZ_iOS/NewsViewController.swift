@@ -41,14 +41,20 @@ extension NewsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:NewsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath)
         
-        //cell configuration
-        cell.title.text = news[indexPath.row].title
-        cell.messageShort.text = news[indexPath.row].messageShort
-        cell.dataPublish.text = String(describing: news[indexPath.row].dataPublish)
+        if let cell = cell as? NewsTableViewCell {
+            configure(forNews: news[indexPath.row], setCell: cell)
+        }
+        
         return cell
         
+    }
+    
+    func configure(forNews: News, setCell: NewsTableViewCell) {
+        setCell.title.text = forNews.title
+        setCell.messageShort.text = forNews.messageShort
+        setCell.dataPublish.text = String(describing: forNews.dataPublish)
     }
     
 }
