@@ -15,16 +15,13 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableViewNews.register(NewsTableViewCell.self, forCellReuseIdentifier: "news_cell")
         tableViewNews.dataSource = self
         tableViewNews.delegate = self
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        tableViewNews.reloadData()
-        
+        super.viewWillAppear(animated)
     }
     
 }
