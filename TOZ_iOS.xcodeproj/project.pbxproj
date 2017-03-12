@@ -252,8 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS-frameworks.sh\"\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
 		2DFA80FBA0E00002ACE03680 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
