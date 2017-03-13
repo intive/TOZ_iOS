@@ -12,3 +12,4 @@ target 'TOZ_iOS' do
   end
 
 end
+pod 'SwiftLint'
