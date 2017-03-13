@@ -9,4 +9,4 @@ xctool \
     -workspace "$WORKSPACE" \
     -scheme "$SCHEME" \
 	-destination "$PLATFORM" \
-	test
+	run-tests
