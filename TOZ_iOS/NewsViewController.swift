@@ -9,14 +9,22 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
-    @IBOutlet weak var tableViewNews: UITableView!
-    var news:[News] =  [News(title: "Tytul", dataPublish: Date(), messageShort: "Message", picture: nil)]
+    @IBOutlet weak var newsTableView: UITableView!
+    
+    var refreshTabView: Bool = false {
+        didSet {
+            newsTableView.reloadData()
+        }
+    }
+    
+    var news:[News] =  [News(identifier: "1", title: "News Tile First", datePublish: Date(), content: "Here is a message long long long", picture: nil),
+                        News(identifier: "2", title: "News Tile Second", datePublish: Date(), content: "Here is a second message long long long", picture: nil)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViewNews.dataSource = self
-        tableViewNews.delegate = self
+        newsTableView.dataSource = self
+        newsTableView.delegate = self
         
     }
     
@@ -38,21 +46,14 @@ extension NewsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath)
-        
-        if let cell = cell as? NewsTableViewCell {
-            configure(forNews: news[indexPath.row], setCell: cell)
-        }
-        
+        let cell:NewsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath) as! NewsTableViewCell
+        cell.configure(with: news[indexPath.row])
+
         return cell
         
     }
     
-    func configure(forNews: News, setCell: NewsTableViewCell) {
-        setCell.title.text = forNews.title
-        setCell.messageShort.text = forNews.messageShort
-        setCell.dataPublish.text = String(describing: forNews.dataPublish)
-    }
+
     
 }
 
