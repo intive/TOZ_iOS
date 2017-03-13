@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -e -o pipefail
 
 PLATFORM="platform=iOS Simulator,OS=10.2,name=iPhone 7"
 WORKSPACE="TOZ_iOS.xcworkspace"
