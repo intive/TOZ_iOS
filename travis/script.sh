@@ -5,8 +5,9 @@ PLATFORM="platform=iOS Simulator,OS=10.2,name=iPhone 7"
 WORKSPACE="TOZ_iOS.xcworkspace"
 SCHEME="TOZ_iOS"
 
-xctool \
+xcodebuild \
     -workspace "$WORKSPACE" \
     -scheme "$SCHEME" \
 	-destination "$PLATFORM" \
-	run-tests
+    -hideShellScriptEnvironment \
+	test
