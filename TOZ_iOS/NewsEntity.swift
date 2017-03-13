@@ -7,13 +7,12 @@
 
 import UIKit
 
-
 struct News {
 
     var identifier: String
     var title: String
-    var datePublish: Date
+    var datePublished: Date
     var content: String
     var picture: UIImage?
-    
+
 }

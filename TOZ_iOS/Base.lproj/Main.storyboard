@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="295.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -82,7 +82,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentTextView" destination="4FZ-KY-L2s" id="UNZ-OY-Z6Y"/>
-                                            <outlet property="datePublishLabel" destination="UBE-OS-cw4" id="09h-cy-Wu3"/>
+                                            <outlet property="datePublishedLabel" destination="UBE-OS-cw4" id="Wbq-q8-IkE"/>
                                             <outlet property="photoView" destination="CUL-Be-REy" id="Gty-AJ-bOS"/>
                                             <outlet property="titleLabel" destination="9iP-Q4-Lzk" id="XX2-7D-uFx"/>
                                         </connections>
