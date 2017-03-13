@@ -7,41 +7,96 @@
 
 import UIKit
 
-class ProfilePhotoView : UIView {
+fileprivate struct Dimensions {
+    static let margin: CGFloat = 10
+    static let nameAgeHeight: CGFloat = 15
+    static let offset: CGFloat = 10
+    static let nameAgeFrame: CGRect = CGRect(x: 0, y: 0, width: 0, height: nameAgeHeight)
+}
+
+class ProfilePhotoView: UIView {
+
+    private let photoView = UIImageView()
+    private let nameLabel = UILabel()
+    private let ageLabel = UILabel()
     
-    var photo = UIImageView()
-    var name = UILabel()
-    var age = UILabel()
-    
-    convenience init(frame: CGRect, photo: UIImage?, name: String, age: Int) {
-        self.init(frame: frame)
-        self.photo.image = photo
-        self.name.text = name
-        self.age.text = "\(String(age)) lata"
+    var photoName: String = "" {
+        didSet {
+            if photoView.image == nil{
+                addPlaceholder()
+            } else {
+                photoView.image = UIImage(named: photoName)
+            }
+        }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        layoutSubviews()
-        self.addSubview(photo)
-        self.addSubview(name)
-        self.addSubview(age)
+    var name: String = "" {
+        didSet {
+            if name == ""{
+                print ("Enter animal name")
+            } else {
+                nameLabel.text = name
+            }
+        }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("ProfilePhotoView is not compatible with NSCoder")
+    var age: Int = 0 {
+        didSet {
+            if age == 0{
+                print ("Enter animal age")
+            } else {
+                ageLabel.text = String(describing: age)
+            }
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let margin: CGFloat = 10
         
-        self.photo = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        self.name = UILabel(frame: CGRect(x: margin, y: frame.size.height * 0.7, width: frame.size.width - margin, height: 20))
-        self.age = UILabel(frame: CGRect(x: margin, y: frame.size.height * 0.7 + name.frame.size.height + margin/2 , width: frame.size.width - margin, height: 15))
-        
-        self.backgroundColor = .gray
+        self.photoView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
+        self.nameLabel.frame = Dimensions.nameAgeFrame
+        self.ageLabel.frame = Dimensions.nameAgeFrame
+        addConstraints()
+    }
+    
+    private func setupView() {
+        self.addSubview(photoView)
+        self.addSubview(nameLabel)
+        self.addSubview(ageLabel)
+        self.backgroundColor = .red
+
     }
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
+
+    private func addPlaceholder() {
+        self.photoView.image = UIImage(named: "first.pdf")
+    }
+    
+    private func addConstraints() {
+        let ageLabelLeft: NSLayoutConstraint = NSLayoutConstraint(item: ageLabel, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: Dimensions.margin)
+        let ageLabelBottom: NSLayoutConstraint = NSLayoutConstraint(item: ageLabel, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -Dimensions.margin)
+        ageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let nameLabelLeft: NSLayoutConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: Dimensions.margin)
+        let nameLabelBottom: NSLayoutConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutAttribute.bottomMargin, relatedBy: NSLayoutRelation.equal, toItem: self.ageLabel, attribute: NSLayoutAttribute.top, multiplier: 1, constant: -Dimensions.offset)
+        let nameLabelRight: NSLayoutConstraint = NSLayoutConstraint(item: nameLabel, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1, constant: -Dimensions.margin)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addConstraint(ageLabelLeft)
+        self.addConstraint(ageLabelBottom)
+        self.addConstraint(nameLabelLeft)
+        self.addConstraint(nameLabelBottom)
+        self.addConstraint(nameLabelRight)
+        
+    }
+    
 }
