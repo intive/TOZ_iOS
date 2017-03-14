@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var contentTextView: UITextView!
 
-    func configure(with news: News) {
+    func configure(with news: NewsEntity) {
 
         titleLabel.text = news.title
         contentTextView.text = news.content

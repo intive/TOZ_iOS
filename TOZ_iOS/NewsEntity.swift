@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct News {
+struct NewsEntity {
 
     var identifier: String
     var title: String

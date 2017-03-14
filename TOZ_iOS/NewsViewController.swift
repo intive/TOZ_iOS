@@ -11,9 +11,9 @@ class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
 
-    var news: [News] =  [
-        News(identifier: "1", title: "News Tile First", datePublished: Date(), content: "Here is a message long long long", picture: nil),
-        News(identifier: "2", title: "News Tile Second", datePublished: Date(), content: "Here is a second message long long long", picture: nil)] {
+    var news: [NewsEntity] =  [
+        NewsEntity(identifier: "1", title: "News Tile First", datePublished: Date(), content: "Here is a message long long long", picture: nil),
+        NewsEntity(identifier: "2", title: "News Tile Second", datePublished: Date(), content: "Here is a second message long long long", picture: nil)] {
 
             didSet {
                 newsTableView.reloadData()
