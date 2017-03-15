@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		423A33951E6F41120062FD88 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A33941E6F41120062FD88 /* ProfilePhotoView.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
+		54072AA31E70609E001CC6D0 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54072AA21E70609E001CC6D0 /* NewsEntity.swift */; };
+		54072AA51E7060E8001CC6D0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54072AA41E7060E8001CC6D0 /* NewsTableViewCell.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */; };
@@ -34,6 +36,8 @@
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		423A33941E6F41120062FD88 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		54072AA21E70609E001CC6D0 /* NewsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
+		54072AA41E7060E8001CC6D0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
+				54072AA41E7060E8001CC6D0 /* NewsTableViewCell.swift */,
+				54072AA21E70609E001CC6D0 /* NewsEntity.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				423A33941E6F41120062FD88 /* ProfilePhotoView.swift */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
@@ -150,6 +156,7 @@
 				A1CABBED1E6AEB1F009A06F8 /* Resources */,
 				21FAFE73937860B49AB94E45 /* [CP] Embed Pods Frameworks */,
 				76BE0121833007DB222752E7 /* [CP] Copy Pods Resources */,
+				426152FD1E76BA4400677C32 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -256,7 +263,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		2DFA80FBA0E00002ACE03680 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -287,6 +293,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		426152FD1E76BA4400677C32 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		76BE0121833007DB222752E7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -342,8 +362,10 @@
 			files = (
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
+				54072AA51E7060E8001CC6D0 /* NewsTableViewCell.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
 				423A33951E6F41120062FD88 /* ProfilePhotoView.swift in Sources */,
+				54072AA31E70609E001CC6D0 /* NewsEntity.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
