@@ -30,22 +30,13 @@ class ProfilePhotoView: UIView {
     
     var name: String? = nil {
         didSet {
-            if name == nil{
-                nameLabel.text = nil
-            } else {
-                nameLabel.text = name
-            }
+            nameLabel.text = name
         }
     }
     
     var age: Int? = nil {
         didSet {
-            if age == nil{
-                ageLabel.text = nil
-            } else {
-                ageLabel.text = "\(String(age!)) lat"
-            }
-
+            ageLabel.text = "\(String(age!)) lat"
         }
     }
     
