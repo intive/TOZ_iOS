@@ -20,7 +20,7 @@ class ProfilePhotoView: UIView {
     
     var photo: UIImage? {
         didSet {
-            if photoImageView.image == nil{
+            if photo == nil{
                 addPlaceholder()
             } else {
                 photoImageView.image = photo
@@ -28,15 +28,24 @@ class ProfilePhotoView: UIView {
         }
     }
     
-    var name: String = "" {
+    var name: String? = nil {
         didSet {
-            nameLabel.text = name
+            if name == nil{
+                nameLabel.text = nil
+            } else {
+                nameLabel.text = name
+            }
         }
     }
     
-    var age: Int = 0 {
+    var age: Int? = nil {
         didSet {
-            ageLabel.text = String(age)
+            if age == nil{
+                ageLabel.text = nil
+            } else {
+                ageLabel.text = "\(String(age!)) lat"
+            }
+
         }
     }
     
