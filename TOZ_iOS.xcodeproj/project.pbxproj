@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25600AED1E6F732200DF10CC /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25600AEC1E6F732200DF10CC /* color.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25600AEC1E6F732200DF10CC /* color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 		A1CABBE61E6AEB1F009A06F8 = {
 			isa = PBXGroup;
 			children = (
+				25600AEC1E6F732200DF10CC /* color.swift */,
 				A1CABBF11E6AEB1F009A06F8 /* TOZ_iOS */,
 				A1CABC081E6AEB1F009A06F8 /* TOZ_iOSTests */,
 				A1CABBF01E6AEB1F009A06F8 /* Products */,
@@ -340,6 +343,7 @@
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
+				25600AED1E6F732200DF10CC /* color.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
