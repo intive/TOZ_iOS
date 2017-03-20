@@ -1,14 +1,19 @@
+//
+//  BackendAPIRequest.swift
+//  TOZ_iOS
+//
+//  Copyright © 2017 intive. All rights reserved.
+//
+
 import Foundation
 
-protocol BackendAPIRequest {
 /**
-Classes implementing this protocol are able to provide informations required
-to build a request.
-*/
+ Classes implementing this protocol are able to provide informations required
+ to build a request.
+ */
+protocol BackendAPIRequest {
     var endpoint: String { get }
     var method: NetworkService.Method { get }
-    //NetworkService.Method is enum with GET, POST, PUT, DELETE for RESTful API:
-    var query: NetworkService.QueryType { get }
     var parameters: [String: Any]? { get }
     var headers: [String: String]? { get }
 }
@@ -17,7 +22,6 @@ extension BackendAPIRequest {
 
     /// Returns default headers for JSON content
     func defaultJSONHeaders() -> [String: String] {
-
         return ["Content-Type": "application/json"]
     }
 }
