@@ -9,11 +9,12 @@ import UIKit
 import Foundation
 
 class GalleryViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImage!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    /*
     let urlStr = "https://static.pexels.com/photos/347721/pexels-photo-347721.jpeg"
     var url: NSURL! //
     //var url:URL! //
-    /*
     var placeholderImageView: UIImageView!
     var img:UIImage!
     var refreshCtrl: UIRefreshControl!
@@ -24,9 +25,12 @@ class GalleryViewController: UIViewController {
     */
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         url = NSURL(string:urlStr)
         let data = NSData(contentsOf: url as URL)
         self.imageView.image = UIImage(data: data as Data!)
+        */
+        PhotoManager.shared.getPhoto(from: "https://static.pexels.com/photos/347721/pexels-photo-347721.jpeg")
     }
 
 }

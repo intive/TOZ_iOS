@@ -14,13 +14,29 @@ class PhotoManager {
     static let shared = PhotoManager()
     private init() {}
 
-    var cache: [URL : UIImage] = [:]
-
-    func getPhoto(from url: URL, completion: ((UIImage?) -> ())) {
-        let image: UIImage? = nil
-        if let image = image {
-            cache[url] = image
+    private var cache: [String : UIImage] = [:] // previously [URL : UIImage]
+    func getPhoto(from url: String/*, completion: ((UIImage?) -> Void)*/) {
+        var image: UIImage? = nil
+        if cache[url] == nil {
+            print("1")
+            //cache[url] = image
+            URLSession.shared.dataTask(with: NSURL(string: url)! as URL, completionHandler: { (data, _, _) -> Void in // previously (data, response, error)
+                DispatchQueue.main.async(execute: { () -> Void in
+                    let img = UIImage(data: data!)
+                    image = img!
+                    self.cache[url] = image
+                })
+            }).resume()
+        } else if self.cache[url] != nil {
+            print("2")
+            image = self.cache[url]
+        } else {
+            print("Error")
         }
-        completion(image)
+        //completion(image)
     }
 }
+
+
+// wywolanie w ViewDidLoad() klasy Gallery View Controller:
+// PhotoManager.shared.getPhoto(from: "https://static.pexels.com/photos/347721/pexels-photo-347721.jpeg")
