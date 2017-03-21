@@ -47,6 +47,7 @@ class BackendService {
                 return
             }
 
+            /// Checks if response contains "error"
             if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
                 let info = [

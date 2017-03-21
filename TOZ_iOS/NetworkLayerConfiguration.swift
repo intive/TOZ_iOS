@@ -6,17 +6,13 @@
 //
 
 import Foundation
-//import Network
 
 class NetworkLayerConfiguration {
 
     class func setup() {
         // Backend Configuration
-        let url = URL(string: "http://swapi.co/api")!
+        let url = URL(string: "http://dev.patronage2017.intive-projects.com")!
         let conf = BackendConfiguration(baseURL: url)
         BackendConfiguration.shared = conf
-
-        // Network Queue
-//        NetworkQueue.shared = NetworkQueue()
     }
 }

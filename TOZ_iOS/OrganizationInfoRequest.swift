@@ -6,11 +6,13 @@
 //
 
 import Foundation
-
+/**
+ Provides informations to make GET request for informations about Organization
+ */
 final class OrganizationInfoRequest: BackendAPIRequest {
 
     var endpoint: String {
-        return "/people/1"
+        return "/organization/info"
     }
 
     var method: NetworkService.Method {

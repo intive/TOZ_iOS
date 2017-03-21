@@ -7,8 +7,13 @@
 
 import Foundation
 
+/**
+ JSON objects parsed by *Mapper will be assigned to this Struct's properties
+ */
 public struct OrganizationInfoItem: ParsedItem {
 
     public let name: String
-    public let accountNumber: String
+    public let bankAccount: [String : Any]
+    public let bankAccountNumber: String
+    public let bankAccountBankName: String
 }

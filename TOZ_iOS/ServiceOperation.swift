@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+Class creates BackendService instance internally so it doesn’t need to be created in its every subclass.
+ */
 public class ServiceOperation {
 
     let service: BackendService
