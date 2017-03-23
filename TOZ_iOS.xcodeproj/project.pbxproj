@@ -134,6 +134,38 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		4BB31FD81E8450D600D2E6EF /* NetworkRequests */ = {
+			isa = PBXGroup;
+			children = (
+				4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */,
+			);
+			name = NetworkRequests;
+			sourceTree = "<group>";
+		};
+		4BB31FD91E8450F800D2E6EF /* NetworkOperations */ = {
+			isa = PBXGroup;
+			children = (
+				4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */,
+			);
+			name = NetworkOperations;
+			sourceTree = "<group>";
+		};
+		4BB31FDA1E84511600D2E6EF /* NetworkItems */ = {
+			isa = PBXGroup;
+			children = (
+				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
+			);
+			name = NetworkItems;
+			sourceTree = "<group>";
+		};
+		4BB31FDB1E84512700D2E6EF /* NetworkMappers */ = {
+			isa = PBXGroup;
+			children = (
+				4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */,
+			);
+			name = NetworkMappers;
+			sourceTree = "<group>";
+		};
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				4B5185881E7E9D4500CD343F /* Network */,
+				4BB31FD81E8450D600D2E6EF /* NetworkRequests */,
+				4BB31FD91E8450F800D2E6EF /* NetworkOperations */,
+				4BB31FDA1E84511600D2E6EF /* NetworkItems */,
+				4BB31FDB1E84512700D2E6EF /* NetworkMappers */,
 				37434B5C1E7F1B7E00336605 /* NewsEntity.swift */,
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
@@ -175,10 +211,6 @@
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
-				4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */,
-				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
-				4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */,
-				4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */,
 				54072AA41E7060E8001CC6D0 /* NewsTableViewCell.swift */,
 				54072AA21E70609E001CC6D0 /* NewsEntity.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
@@ -352,7 +384,7 @@
 		};
 		426152FD1E76BA4400677C32 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -360,7 +392,7 @@
 			name = "Run SwiftLint";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
