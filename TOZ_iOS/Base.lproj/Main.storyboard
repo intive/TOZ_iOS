@@ -49,7 +49,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="295.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="296"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUL-Be-REy">
@@ -86,7 +86,7 @@
                                                 <constraint firstItem="4FZ-KY-L2s" firstAttribute="top" secondItem="CUL-Be-REy" secondAttribute="top" id="1Yv-E2-os1"/>
                                                 <constraint firstItem="UBE-OS-cw4" firstAttribute="leading" secondItem="2af-qm-LmO" secondAttribute="leadingMargin" constant="10" id="5Xc-ng-lu0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="UBE-OS-cw4" secondAttribute="trailing" constant="10" id="8Zj-Zu-J2I"/>
-                                                <constraint firstItem="4FZ-KY-L2s" firstAttribute="leading" secondItem="CUL-Be-REy" secondAttribute="trailing" constant="1" id="N1t-N7-vJO"/>
+                                                <constraint firstItem="4FZ-KY-L2s" firstAttribute="leading" secondItem="CUL-Be-REy" secondAttribute="trailing" priority="999" constant="1" id="N1t-N7-vJO"/>
                                                 <constraint firstItem="CUL-Be-REy" firstAttribute="top" secondItem="2af-qm-LmO" secondAttribute="topMargin" constant="80" id="TuW-Te-Xcx"/>
                                                 <constraint firstItem="4FZ-KY-L2s" firstAttribute="height" secondItem="CUL-Be-REy" secondAttribute="height" id="Twi-JN-8hh"/>
                                                 <constraint firstItem="CUL-Be-REy" firstAttribute="leading" secondItem="2af-qm-LmO" secondAttribute="leadingMargin" constant="10" id="W9y-CU-2r5"/>

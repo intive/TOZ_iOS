@@ -30,6 +30,8 @@ class NewsTableViewCell: UITableViewCell {
     
         if news.picture == nil {
             let lackOfPictuteConstraint:NSLayoutConstraint = NSLayoutConstraint(item: contentTextView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.leadingMargin, multiplier: 1, constant: 10)
+            
+            photoView.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraint(lackOfPictuteConstraint)
         }
         
