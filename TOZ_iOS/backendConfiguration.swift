@@ -16,6 +16,6 @@ public final class BackendConfiguration {
     public init(baseURL: URL) {
         self.baseURL = baseURL
     }
-
-    public static var shared: BackendConfiguration!
+    
+    public static var shared: BackendConfiguration = BackendConfiguration(baseURL: URL(string: "http://dev.patronage2017.intive-projects.com")!)
 }

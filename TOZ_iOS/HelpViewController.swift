@@ -13,7 +13,6 @@ class HelpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkLayerConfiguration.setup()
         getOrgInfo()
     }
 

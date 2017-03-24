@@ -22,13 +22,21 @@ class NetworkService {
     enum Method: String {
         case GET, POST, PUT, DELETE
     }
+    
+    enum Errors: Error {
+        case FailedToSerializeJSON
+        case InvalidResponse
+        case ConnectionError(NSError)
+        case InvalidRequest(NSError?)
+        case UnknownError
+    }
 
     func makeRequest(for url: URL, method: Method,
                      params: [String: Any]? = nil,
                      headers: [String: String]? = nil,
                      success: ((Data?) -> Void)? = nil,
                      // swiftlint:disable large_tuple
-                     failure: ((_ data: Data?, _ error: NSError?, _ responseCode: Int) -> Void)? = nil) {
+                     failure: ((_ data: Data?, _ error: Error?, _ responseCode: Int) -> Void)? = nil) {
 
         /// Details about request
         /// Encapsulates metadata related to a URL request, including the URL, HTTP request method, HTTP headers fields
@@ -40,7 +48,12 @@ class NetworkService {
         /// HTTP body data
         if let params = params {
             // swiftlint:disable force_try
-            mutableRequest.httpBody = try! JSONSerialization.data(withJSONObject: params, options: [])
+            do {
+                mutableRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            } catch {
+                print("Parameters serialization to JSON failed")
+                failure?(nil, Errors.FailedToSerializeJSON, 0)
+            }
         }
         /// Creates a session with default configuration
         let session = URLSession.shared
@@ -48,13 +61,13 @@ class NetworkService {
         /// Creates task object within the session. Returns data as an Data object
         task = session.dataTask(with: mutableRequest as URLRequest, completionHandler: { (data, response, error) in
             guard let httpResponse = response as? HTTPURLResponse else {
-                failure?(data, error as? NSError, 0)
+                failure?(data, Errors.InvalidResponse, 0)
                 return
             }
 
             if let error = error {
                 // Request failed, might be internet connection issue
-                failure?(data, error as NSError, httpResponse.statusCode)
+                failure?(data, Errors.ConnectionError(error as NSError), httpResponse.statusCode)
                 return
             }
 
@@ -63,17 +76,14 @@ class NetworkService {
                 success?(data)
             } else if self.failureCodes.contains(httpResponse.statusCode) {
                 print("Request finished with failure.")
-                failure?(data, error as NSError?, httpResponse.statusCode)
+                failure?(data, Errors.InvalidRequest(error as NSError?), httpResponse.statusCode)
             } else {
-                print("Request finished with serious failure.")
                 // Server returned response with status code different than
-                // expected `successCodes`.
-                let info = [
-                    NSLocalizedDescriptionKey: "Request failed with code \(httpResponse.statusCode)",
-                    NSLocalizedFailureReasonErrorKey: "Wrong handling logic, wrong endpoint mapping or backend bug."
-                ]
-                let error = NSError(domain: "NetworkService", code: 0, userInfo: info)
-                failure?(data, error, httpResponse.statusCode)
+                // expected `successCodes`
+                print("Request finished with serious failure.")
+                print("Request failed with code \(httpResponse.statusCode)")
+                print("Wrong handling logic, wrong endpoint mapping or backend bug.")
+                failure?(data, Errors.UnknownError, httpResponse.statusCode)
             }
         })
 

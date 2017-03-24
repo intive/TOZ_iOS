@@ -21,11 +21,20 @@ class BackendService {
     init(_ conf: BackendConfiguration) {
         self.conf = conf
     }
+    
+    enum Errors: Error {
+        case ServerRespondedWithError
+        case NoDataError
+        case UnauthorizedRequest
+        case ErrorResponseWithErrorField(String)
+        case BackendError
+    
+    }
 
     /// Takes BackendAPIRequest as parameter and extracts necessary informations from the request object
     func request(_ request: BackendAPIRequest,
                  success: ((AnyObject?) -> Void)? = nil,
-                 failure: ((NSError) -> Void)? = nil) {
+                 failure: ((Error) -> Void)? = nil) {
 
         /// Adds endpoint to backend URL
         let url = conf.baseURL.appendingPathComponent(request.endpoint)
@@ -47,17 +56,12 @@ class BackendService {
                 return
             }
 
-            /// Checks if response contains "error"
+            /// Checks if error response contains "error" field
             if let data = data {
-                let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
-                let info = [
-                    NSLocalizedDescriptionKey: json?["error"] as? String ?? "",
-                    NSLocalizedFailureReasonErrorKey: "Probably not allowed action."
-                ]
-                let error = NSError(domain: "BackendService", code: 0, userInfo: info)
-                failure?(error)
+                    let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
+                    failure?(Errors.ErrorResponseWithErrorField(json?["error"] as? String ?? ""))
             } else {
-                failure?(error ?? NSError(domain: "BackendService", code: 0, userInfo: nil))
+                failure?(Errors.BackendError)
             }
         })
     }
