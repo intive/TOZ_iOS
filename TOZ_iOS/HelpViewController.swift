@@ -13,18 +13,22 @@ class HelpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getOrgInfo()
+        getOrganizationInfo()
     }
 
-    func getOrgInfo() {
-        let orgInfo = OrganizationInfoOperation()
-        orgInfo.start()
+    func getOrganizationInfo() {
+        let organizationInfo = OrganizationInfoOperation()
+        organizationInfo.start()
         // item is of type OrganizationInfoItem
-        orgInfo.success = { item in
-            DispatchQueue.main.async {
-            self.organizationLabel.text = "Organization: \(item.name) \n Bank Account Number: \(item.bankAccountNumber) \n Bank name: \(item.bankAccountBankName)"
+        switch organizationInfo.result {
+        case .success:
+            organizationInfo.result.success = { item in
+                DispatchQueue.main.async {
+                self.organizationLabel.text = "Organization: \(item.name) \n Bank Account Number: \(item.bankAccountNumber) \n Bank name: \(item.bankAccountBankName)"
+                }
             }
+        default:
+            organizationInfo.result.failure = { error in print(error.localizedDescription) }
         }
-        orgInfo.failure = { error in print(error.localizedDescription) }
     }
 }

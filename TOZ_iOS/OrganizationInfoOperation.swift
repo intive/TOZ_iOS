@@ -7,36 +7,48 @@
 
 import Foundation
 
-public class OrganizationInfoOperation: ServiceOperation {
+class OrganizationInfoOperation: ServiceOperation {
 
     private let request: OrganizationInfoRequest = OrganizationInfoRequest()
 
-    private enum Errors: Error {
-        case cannotParseResponse
+//    public var success: ((OrganizationInfoItem) -> Void)?
+//    public var failure: ((Error) -> Void)?
+    
+    enum OperationResult {
+        case success(OrganizationInfoItem)
+        case failure(Error)
     }
     
-    enum Result {
-        case success(((OrganizationInfoItem) -> Void)?)
-        case failure(((Error) -> Void)?)
-    }
-    
-    public var success: ((OrganizationInfoItem) -> Void)?
-    public var failure: ((Error) -> Void)?
+    var result: OperationResult? = nil
 
-    public func start() {
-        service.request(request, success: handleSuccess, failure: handleFailure)
+    func start() {
+        service.request(request, completion: handleResponse)
     }
 
-    private func handleSuccess(_ response: AnyObject?) {
-        do {
-            let item = try OrganizationInfoResponseMapper.process(response)
-            self.success?(item)
-        } catch {
-            handleFailure(Errors.cannotParseResponse)
+    private func handleResponse(_ response: Result<AnyObject>) {
+        switch response {
+        case .success:
+            do {
+                let item = try OrganizationInfoResponseMapper.process(response as AnyObject?)
+                result = .success(item)
+            } catch {
+                result = .failure(RequestError.FailedToSerializeJSON)
+            }
+        case .failure:
+                result = .failure(RequestError.OperationError)
         }
     }
-
-    private func handleFailure(_ error: Error) {
-        self.failure?(error)
-    }
+//
+//    private func handleSuccess(_ response: AnyObject?) {
+//        do {
+//            let item = try OrganizationInfoResponseMapper.process(response)
+//            self.success?(item)
+//        } catch {
+//            handleFailure(OperationError.cannotParseResponse)
+//        }
+//    }
+//
+//    private func handleFailure(_ error: Error) {
+//        self.failure?(error)
+//    }
 }

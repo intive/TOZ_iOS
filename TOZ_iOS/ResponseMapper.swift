@@ -14,7 +14,7 @@ protocol ResponseMapperProtocol {
 
 internal enum ResponseMapperError: Error {
     case invalid
-    case missingAttribute
+    case responseParsingFailed
 }
 
 class ResponseMapper<A: ParsedItem> {
@@ -24,7 +24,7 @@ class ResponseMapper<A: ParsedItem> {
         if let item = parse(json) {
             return item
         } else {
-            throw ResponseMapperError.missingAttribute
+            throw ResponseMapperError.responseParsingFailed
         }
     }
 }

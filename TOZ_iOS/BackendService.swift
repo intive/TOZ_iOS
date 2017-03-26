@@ -7,7 +7,7 @@
 
 import Foundation
 
-public let didPerformUnauthorizedOperation = "DidPerformUnauthorizedOperation"
+let didPerformUnauthorizedOperation = "DidPerformUnauthorizedOperation"
 
 /**
 Class that takes requests (*Request objects) related to the backend.
@@ -21,20 +21,12 @@ class BackendService {
     init(_ conf: BackendConfiguration) {
         self.conf = conf
     }
-    
-    enum Errors: Error {
-        case ServerRespondedWithError
-        case NoDataError
-        case UnauthorizedRequest
-        case ErrorResponseWithErrorField(String)
-        case BackendError
-    
-    }
 
     /// Takes BackendAPIRequest as parameter and extracts necessary informations from the request object
     func request(_ request: BackendAPIRequest,
-                 success: ((AnyObject?) -> Void)? = nil,
-                 failure: ((Error) -> Void)? = nil) {
+                 /*success: ((AnyObject?) -> Void)? = nil,
+                 failure: ((Error) -> Void)? = nil)*/
+        completion: @escaping (Result<AnyObject>) -> Void) {
 
         /// Adds endpoint to backend URL
         let url = conf.baseURL.appendingPathComponent(request.endpoint)
@@ -47,8 +39,8 @@ class BackendService {
             if let data = data {
                 json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
             }
-            success?(json)
-
+            completion(.success(json))
+            
         }, failure: { data, error, statusCode in
             if statusCode == 401 {
                 // Operation not authorized
@@ -59,9 +51,9 @@ class BackendService {
             /// Checks if error response contains "error" field
             if let data = data {
                     let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
-                    failure?(Errors.ErrorResponseWithErrorField(json?["error"] as? String ?? ""))
+                completion(.failure(RequestError.ServerRespondedWithErrorField(json?["error"] as? String ?? "")))
             } else {
-                failure?(Errors.BackendError)
+                completion(.failure(RequestError.BackendError))
             }
         })
     }

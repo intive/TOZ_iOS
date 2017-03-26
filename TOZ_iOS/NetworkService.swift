@@ -22,14 +22,6 @@ class NetworkService {
     enum Method: String {
         case GET, POST, PUT, DELETE
     }
-    
-    enum Errors: Error {
-        case FailedToSerializeJSON
-        case InvalidResponse
-        case ConnectionError(NSError)
-        case InvalidRequest(NSError?)
-        case UnknownError
-    }
 
     func makeRequest(for url: URL, method: Method,
                      params: [String: Any]? = nil,
@@ -51,8 +43,8 @@ class NetworkService {
             do {
                 mutableRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
             } catch {
-                print("Parameters serialization to JSON failed")
-                failure?(nil, Errors.FailedToSerializeJSON, 0)
+                print("Serialization parameters to JSON failed")
+                failure?(nil, RequestError.FailedToSerializeJSON, 0)
             }
         }
         /// Creates a session with default configuration
@@ -61,13 +53,13 @@ class NetworkService {
         /// Creates task object within the session. Returns data as an Data object
         task = session.dataTask(with: mutableRequest as URLRequest, completionHandler: { (data, response, error) in
             guard let httpResponse = response as? HTTPURLResponse else {
-                failure?(data, Errors.InvalidResponse, 0)
+                failure?(data, RequestError.InvalidResponse, 0)
                 return
             }
 
             if let error = error {
                 // Request failed, might be internet connection issue
-                failure?(data, Errors.ConnectionError(error as NSError), httpResponse.statusCode)
+                failure?(data, RequestError.ConnectionError(error as NSError), httpResponse.statusCode)
                 return
             }
 
@@ -76,17 +68,16 @@ class NetworkService {
                 success?(data)
             } else if self.failureCodes.contains(httpResponse.statusCode) {
                 print("Request finished with failure.")
-                failure?(data, Errors.InvalidRequest(error as NSError?), httpResponse.statusCode)
+                failure?(data, RequestError.InvalidRequest(error as NSError?), httpResponse.statusCode)
             } else {
                 // Server returned response with status code different than
                 // expected `successCodes`
                 print("Request finished with serious failure.")
                 print("Request failed with code \(httpResponse.statusCode)")
                 print("Wrong handling logic, wrong endpoint mapping or backend bug.")
-                failure?(data, Errors.UnknownError, httpResponse.statusCode)
+                failure?(data, RequestError.UnknownError, httpResponse.statusCode)
             }
         })
-
         task?.resume()
     }
 

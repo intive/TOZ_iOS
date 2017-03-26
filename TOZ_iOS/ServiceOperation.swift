@@ -10,15 +10,15 @@ import Foundation
 /**
 Class creates BackendService instance internally so it doesn’t need to be created in its every subclass.
  */
-public class ServiceOperation {
+class ServiceOperation {
 
     let service: BackendService
 
-    public init() {
+    init() {
         self.service = BackendService(BackendConfiguration.shared)
     }
 
-    public func cancel() {
+    func cancel() {
         service.cancel()
     }
 }

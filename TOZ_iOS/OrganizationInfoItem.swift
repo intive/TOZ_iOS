@@ -10,10 +10,10 @@ import Foundation
 /**
  JSON objects parsed by *Mapper will be assigned to this Struct's properties
  */
-public struct OrganizationInfoItem: ParsedItem {
+struct OrganizationInfoItem: ParsedItem {
 
-    public let name: String
-    public let bankAccount: [String : Any]
-    public let bankAccountNumber: String
-    public let bankAccountBankName: String
+    let name: String
+    let bankAccount: [String : Any]
+    let bankAccountNumber: String
+    let bankAccountBankName: String
 }
