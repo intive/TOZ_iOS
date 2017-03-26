@@ -14,12 +14,12 @@ class OrganizationInfoOperation: ServiceOperation {
 //    public var success: ((OrganizationInfoItem) -> Void)?
 //    public var failure: ((Error) -> Void)?
     
-    enum OperationResult {
-        case success(OrganizationInfoItem)
-        case failure(Error)
-    }
+//    enum OperationResult {
+//        case success(OrganizationInfoItem)
+//        case failure(Error)
+//    }
     
-    var result: OperationResult? = nil
+    var result: Result<OrganizationInfoItem>? = nil
 
     func start() {
         service.request(request, completion: handleResponse)
