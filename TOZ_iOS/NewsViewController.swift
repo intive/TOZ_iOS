@@ -10,10 +10,9 @@ import UIKit
 class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
-
     var news: [NewsEntity] =  [
-        NewsEntity(identifier: "1", title: "News Tile First", datePublished: Date(), content: "Here is a message long long long", picture: nil),
-        NewsEntity(identifier: "2", title: "News Tile Second", datePublished: Date(), content: "Here is a second message long long long", picture: nil)] {
+        NewsEntity(identifier: "1", title: "News Tile First", datePublished: Date(), content: "Here is a message long long long", picture: #imageLiteral(resourceName: "dogTemporary")),
+        NewsEntity(identifier: "2", title: "News Tile Second", datePublished: Date(), content: "Here is a second message long long long", picture: #imageLiteral(resourceName: "catTemporary"))] {
 
             didSet {
                 newsTableView.reloadData()
