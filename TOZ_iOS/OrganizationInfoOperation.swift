@@ -11,16 +11,8 @@ class OrganizationInfoOperation: ServiceOperation {
 
     private let request: OrganizationInfoRequest = OrganizationInfoRequest()
 
-//    public var success: ((OrganizationInfoItem) -> Void)?
-//    public var failure: ((Error) -> Void)?
-    
-//    enum OperationResult {
-//        case success(OrganizationInfoItem)
-//        case failure(Error)
-//    }
-    
-//    var result: ((Result<OrganizationInfoItem>) -> Void)?
     var result: Result<OrganizationInfoItem>? = nil
+    var resultCompletion: ((Result<OrganizationInfoItem>) -> Void)? = nil
 
     func start() {
         service.request(request, completion: handleResponse)
@@ -32,26 +24,14 @@ class OrganizationInfoOperation: ServiceOperation {
             do {
                 let item = try OrganizationInfoResponseMapper.process(response as AnyObject?)
                 result = .success(item)
+                resultCompletion!(result!)
             } catch {
                 result = .failure(RequestError.FailedToSerializeJSON)
+                resultCompletion!(result!)
             }
-        case .failure:
+        default:
                 result = .failure(RequestError.OperationError)
+                resultCompletion!(result!)
         }
-    }
-//
-//    private func handleResponse(_ response: Result<AnyObject>) {
-//        switch response {
-//        case .success:
-//            do {
-//                let item = try OrganizationInfoResponseMapper.process(response as AnyObject?)
-//                result.success(item)
-//            } catch {
-//                result.failure(RequestError.FailedToSerializeJSON)
-//            }
-//        case .failure:
-//            result.failure(RequestError.OperationError)
-//        }
-//    }
-    
+    }    
 }

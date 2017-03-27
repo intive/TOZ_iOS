@@ -13,8 +13,6 @@ enum RequestError: Error {
     case ConnectionError(NSError)
     case InvalidRequest(NSError?)
     case UnknownError
-    case NoDataError
-    case UnauthorizedRequest
     case ServerRespondedWithErrorField(String)
     case BackendError
     case OperationError

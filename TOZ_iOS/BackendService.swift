@@ -39,7 +39,9 @@ class BackendService {
             if let data = data {
                 json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
             }
-            completion(.success(json))
+            if let json = json {
+                completion(Result<AnyObject>.success(json))
+                }
             
         }, failure: { data, error, statusCode in
             if statusCode == 401 {
@@ -48,12 +50,12 @@ class BackendService {
                 return
             }
 
-            /// Checks if error response contains "error" field
+            /// Check if failure comes with "error" field as a response
             if let data = data {
                     let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
-                completion(.failure(RequestError.ServerRespondedWithErrorField(json?["error"] as? String ?? "")))
+                completion(Result<AnyObject>.failure(RequestError.ServerRespondedWithErrorField(json?["error"] as? String ?? "")))
             } else {
-                completion(.failure(RequestError.BackendError))
+                completion(Result<AnyObject>.failure(RequestError.BackendError))
             }
         })
     }

@@ -19,18 +19,16 @@ class HelpViewController: UIViewController {
     func getOrganizationInfo() {
         let organizationInfo = OrganizationInfoOperation()
         organizationInfo.start()
-        // item is of type OrganizationInfoItem
+        // item should be of type OrganizationInfoItem
         switch organizationInfo.result {
         case .success?:
-            //maybe expects type (OrganizationInfoItem) but gets ((OrganizationInfoItem) -> Void) ?
-            organizationInfo.result?.success = { item in
+            organizationInfo.resultCompletion? = { item in
                 DispatchQueue.main.async {
-                self.organizationLabel.text = "Organization: \(item.name) \n Bank Account Number: \(item.bankAccountNumber) \n Bank name: \(item.bankAccountBankName)"
+                self.organizationLabel.text = "\(.success.item.name) \n Bank Account Number: \(.success.item.bankAccountNumber) \n Bank name: \(.success.item.bankAccountBankName)"
                 }
             }
         default:
-            //maybe expects type (Error) but gets ((Error) -> Void) ?
-            organizationInfo.result?.failure = { error in print(error) }
+            organizationInfo.resultCompletion? = { error in print(error) }
         }
     }
 }
