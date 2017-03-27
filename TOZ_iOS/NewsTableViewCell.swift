@@ -16,6 +16,7 @@ class NewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentTextView.isUserInteractionEnabled = false
+        self.backgroundColor = Color.Cell.Background.primary
     }
 
     func configure(with news: NewsEntity) {
