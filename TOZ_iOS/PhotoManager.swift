@@ -14,17 +14,21 @@ class PhotoManager {
     static let shared = PhotoManager()
     private init() {}
 
-    private var cache = [String: UIImage]()
     func getPhoto(from url: String, completion: @escaping ((UIImage?) -> Void)) {
-        var image: UIImage? = nil
-        if let image = self.cache[url] {
-            completion(image)
+        let imageData = UserDefaults.standard.object(forKey: url)
+        if let imageData = imageData {
+            let image = UIImage(data: (imageData as? Data)!)
+            if let image = image {
+                completion(image)
+            } else {
+                completion(nil)
+            }
         } else {
             URLSession.shared.dataTask(with: NSURL(string: url)! as URL, completionHandler: { (data, _, _) -> Void in
                 DispatchQueue.main.async(execute: { () -> Void in
                     if let data = data {
-                        image = UIImage(data: data)
-                        self.cache[url] = image
+                        let image = UIImage(data: data)
+                        UserDefaults.standard.set(UIImagePNGRepresentation(image!), forKey: url)
                         completion(image)
                     } else {
                         completion(nil)
