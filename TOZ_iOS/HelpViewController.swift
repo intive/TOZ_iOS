@@ -21,7 +21,7 @@ class HelpViewController: UIViewController {
         organizationInfo.start()
         organizationInfo.resultCompletion = { item in
             DispatchQueue.main.async {
-            self.organizationLabel.text = "\(item.name) \n Bank Account Number: \(item.bankAccountNumber) \n Bank name: \(item.bankAccountBankName)"
+            self.organizationLabel.text = "placeholder"
             }
         }
     }

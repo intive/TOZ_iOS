@@ -22,13 +22,15 @@ class OrganizationInfoOperation: ServiceOperation {
         switch response {
         case .success:
             do {
-                let item = try OrganizationInfoResponseMapper.process(response as AnyObject)
-                resultCompletion!(RequestResult<OrganizationInfoItem>.success(item))
+                result = .success(try OrganizationInfoResponseMapper.process(response as AnyObject))
+                resultCompletion!(result!)
             } catch {
-                resultCompletion!(RequestResult<OrganizationInfoItem>.failure(RequestError.FailedToMapSerializedJSON))
+                result = .failure(RequestError.FailedToMapSerializedJSON)
+                resultCompletion!(result!)
             }
         default:
-            resultCompletion!(RequestResult<OrganizationInfoItem>.failure(RequestError.OperationError))
+            result = .failure(RequestError.OperationError)
+            resultCompletion!(result!)
         }
     }
 }
