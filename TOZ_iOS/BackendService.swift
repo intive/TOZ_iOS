@@ -27,8 +27,7 @@ class BackendService {
     }
 
     /// Takes BackendAPIRequest as parameter and extracts necessary informations from the request object
-    func request(_ request: BackendAPIRequest,
-        completion: @escaping (RequestResult<AnyObject>) -> Void) {
+    func request(_ request: BackendAPIRequest, completion: @escaping (RequestResult<AnyObject>) -> Void) {
 
         /// Adds endpoint to backend URL
         let url = conf.baseURL.appendingPathComponent(request.endpoint)
@@ -46,7 +45,7 @@ class BackendService {
             } else {
                 completion(RequestResult<AnyObject>.failure(RequestError.FailedToSerializeJSON))
             }
-            
+
         }, failure: { data, error, statusCode in
             if statusCode == 401 {
                 /// Operation not authorized

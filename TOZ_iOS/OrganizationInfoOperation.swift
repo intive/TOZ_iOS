@@ -30,5 +30,5 @@ class OrganizationInfoOperation: ServiceOperation {
         default:
             resultCompletion!(RequestResult<OrganizationInfoItem>.failure(RequestError.OperationError))
         }
-    }    
+    }
 }
