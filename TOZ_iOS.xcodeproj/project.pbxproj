@@ -35,6 +35,7 @@
 		A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */; };
 		AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */; };
+		FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B8ADB371E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework in Frameworks */,
+				FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +173,6 @@
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B8ADB361E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework */,
 				60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */,
 				0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */,
 			);
@@ -215,8 +215,6 @@
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
-				54072AA41E7060E8001CC6D0 /* NewsTableViewCell.swift */,
-				54072AA21E70609E001CC6D0 /* NewsEntity.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
 				A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */,
@@ -247,7 +245,7 @@
 				A1CABBED1E6AEB1F009A06F8 /* Resources */,
 				21FAFE73937860B49AB94E45 /* [CP] Embed Pods Frameworks */,
 				76BE0121833007DB222752E7 /* [CP] Copy Pods Resources */,
-				426152FD1E76BA4400677C32 /* Run SwiftLint */,
+				42342C7B1E883E9D003420FC /* Launch Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -386,19 +384,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		426152FD1E76BA4400677C32 /* Run SwiftLint */ = {
+		42342C7B1E883E9D003420FC /* Launch Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run SwiftLint";
+			name = "Launch Swiftlint";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		76BE0121833007DB222752E7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
