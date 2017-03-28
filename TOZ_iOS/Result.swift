@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Result<T> {
+enum RequestResult<T> {
     case success(T)
     case failure(RequestError)
 }

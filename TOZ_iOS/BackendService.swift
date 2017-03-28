@@ -7,6 +7,10 @@
 
 import Foundation
 
+extension Notification.Name {
+    static let didPerformUnauthorizedOperation = Notification.Name("DidPerformUnauthorizedOperation")
+}
+
 let didPerformUnauthorizedOperation = "DidPerformUnauthorizedOperation"
 
 /**
@@ -24,9 +28,7 @@ class BackendService {
 
     /// Takes BackendAPIRequest as parameter and extracts necessary informations from the request object
     func request(_ request: BackendAPIRequest,
-                 /*success: ((AnyObject?) -> Void)? = nil,
-                 failure: ((Error) -> Void)? = nil)*/
-        completion: @escaping (Result<AnyObject>) -> Void) {
+        completion: @escaping (RequestResult<AnyObject>) -> Void) {
 
         /// Adds endpoint to backend URL
         let url = conf.baseURL.appendingPathComponent(request.endpoint)
@@ -40,22 +42,26 @@ class BackendService {
                 json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
             }
             if let json = json {
-                completion(Result<AnyObject>.success(json))
-                }
+                completion(RequestResult<AnyObject>.success(json))
+            } else {
+                completion(RequestResult<AnyObject>.failure(RequestError.FailedToSerializeJSON))
+            }
             
         }, failure: { data, error, statusCode in
             if statusCode == 401 {
-                // Operation not authorized
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: didPerformUnauthorizedOperation), object: nil)
+                /// Operation not authorized
+                NotificationCenter.default.post(name: .didPerformUnauthorizedOperation, object: nil)
                 return
             }
 
             /// Check if failure comes with "error" field as a response
             if let data = data {
-                    let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
-                completion(Result<AnyObject>.failure(RequestError.ServerRespondedWithErrorField(json?["error"] as? String ?? "")))
+                if let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [String: Any] {
+                    let errorField = json?["error"] as? String ?? ""
+                    completion(RequestResult<AnyObject>.failure(RequestError.ServerRespondedWithErrorField(errorField)))
+                }
             } else {
-                completion(Result<AnyObject>.failure(RequestError.BackendError))
+                completion(RequestResult<AnyObject>.failure(RequestError.BackendError))
             }
         })
     }

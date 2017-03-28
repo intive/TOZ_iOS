@@ -16,4 +16,5 @@ enum RequestError: Error {
     case ServerRespondedWithErrorField(String)
     case BackendError
     case OperationError
+    case FailedToMapSerializedJSON
 }

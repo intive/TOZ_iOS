@@ -19,6 +19,7 @@
 		4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858B1E7EA08C00CD343F /* NetworkService.swift */; };
 		4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */; };
 		4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858F1E7EAD7B00CD343F /* BackendService.swift */; };
+		4B8ADB371E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8ADB361E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework */; };
 		4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */; };
 		4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98601E7F11E400951035 /* ServiceOperation.swift */; };
 		4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98621E7F129100951035 /* ParsedItem.swift */; };
@@ -60,6 +61,7 @@
 		4B51858B1E7EA08C00CD343F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendAPIRequest.swift; sourceTree = "<group>"; };
 		4B51858F1E7EAD7B00CD343F /* BackendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4B8ADB361E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_TOZ_iOS.framework; path = "../../Library/Developer/Xcode/DerivedData/TOZ_iOS-hhxswebudmeiytcdufjohvoexfmx/Build/Products/Debug-iphonesimulator/Pods_TOZ_iOS.framework"; sourceTree = "<group>"; };
 		4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoOperation.swift; sourceTree = "<group>"; };
 		4BFF98601E7F11E400951035 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		4BFF98621E7F129100951035 /* ParsedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedItem.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8ADB371E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +172,7 @@
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B8ADB361E8AB4C600EE4EB2 /* Pods_TOZ_iOS.framework */,
 				60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */,
 				0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */,
 			);
@@ -609,7 +613,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -warn-long-function-bodies=100";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

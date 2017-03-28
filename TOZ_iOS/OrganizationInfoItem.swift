@@ -13,7 +13,6 @@ import Foundation
 struct OrganizationInfoItem: ParsedItem {
 
     let name: String
-    let bankAccount: [String : Any]
     let bankAccountNumber: String
     let bankAccountBankName: String
 }

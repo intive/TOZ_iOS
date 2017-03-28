@@ -11,27 +11,24 @@ class OrganizationInfoOperation: ServiceOperation {
 
     private let request: OrganizationInfoRequest = OrganizationInfoRequest()
 
-    var result: Result<OrganizationInfoItem>? = nil
-    var resultCompletion: ((Result<OrganizationInfoItem>) -> Void)? = nil
+    private(set) var result: RequestResult<OrganizationInfoItem>? = nil
+    var resultCompletion: ((RequestResult<OrganizationInfoItem>) -> Void)? = nil
 
     func start() {
         service.request(request, completion: handleResponse)
     }
 
-    private func handleResponse(_ response: Result<AnyObject>) {
+    private func handleResponse(_ response: RequestResult<AnyObject>) {
         switch response {
         case .success:
             do {
-                let item = try OrganizationInfoResponseMapper.process(response as AnyObject?)
-                result = .success(item)
-                resultCompletion!(result!)
+                let item = try OrganizationInfoResponseMapper.process(response as AnyObject)
+                resultCompletion!(RequestResult<OrganizationInfoItem>.success(item))
             } catch {
-                result = .failure(RequestError.FailedToSerializeJSON)
-                resultCompletion!(result!)
+                resultCompletion!(RequestResult<OrganizationInfoItem>.failure(RequestError.FailedToMapSerializedJSON))
             }
         default:
-                result = .failure(RequestError.OperationError)
-                resultCompletion!(result!)
+            resultCompletion!(RequestResult<OrganizationInfoItem>.failure(RequestError.OperationError))
         }
     }    
 }

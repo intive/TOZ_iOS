@@ -39,7 +39,6 @@ class NetworkService {
 
         /// HTTP body data
         if let params = params {
-            // swiftlint:disable force_try
             do {
                 mutableRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
             } catch {
