@@ -28,7 +28,7 @@ class NetworkService {
                      headers: [String: String]? = nil,
                      success: ((Data?) -> Void)? = nil,
                      // swiftlint:disable large_tuple
-                     failure: ((_ data: Data?, _ error: Error?, _ responseCode: Int) -> Void)? = nil) {
+                     failure: ((_ data: Data?, _ error: RequestError, _ responseCode: Int) -> Void)? = nil) {
 
         /// Details about request
         /// Encapsulates metadata related to a URL request, including the URL, HTTP request method, HTTP headers fields
@@ -44,6 +44,7 @@ class NetworkService {
             } catch {
                 print("Serialization parameters to JSON failed")
                 failure?(nil, RequestError.FailedToSerializeJSON, 0)
+                return
             }
         }
         /// Creates a session with default configuration
@@ -58,7 +59,7 @@ class NetworkService {
 
             if let error = error {
                 // Request failed, might be internet connection issue
-                failure?(data, RequestError.ConnectionError(error as NSError), httpResponse.statusCode)
+                failure?(data, RequestError.ConnectionError(error), httpResponse.statusCode)
                 return
             }
 
@@ -67,14 +68,14 @@ class NetworkService {
                 success?(data)
             } else if self.failureCodes.contains(httpResponse.statusCode) {
                 print("Request finished with failure.")
-                failure?(data, RequestError.InvalidRequest(error as NSError?), httpResponse.statusCode)
+                failure?(data, RequestError.InvalidRequest, httpResponse.statusCode)
             } else {
                 // Server returned response with status code different than
                 // expected `successCodes`
                 print("Request finished with serious failure.")
                 print("Request failed with code \(httpResponse.statusCode)")
                 print("Wrong handling logic, wrong endpoint mapping or backend bug.")
-                failure?(data, RequestError.UnknownError, httpResponse.statusCode)
+                failure?(data, RequestError.UnexpectedNetworkError, httpResponse.statusCode)
             }
         })
         task?.resume()

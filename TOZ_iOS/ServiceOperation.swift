@@ -14,8 +14,8 @@ class ServiceOperation {
 
     let service: BackendService
 
-    init() {
-        self.service = BackendService(BackendConfiguration.shared)
+    init(_ service: BackendService = BackendService(BackendConfiguration.shared)) {
+        self.service = service
     }
 
     func cancel() {

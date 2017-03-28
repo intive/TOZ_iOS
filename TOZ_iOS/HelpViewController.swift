@@ -10,19 +10,27 @@ import UIKit
 class HelpViewController: UIViewController {
 
     @IBOutlet weak var organizationLabel: UILabel!
+    let organizationInfoOperation = OrganizationInfoOperation()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         getOrganizationInfo()
     }
 
     func getOrganizationInfo() {
-        let organizationInfo = OrganizationInfoOperation()
-        organizationInfo.start()
-        organizationInfo.resultCompletion = { item in
+        organizationInfoOperation.resultCompletion = { result in
+            let text: String
+
+            switch result {
+            case .success(let organizationInfoItem):
+                text = organizationInfoItem.name
+            case .failure(let error):
+                text = "\(error)"
+            }
+
             DispatchQueue.main.async {
-            self.organizationLabel.text = "\(item.name)"
+                self.organizationLabel.text = text
             }
         }
+        organizationInfoOperation.start()
     }
 }

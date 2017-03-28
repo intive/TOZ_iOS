@@ -36,31 +36,25 @@ class BackendService {
 
         /// Uses NetworkService class to execute HTTP request
         service.makeRequest(for: url, method: request.method, params: request.parameters, headers: headers, success: { data in
-            var json: AnyObject? = nil
-            if let data = data {
-                json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as AnyObject
-            }
-            if let json = json {
-                completion(RequestResult<AnyObject>.success(json))
+            if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as AnyObject {
+                completion(.success(json))
             } else {
-                completion(RequestResult<AnyObject>.failure(RequestError.FailedToSerializeJSON))
+                completion(.failure(RequestError.FailedToSerializeJSON))
             }
 
         }, failure: { data, error, statusCode in
-            if statusCode == 401 {
+            guard statusCode != 401 else {
                 /// Operation not authorized
                 NotificationCenter.default.post(name: .didPerformUnauthorizedOperation, object: nil)
                 return
             }
 
             /// Check if failure comes with "error" field as a response
-            if let data = data {
-                if let json = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [String: Any] {
-                    let errorField = json?["error"] as? String ?? ""
-                    completion(RequestResult<AnyObject>.failure(RequestError.ServerRespondedWithErrorField(errorField)))
-                }
+            if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                let errorField = json?["error"] as? String ?? ""
+                completion(.failure(RequestError.ServerRespondedWithErrorField(errorField)))
             } else {
-                completion(RequestResult<AnyObject>.failure(RequestError.BackendError))
+                completion(.failure(error))
             }
         })
     }

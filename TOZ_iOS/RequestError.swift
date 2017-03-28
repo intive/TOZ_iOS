@@ -10,11 +10,8 @@ import Foundation
 enum RequestError: Error {
     case FailedToSerializeJSON
     case InvalidResponse
-    case ConnectionError(NSError)
-    case InvalidRequest(NSError?)
-    case UnknownError
+    case ConnectionError(Error)
+    case InvalidRequest
+    case UnexpectedNetworkError
     case ServerRespondedWithErrorField(String)
-    case BackendError
-    case OperationError
-    case FailedToMapSerializedJSON
 }
