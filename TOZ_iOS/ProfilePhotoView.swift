@@ -48,7 +48,6 @@ class ProfilePhotoView: UIView {
         self.addSubview(photoImageView)
         self.addSubview(nameLabel)
         self.addSubview(ageLabel)
-        self.backgroundColor = .red
 
         let ageLabelLeft: NSLayoutConstraint = NSLayoutConstraint(item: ageLabel, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: ProfileViewDimensions.margin)
         let ageLabelBottom: NSLayoutConstraint = NSLayoutConstraint(item: ageLabel, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -ProfileViewDimensions.margin)
