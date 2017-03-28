@@ -24,10 +24,7 @@ class NewsTableViewCell: UITableViewCell {
         datePublishedLabel.text = dateToString.string(from: news.datePublished)
 
         photoView.image = news.picture
-        //photoView = UIImageView(image: news.picture)
-        //photoView.frame = CGRect(x: 0, y: 0, width: photoView.frame.width, height: photoView.frame.height)
         photoView.backgroundColor = Color.Cell.Background.primary
-
 
     }
 

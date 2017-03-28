@@ -32,11 +32,6 @@ class NewsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-    
-    override func viewDidLayoutSubviews() {
-        newsTableView.setNeedsDisplay()
-    }
 
 }
 
