@@ -10,6 +10,7 @@ import UIKit
 
 import Foundation
 
+// swiftlint:disable nesting
 struct Color {
     struct Background {
         static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
@@ -50,4 +51,3 @@ struct Color {
         }
     }
 }
-
