@@ -209,7 +209,6 @@
 					};
 					A1CABC041E6AEB1F009A06F8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2637WT3X84;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A1CABBEE1E6AEB1F009A06F8;
 					};
@@ -528,7 +527,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2637WT3X84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
@@ -544,7 +543,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2637WT3X84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
