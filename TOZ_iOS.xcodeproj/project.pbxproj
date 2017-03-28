@@ -26,6 +26,7 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */; };
@@ -68,6 +69,7 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
+				54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */,
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
@@ -465,6 +468,7 @@
 				4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */,
 				4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */,
 				4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */,
+				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,
@@ -605,6 +609,7 @@
 			baseConfigurationReference = FB010738E58D345E5DABAD84 /* Pods-TOZ_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
@@ -618,6 +623,7 @@
 			baseConfigurationReference = C3D1325AC6CF9A0833CE20E0 /* Pods-TOZ_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
@@ -632,6 +638,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
