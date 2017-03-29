@@ -12,6 +12,9 @@
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
 		37434B631E7F1BAA00336605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B621E7F1BAA00336605 /* Color.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
+		8FD1C2101E8950430061FFA3 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C20F1E8950430061FFA3 /* GalleryTableViewCell.swift */; };
+		8FD1C2141E8965380061FFA3 /* GalleryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C2131E8965380061FFA3 /* GalleryEntity.swift */; };
+		8FD1C21A1E8A4AAE0061FFA3 /* HelpFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1C2191E8A4AAE0061FFA3 /* HelpFinanceViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */; };
@@ -41,6 +44,9 @@
 		37434B621E7F1BAA00336605 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD1C20F1E8950430061FFA3 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
+		8FD1C2131E8965380061FFA3 /* GalleryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryEntity.swift; sourceTree = "<group>"; };
+		8FD1C2191E8A4AAE0061FFA3 /* HelpFinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFinanceViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -123,11 +129,14 @@
 			children = (
 				37434B5C1E7F1B7E00336605 /* NewsEntity.swift */,
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
+				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
-				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
+				8FD1C2191E8A4AAE0061FFA3 /* HelpFinanceViewController.swift */,
+				8FD1C2131E8965380061FFA3 /* GalleryEntity.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
+				8FD1C20F1E8950430061FFA3 /* GalleryTableViewCell.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
@@ -351,9 +360,12 @@
 			files = (
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
+				8FD1C2101E8950430061FFA3 /* GalleryTableViewCell.swift in Sources */,
+				8FD1C2141E8965380061FFA3 /* GalleryEntity.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
+				8FD1C21A1E8A4AAE0061FFA3 /* HelpFinanceViewController.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
@@ -495,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +536,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,6 +552,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
