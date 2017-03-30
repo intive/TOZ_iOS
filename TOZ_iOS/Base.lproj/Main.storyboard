@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,13 +20,30 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="organizationInfo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-Jt-VyL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3Mh-Jt-VyL" secondAttribute="trailing" id="9d9-LB-Cfj"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="3Mh-Jt-VyL" secondAttribute="bottom" id="Ct6-Ld-PkT"/>
+                            <constraint firstItem="3Mh-Jt-VyL" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="20" id="Mlh-v4-l8F"/>
+                            <constraint firstItem="3Mh-Jt-VyL" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="dul-aU-tZT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Help" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="OrganizationLabel" destination="3Mh-Jt-VyL" id="js2-O0-ENJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="-752"/>
+            <point key="canvasLocation" x="928.79999999999995" y="-752.47376311844084"/>
         </scene>
         <!--NewsViewController-->
         <scene sceneID="wg7-f3-ORb">
@@ -40,15 +57,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="296" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0A2-ax-oox">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="229" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0A2-ax-oox">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news_cell" rowHeight="296" id="JL1-Lg-NlW" customClass="NewsTableViewCell" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="296"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news_cell" rowHeight="229" id="JL1-Lg-NlW" customClass="NewsTableViewCell" customModule="TOZ_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
+
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -65,15 +86,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUL-Be-REy">
+                                                <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUL-Be-REy" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
                                                     <rect key="frame" x="41" y="83" width="122" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4FZ-KY-L2s">
                                                     <rect key="frame" x="187" y="83" width="145" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -83,7 +103,7 @@
                                         <connections>
                                             <outlet property="contentTextView" destination="4FZ-KY-L2s" id="UNZ-OY-Z6Y"/>
                                             <outlet property="datePublishedLabel" destination="UBE-OS-cw4" id="Wbq-q8-IkE"/>
-                                            <outlet property="photoView" destination="CUL-Be-REy" id="Gty-AJ-bOS"/>
+                                            <outlet property="photoView" destination="CUL-Be-REy" id="duB-Z7-5Rm"/>
                                             <outlet property="titleLabel" destination="9iP-Q4-Lzk" id="XX2-7D-uFx"/>
                                         </connections>
                                     </tableViewCell>
@@ -149,11 +169,31 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Bcm-ur-ufL" kind="relationship" relationship="viewControllers" id="eO7-KV-001"/>
+                        <segue destination="lRF-tU-lPU" kind="relationship" relationship="viewControllers" id="O0Y-Jp-JoR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--CalendarViewController-->
+        <scene sceneID="zQT-fF-PfN">
+            <objects>
+                <viewController title="CalendarViewController" id="lRF-tU-lPU" customClass="CalendarViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jHJ-m5-Ygy"/>
+                        <viewControllerLayoutGuide type="bottom" id="7He-d5-pWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Arb-gE-T89">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="first" id="oPL-v6-0MH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LF-WZ-0qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518" y="754"/>
         </scene>
     </scenes>
     <resources>
