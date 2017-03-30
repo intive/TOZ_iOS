@@ -11,8 +11,6 @@ extension Notification.Name {
     static let didPerformUnauthorizedOperation = Notification.Name("DidPerformUnauthorizedOperation")
 }
 
-let didPerformUnauthorizedOperation = "DidPerformUnauthorizedOperation"
-
 /**
 Class that takes requests (*Request objects) related to the backend.
 Tries to serialize the response data to json.
