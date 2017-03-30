@@ -9,12 +9,12 @@ import Foundation
 
 struct ListOfAnimalsItem: ParsedItem {
     let animalID: String?
-//    let name: String?
+    let name: String
     let type: String
-//    let sex: String?
-//    let description: String?
-//    let address: String?
-//    let created: Int?
-//    let lastModified: Int?
-//    let imageUrl: String?
+    let sex: String
+    let description: String?
+    let address: String?
+    let created: Int?
+    let lastModified: Int?
+    let imageUrl: String?
 }

@@ -11,8 +11,8 @@ class ListOfAnimalsOperation: ServiceOperation {
 
     private let request: ListOfAnimalsRequest = ListOfAnimalsRequest()
 
-    private(set) var result: RequestResult<ListOfAnimalsItem>?
-    var resultCompletion: ((RequestResult<ListOfAnimalsItem>) -> Void)?
+    private(set) var result: RequestResult<[ListOfAnimalsItem?]>?
+    var resultCompletion: ((RequestResult<[ListOfAnimalsItem?]>) -> Void)?
 
     func start() {
         service.request(request, completion: handleResponse)
@@ -31,7 +31,7 @@ class ListOfAnimalsOperation: ServiceOperation {
         }
     }
 
-    func callCompletion(_ result: RequestResult<ListOfAnimalsItem>) {
+    func callCompletion(_ result: RequestResult<[ListOfAnimalsItem?]>) {
         self.result = result
         resultCompletion?(result)
     }
