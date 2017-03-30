@@ -11,13 +11,8 @@ class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePublishedLabel: UILabel!
-    @IBOutlet weak var photoView: ProfilePhotoView!
+    @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var contentTextView: UITextView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        contentTextView.isUserInteractionEnabled = false
-        self.backgroundColor = Color.Cell.Background.primary
-    }
 
     func configure(with news: NewsEntity) {
 
@@ -26,6 +21,5 @@ class NewsTableViewCell: UITableViewCell {
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
         datePublishedLabel.text = dateToString.string(from: news.datePublished)
-        photoView.photo = news.picture
     }
 }

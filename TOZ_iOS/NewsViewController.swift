@@ -4,17 +4,20 @@
 //
 //  Copyright © 2017 intive. All rights reserved.
 //
+
 import UIKit
 
 class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
-    var news: [NewsEntity] = [
-        NewsEntity(identifier: "1", title: "Pappy has new home!", datePublished: Date(), content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.", picture: #imageLiteral(resourceName: "dogTemporary")),
-        NewsEntity(identifier: "2", title: "Scientists proved that cats are douchebags!", datePublished: Date(), content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.", picture: #imageLiteral(resourceName: "catTemporary"))] {
-                didSet {
-                    newsTableView.reloadData()
-                }
+
+    var news: [NewsEntity] =  [
+        NewsEntity(identifier: "1", title: "News Tile First", datePublished: Date(), content: "Here is a message long long long", picture: nil),
+        NewsEntity(identifier: "2", title: "News Tile Second", datePublished: Date(), content: "Here is a second message long long long", picture: nil)] {
+
+            didSet {
+                newsTableView.reloadData()
+            }
         }
 
     override func viewDidLoad() {
@@ -22,7 +25,6 @@ class NewsViewController: UIViewController {
 
         newsTableView.dataSource = self
         newsTableView.delegate = self
-        self.newsTableView.backgroundColor = Color.Background.primary
 
     }
 

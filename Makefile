@@ -1,8 +1,8 @@
 # Make sure we're failing even though we pipe to xcpretty
 SHELL=/bin/bash -o pipefail -o errexit
 
-# iPhone7, iOS10.3
-DEVICE_UUID:=$(shell xcrun instruments -s | grep -m 1 -o "iPhone 7 (10.3) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$$/\1/")
+# iPhone7, iOS10.2
+DEVICE_UUID:=$(shell xcrun instruments -s | grep -m 1 -o "iPhone 7 (10.2) \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$$/\1/")
 BUILD_DESTINATION = platform=iOS Simulator,id=${DEVICE_UUID}
 WORKING_DIR = ./
 SCHEME = TOZ_iOS
