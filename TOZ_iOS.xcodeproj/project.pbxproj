@@ -12,7 +12,11 @@
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
 		37434B631E7F1BAA00336605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B621E7F1BAA00336605 /* Color.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
-		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
+		54AEE4D21E8B0FCF00F647DD /* CalendarPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */; };
+		54AEE4D61E8B126C00F647DD /* CalendarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEE4D51E8B126C00F647DD /* CalendarMainViewController.swift */; };
+		54C8F40A1E8A9D0300896924 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C8F4091E8A9D0300896924 /* WeekViewController.swift */; };
+		54D095461E8D3B9800083EC7 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D095451E8D3B9800083EC7 /* Schedule.xib */; };
+		54D095481E8D3BBA00083EC7 /* WeekDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D095471E8D3BBA00083EC7 /* WeekDay.xib */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */; };
@@ -41,7 +45,11 @@
 		37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
 		37434B621E7F1BAA00336605 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPageViewController.swift; sourceTree = "<group>"; };
+		54AEE4D51E8B126C00F647DD /* CalendarMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMainViewController.swift; sourceTree = "<group>"; };
+		54C8F4091E8A9D0300896924 /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		54D095451E8D3B9800083EC7 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
+		54D095471E8D3BBA00083EC7 /* WeekDay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDay.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,11 +136,15 @@
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
-				54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */,
+				54C8F4091E8A9D0300896924 /* WeekViewController.swift */,
+				54AEE4D51E8B126C00F647DD /* CalendarMainViewController.swift */,
+				54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */,
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
+				54D095451E8D3B9800083EC7 /* Schedule.xib */,
+				54D095471E8D3BBA00083EC7 /* WeekDay.xib */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
 				A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */,
 				A1CABC001E6AEB1F009A06F8 /* Info.plist */,
@@ -209,7 +221,6 @@
 					};
 					A1CABC041E6AEB1F009A06F8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2637WT3X84;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A1CABBEE1E6AEB1F009A06F8;
 					};
@@ -239,8 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D095481E8D3BBA00083EC7 /* WeekDay.xib in Resources */,
 				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
+				54D095461E8D3B9800083EC7 /* Schedule.xib in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,14 +366,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C8F40A1E8A9D0300896924 /* WeekViewController.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
+				54AEE4D21E8B0FCF00F647DD /* CalendarPageViewController.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
-				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
+				54AEE4D61E8B126C00F647DD /* CalendarMainViewController.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,7 +543,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2637WT3X84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
@@ -544,7 +559,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2637WT3X84;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
