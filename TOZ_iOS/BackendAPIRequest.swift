@@ -22,6 +22,6 @@ extension BackendAPIRequest {
 
     /// Returns default headers for JSON content
     func defaultJSONHeaders() -> [String: String] {
-        return ["Content-Type": "application/json"]
+        return ["Accept": "application/json"]
     }
 }
