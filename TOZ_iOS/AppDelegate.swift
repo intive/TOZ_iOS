@@ -10,9 +10,14 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIView.appearance().backgroundColor = Color.Background.primary
+        UITableView.appearance().backgroundColor = Color.TableView.background
+        UITableView.appearance().separatorColor = Color.TableView.separator
+        UITableViewCell.appearance().backgroundColor = Color.Cell.Background.primary
+        UITabBar.appearance().backgroundColor = Color.TabBar.Background.primary
+        UITabBar.appearance().tintColor = Color.TabBar.Icons.pressed
         // Override point for customization after application launch.
         return true
     }
