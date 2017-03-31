@@ -11,7 +11,7 @@
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
 		37434B631E7F1BAA00336605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B621E7F1BAA00336605 /* Color.swift */; };
-            3777B0B61E8E4F5800FF385A /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B51E8E4F5800FF385A /* PhotoManager.swift */; };
+		3777B0B61E8E4F5800FF385A /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B51E8E4F5800FF385A /* PhotoManager.swift */; };
 		3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */; };
 		3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */; };
 		3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */; };
