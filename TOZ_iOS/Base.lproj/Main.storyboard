@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -165,6 +166,80 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--WeekPage-->
+        <scene sceneID="lyq-1q-hb1">
+            <objects>
+                <viewController storyboardIdentifier="WeekViewController" title="WeekPage" id="NmJ-bD-S86" customClass="WeekViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="je9-r4-j92"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jp9-lH-vYf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i79-Tg-t8N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-cV-aWS">
+                                <rect key="frame" x="37" y="160" width="301" height="83"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-lW-FDO">
+                                <rect key="frame" x="37" y="302.5" width="301" height="62"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="riX-8D-LNp">
+                                <rect key="frame" x="37" y="426" width="301" height="55"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-uF-jt7">
+                                <rect key="frame" x="37" y="261" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Ll-q9g">
+                                <rect key="frame" x="37" y="385.5" width="86" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iz4-lW-FDO" firstAttribute="top" secondItem="HcD-uF-jt7" secondAttribute="bottom" constant="21" id="1gK-6n-Sfd"/>
+                            <constraint firstItem="Jp9-lH-vYf" firstAttribute="top" secondItem="riX-8D-LNp" secondAttribute="bottom" constant="186" id="5kA-ol-yWY"/>
+                            <constraint firstItem="HcD-uF-jt7" firstAttribute="top" secondItem="i79-Tg-t8N" secondAttribute="top" constant="261" id="8Jn-GA-dJM"/>
+                            <constraint firstItem="S0w-Ll-q9g" firstAttribute="leading" secondItem="riX-8D-LNp" secondAttribute="leading" id="8aG-ho-ZJX"/>
+                            <constraint firstItem="Iz4-lW-FDO" firstAttribute="centerY" secondItem="i79-Tg-t8N" secondAttribute="centerY" id="Cp0-vR-yWo"/>
+                            <constraint firstItem="HcD-uF-jt7" firstAttribute="top" secondItem="PpP-cV-aWS" secondAttribute="bottom" constant="18" id="NdE-N3-9ij"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="centerX" secondItem="i79-Tg-t8N" secondAttribute="centerX" id="PeC-23-8Vm"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="top" secondItem="je9-r4-j92" secondAttribute="bottom" constant="140" id="VIZ-D6-noE"/>
+                            <constraint firstItem="S0w-Ll-q9g" firstAttribute="top" secondItem="Iz4-lW-FDO" secondAttribute="bottom" constant="21" id="ayh-yu-tPB"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="i79-Tg-t8N" secondAttribute="leadingMargin" constant="21" id="dk9-U7-fLH"/>
+                            <constraint firstItem="riX-8D-LNp" firstAttribute="top" secondItem="S0w-Ll-q9g" secondAttribute="bottom" constant="20" id="fYP-iV-1V1"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="trailing" secondItem="Iz4-lW-FDO" secondAttribute="trailing" id="hhH-ve-Ndw"/>
+                            <constraint firstItem="HcD-uF-jt7" firstAttribute="leading" secondItem="Iz4-lW-FDO" secondAttribute="leading" id="llk-f4-qB3"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="HcD-uF-jt7" secondAttribute="leading" id="sZd-4O-mqq"/>
+                            <constraint firstItem="Iz4-lW-FDO" firstAttribute="leading" secondItem="S0w-Ll-q9g" secondAttribute="leading" id="wdF-5M-eof"/>
+                            <constraint firstItem="Iz4-lW-FDO" firstAttribute="trailing" secondItem="riX-8D-LNp" secondAttribute="trailing" id="zAs-Qi-Vtu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarStack" destination="PpP-cV-aWS" id="S1r-pA-eg2"/>
+                        <outlet property="scheduleAfternoon" destination="riX-8D-LNp" id="zKK-dR-3Xh"/>
+                        <outlet property="scheduleMorning" destination="Iz4-lW-FDO" id="LQ6-1M-e46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDP-G5-Gek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1970.4000000000001" y="1540.4797601199402"/>
+        </scene>
+        <!--Calendar Page View Controller-->
+        <scene sceneID="GdS-GG-DNk">
+            <objects>
+                <pageViewController storyboardIdentifier="CalendarPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5tt-8M-XvX" customClass="CalendarPageViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AvZ-IX-DfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1282" y="1339"/>
+        </scene>
         <!--CalendarViewController-->
         <scene sceneID="zQT-fF-PfN">
             <objects>
@@ -176,13 +251,62 @@
                     <view key="view" contentMode="scaleToFill" id="Arb-gE-T89">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc8-k7-8k6">
+                                <rect key="frame" x="26" y="122" width="323" height="387"/>
+                                <connections>
+                                    <segue destination="5tt-8M-XvX" kind="embed" id="8t5-hw-bht"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Di-sN-Tya">
+                                <rect key="frame" x="32" y="76" width="317" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwp-2B-qDY">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44P-Z8-0VW">
+                                        <rect key="frame" x="108.5" y="0.0" width="178.5" height="30"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousWeek:" destination="lRF-tU-lPU" eventType="touchUpInside" id="jxV-To-N8v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNM-jJ-dGC">
+                                        <rect key="frame" x="287" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextWeek:" destination="lRF-tU-lPU" eventType="touchUpInside" id="ahV-tU-B4B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zNM-jJ-dGC" secondAttribute="trailing" constant="10" id="Jmk-zl-P5u"/>
+                            <constraint firstItem="7He-d5-pWj" firstAttribute="top" secondItem="Oc8-k7-8k6" secondAttribute="bottom" constant="109" id="OH7-mo-cvr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oc8-k7-8k6" secondAttribute="trailing" constant="10" id="Ucj-vs-o7T"/>
+                            <constraint firstItem="Oc8-k7-8k6" firstAttribute="top" secondItem="7Di-sN-Tya" secondAttribute="bottom" constant="16" id="aCv-5H-uQk"/>
+                            <constraint firstItem="Oc8-k7-8k6" firstAttribute="leading" secondItem="Arb-gE-T89" secondAttribute="leadingMargin" constant="10" id="dah-Wc-FFb"/>
+                            <constraint firstItem="7Di-sN-Tya" firstAttribute="leading" secondItem="Arb-gE-T89" secondAttribute="leadingMargin" constant="16" id="dxV-34-iUh"/>
+                            <constraint firstItem="7Di-sN-Tya" firstAttribute="top" secondItem="jHJ-m5-Ygy" secondAttribute="bottom" constant="56" id="yQe-Ct-7q9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="first" id="oPL-v6-0MH"/>
+                    <connections>
+                        <outlet property="currDateLabel" destination="fwp-2B-qDY" id="L27-7w-3nP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LF-WZ-0qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="754"/>
+            <point key="canvasLocation" x="-351.19999999999999" y="777.66116941529242"/>
         </scene>
     </scenes>
     <resources>

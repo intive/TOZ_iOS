@@ -27,7 +27,13 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54AEE4D21E8B0FCF00F647DD /* CalendarPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */; };
 		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
+		54C25DD11E8E5ACC0027A88B /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C25DD01E8E5ACC0027A88B /* ScheduleView.swift */; };
+		54C25DD31E8E5AE30027A88B /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C25DD21E8E5AE30027A88B /* WeekDayView.swift */; };
+		54C8F40A1E8A9D0300896924 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C8F4091E8A9D0300896924 /* WeekViewController.swift */; };
+		54D095461E8D3B9800083EC7 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D095451E8D3B9800083EC7 /* Schedule.xib */; };
+		54D095481E8D3BBA00083EC7 /* WeekDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D095471E8D3BBA00083EC7 /* WeekDay.xib */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */; };
@@ -71,7 +77,14 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPageViewController.swift; sourceTree = "<group>"; };
+		54AEE4D51E8B126C00F647DD /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		54C25DD01E8E5ACC0027A88B /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		54C25DD21E8E5AE30027A88B /* WeekDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
+		54C8F4091E8A9D0300896924 /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		54D095451E8D3B9800083EC7 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
+		54D095471E8D3BBA00083EC7 /* WeekDay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDay.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +183,20 @@
 			name = NetworkMappers;
 			sourceTree = "<group>";
 		};
+		54C497521E8DCF5C008E0032 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				54AEE4D51E8B126C00F647DD /* CalendarViewController.swift */,
+				54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */,
+				54C8F4091E8A9D0300896924 /* WeekViewController.swift */,
+				54D095451E8D3B9800083EC7 /* Schedule.xib */,
+				54C25DD01E8E5ACC0027A88B /* ScheduleView.swift */,
+				54D095471E8D3BBA00083EC7 /* WeekDay.xib */,
+				54C25DD21E8E5AE30027A88B /* WeekDayView.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +229,7 @@
 		A1CABBF11E6AEB1F009A06F8 /* TOZ_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				54C497521E8DCF5C008E0032 /* Calendar */,
 				4B5185881E7E9D4500CD343F /* Network */,
 				4BB31FD81E8450D600D2E6EF /* NetworkRequests */,
 				4BB31FD91E8450F800D2E6EF /* NetworkOperations */,
@@ -324,8 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D095481E8D3BBA00083EC7 /* WeekDay.xib in Resources */,
 				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
+				54D095461E8D3B9800083EC7 /* Schedule.xib in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,15 +482,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C8F40A1E8A9D0300896924 /* WeekViewController.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
+				54C25DD31E8E5AE30027A88B /* WeekDayView.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
+				54AEE4D21E8B0FCF00F647DD /* CalendarPageViewController.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
+				54C25DD11E8E5ACC0027A88B /* ScheduleView.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
@@ -618,6 +652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -632,6 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -647,6 +683,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOZ_iOS.app/TOZ_iOS";
 			};
@@ -662,6 +699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOZ_iOS.app/TOZ_iOS";
 			};
