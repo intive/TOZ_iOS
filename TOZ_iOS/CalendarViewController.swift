@@ -28,25 +28,25 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pageBoss = self.childViewControllers.first as! CalendarPageViewController!
+        pageBoss = self.childViewControllers.first as? CalendarPageViewController
 
         currentCalendar = CalendarDataSource(date: Date())
         configureUX()
     }
-    
+
     func nextPage() {
         pageBoss.setViewControllers([pageBoss.weekPages[pageBoss.getNextIndex()]], direction: .forward, animated: true, completion: nil)
     }
-    
+
     func previousPage() {
         pageBoss.setViewControllers([pageBoss.weekPages[pageBoss.getPreviousIndex()]], direction: .reverse, animated: true, completion: nil)
     }
-    
-    func configureUX()  {
+
+    func configureUX() {
         currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
     }
-    
-    func updateUX()  {
+
+    func updateUX() {
         currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
     }
 
@@ -54,9 +54,9 @@ class CalendarViewController: UIViewController {
 
 class CalendarDataSource {
 
-    var currentCalendar:Calendar
-    var currentDate:Date
-    var currentWeek:Int
+    var currentCalendar: Calendar
+    var currentDate: Date
+    var currentWeek: Int
 
     init(date: Date) {
         currentDate = Date()
@@ -72,7 +72,7 @@ class CalendarDataSource {
         let dayWeek = currentCalendar.component(.weekday, from: currentDate)
         let dayFromMon = (dayWeek != 1 ? dayWeek-2 : 7)
         let monday = currentCalendar.date(byAdding: .day, value: -dayFromMon, to: currentDate)!
-        var daysInWeek:[Date] = []
+        var daysInWeek: [Date] = []
         for i in 0...6 {
             daysInWeek.append(currentCalendar.date(byAdding: .day, value: i, to: monday)!)
         }
