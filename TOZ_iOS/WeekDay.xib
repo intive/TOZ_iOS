@@ -15,20 +15,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6d-zj-5P5" customClass="UIControl">
-                    <rect key="frame" x="87" y="384" width="172" height="91"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DayOfWeek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-97-doL">
-                    <rect key="frame" x="87" y="182" width="172" height="97"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-Bi-b3S">
+                    <rect key="frame" x="101" y="246" width="172" height="112"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayOfWeek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-97-doL">
+                            <rect key="frame" x="0.0" y="0.0" width="172" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6d-zj-5P5" customClass="UIControl">
+                            <rect key="frame" x="0.0" y="20.5" width="172" height="91.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3L0-Bi-b3S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="101" id="8yW-aV-EoY"/>
+                <constraint firstAttribute="trailing" secondItem="3L0-Bi-b3S" secondAttribute="trailing" constant="102" id="9qM-il-ZGt" userLabel="trailing = Stack View.trailing + 50"/>
+                <constraint firstAttribute="bottom" secondItem="3L0-Bi-b3S" secondAttribute="bottom" constant="309" id="OwC-Pq-QZB" userLabel="bottom = Stack View.bottom + 50"/>
+                <constraint firstItem="3L0-Bi-b3S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="246" id="y6Z-g0-fLq"/>
+            </constraints>
             <point key="canvasLocation" x="94.5" y="109.5"/>
         </view>
     </objects>

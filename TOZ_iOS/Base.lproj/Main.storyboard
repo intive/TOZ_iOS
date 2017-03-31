@@ -160,36 +160,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-cV-aWS">
-                                <rect key="frame" x="41" y="221" width="227" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-cV-aWS">
+                                <rect key="frame" x="41" y="221" width="332" height="91"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-lW-FDO" userLabel="sss">
-                                <rect key="frame" x="41" y="359" width="227" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-lW-FDO" userLabel="sss">
+                                <rect key="frame" x="41" y="359" width="332" height="61"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="riX-8D-LNp">
-                                <rect key="frame" x="41" y="456" width="227" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="riX-8D-LNp">
+                                <rect key="frame" x="41" y="456" width="332" height="154"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-uF-jt7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-uF-jt7">
                                 <rect key="frame" x="41" y="330" width="39" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Ll-q9g">
-                                <rect key="frame" x="41" y="428" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Ll-q9g">
+                                <rect key="frame" x="41" y="428" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="centerX" secondItem="i79-Tg-t8N" secondAttribute="centerX" id="2q0-y7-9j1"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="top" secondItem="je9-r4-j92" secondAttribute="bottom" constant="201" id="59S-5A-TIH"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="i79-Tg-t8N" secondAttribute="leadingMargin" constant="21" id="Cxi-EB-By5"/>
+                            <constraint firstItem="HcD-uF-jt7" firstAttribute="top" secondItem="PpP-cV-aWS" secondAttribute="bottom" constant="18" id="E6v-20-iRP"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="trailing" secondItem="Iz4-lW-FDO" secondAttribute="trailing" id="EER-6j-6yf"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="S0w-Ll-q9g" secondAttribute="leading" id="LTZ-J7-N5M"/>
+                            <constraint firstAttribute="bottom" secondItem="PpP-cV-aWS" secondAttribute="bottom" constant="424" id="Ng6-mj-Uua"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="riX-8D-LNp" secondAttribute="leading" id="T95-rO-AA6"/>
+                            <constraint firstItem="S0w-Ll-q9g" firstAttribute="top" secondItem="Iz4-lW-FDO" secondAttribute="bottom" constant="8" symbolic="YES" id="YJR-YE-or9"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="trailing" secondItem="riX-8D-LNp" secondAttribute="trailing" id="ccC-IO-yoB"/>
+                            <constraint firstItem="Jp9-lH-vYf" firstAttribute="top" secondItem="riX-8D-LNp" secondAttribute="bottom" constant="126" id="ecO-4A-1qL"/>
+                            <constraint firstItem="riX-8D-LNp" firstAttribute="top" secondItem="S0w-Ll-q9g" secondAttribute="bottom" constant="7" id="ede-kV-ipr"/>
+                            <constraint firstItem="Iz4-lW-FDO" firstAttribute="top" secondItem="HcD-uF-jt7" secondAttribute="bottom" constant="8" symbolic="YES" id="iIn-y1-091"/>
+                            <constraint firstAttribute="bottom" secondItem="Iz4-lW-FDO" secondAttribute="bottom" constant="316" id="p0b-AJ-f0K"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="HcD-uF-jt7" secondAttribute="leading" id="qzv-L9-S22"/>
+                            <constraint firstItem="PpP-cV-aWS" firstAttribute="leading" secondItem="Iz4-lW-FDO" secondAttribute="leading" id="zNv-SJ-DVb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDP-G5-Gek" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,7 +220,7 @@
         <!--CalendarViewController-->
         <scene sceneID="zQT-fF-PfN">
             <objects>
-                <viewController title="CalendarViewController" id="lRF-tU-lPU" customClass="CalendarMainViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CalendarViewController" id="lRF-tU-lPU" customClass="CalendarViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jHJ-m5-Ygy"/>
                         <viewControllerLayoutGuide type="bottom" id="7He-d5-pWj"/>
@@ -225,14 +238,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Di-sN-Tya">
                                 <rect key="frame" x="36" y="76" width="348" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CurrDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwp-2B-qDY">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwp-2B-qDY">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44P-Z8-0VW">
-                                        <rect key="frame" x="112" y="0.0" width="206" height="30"/>
+                                        <rect key="frame" x="109" y="0.0" width="209" height="30"/>
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -265,7 +278,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="first" id="oPL-v6-0MH"/>
                     <connections>
-                        <outlet property="CurrDateLabel" destination="fwp-2B-qDY" id="ZAs-gN-hzs"/>
+                        <outlet property="currDateLabel" destination="fwp-2B-qDY" id="L27-7w-3nP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LF-WZ-0qz" userLabel="First Responder" sceneMemberID="firstResponder"/>

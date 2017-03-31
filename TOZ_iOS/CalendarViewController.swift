@@ -6,7 +6,7 @@
 
 import UIKit
 
-class CalendarMainViewController: UIViewController {
+class CalendarViewController: UIViewController {
 
     @IBAction func nextWeek(_ sender: Any) {
         currentCalendar.nextWeek()
@@ -20,7 +20,7 @@ class CalendarMainViewController: UIViewController {
         previousPage()
     }
 
-    @IBOutlet weak var CurrDateLabel: UILabel!
+    @IBOutlet weak var currDateLabel: UILabel!
 
     var currentCalendar: CalendarDataSource!
     var pageBoss: CalendarPageViewController!
@@ -43,11 +43,11 @@ class CalendarMainViewController: UIViewController {
     }
     
     func configureUX()  {
-        CurrDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
+        currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
     }
     
     func updateUX()  {
-        CurrDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
+        currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
     }
 
 }
