@@ -15,12 +15,19 @@ class PhotoManager {
     private init() {}
 
     private var cache = [String: UIImage]()
+
     func getPhoto(from url: String, completion: @escaping ((UIImage?) -> Void)) {
         var image: UIImage? = nil
         if let image = self.cache[url] {
+
             completion(image)
         } else {
-            URLSession.shared.dataTask(with: NSURL(string: url)! as URL, completionHandler: { (data, _, _) -> Void in
+            guard let validUrl = URL(string: url) else {
+                completion(nil)
+                return
+            }
+
+            URLSession.shared.dataTask(with: validUrl, completionHandler: { (data, _, _) -> Void in
                 DispatchQueue.main.async(execute: { () -> Void in
                     if let data = data {
                         image = UIImage(data: data)
