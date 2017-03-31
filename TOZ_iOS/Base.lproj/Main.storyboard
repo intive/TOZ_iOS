@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,9 +38,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="dul-aU-tZT"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Help" image="first" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="Title" id="rYc-8H-jjX"/>
@@ -140,6 +136,7 @@ PKO BO II O/Szczecin</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ca0-X9-wo3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0k-oq-Ep1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Hy9-2Z-SmP" userLabel="Exit" sceneMemberID="exit"/>
@@ -168,7 +165,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -247,7 +244,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I5H-z0-603" id="hVY-1x-0Zw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNf-Wh-UAR">
@@ -313,11 +310,31 @@ PKO BO II O/Szczecin</string>
                     <connections>
                         <outlet property="galleryTableView" destination="NBp-S6-8yq" id="vkH-7f-Ya1"/>
                         <outlet property="temporaryName" destination="pdL-Z6-iaL" id="MwO-rs-b70"/>
+                        <segue destination="m5n-HO-4WV" kind="show" identifier="showGalleryDetail" id="OUb-PL-SO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9s-ub-ycf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="753.37331334332839"/>
+        </scene>
+        <!--Gallery Detail View Controller-->
+        <scene sceneID="wJd-uY-Gns">
+            <objects>
+                <viewController id="Edr-KM-NY0" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qGb-td-hyb"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyu-ak-Jqy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yxC-T0-ejg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T7h-RI-Ugm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdw-HA-pNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2706.4000000000001" y="753.37331334332839"/>
         </scene>
         <!--MainTabBarController-->
         <scene sceneID="yl2-sM-qoP">
@@ -358,6 +375,24 @@ PKO BO II O/Szczecin</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LF-WZ-0qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-518" y="754"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wvw-bY-XyA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m5n-HO-4WV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fXz-23-pWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Edr-KM-NY0" kind="relationship" relationship="rootViewController" id="5C7-Vk-moc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXi-77-gCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767.2" y="753.37331334332839"/>
         </scene>
     </scenes>
     <resources>

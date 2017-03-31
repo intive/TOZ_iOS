@@ -21,7 +21,6 @@ class HelpViewController: UIViewController {
 
     @IBAction func unwindToHelp(segue: UIStoryboardSegue) {
     }
-    
     func getOrganizationInfo() {
         organizationInfoOperation.resultCompletion = { result in
             let text: String

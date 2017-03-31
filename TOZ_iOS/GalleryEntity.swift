@@ -9,11 +9,8 @@
 import UIKit
 
 struct GalleryEntity {
-    
     var name: String
     var age: String
     var description: String
     var image: UIImage?
-    
 }
-
