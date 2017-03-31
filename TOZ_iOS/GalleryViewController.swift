@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Foundation
 
 class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var galleryTableView: UITableView!
     @IBOutlet weak var temporaryName: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    //@IBOutlet weak var indicator: UIActivityIndicatorView!
     var animalsArray:[GalleryEntity] = []
     override func viewDidLoad() {
         super.viewDidLoad()
