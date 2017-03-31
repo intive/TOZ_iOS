@@ -13,7 +13,7 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<ListOfAnimalsItem>, Re
         return try process(obj, mapper: { jsonNode in
             guard let animalID = jsonNode?["id"] as? String? else { return nil }
             guard let name = jsonNode?["name"] as? String else { return nil }
-            guard let type = jsonNode?["id"] as? String else { return nil }
+            guard let type = jsonNode?["type"] as? String else { return nil }
             guard let sex = jsonNode?["sex"] as? String else { return nil }
             guard let description = jsonNode?["description"] as? String? else { return nil }
             guard let address = jsonNode?["address"] as? String? else { return nil }
