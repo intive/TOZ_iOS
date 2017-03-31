@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Foundation
 
 class GalleryViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    //@IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
