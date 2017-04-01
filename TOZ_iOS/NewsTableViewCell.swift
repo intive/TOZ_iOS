@@ -25,7 +25,7 @@ class NewsTableViewCell: UITableViewCell {
         contentTextView.text = news.content
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
-        datePublishedLabel.text = dateToString.string(from: news.datePublished)
+        datePublishedLabel.text = String(news.datePublished)
         photoView.photo = news.picture
     }
 }

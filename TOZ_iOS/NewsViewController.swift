@@ -9,25 +9,13 @@ import UIKit
 class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
-    var news: [NewsEntity] = [
-        NewsEntity(identifier: "1", title: "Pappy has new home!", datePublished: Date(), content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.", picture: #imageLiteral(resourceName: "dogTemporary")),
-        NewsEntity(identifier: "2", title: "Scientists proved that cats are douchebags!", datePublished: Date(), content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.", picture: #imageLiteral(resourceName: "catTemporary"))] {
-                didSet {
-                    newsTableView.reloadData()
-                }
-        }
+    let newsOperation = NewsOperation()
+    var localNewsList = [NewsEntity]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        newsTableView.dataSource = self
-        newsTableView.delegate = self
         self.newsTableView.backgroundColor = Color.Background.primary
-
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        getNews()
     }
 
 }
@@ -36,18 +24,46 @@ extension NewsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return news.count
+        return localNewsList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell: NewsTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath) as? NewsTableViewCell)!
-        cell.configure(with: news[indexPath.row])
-
+        cell.configure(with: localNewsList[indexPath.row])
         return cell
 
     }
 
+    func getNews() {
+        newsOperation.resultCompletion = { result in
+            var title: String?
+            var contents: String?
+            var publishDate: Int?
+            var photoURL: String?
+            var downloadedNewsList = [NewsEntity]()
+
+            switch result {
+            case .success(let newsList):
+                for news in newsList {
+                    title = news?.title
+                    contents = news?.contents
+                    publishDate = news?.published
+                    photoURL = news?.photoUrl
+                    downloadedNewsList.append(NewsEntity(title: title!, datePublished: publishDate!, content: contents!, picture: nil))
+                }
+
+            case .failure(let error):
+                print ("\(error)")
+            }
+
+            DispatchQueue.main.async {
+                self.localNewsList = downloadedNewsList
+                self.newsTableView.reloadData()
+            }
+        }
+        newsOperation.start()
+    }
 }
 
 extension NewsViewController: UITableViewDelegate {
