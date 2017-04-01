@@ -37,20 +37,17 @@ extension NewsViewController: UITableViewDataSource {
 
     func getNews() {
         newsOperation.resultCompletion = { result in
-            var title: String?
-            var contents: String?
-            var publishDate: Int?
-            var photoURL: String?
             var downloadedNewsList = [NewsEntity]()
 
             switch result {
             case .success(let newsList):
                 for news in newsList {
-                    title = news?.title
-                    contents = news?.contents
-                    publishDate = news?.published
-                    photoURL = news?.photoUrl
-                    downloadedNewsList.append(NewsEntity(title: title!, datePublished: publishDate!, content: contents!, picture: nil))
+                    
+                    let title = news.title
+                    let contents = news.contents
+                    let publishDate = news.published
+                    let photoURL = news.photoUrl
+                    downloadedNewsList.append(NewsEntity(title: title, datePublished: publishDate, content: contents, picture: nil))
                 }
 
             case .failure(let error):
