@@ -9,13 +9,18 @@ import UIKit
 
 class HelpViewController: UIViewController {
 
-    @IBOutlet weak var organizationLabel: UILabel!
     let organizationInfoOperation = OrganizationInfoOperation()
 
     override func viewDidLoad() {
         getOrganizationInfo()
     }
 
+    @IBAction func financeHelpButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "financeView", sender: self)
+    }
+
+    @IBAction func unwindToHelp(segue: UIStoryboardSegue) {
+    }
     func getOrganizationInfo() {
         organizationInfoOperation.resultCompletion = { result in
             let text: String
@@ -28,7 +33,7 @@ class HelpViewController: UIViewController {
             }
 
             DispatchQueue.main.async {
-                self.organizationLabel.text = text
+                // Do someting
             }
         }
         organizationInfoOperation.start()
