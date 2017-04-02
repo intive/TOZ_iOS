@@ -10,7 +10,7 @@ class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
     let newsOperation = NewsOperation()
-    var localNewsList = [NewsEntity]()
+    var localNewsList = [NewsItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +37,18 @@ extension NewsViewController: UITableViewDataSource {
 
     func getNews() {
         newsOperation.resultCompletion = { result in
-            var downloadedNewsList = [NewsEntity]()
+            var downloadedNewsList = [NewsItem]()
 
             switch result {
             case .success(let newsList):
+
                 for news in newsList {
-                    
                     let title = news.title
                     let contents = news.contents
                     let publishDate = news.published
                     let photoURL = news.photoUrl
-                    downloadedNewsList.append(NewsEntity(title: title, datePublished: publishDate, content: contents, picture: nil))
+
+                    downloadedNewsList.append(NewsItem(title: title, contents: contents, photoUrl: photoURL, published: publishDate))
                 }
 
             case .failure(let error):

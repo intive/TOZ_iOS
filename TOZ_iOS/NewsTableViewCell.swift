@@ -19,14 +19,14 @@ class NewsTableViewCell: UITableViewCell {
         self.backgroundColor = Color.Cell.Background.primary
     }
 
-    func configure(with news: NewsEntity) {
+    func configure(with news: NewsItem) {
 
         titleLabel.text = news.title
-        contentTextView.text = news.content
+        contentTextView.text = news.contents
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
-        let downloadedDate = Date(timeIntervalSince1970: TimeInterval(news.datePublished))
+        let downloadedDate = Date(timeIntervalSince1970: TimeInterval(news.published))
         datePublishedLabel.text = dateToString.string(from: downloadedDate)
-        photoView.photo = news.picture
     }
+
 }

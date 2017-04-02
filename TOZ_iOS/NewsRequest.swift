@@ -9,19 +9,19 @@
 import Foundation
 
 final class NewsRequest: BackendAPIRequest {
-    
+
     var endpoint: String {
         return "/news"
     }
-    
+
     var method: NetworkService.Method {
         return .GET
     }
-    
+
     var parameters: [String: Any]? {
         return nil
     }
-    
+
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
