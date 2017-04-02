@@ -23,7 +23,7 @@ class NewsViewController: UIViewController {
         newsTableView.dataSource = self
         newsTableView.delegate = self
         self.newsTableView.backgroundColor = Color.Background.primary
-
+        self.newsTableView.separatorColor = Color.TableView.separator
     }
 
     override func viewWillAppear(_ animated: Bool) {
