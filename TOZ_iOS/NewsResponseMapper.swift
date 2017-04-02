@@ -15,7 +15,8 @@ final class NewsResponseMapper: ArrayResponseMapper<NewsItem>, ResponseMapperPro
             guard let title = jsonNode["title"] as? String else { return nil }
             guard let contents = jsonNode["contents"] as? String else { return nil }
             guard let photoUrl = jsonNode["photoUrl"] as? String else { return nil }
-            return NewsItem(title: title, contents: contents, photoUrl: photoUrl, published: publishDate)
+            let published = Date(timeIntervalSince1970: TimeInterval(publishDate))
+            return NewsItem(title: title, contents: contents, photoUrl: photoUrl, published: published)
         })
     }
 }

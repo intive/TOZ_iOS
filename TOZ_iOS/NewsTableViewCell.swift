@@ -25,13 +25,10 @@ class NewsTableViewCell: UITableViewCell {
         contentTextView.text = news.contents
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
-        let downloadedDate = Date(timeIntervalSince1970: TimeInterval(news.published))
-        datePublishedLabel.text = dateToString.string(from: downloadedDate)
+        datePublishedLabel.text = dateToString.string(from: news.published)
 
         PhotoManager.shared.getPhoto(from: news.photoUrl, completion: {(image) -> (Void) in
-            if let image = image {
-                self.photoView.photo = image
-            }
+            self.photoView.photo = image
         })
     }
 

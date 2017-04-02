@@ -12,5 +12,5 @@ struct NewsItem: ParsedItem {
     let title: String
     let contents: String
     let photoUrl: String
-    let published: Int
+    let published: Date
 }

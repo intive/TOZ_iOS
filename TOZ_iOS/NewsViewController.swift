@@ -37,27 +37,16 @@ extension NewsViewController: UITableViewDataSource {
 
     func getNews() {
         newsOperation.resultCompletion = { result in
-            var downloadedNewsList = [NewsItem]()
 
             switch result {
             case .success(let newsList):
-
-                for news in newsList {
-                    let title = news.title
-                    let contents = news.contents
-                    let publishDate = news.published
-                    let photoURL = news.photoUrl
-
-                    downloadedNewsList.append(NewsItem(title: title, contents: contents, photoUrl: photoURL, published: publishDate))
+                DispatchQueue.main.async {
+                    self.localNewsList = newsList
+                    self.newsTableView.reloadData()
                 }
 
             case .failure(let error):
                 print ("\(error)")
-            }
-
-            DispatchQueue.main.async {
-                self.localNewsList = downloadedNewsList
-                self.newsTableView.reloadData()
             }
         }
         newsOperation.start()
