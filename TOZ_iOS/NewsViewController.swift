@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var newsTableView: UITableView!
     let newsOperation = NewsOperation()
@@ -18,21 +18,18 @@ class NewsViewController: UIViewController {
         getNews()
     }
 
-}
-
-extension NewsViewController: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return localNewsList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath)
 
-        let cell: NewsTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath) as? NewsTableViewCell)!
-        cell.configure(with: localNewsList[indexPath.row])
+        if let cell = cell as? NewsTableViewCell {
+            cell.configure(with: localNewsList[indexPath.row])
+        }
         return cell
-
     }
 
     func getNews() {
@@ -44,15 +41,11 @@ extension NewsViewController: UITableViewDataSource {
                     self.localNewsList = newsList
                     self.newsTableView.reloadData()
                 }
-
             case .failure(let error):
                 print ("\(error)")
             }
         }
         newsOperation.start()
     }
-}
-
-extension NewsViewController: UITableViewDelegate {
 
 }
