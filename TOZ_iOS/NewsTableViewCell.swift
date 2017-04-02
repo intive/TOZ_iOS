@@ -27,6 +27,12 @@ class NewsTableViewCell: UITableViewCell {
         dateToString.dateFormat = "yyyy-MM-dd"
         let downloadedDate = Date(timeIntervalSince1970: TimeInterval(news.published))
         datePublishedLabel.text = dateToString.string(from: downloadedDate)
+
+        PhotoManager.shared.getPhoto(from: news.photoUrl, completion: {(image) -> (Void) in
+            if let image = image {
+                self.photoView.photo = image
+            }
+        })
     }
 
 }
