@@ -8,7 +8,7 @@
 import Foundation
 
 struct ListOfAnimalsItem: ParsedItem {
-    let animalID: String?
+    let animalID: String
     let name: String
     let type: String
     let sex: String
