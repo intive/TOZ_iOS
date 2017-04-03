@@ -12,6 +12,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var galleryTableView: UITableView!
     @IBOutlet weak var temporaryName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBAction func unwindToGallery(segue: UIStoryboardSegue) {
+    }
     //@IBOutlet weak var indicator: UIActivityIndicatorView!
     var animalsArray:[GalleryEntity] = []
     override func viewDidLoad() {
@@ -38,7 +40,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         return UITableViewCell()
     }
     // UITableViewDelegate
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showGalleryDetail", sender: self)
     }
 }

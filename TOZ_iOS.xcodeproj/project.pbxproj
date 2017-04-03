@@ -11,10 +11,10 @@
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
 		37434B631E7F1BAA00336605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B621E7F1BAA00336605 /* Color.swift */; };
-		3777B0B61E8E4F5800FF385A /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B51E8E4F5800FF385A /* PhotoManager.swift */; };
 		3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */; };
 		3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */; };
 		3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */; };
+		3777B0B61E8E4F5800FF385A /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B51E8E4F5800FF385A /* PhotoManager.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
@@ -59,10 +59,10 @@
 		37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
 		37434B621E7F1BAA00336605 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-        3777B0B51E8E4F5800FF385A /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryEntity.swift; sourceTree = "<group>"; };
 		3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFinanceViewController.swift; sourceTree = "<group>"; };
+		3777B0B51E8E4F5800FF385A /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */,
-                3777B0B51E8E4F5800FF385A /* PhotoManager.swift */,
+				3777B0B51E8E4F5800FF385A /* PhotoManager.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
@@ -631,6 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -645,6 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -660,6 +662,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -675,6 +678,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TOZ_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intive.TOZ-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
