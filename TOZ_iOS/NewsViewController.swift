@@ -15,6 +15,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.newsTableView.backgroundColor = Color.Background.primary
+        self.newsTableView.separatorColor = Color.TableView.separator
         getNews()
     }
 
