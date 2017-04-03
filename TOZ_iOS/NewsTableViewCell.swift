@@ -26,10 +26,14 @@ class NewsTableViewCell: UITableViewCell {
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
         datePublishedLabel.text = dateToString.string(from: news.published)
-
-        PhotoManager.shared.getPhoto(from: news.photoUrl, completion: {(image) -> (Void) in
-            self.photoView.photo = image
-        })
+        
+        self.photoView.photo = nil
+        let photoURL: String? = news.photoUrl
+        if let photoURL = photoURL {
+            PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
+                self.photoView.photo = image
+            })
+        }
     }
 
 }
