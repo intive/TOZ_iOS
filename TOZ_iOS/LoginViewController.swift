@@ -20,12 +20,14 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         incorrectPassword()
         incorrectLogin()
+        sessionIsOutdated()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginErrorText.isUserInteractionEnabled = false
         self.passwordErrorText.isUserInteractionEnabled = false
+        self.view.backgroundColor = Color.Background.primary
         self.loginIncorrectImage.alpha = 0
         self.passwordIncorrectImage.alpha = 0
         self.logoImageView.image = UIImage(named: "tozTempLogo")
@@ -34,21 +36,34 @@ class LoginViewController: UIViewController {
 
     func incorrectPassword() {
         self.passwordTextField.text = ""
-        self.passwordErrorText.placeholder = "Wpisane hasło jest niepoprawne"
-        self.passwordErrorText.attributedPlaceholder = NSAttributedString(string: passwordErrorText.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.red])
+        self.passwordErrorText.text = "Wpisane hasło jest niepoprawne"
         self.passwordTextField.layer.borderWidth = 2.0
         self.passwordTextField.layer.borderColor = UIColor.red.cgColor
         self.passwordIncorrectImage.image = UIImage(named: "redTriangle")
-        self.passwordIncorrectImage.alpha = 1
+        self.passwordIncorrectImage.alpha = 0.7
+        errorColorChange()
     }
 
     func incorrectLogin() {
         self.loginTextField.text = ""
-        self.loginErrorText.placeholder = "Wpisany login jest niepoprawny"
-        self.loginErrorText.attributedPlaceholder = NSAttributedString(string: loginErrorText.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.red])
+        self.loginErrorText.text = "Wpisany login jest niepoprawny"
         self.loginTextField.layer.borderWidth = 2.0
         self.loginTextField.layer.borderColor = UIColor.red.cgColor
         self.loginIncorrectImage.image = UIImage(named: "redTriangle")
-        self.loginIncorrectImage.alpha = 1
+        self.loginIncorrectImage.alpha = 0.7
+        errorColorChange()
+    }
+
+    func errorColorChange() {
+        self.loginErrorText.backgroundColor = .white
+        self.passwordErrorText.backgroundColor = .white
+        self.loginErrorText.alpha = 0.8
+        self.passwordErrorText.alpha = 0.8
+    }
+
+    func sessionIsOutdated() {
+        let alertView = UIAlertController(title: "Błąd", message: "Link aktywacyjny wygasł, skontaktuj się z administratorem", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Rozumiem", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alertView, animated: true, completion: nil)
     }
 }
