@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListOfAnimalsItem: ParsedItem {
+struct AnimalItem: ParsedItem {
     let animalID: String
     let name: String
     let type: String

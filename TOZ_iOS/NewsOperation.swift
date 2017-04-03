@@ -1,5 +1,5 @@
 //
-//  ListOfAnimalsOperation.swift
+//  NewsOperation.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-class ListOfAnimalsOperation: ServiceOperation {
+class NewsOperation: ServiceOperation {
 
-    private let request: ListOfAnimalsRequest = ListOfAnimalsRequest()
+    private let request: NewsRequest = NewsRequest()
 
-    private(set) var result: RequestResult<[AnimalItem]>?
-    var resultCompletion: ((RequestResult<[AnimalItem]>) -> Void)?
+    private(set) var result: RequestResult<[NewsItem]>?
+    var resultCompletion: ((RequestResult<[NewsItem]>) -> Void)?
 
     func start() {
         service.request(request, completion: handleResponse)
@@ -22,7 +22,7 @@ class ListOfAnimalsOperation: ServiceOperation {
         switch response {
         case .success(let object):
             do {
-                callCompletion(.success(try ListOfAnimalsArrayMapper.process(object)))
+                callCompletion(.success(try NewsResponseMapper.process(object)))
             } catch let error {
                 callCompletion(.failure(error))
             }
@@ -31,7 +31,7 @@ class ListOfAnimalsOperation: ServiceOperation {
         }
     }
 
-    func callCompletion(_ result: RequestResult<[AnimalItem]>) {
+    func callCompletion(_ result: RequestResult<[NewsItem]>) {
         self.result = result
         resultCompletion?(result)
     }
