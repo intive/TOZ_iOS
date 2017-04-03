@@ -9,9 +9,8 @@ import UIKit
 
 struct NewsEntity {
 
-    var identifier: String
     var title: String
-    var datePublished: Date
+    var datePublished: Int
     var content: String
     var picture: UIImage?
 

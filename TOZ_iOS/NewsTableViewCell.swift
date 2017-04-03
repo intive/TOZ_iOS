@@ -19,13 +19,20 @@ class NewsTableViewCell: UITableViewCell {
         self.backgroundColor = Color.Cell.Background.primary
     }
 
-    func configure(with news: NewsEntity) {
+    func configure(with news: NewsItem) {
 
         titleLabel.text = news.title
-        contentTextView.text = news.content
+        contentTextView.text = news.contents
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
-        datePublishedLabel.text = dateToString.string(from: news.datePublished)
-        photoView.photo = news.picture
+        datePublishedLabel.text = dateToString.string(from: news.published)
+        self.photoView.photo = nil
+        let photoURL: String? = news.photoUrl
+        if let photoURL = photoURL {
+            PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
+                self.photoView.photo = image
+            })
+        }
     }
+
 }
