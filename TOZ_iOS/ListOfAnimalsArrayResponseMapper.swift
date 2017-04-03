@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class ListOfAnimalsArrayMapper: ArrayResponseMapper<ListOfAnimalsItem>, ResponseMapperProtocol {
+final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseMapperProtocol {
 
-    static func process(_ obj: AnyObject?) throws -> [ListOfAnimalsItem] {
+    static func process(_ obj: AnyObject?) throws -> [AnimalItem] {
         return try process(obj, mapper: { jsonNode in
             guard let animalID = jsonNode["id"] as? String else { throw ResponseMapperError.responseParsingFailed }
             guard let name = jsonNode["name"] as? String else { throw ResponseMapperError.responseParsingFailed }
@@ -20,7 +20,7 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<ListOfAnimalsItem>, Re
             guard let created = jsonNode["created"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
             guard let lastModified = jsonNode["lastModified"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
             guard let imageUrl = jsonNode["imageUrl"] as? String? else { throw ResponseMapperError.responseParsingFailed }
-            return ListOfAnimalsItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: created, lastModified: lastModified, imageUrl: imageUrl)
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: created, lastModified: lastModified, imageUrl: imageUrl)
         })
     }
 }
