@@ -26,7 +26,6 @@ class NewsTableViewCell: UITableViewCell {
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
         datePublishedLabel.text = dateToString.string(from: news.published)
-        
         self.photoView.photo = nil
         let photoURL: String? = news.photoUrl
         if let photoURL = photoURL {
