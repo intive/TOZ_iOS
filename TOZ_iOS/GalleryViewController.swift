@@ -30,7 +30,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "galleryTableViewCell", for: indexPath)
-        if let cell = cell as? GalleryTableViewCell{
+        if let cell = cell as? GalleryTableViewCell {
             let animalInfo = animalsArray[indexPath.row]
             cell.animalDescription.text = animalInfo.description
             cell.animalName.text = animalInfo.name
