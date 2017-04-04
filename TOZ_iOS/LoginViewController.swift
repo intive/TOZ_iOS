@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = Color.Background.primary
         self.loginIncorrectImage.alpha = 0
         self.passwordIncorrectImage.alpha = 0
-        self.logoImageView.image = UIImage(named: "tozTempLogo")
+        self.logoImageView.image = UIImage(named: "pug_logo")
         self.companyNameLabel.text = "Towarzystwo Opieki nad Zwierzętami"
     }
 

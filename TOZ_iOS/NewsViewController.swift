@@ -6,50 +6,47 @@
 //
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var newsTableView: UITableView!
-    var news: [NewsEntity] = [
-        NewsEntity(identifier: "1", title: "Pappy has new home!", datePublished: Date(), content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.", picture: #imageLiteral(resourceName: "dogTemporary")),
-        NewsEntity(identifier: "2", title: "Scientists proved that cats are douchebags!", datePublished: Date(), content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.", picture: #imageLiteral(resourceName: "catTemporary"))] {
-                didSet {
-                    newsTableView.reloadData()
-                }
-        }
+    let newsOperation = NewsOperation()
+    var localNewsList = [NewsItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        newsTableView.dataSource = self
-        newsTableView.delegate = self
         self.newsTableView.backgroundColor = Color.Background.primary
         self.newsTableView.separatorColor = Color.TableView.separator
+        getNews()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-}
-
-extension NewsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return news.count
+        return localNewsList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath)
 
-        let cell: NewsTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "news_cell", for: indexPath) as? NewsTableViewCell)!
-        cell.configure(with: news[indexPath.row])
-
+        if let cell = cell as? NewsTableViewCell {
+            cell.configure(with: localNewsList[indexPath.row])
+        }
         return cell
-
     }
 
-}
+    func getNews() {
+        newsOperation.resultCompletion = { result in
 
-extension NewsViewController: UITableViewDelegate {
+            switch result {
+            case .success(let newsList):
+                DispatchQueue.main.async {
+                    self.localNewsList = newsList
+                    self.newsTableView.reloadData()
+                }
+            case .failure(let error):
+                print ("\(error)")
+            }
+        }
+        newsOperation.start()
+    }
 
 }
