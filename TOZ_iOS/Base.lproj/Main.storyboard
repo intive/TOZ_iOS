@@ -248,7 +248,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I5H-z0-603" id="hVY-1x-0Zw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNf-Wh-UAR">
@@ -375,63 +375,70 @@ PKO BO II O/Szczecin</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17e-HM-R10" userLabel="LoginView">
                                 <rect key="frame" x="37" y="287" width="300" height="82"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WjE-5c-3ym">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WjE-5c-3ym">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="GoN-4l-LdV"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7B-YB-XJE" userLabel="LoginErrorText">
-                                        <rect key="frame" x="0.0" y="42" width="300" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZA-gW-EDi" userLabel="InccorectLoginLabel">
+                                        <rect key="frame" x="0.0" y="48" width="44.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="zu2-NO-haH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.041046944600000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="HDj-hh-C2v">
-                                        <rect key="frame" x="270" y="10" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <color key="highlightedColor" red="1" green="0.0" blue="0.041046944600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="27S-Kk-2ad"/>
+                                    <constraint firstItem="WjE-5c-3ym" firstAttribute="leading" secondItem="17e-HM-R10" secondAttribute="leading" id="4KT-sa-Qfk"/>
+                                    <constraint firstItem="VZA-gW-EDi" firstAttribute="top" secondItem="WjE-5c-3ym" secondAttribute="bottom" constant="8" id="Oow-9M-snZ"/>
+                                    <constraint firstItem="VZA-gW-EDi" firstAttribute="leading" secondItem="17e-HM-R10" secondAttribute="leading" id="WNe-di-saC"/>
+                                    <constraint firstAttribute="trailing" secondItem="WjE-5c-3ym" secondAttribute="trailing" id="cg4-l4-iUC"/>
+                                    <constraint firstItem="WjE-5c-3ym" firstAttribute="top" secondItem="17e-HM-R10" secondAttribute="top" id="p2b-fV-4eV"/>
                                     <constraint firstAttribute="height" constant="82" id="uof-fe-ylZ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPa-Xr-BFU" userLabel="PasswordView">
                                 <rect key="frame" x="38" y="370" width="300" height="82"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Hasło" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZ4-sA-GCI">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Hasło" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZ4-sA-GCI">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="mrK-HR-MlE"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-2C-pT3" userLabel="PasswordErrorText">
-                                        <rect key="frame" x="0.0" y="42" width="300" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" notEnabled="YES"/>
-                                        </accessibility>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-Ik-azJ" userLabel="IncorrectPasswordLabel">
+                                        <rect key="frame" x="0.0" y="48" width="44.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="AEt-DY-b7s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.041046944600000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-ni-Hy0">
-                                        <rect key="frame" x="270" y="10" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vZ4-sA-GCI" secondAttribute="trailing" id="4YC-kT-fdd"/>
+                                    <constraint firstItem="3JT-Ik-azJ" firstAttribute="top" secondItem="vZ4-sA-GCI" secondAttribute="bottom" constant="8" id="5Tl-ye-dUb"/>
                                     <constraint firstAttribute="width" constant="300" id="aYM-mY-7BZ"/>
+                                    <constraint firstItem="vZ4-sA-GCI" firstAttribute="top" secondItem="ZPa-Xr-BFU" secondAttribute="top" id="cCV-eA-oBV"/>
+                                    <constraint firstItem="3JT-Ik-azJ" firstAttribute="leading" secondItem="ZPa-Xr-BFU" secondAttribute="leading" id="cIv-bc-S1a"/>
                                     <constraint firstAttribute="height" constant="82" id="qxT-bJ-IWe"/>
+                                    <constraint firstItem="vZ4-sA-GCI" firstAttribute="leading" secondItem="ZPa-Xr-BFU" secondAttribute="leading" id="zF7-Kh-QoR"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long company name. Very long company name. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-x3-tFk">
@@ -472,13 +479,13 @@ PKO BO II O/Szczecin</string>
                     </view>
                     <connections>
                         <outlet property="companyNameLabel" destination="Xx4-x3-tFk" id="2LI-hg-kbZ"/>
-                        <outlet property="loginErrorText" destination="x7B-YB-XJE" id="ZXV-5b-TBT"/>
-                        <outlet property="loginIncorrectImage" destination="HDj-hh-C2v" id="dAd-aL-Dda"/>
+                        <outlet property="incorrectLoginLabel" destination="VZA-gW-EDi" id="TX6-eQ-adX"/>
+                        <outlet property="incorrectPasswordLabel" destination="3JT-Ik-azJ" id="lqA-LZ-RB3"/>
                         <outlet property="loginTextField" destination="WjE-5c-3ym" id="rs5-Kx-mA0"/>
+                        <outlet property="loginView" destination="17e-HM-R10" id="ayQ-Vk-G0N"/>
                         <outlet property="logoImageView" destination="t4E-kw-iud" id="EJQ-DZ-N7O"/>
-                        <outlet property="passwordErrorText" destination="nmn-2C-pT3" id="4lp-9O-1vs"/>
-                        <outlet property="passwordIncorrectImage" destination="g5K-ni-Hy0" id="zgr-sC-wrU"/>
                         <outlet property="passwordTextField" destination="vZ4-sA-GCI" id="PeT-42-Y2z"/>
+                        <outlet property="passwordView" destination="ZPa-Xr-BFU" id="tPO-pa-1Tp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jc-nP-QAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -551,7 +558,6 @@ PKO BO II O/Szczecin</string>
         <image name="mapka" width="930" height="514"/>
         <image name="piggy-bank" width="64" height="64"/>
         <image name="placeholder-2" width="32" height="32"/>
-        <image name="second" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="0.019811868667602539" green="0.011734841391444206" blue="0.011669095605611801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
