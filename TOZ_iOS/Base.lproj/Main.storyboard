@@ -26,6 +26,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Zostań wolontariuszem"/>
+                                <connections>
+                                    <segue destination="a41-0e-6GE" kind="presentation" id="hYB-xo-wkh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-mv-asT">
                                 <rect key="frame" x="0.0" y="318" width="375" height="300"/>
@@ -141,7 +144,7 @@ PKO BO II O/Szczecin</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0k-oq-Ep1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Hy9-2Z-SmP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1784.8" y="-734.48275862068976"/>
+            <point key="canvasLocation" x="1785" y="-719"/>
         </scene>
         <!--NewsViewController-->
         <scene sceneID="wg7-f3-ORb">
@@ -490,7 +493,7 @@ PKO BO II O/Szczecin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jc-nP-QAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="-1415"/>
+            <point key="canvasLocation" x="1785" y="-1436"/>
         </scene>
         <!--MainTabBarController-->
         <scene sceneID="yl2-sM-qoP">

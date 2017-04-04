@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
         incorrectPassword()
         incorrectLogin()
         sessionIsOutdated()
+
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
