@@ -42,7 +42,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Help" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-help" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="Title" id="rYc-8H-jjX"/>
                     <connections>
                         <segue destination="s0n-Jd-znN" kind="modal" identifier="financeView" id="pXD-39-NKy"/>
@@ -221,7 +221,7 @@ PKO BO II O/Szczecin</string>
                             <constraint firstItem="0A2-ax-oox" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="hbj-I9-gYJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-feed" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="newsTableView" destination="0A2-ax-oox" id="1wj-Nm-hS9"/>
                     </connections>
@@ -313,7 +313,7 @@ PKO BO II O/Szczecin</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" image="first" id="vrd-JU-e4A"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-gallery" id="vrd-JU-e4A"/>
                     <connections>
                         <outlet property="galleryTableView" destination="NBp-S6-8yq" id="vkH-7f-Ya1"/>
                         <segue destination="m5n-HO-4WV" kind="show" identifier="showGalleryDetail" id="OUb-PL-SO9"/>
@@ -529,7 +529,7 @@ PKO BO II O/Szczecin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="first" id="oPL-v6-0MH"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="oPL-v6-0MH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LF-WZ-0qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,11 +556,14 @@ PKO BO II O/Szczecin</string>
     </scenes>
     <resources>
         <image name="credit-card-2" width="128" height="128"/>
-        <image name="first" width="30" height="30"/>
         <image name="id-card" width="64" height="64"/>
         <image name="mapka" width="930" height="514"/>
         <image name="piggy-bank" width="64" height="64"/>
         <image name="placeholder-2" width="32" height="32"/>
+        <image name="tab-bar-cal" width="50" height="52"/>
+        <image name="tab-bar-feed" width="50" height="46"/>
+        <image name="tab-bar-gallery" width="60" height="54"/>
+        <image name="tab-bar-help" width="50" height="50"/>
     </resources>
     <color key="tintColor" red="0.019811868667602539" green="0.011734841391444206" blue="0.011669095605611801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
