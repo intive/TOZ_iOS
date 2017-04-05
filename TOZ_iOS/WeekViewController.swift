@@ -8,6 +8,22 @@ import UIKit
 
 class WeekViewController: UIViewController {
 
+    @IBAction func tapAction(_ sender: WeekDayView) {
+        let tag = sender.tag
+        for button in weekDayViews {
+            if tag == button.tag {
+                weekDayViews[tag].valueOfDay.backgroundColor = UIColor.white
+                weekDayViews[tag].valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
+            } else {
+                weekDayViews[tag].valueOfDay.backgroundColor = UIColor.darkGray
+                weekDayViews[tag].valueOfDay.setTitleColor(UIColor.white, for: .normal)
+            }
+        }
+    }
+    @IBOutlet var weekDayViews: [WeekDayView]!
+
+    @IBOutlet var weekView: UIControl!
+
     @IBOutlet weak var calendarStack: UIStackView!
 
     @IBOutlet weak var scheduleMorning: UIStackView!
@@ -16,17 +32,5 @@ class WeekViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let scheduleM = Bundle.main.loadNibNamed("Schedule", owner: self, options: nil)?.first as? ScheduleView {
-            scheduleMorning.addSubview(scheduleM)
         }
-        if let scheduleA = Bundle.main.loadNibNamed("Schedule", owner: self, options: nil)?.first as? ScheduleView {
-            scheduleAfternoon.addSubview(scheduleA)
-        }
-        if let weekDay = Bundle.main.loadNibNamed("WeekDay", owner: self, options: nil)?.first as? WeekDayView {
-            calendarStack.addSubview(weekDay)
-        }
-
-    }
-
 }

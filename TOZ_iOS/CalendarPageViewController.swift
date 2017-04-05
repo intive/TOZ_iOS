@@ -20,8 +20,6 @@ class CalendarPageViewController: UIPageViewController {
         let weekAfter: WeekViewController = (self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as? WeekViewController)!
         guard let weekBefore: WeekViewController = self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as? WeekViewController else { return }
 
-        weekBefore.view.backgroundColor = UIColor.darkGray
-        weekAfter.view.backgroundColor = UIColor.orange
         weekPages.append(weekBefore)
         weekPages.append(weekAfter)
         //set initial view

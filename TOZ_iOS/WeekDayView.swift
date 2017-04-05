@@ -8,14 +8,22 @@
 
 import UIKit
 
-class WeekDayView: UIView {
+class WeekDayView: UIControl {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet var view: UIView!
+    @IBOutlet weak var dayOfweek: UILabel!
+    @IBOutlet weak var valueOfDay: UIButton!
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        Bundle.main.loadNibNamed("WeekDay", owner: self, options: nil)
+        self.view.frame = self.bounds
+        if let titleLabel = valueOfDay.titleLabel {
+            titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 8)
+        }
+        dayOfweek.layer.cornerRadius = 8
+        valueOfDay.layer.cornerRadius = 8
+        self.view.frame = self.bounds
+        self.addSubview(self.view)
     }
-    */
-
 }
