@@ -39,7 +39,17 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
-		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
+		54BEF3EA1E84186C00FB2FE7 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		54C61C9F1E95554000A5F537 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5426448B1E9277B000C3BB06 /* CalendarViewController.swift */; };
+		54C61CA01E95569200A5F537 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2D8D91E92FBD7009CFFB9 /* CalendarHelper.swift */; };
+		54C61CA11E95569600A5F537 /* CalendarPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */; };
+		54C61CA21E95569B00A5F537 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C8F4091E8A9D0300896924 /* WeekViewController.swift */; };
+		54C61CA31E9556A100A5F537 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C25DD01E8E5ACC0027A88B /* ScheduleView.swift */; };
+		54C61CA41E9556A400A5F537 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C25DD21E8E5AE30027A88B /* WeekDayView.swift */; };
+		54C61CA51E9556A600A5F537 /* CalendarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2D8DB1E92FD0F009CFFB9 /* CalendarEntity.swift */; };
+		54C61CA61E9556A800A5F537 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5424F3C31E94DFE400087AC3 /* CalendarService.swift */; };
+		54C61CA71E9556AC00A5F537 /* WeekDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D095471E8D3BBA00083EC7 /* WeekDay.xib */; };
+		54C61CA81E9556AF00A5F537 /* Schedule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D095451E8D3B9800083EC7 /* Schedule.xib */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
@@ -389,11 +399,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54D095481E8D3BBA00083EC7 /* WeekDay.xib in Resources */,
 				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
-				54D095461E8D3B9800083EC7 /* Schedule.xib in Resources */,
+				54C61CA71E9556AC00A5F537 /* WeekDay.xib in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
+				54C61CA81E9556AF00A5F537 /* Schedule.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,32 +529,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54C8F40A1E8A9D0300896924 /* WeekViewController.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
+				54C61CA11E95569600A5F537 /* CalendarPageViewController.swift in Sources */,
 				3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
 				3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */,
 				3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
+				54C61CA01E95569200A5F537 /* CalendarHelper.swift in Sources */,
 				4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */,
+				54C61C9F1E95554000A5F537 /* CalendarViewController.swift in Sources */,
+				54C61CA61E9556A800A5F537 /* CalendarService.swift in Sources */,
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
+				54C61CA31E9556A100A5F537 /* ScheduleView.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
-				54C25DD11E8E5ACC0027A88B /* ScheduleView.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
-				5426448C1E9277B000C3BB06 /* CalendarViewController.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
 				3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */,
+				54C61CA51E9556A600A5F537 /* CalendarEntity.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
+				54C61CA21E95569B00A5F537 /* WeekViewController.swift in Sources */,
+				54C61CA41E9556A400A5F537 /* WeekDayView.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
-				54A2D8DC1E92FD0F009CFFB9 /* CalendarEntity.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
@@ -554,12 +568,11 @@
 				4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */,
 				4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */,
 				8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */,
-				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
+				54BEF3EA1E84186C00FB2FE7 /* (null) in Sources */,
 				4B98B2E81E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
-				5424F3C41E94DFE400087AC3 /* CalendarService.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
