@@ -15,7 +15,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func unwindToGallery(segue: UIStoryboardSegue) {
     }
     //@IBOutlet weak var indicator: UIActivityIndicatorView!
-    var animalsArray:[GalleryEntity] = []
+    var animalsArray = [GalleryEntity]()
     override func viewDidLoad() {
         super.viewDidLoad()
         let firstAnimal = GalleryEntity(name: "Piorun", age: "3 lata", description: "Dog ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus.", image: UIImage(named: "dog1"))
