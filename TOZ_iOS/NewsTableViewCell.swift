@@ -29,7 +29,7 @@ class NewsTableViewCell: UITableViewCell {
         self.photoView.photo = nil
         let photoURL: String? = news.photoUrl
         if let photoURL = photoURL {
-            PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
+            PhotoManager.shared.getPhoto(from: "\(BackendConfiguration.shared.baseURL)/" + photoURL, completion: {(image) -> (Void) in
                 self.photoView.photo = image
             })
         }
