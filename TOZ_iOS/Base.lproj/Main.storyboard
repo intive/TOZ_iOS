@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -168,7 +169,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -251,7 +252,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I5H-z0-603" id="hVY-1x-0Zw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNf-Wh-UAR">
@@ -528,174 +529,154 @@ PKO BO II O/Szczecin</string>
                         <rect key="frame" x="0.0" y="0.0" width="354" height="456"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-zK-pWf">
-                                <rect key="frame" x="0.0" y="0.0" width="357" height="458"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-kn-OVp">
+                                <rect key="frame" x="20" y="8" width="314" height="440"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-cV-aWS">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-zK-pWf">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="220"/>
                                         <subviews>
-                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-bb-jFO" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="Dc9-hn-CQa"/>
-                                                </connections>
-                                            </view>
-                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk3-CW-xLl" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="valueChanged" id="RB1-13-QGO"/>
-                                                </connections>
-                                            </view>
-                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zid-hk-RVq" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="102" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="valueChanged" id="T7g-Fd-I0k"/>
-                                                </connections>
-                                            </view>
-                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xs4-th-Vy8" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="153" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="valueChanged" id="mdw-5q-YLl"/>
-                                                </connections>
-                                            </view>
-                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-HT-BbA" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="204" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="valueChanged" id="L4b-ch-cOy"/>
-                                                </connections>
-                                            </view>
-                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-GW-8bz" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="255" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="valueChanged" id="Ysj-FH-d7T"/>
-                                                </connections>
-                                            </view>
-                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjO-nF-RFJ" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="306" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="tapAction:" destination="NmJ-bD-S86" eventType="valueChanged" id="p3p-xp-uGp"/>
-                                                </connections>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-cV-aWS">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                                <subviews>
+                                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-bb-jFO" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="tapAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="Dc9-hn-CQa"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xk3-CW-xLl" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="45" y="0.0" width="44.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zid-hk-RVq" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="89.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xs4-th-Vy8" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="134.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-HT-BbA" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="179.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-GW-8bz" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="224.5" y="0.0" width="44.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="7" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FjO-nF-RFJ" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="269" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epp-JL-Vpi">
+                                                <rect key="frame" x="140.5" y="59" width="33" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-uF-jt7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-lW-FDO">
+                                                <rect key="frame" x="0.0" y="84.5" width="314" height="50"/>
+                                                <subviews>
+                                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-uh-xhF" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-9J-c08" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="45" y="0.0" width="44.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMw-Jm-drp" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="89.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqv-wr-z9W" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="134.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-rL-CO4" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="179.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dww-AY-9jS" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="224.5" y="0.0" width="44.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view tag="7" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJU-W7-GXt" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="269" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eUs-6p-wWG">
+                                                <rect key="frame" x="118.5" y="143.5" width="77" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Ll-q9g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.029020199552178383" green="0.6732446551322937" blue="0.96017700433731079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="riX-8D-LNp">
+                                                <rect key="frame" x="0.0" y="170" width="314" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-0p-MRd" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-o5-dbZ" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="45" y="0.0" width="44.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-7U-z5j" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="89.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-3O-TL0" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="134.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axm-Qe-xEp" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="179.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjh-jd-ig0" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="224.5" y="0.0" width="44.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-Tw-Tif" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="269" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epp-JL-Vpi">
-                                        <rect key="frame" x="0.0" y="50" width="357" height="17"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-uF-jt7">
-                                                <rect key="frame" x="0.0" y="0.0" width="357" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-lW-FDO">
-                                        <rect key="frame" x="0.0" y="67" width="357" height="52"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-uh-xhF" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-9J-c08" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMw-Jm-drp" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="102" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqv-wr-z9W" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="153" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-rL-CO4" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="204" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dww-AY-9jS" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="255" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJU-W7-GXt" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="306" y="0.0" width="51" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eUs-6p-wWG">
-                                        <rect key="frame" x="0.0" y="119" width="357" height="18"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Ll-q9g">
-                                                <rect key="frame" x="0.0" y="0.0" width="357" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.029020199552178383" green="0.6732446551322937" blue="0.96017700433731079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="riX-8D-LNp">
-                                        <rect key="frame" x="0.0" y="137" width="357" height="50"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-0p-MRd" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-o5-dbZ" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-7U-z5j" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="102" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-3O-TL0" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="153" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axm-Qe-xEp" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="204" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjh-jd-ig0" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="255" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-Tw-Tif" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="306" y="0.0" width="51" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0r-Kw-qJC">
-                                        <rect key="frame" x="0.0" y="187" width="357" height="271"/>
-                                        <color key="backgroundColor" red="1" green="0.30563805370000002" blue="0.25055329119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o0r-Kw-qJC">
+                                        <rect key="frame" x="0.0" y="220" width="314" height="220"/>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="o0r-Kw-qJC" firstAttribute="top" secondItem="Hy5-zK-pWf" secondAttribute="top" constant="187" id="KnZ-yX-LHq"/>
-                                    <constraint firstItem="epp-JL-Vpi" firstAttribute="top" secondItem="Hy5-zK-pWf" secondAttribute="top" constant="50" id="NOv-5s-2Lh"/>
-                                    <constraint firstItem="eUs-6p-wWG" firstAttribute="top" secondItem="Hy5-zK-pWf" secondAttribute="top" constant="119" id="hjd-DE-Xas"/>
-                                    <constraint firstItem="epp-JL-Vpi" firstAttribute="top" secondItem="PpP-cV-aWS" secondAttribute="bottom" id="pWG-4p-0q1"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Hy5-zK-pWf" firstAttribute="top" secondItem="je9-r4-j92" secondAttribute="bottom" id="91O-8I-5Ig"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Hy5-zK-pWf" secondAttribute="bottom" constant="-2" id="K5a-aw-Myy"/>
-                            <constraint firstItem="Hy5-zK-pWf" firstAttribute="leading" secondItem="i79-Tg-t8N" secondAttribute="leading" id="dRG-lf-QUe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hy5-zK-pWf" secondAttribute="trailing" constant="-19" id="vqp-MM-GgH"/>
+                            <constraint firstItem="Jp9-lH-vYf" firstAttribute="top" secondItem="gjc-kn-OVp" secondAttribute="bottom" priority="750" constant="8" symbolic="YES" id="Jio-Ua-qmt"/>
+                            <constraint firstItem="gjc-kn-OVp" firstAttribute="top" secondItem="je9-r4-j92" secondAttribute="bottom" priority="750" constant="8" symbolic="YES" id="O75-rE-q7h"/>
+                            <constraint firstAttribute="trailing" secondItem="gjc-kn-OVp" secondAttribute="trailing" constant="20" symbolic="YES" id="Yfv-Fx-cck"/>
+                            <constraint firstItem="gjc-kn-OVp" firstAttribute="leading" secondItem="i79-Tg-t8N" secondAttribute="leading" constant="20" symbolic="YES" id="eqT-Fg-RJm"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -706,13 +687,13 @@ PKO BO II O/Szczecin</string>
                         <outlet property="scheduleAfternoon" destination="riX-8D-LNp" id="zKK-dR-3Xh"/>
                         <outlet property="scheduleMorning" destination="Iz4-lW-FDO" id="LQ6-1M-e46"/>
                         <outlet property="weekView" destination="i79-Tg-t8N" id="mtT-jB-3Ju"/>
+                        <outletCollection property="weekDayViews" destination="FjO-nF-RFJ" collectionClass="NSMutableArray" id="chZ-wK-VJz"/>
+                        <outletCollection property="weekDayViews" destination="Xs4-th-Vy8" collectionClass="NSMutableArray" id="g81-Xw-5wH"/>
+                        <outletCollection property="weekDayViews" destination="fg0-GW-8bz" collectionClass="NSMutableArray" id="wNL-2r-80K"/>
                         <outletCollection property="weekDayViews" destination="qhq-bb-jFO" collectionClass="NSMutableArray" id="bi2-hp-5gA"/>
                         <outletCollection property="weekDayViews" destination="xk3-CW-xLl" collectionClass="NSMutableArray" id="j0S-A0-wM9"/>
                         <outletCollection property="weekDayViews" destination="zid-hk-RVq" collectionClass="NSMutableArray" id="iIj-LA-QGQ"/>
-                        <outletCollection property="weekDayViews" destination="Xs4-th-Vy8" collectionClass="NSMutableArray" id="g81-Xw-5wH"/>
                         <outletCollection property="weekDayViews" destination="DIf-HT-BbA" collectionClass="NSMutableArray" id="0Ar-W0-H4l"/>
-                        <outletCollection property="weekDayViews" destination="fg0-GW-8bz" collectionClass="NSMutableArray" id="wNL-2r-80K"/>
-                        <outletCollection property="weekDayViews" destination="FjO-nF-RFJ" collectionClass="NSMutableArray" id="chZ-wK-VJz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDP-G5-Gek" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -739,26 +720,26 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="bottom" id="7He-d5-pWj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Arb-gE-T89">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc8-k7-8k6">
-                                <rect key="frame" x="16" y="126" width="288" height="284"/>
+                                <rect key="frame" x="16" y="126" width="343" height="383"/>
                                 <connections>
                                     <segue destination="5tt-8M-XvX" kind="embed" id="8t5-hw-bht"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="7Di-sN-Tya">
-                                <rect key="frame" x="16" y="80" width="288" height="30"/>
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwp-2B-qDY">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="apR-2q-K7l">
-                                        <rect key="frame" x="176.5" y="0.0" width="111.5" height="30"/>
+                                        <rect key="frame" x="204" y="0.0" width="139" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44P-Z8-0VW">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -772,7 +753,7 @@ PKO BO II O/Szczecin</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNM-jJ-dGC">
-                                                <rect key="frame" x="81.5" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="109" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="&gt;">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
