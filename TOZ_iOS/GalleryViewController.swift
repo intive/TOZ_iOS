@@ -40,7 +40,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     // UITableViewDelegate
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showGalleryDetail", sender: self)
     }
 

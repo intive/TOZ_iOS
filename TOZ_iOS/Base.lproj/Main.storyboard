@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -168,7 +168,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -251,7 +251,7 @@ PKO BO II O/Szczecin</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I5H-z0-603" id="hVY-1x-0Zw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNf-Wh-UAR">
@@ -313,17 +313,17 @@ PKO BO II O/Szczecin</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab-bar-gallery" id="vrd-JU-e4A"/>
+                    <navigationItem key="navigationItem" title="GALERIA" id="CCz-TN-taZ"/>
                     <connections>
                         <outlet property="galleryTableView" destination="NBp-S6-8yq" id="vkH-7f-Ya1"/>
-                        <segue destination="m5n-HO-4WV" kind="show" identifier="showGalleryDetail" id="OUb-PL-SO9"/>
+                        <segue destination="Edr-KM-NY0" kind="show" identifier="showGalleryDetail" id="tD3-Yb-xjJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9s-ub-ycf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.79999999999995" y="753.37331334332839"/>
+            <point key="canvasLocation" x="1868" y="753.37331334332839"/>
         </scene>
-        <!--Gallery Detail View Controller-->
+        <!--PROFIL-->
         <scene sceneID="wJd-uY-Gns">
             <objects>
                 <viewController id="Edr-KM-NY0" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -336,11 +336,11 @@ PKO BO II O/Szczecin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="T7h-RI-Ugm"/>
+                    <navigationItem key="navigationItem" title="PROFIL" id="T7h-RI-Ugm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdw-HA-pNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2706.4000000000001" y="753.37331334332839"/>
+            <point key="canvasLocation" x="2610" y="753"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4vG-4N-OYH">
@@ -508,7 +508,7 @@ PKO BO II O/Szczecin</string>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Bcm-ur-ufL" kind="relationship" relationship="viewControllers" id="eO7-KV-001"/>
+                        <segue destination="bou-TN-CNO" kind="relationship" relationship="viewControllers" id="eO7-KV-001"/>
                         <segue destination="lRF-tU-lPU" kind="relationship" relationship="viewControllers" id="O0Y-Jp-JoR"/>
                     </connections>
                 </tabBarController>
@@ -536,22 +536,23 @@ PKO BO II O/Szczecin</string>
             <point key="canvasLocation" x="-518" y="754"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Wvw-bY-XyA">
+        <scene sceneID="DI6-x6-tYT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m5n-HO-4WV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bou-TN-CNO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-gallery" id="vrd-JU-e4A"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fXz-23-pWj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HmX-wu-tVQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Edr-KM-NY0" kind="relationship" relationship="rootViewController" id="5C7-Vk-moc"/>
+                        <segue destination="Bcm-ur-ufL" kind="relationship" relationship="rootViewController" id="wpI-Js-xIj"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IXi-77-gCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9I-Xk-dfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767.2" y="753.37331334332839"/>
+            <point key="canvasLocation" x="928.79999999999995" y="753.37331334332839"/>
         </scene>
     </scenes>
     <resources>
