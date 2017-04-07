@@ -52,8 +52,9 @@ class CalendarViewController: UIViewController {
 
         var calendarService = CalendarService()
 
-        prevButtonVar.layer.cornerRadius = 15
-        nextButtonVar.layer.cornerRadius = 15
+        prevButtonVar.layer.cornerRadius = prevButtonVar.bounds.height * 0.4
+        nextButtonVar.layer.cornerRadius = nextButtonVar.bounds.height * 0.4
+
         pageBoss = self.childViewControllers.first as? CalendarPageViewController
 
         let week = currentCalendar.getCurrentWeek()

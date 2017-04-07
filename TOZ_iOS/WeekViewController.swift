@@ -8,7 +8,9 @@ import UIKit
 
 class WeekViewController: UIViewController {
 
-    @IBAction func tapAction(_ sender: WeekDayView) {
+    @IBAction func aha(_ sender: Any) {
+    }
+    @IBAction func weekAction(_ sender: WeekDayView) {
         let tag = sender.tag
         for button in weekDayViews {
             if tag == button.tag {
