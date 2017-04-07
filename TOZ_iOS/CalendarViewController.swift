@@ -72,6 +72,11 @@ class CalendarViewController: UIViewController {
 
         return calExamplUI
     }
+    
+    func mapUIToRequestData(from uiData: [CalendarDataUI]) -> [CalendarEntity] {
+        
+        return calExamplRequest
+    }
 
     func nextPage() {
         let week = currentCalendar.getCurrentWeek()
@@ -89,34 +94,38 @@ class CalendarViewController: UIViewController {
 
         currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
 
-        for i in 0...6 {
-            guard let dayOfweek = (pageBoss.weekPages[pageBoss.indexPage].calendarStack.arrangedSubviews[i] as? WeekDayView)?.dayOfweek else { return }
-            dayOfweek.text = calendarDataUI[i].dayOfWeek
-            guard let valueOfDay = (pageBoss.weekPages[pageBoss.indexPage].calendarStack.arrangedSubviews[i] as? WeekDayView)?.valueOfDay else { return }
-            valueOfDay.setTitle(calendarDataUI[i].date, for: .normal)
-            if (currentCalendar.getDay()) == i {
-                valueOfDay.backgroundColor = UIColor.white
-                valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
-                dayOfweek.textColor = UIColor.white
-            }
-
-            guard let switchControlTop = (pageBoss.weekPages[pageBoss.indexPage].scheduleMorning.arrangedSubviews[i] as? ScheduleView)?.switchControl else { return }
-            if calendarDataUI[i].morning {
-                switchControlTop.backgroundColor = UIColor.darkGray
-                switchControlTop.setTitle(calendarDataUI[i].ownerId, for: .normal)
-            } else {
-                switchControlTop.backgroundColor = UIColor.white
-                switchControlTop.setTitle(calendarDataUI[i].ownerId, for: .normal)
-            }
-            guard let switchControlBottom = (pageBoss.weekPages[pageBoss.indexPage].scheduleAfternoon.arrangedSubviews[i] as? ScheduleView)?.switchControl else { return }
-            if calendarDataUI[i].afterNoon {
-                switchControlBottom.backgroundColor = UIColor.darkGray
-                switchControlBottom.setTitle(calendarDataUI[i].ownerId, for: .normal)
-            } else {
-                switchControlBottom.backgroundColor = UIColor.white
-                switchControlBottom.setTitle(calendarDataUI[i].ownerId, for: .normal)
+        let weekDayViews = pageBoss.weekPages[pageBoss.indexPage].weekDayViews
+        for dayAfterDay in weekDayViews! {
+            dayAfterDay.dayOfweek.text = calendarDataUI[dayAfterDay.tag].dayOfWeek
+            dayAfterDay.valueOfDay.setTitle(calendarDataUI[dayAfterDay.tag].date, for: .normal)
+            if (currentCalendar.getDay()) == dayAfterDay.tag {
+                dayAfterDay.valueOfDay.backgroundColor = UIColor.white
+                dayAfterDay.valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
+                dayAfterDay.dayOfweek.textColor = UIColor.white
             }
         }
+
+        let scheduleMoringViews = pageBoss.weekPages[pageBoss.indexPage].scheduleMoringViews
+        for scheduleItem in scheduleMoringViews! {
+            if calendarDataUI[scheduleItem.tag].morning {
+                scheduleItem.switchControl.backgroundColor = UIColor.darkGray
+            } else {
+                scheduleItem.switchControl.backgroundColor = UIColor.white
+                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
+            }
+        }
+
+        let scheduleAfterViews = pageBoss.weekPages[pageBoss.indexPage].scheduleAfterViews
+        for scheduleItem in scheduleAfterViews! {
+            if calendarDataUI[scheduleItem.tag].afterNoon {
+                scheduleItem.switchControl.backgroundColor = UIColor.darkGray
+                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
+            } else {
+                scheduleItem.switchControl.backgroundColor = UIColor.white
+                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
+            }
+        }
+
     }
 
 }
