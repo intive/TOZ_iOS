@@ -11,6 +11,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var newsTableView: UITableView!
     let newsOperation = NewsOperation()
     var localNewsList = [NewsItem]()
+    var selectedNewsCell: NewsTableViewCell?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,19 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.configure(with: localNewsList[indexPath.row])
         }
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as? NewsTableViewCell
+        selectedNewsCell = selectedCell
+        performSegue(withIdentifier: "newsDetailSegue", sender: selectedNewsCell)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newsDetailSegue" {
+            let newsDetailViewController = segue.destination as? NewsDetailViewController
+            newsDetailViewController?.selectedCell = selectedNewsCell
+
+        }
     }
 
     func getNews() {
