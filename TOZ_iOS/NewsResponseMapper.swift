@@ -19,7 +19,11 @@ final class NewsResponseMapper: ArrayResponseMapper<NewsItem>, ResponseMapperPro
             if let publishDate = publishDate {
                 published = Date(timeIntervalSince1970: TimeInterval(publishDate))
             }
-            return NewsItem(title: title, contents: contents, photoUrl: photoUrl, published: published)
+            var photoURL: URL? = nil
+            if let photoUrl = photoUrl {
+                photoURL = BackendConfiguration.shared.baseURL.appendingPathComponent(photoUrl)
+            }
+            return NewsItem(title: title, contents: contents, photoUrl: photoURL, published: published)
         })
     }
 }
