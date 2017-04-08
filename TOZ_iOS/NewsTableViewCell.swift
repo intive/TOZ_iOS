@@ -29,7 +29,7 @@ class NewsTableViewCell: UITableViewCell {
             datePublishedLabel.text = dateToString.string(from: published)
         }
         self.photoView.photo = nil
-        let photoURL: String? = news.photoUrl
+        let photoURL: URL? = news.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
                 self.photoView.photo = image

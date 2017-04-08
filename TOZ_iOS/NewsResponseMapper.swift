@@ -19,9 +19,9 @@ final class NewsResponseMapper: ArrayResponseMapper<NewsItem>, ResponseMapperPro
             if let publishDate = publishDate {
                 published = Date(timeIntervalSince1970: TimeInterval(publishDate))
             }
-            var photoURL: String? = nil
+            var photoURL: URL? = nil
             if let photoUrl = photoUrl {
-                photoURL = String(describing: BackendConfiguration.shared.baseURL.appendingPathComponent(photoUrl))
+                photoURL = BackendConfiguration.shared.baseURL.appendingPathComponent(photoUrl)
             }
             return NewsItem(title: title, contents: contents, photoUrl: photoURL, published: published)
         })
