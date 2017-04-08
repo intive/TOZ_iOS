@@ -21,7 +21,7 @@ final class NewsResponseMapper: ArrayResponseMapper<NewsItem>, ResponseMapperPro
             }
             var photoURL: String? = nil
             if let photoUrl = photoUrl {
-                photoURL = "\(BackendConfiguration.shared.baseURL)/"+photoUrl
+                photoURL = String(describing: BackendConfiguration.shared.baseURL.appendingPathComponent(photoUrl))
             }
             return NewsItem(title: title, contents: contents, photoUrl: photoURL, published: published)
         })
