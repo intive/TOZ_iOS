@@ -8,6 +8,7 @@
 import UIKit
 
 class NewsDetailViewController: UIViewController {
+    @IBOutlet weak var selectedTitleLabel: UILabel!
     @IBOutlet weak var selectedDateLabel: UILabel!
     @IBOutlet weak var selectedImageView: ProfilePhotoView!
     @IBOutlet weak var selectedContentLabel: UILabel!
@@ -15,7 +16,8 @@ class NewsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = selectedCell?.titleLabel.text
+        selectedContentLabel.sizeToFit()
+        selectedTitleLabel.text = selectedCell?.titleLabel.text
         selectedDateLabel.text = selectedCell?.datePublishedLabel.text
         selectedImageView.photo = selectedCell?.photoView.photo
         selectedContentLabel.text = selectedCell?.contentTextView.text
