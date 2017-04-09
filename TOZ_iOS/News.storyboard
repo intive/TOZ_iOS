@@ -13,7 +13,6 @@
         <!--NewsViewController-->
         <scene sceneID="Ic6-uI-xWc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpd-IH-bd8" sceneMemberID="firstResponder"/>
                 <viewController title="News" id="LDg-fo-A5n" userLabel="NewsViewController" customClass="NewsViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s1P-l8-cHA"/>
@@ -94,13 +93,13 @@
                         </segue>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpd-IH-bd8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2119" y="-99"/>
         </scene>
         <!--Title-->
         <scene sceneID="5Rb-gm-0Lh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I5t-ca-dnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="NewsDetailViewController" id="QIr-6d-S0g" customClass="NewsDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mL5-VE-uXX"/>
@@ -148,7 +147,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="AJQ-Bf-YG3" secondAttribute="trailing" constant="5" id="24Y-PA-2qC"/>
                                             <constraint firstAttribute="trailing" secondItem="Mxm-Qm-aM7" secondAttribute="trailing" constant="5" id="6Fd-H2-5lB"/>
@@ -200,13 +198,13 @@
                         <outlet property="selectedTitleLabel" destination="Mxm-Qm-aM7" id="ja1-qe-FYc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5t-ca-dnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2927" y="-99"/>
         </scene>
         <!--News-->
         <scene sceneID="ge0-nh-dXU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ECF-zG-zZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VL-lz-GRm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="tab-bar-feed" id="VmM-Vg-2oV"/>
                     <toolbarItems/>
@@ -220,6 +218,7 @@
                         <segue destination="LDg-fo-A5n" kind="relationship" relationship="rootViewController" id="hxe-bd-u5b"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECF-zG-zZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1180" y="-99"/>
         </scene>
