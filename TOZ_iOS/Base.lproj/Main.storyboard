@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6J-XI-6hm">
@@ -61,7 +63,7 @@
                         <viewControllerLayoutGuide type="bottom" id="woZ-qY-0oT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gBp-zW-gF3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dane do przelewu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfN-2e-xSz">
@@ -72,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcC-cn-7zS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -155,20 +157,20 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="229" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0A2-ax-oox">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news_cell" rowHeight="229" id="JL1-Lg-NlW" customClass="NewsTableViewCell" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="229"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JL1-Lg-NlW" id="2af-qm-LmO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iP-Q4-Lzk">
@@ -239,7 +241,7 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="bottom" id="iAx-B8-ZpV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tkm-f0-QOj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NBp-S6-8yq">
@@ -332,7 +334,7 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="bottom" id="gyu-ak-Jqy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yxC-T0-ejg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -351,11 +353,11 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="bottom" id="Zd5-c9-Zga"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SMP-Wf-VPY" userLabel="LoginMainView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-kw-iud">
-                                <rect key="frame" x="43" y="198" width="288" height="279"/>
+                                <rect key="frame" x="63" y="198" width="288" height="279"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="279" id="45D-1m-aQG"/>
                                     <constraint firstAttribute="width" constant="288" id="IHO-O9-eRX"/>
@@ -364,7 +366,7 @@ PKO BO II O/Szczecin</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-P1-uhR">
-                                <rect key="frame" x="97" y="462" width="180" height="50"/>
+                                <rect key="frame" x="117" y="462" width="180" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="8P4-NE-Cys"/>
@@ -376,7 +378,7 @@ PKO BO II O/Szczecin</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17e-HM-R10" userLabel="LoginView">
-                                <rect key="frame" x="37" y="287" width="300" height="82"/>
+                                <rect key="frame" x="57" y="287" width="300" height="82"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WjE-5c-3ym">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -392,7 +394,7 @@ PKO BO II O/Szczecin</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZA-gW-EDi" userLabel="InccorectLoginLabel">
-                                        <rect key="frame" x="0.0" y="48" width="44.5" height="21"/>
+                                        <rect key="frame" x="0.0" y="48" width="45" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="zu2-NO-haH"/>
                                         </constraints>
@@ -412,7 +414,7 @@ PKO BO II O/Szczecin</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPa-Xr-BFU" userLabel="PasswordView">
-                                <rect key="frame" x="38" y="370" width="300" height="82"/>
+                                <rect key="frame" x="57" y="370" width="300" height="82"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Hasło" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZ4-sA-GCI">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -425,7 +427,7 @@ PKO BO II O/Szczecin</string>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-Ik-azJ" userLabel="IncorrectPasswordLabel">
-                                        <rect key="frame" x="0.0" y="48" width="44.5" height="21"/>
+                                        <rect key="frame" x="0.0" y="48" width="45" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="AEt-DY-b7s"/>
                                         </constraints>
@@ -445,14 +447,14 @@ PKO BO II O/Szczecin</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long company name. Very long company name. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-x3-tFk">
-                                <rect key="frame" x="25" y="30" width="325" height="47"/>
+                                <rect key="frame" x="25" y="30" width="364" height="47"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaloguj się" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykl-FD-Jt3">
-                                <rect key="frame" x="145" y="117" width="85" height="21"/>
+                                <rect key="frame" x="165" y="117" width="85" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="d0l-TB-f5b"/>
                                     <constraint firstAttribute="width" constant="85" id="iiu-Cf-oKB"/>
@@ -516,6 +518,276 @@ PKO BO II O/Szczecin</string>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--WeekPage-->
+        <scene sceneID="lyq-1q-hb1">
+            <objects>
+                <viewController storyboardIdentifier="WeekViewController" autoresizesArchivedViewToFullSize="NO" title="WeekPage" modalPresentationStyle="pageSheet" id="NmJ-bD-S86" customClass="WeekViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="je9-r4-j92"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jp9-lH-vYf"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="TopLeft" id="i79-Tg-t8N">
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="456"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-kn-OVp">
+                                <rect key="frame" x="0.0" y="0.0" width="354" height="440"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="TopLeft" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-zK-pWf">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="220"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-cV-aWS">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-bb-jFO" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="t2k-FX-ufj"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk3-CW-xLl" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="8C5-4K-fzg"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zid-hk-RVq" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="101" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="WzK-40-l2h"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xs4-th-Vy8" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="Zcj-2L-Tyj"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-HT-BbA" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="202" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="oVp-T5-P6i"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-GW-8bz" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="253" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="uLc-J3-60i"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjO-nF-RFJ" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="303" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="p6d-vE-8Ty"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epp-JL-Vpi">
+                                                <rect key="frame" x="0.0" y="59" width="354" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcD-uF-jt7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-lW-FDO">
+                                                <rect key="frame" x="0.0" y="85" width="354" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr5-uh-xhF" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="NeZ-L3-NIl"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-9J-c08" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="0Vd-6M-jry"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMw-Jm-drp" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="101" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="YPW-HD-UOa"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqv-wr-z9W" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="yxA-1K-xdV"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-rL-CO4" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="202" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="6XB-pR-dBa"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dww-AY-9jS" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="253" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="glB-th-LZ9"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJU-W7-GXt" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="303" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="utf-0E-Kdj"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eUs-6p-wWG">
+                                                <rect key="frame" x="0.0" y="143" width="354" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Ll-q9g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
+                                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="riX-8D-LNp">
+                                                <rect key="frame" x="0.0" y="170" width="354" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-0p-MRd" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="bBz-oh-xeE"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-o5-dbZ" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="ERi-da-wc0"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGG-7U-z5j" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="101" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="do3-KR-PxT"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-3O-TL0" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="UW3-9o-L7i"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axm-Qe-xEp" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="202" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="S5a-fY-OHH"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjh-jd-ig0" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="253" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="VcY-Uf-QeI"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-Tw-Tif" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="303" y="0.0" width="51" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="NmJ-bD-S86" eventType="touchUpInside" id="9aa-Kd-gp8"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o0r-Kw-qJC">
+                                        <rect key="frame" x="0.0" y="220" width="354" height="220"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gjc-kn-OVp" firstAttribute="top" secondItem="je9-r4-j92" secondAttribute="bottom" id="O75-rE-q7h"/>
+                            <constraint firstAttribute="trailing" secondItem="gjc-kn-OVp" secondAttribute="trailing" id="Yfv-Fx-cck"/>
+                            <constraint firstItem="gjc-kn-OVp" firstAttribute="leading" secondItem="i79-Tg-t8N" secondAttribute="leading" id="eqT-Fg-RJm"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="354" height="456"/>
+                    <connections>
+                        <outlet property="calendarStack" destination="PpP-cV-aWS" id="S1r-pA-eg2"/>
+                        <outlet property="scheduleAfternoon" destination="riX-8D-LNp" id="zKK-dR-3Xh"/>
+                        <outlet property="scheduleMorning" destination="Iz4-lW-FDO" id="LQ6-1M-e46"/>
+                        <outlet property="weekView" destination="i79-Tg-t8N" id="mtT-jB-3Ju"/>
+                        <outletCollection property="weekDayViews" destination="FjO-nF-RFJ" collectionClass="NSMutableArray" id="chZ-wK-VJz"/>
+                        <outletCollection property="weekDayViews" destination="Xs4-th-Vy8" collectionClass="NSMutableArray" id="g81-Xw-5wH"/>
+                        <outletCollection property="weekDayViews" destination="fg0-GW-8bz" collectionClass="NSMutableArray" id="wNL-2r-80K"/>
+                        <outletCollection property="weekDayViews" destination="qhq-bb-jFO" collectionClass="NSMutableArray" id="bi2-hp-5gA"/>
+                        <outletCollection property="weekDayViews" destination="xk3-CW-xLl" collectionClass="NSMutableArray" id="j0S-A0-wM9"/>
+                        <outletCollection property="weekDayViews" destination="zid-hk-RVq" collectionClass="NSMutableArray" id="iIj-LA-QGQ"/>
+                        <outletCollection property="weekDayViews" destination="DIf-HT-BbA" collectionClass="NSMutableArray" id="0Ar-W0-H4l"/>
+                        <outletCollection property="scheduleMoringViews" destination="pr5-uh-xhF" collectionClass="NSMutableArray" id="Zj3-Qk-lPF"/>
+                        <outletCollection property="scheduleMoringViews" destination="1Og-9J-c08" collectionClass="NSMutableArray" id="rdK-an-cb4"/>
+                        <outletCollection property="scheduleMoringViews" destination="KMw-Jm-drp" collectionClass="NSMutableArray" id="nk3-QA-P6Z"/>
+                        <outletCollection property="scheduleMoringViews" destination="kqv-wr-z9W" collectionClass="NSMutableArray" id="cgc-jw-1nD"/>
+                        <outletCollection property="scheduleMoringViews" destination="kIp-rL-CO4" collectionClass="NSMutableArray" id="Lbk-Vk-fjg"/>
+                        <outletCollection property="scheduleMoringViews" destination="dww-AY-9jS" collectionClass="NSMutableArray" id="ZGd-cG-jXw"/>
+                        <outletCollection property="scheduleMoringViews" destination="EJU-W7-GXt" collectionClass="NSMutableArray" id="gnx-Er-wXP"/>
+                        <outletCollection property="scheduleAfterViews" destination="iM3-0p-MRd" collectionClass="NSMutableArray" id="YuK-pf-c1Q"/>
+                        <outletCollection property="scheduleAfterViews" destination="2dI-o5-dbZ" collectionClass="NSMutableArray" id="L4s-Cg-wbd"/>
+                        <outletCollection property="scheduleAfterViews" destination="JGG-7U-z5j" collectionClass="NSMutableArray" id="ihX-vV-hjP"/>
+                        <outletCollection property="scheduleAfterViews" destination="YZ1-3O-TL0" collectionClass="NSMutableArray" id="dKN-yn-9CG"/>
+                        <outletCollection property="scheduleAfterViews" destination="axm-Qe-xEp" collectionClass="NSMutableArray" id="swb-92-TI1"/>
+                        <outletCollection property="scheduleAfterViews" destination="wjh-jd-ig0" collectionClass="NSMutableArray" id="Tih-st-bbq"/>
+                        <outletCollection property="scheduleAfterViews" destination="wxa-Tw-Tif" collectionClass="NSMutableArray" id="0rx-Pl-f8V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDP-G5-Gek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2110.4000000000001" y="1531.0344827586207"/>
+        </scene>
+        <!--Calendar Page View Controller-->
+        <scene sceneID="GdS-GG-DNk">
+            <objects>
+                <pageViewController storyboardIdentifier="CalendarPageViewController" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5tt-8M-XvX" customClass="CalendarPageViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="354" height="456"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AvZ-IX-DfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1282" y="1339"/>
+        </scene>
         <!--CalendarViewController-->
         <scene sceneID="zQT-fF-PfN">
             <objects>
@@ -524,16 +796,86 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="top" id="jHJ-m5-Ygy"/>
                         <viewControllerLayoutGuide type="bottom" id="7He-d5-pWj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Arb-gE-T89">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Arb-gE-T89">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc8-k7-8k6">
+                                <rect key="frame" x="20" y="126" width="374" height="452"/>
+                                <connections>
+                                    <segue destination="5tt-8M-XvX" kind="embed" id="8t5-hw-bht"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="7Di-sN-Tya">
+                                <rect key="frame" x="20" y="80" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwp-2B-qDY">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="apR-2q-K7l">
+                                        <rect key="frame" x="220" y="0.0" width="154" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44P-Z8-0VW">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.65000000000000002"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="44P-Z8-0VW" secondAttribute="height" multiplier="1:1" id="AKB-PQ-5wb"/>
+                                                </constraints>
+                                                <state key="normal" title="&lt;">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="previousWeek:" destination="lRF-tU-lPU" eventType="touchUpInside" id="jxV-To-N8v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNM-jJ-dGC">
+                                                <rect key="frame" x="124" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zNM-jJ-dGC" secondAttribute="height" multiplier="1:1" id="9P4-Vi-NiM"/>
+                                                </constraints>
+                                                <state key="normal" title="&gt;">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextWeek:" destination="lRF-tU-lPU" eventType="touchUpInside" id="ahV-tU-B4B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="44P-Z8-0VW" firstAttribute="height" secondItem="zNM-jJ-dGC" secondAttribute="height" id="5Kf-nx-fEn"/>
+                                            <constraint firstItem="44P-Z8-0VW" firstAttribute="width" secondItem="zNM-jJ-dGC" secondAttribute="height" multiplier="1:1" id="6qP-FI-IcB"/>
+                                            <constraint firstItem="44P-Z8-0VW" firstAttribute="width" secondItem="zNM-jJ-dGC" secondAttribute="width" id="wFa-m1-nTY"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7He-d5-pWj" firstAttribute="top" secondItem="Oc8-k7-8k6" secondAttribute="bottom" constant="109" id="OH7-mo-cvr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Di-sN-Tya" secondAttribute="trailing" id="TjT-dN-oWN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oc8-k7-8k6" secondAttribute="trailing" id="Ucj-vs-o7T"/>
+                            <constraint firstItem="Oc8-k7-8k6" firstAttribute="top" secondItem="7Di-sN-Tya" secondAttribute="bottom" constant="16" id="aCv-5H-uQk"/>
+                            <constraint firstItem="Oc8-k7-8k6" firstAttribute="leading" secondItem="Arb-gE-T89" secondAttribute="leadingMargin" id="dah-Wc-FFb"/>
+                            <constraint firstItem="7Di-sN-Tya" firstAttribute="leading" secondItem="Arb-gE-T89" secondAttribute="leadingMargin" id="dxV-34-iUh"/>
+                            <constraint firstItem="7Di-sN-Tya" firstAttribute="top" secondItem="jHJ-m5-Ygy" secondAttribute="bottom" constant="60" id="yQe-Ct-7q9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="oPL-v6-0MH"/>
+                    <connections>
+                        <outlet property="currDateLabel" destination="fwp-2B-qDY" id="L27-7w-3nP"/>
+                        <outlet property="nextButtonVar" destination="zNM-jJ-dGC" id="pp6-uJ-2w8"/>
+                        <outlet property="prevButtonVar" destination="44P-Z8-0VW" id="AQb-dp-Rfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LF-WZ-0qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="754"/>
+            <point key="canvasLocation" x="-352.5" y="777.46478873239437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wvw-bY-XyA">
