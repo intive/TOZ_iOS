@@ -86,6 +86,7 @@ class ProfilePhotoView: UIView {
     }
 
     private func addPlaceholder() {
-        self.photoImageView.image = UIImage(named: "first")
+        self.photoImageView.image = UIImage(named: "placeholder")
+        self.backgroundColor = Color.Background.primary
     }
 }
