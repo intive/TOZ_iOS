@@ -2,8 +2,32 @@
 //  AnimalRequest.swift
 //  TOZ_iOS
 //
-//  Created by Filip Zieliński on 09/04/2017.
 //  Copyright © 2017 intive. All rights reserved.
 //
 
 import Foundation
+
+final class AnimalRequest: BackendAPIRequest {
+
+    private let animalID: String
+
+    init(animalID: String) {
+        self.animalID = animalID
+    }
+
+    var endpoint: String {
+        return "/pets/\(animalID)"
+    }
+
+    var method: NetworkService.Method {
+        return .GET
+    }
+
+    var parameters: [String: Any]? {
+        return nil
+    }
+
+    var headers: [String: String]? {
+        return defaultJSONHeaders()
+    }
+}

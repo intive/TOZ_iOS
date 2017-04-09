@@ -2,7 +2,6 @@
 //  GalleryDetailPageViewController.swift
 //  TOZ_iOS
 //
-//  Created by Filip Zieliński on 09/04/2017.
 //  Copyright © 2017 intive. All rights reserved.
 //
 
@@ -20,7 +19,6 @@ class GalleryDetailPageViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
