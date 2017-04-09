@@ -12,7 +12,6 @@
         <!--GalleryViewController-->
         <scene sceneID="biJ-Mo-c8t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u6w-zc-N2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="GalleryViewController" id="KSe-kZ-JEA" userLabel="GalleryViewController" customClass="GalleryViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z6L-L3-Jk5"/>
@@ -93,7 +92,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="g8m-kS-or0"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-gallery" id="g8m-kS-or0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="galleryTableView" destination="1wV-q0-plX" id="EVT-oJ-f16"/>
@@ -102,13 +101,13 @@
                         </segue>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6w-zc-N2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="753.37331334332839"/>
         </scene>
         <!--Gallery Detail View Controller-->
         <scene sceneID="H3S-Ao-kBS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RKW-d2-vM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Ins-4q-KpB" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T7T-6v-jbP"/>
@@ -121,13 +120,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="1MT-OW-06R"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKW-d2-vM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2706.4000000000001" y="753.37331334332839"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1th-Yw-nO0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YPX-2H-nd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZWx-8z-7au" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LU8-Ks-Eam">
@@ -139,8 +138,12 @@
                         <segue destination="Ins-4q-KpB" kind="relationship" relationship="rootViewController" id="6yO-Le-2WM"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPX-2H-nd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767.2" y="753.37331334332839"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab-bar-gallery" width="30" height="27"/>
+    </resources>
 </document>

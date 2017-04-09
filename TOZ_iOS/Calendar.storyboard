@@ -12,7 +12,6 @@
         <!--CalendarViewController-->
         <scene sceneID="ljX-cG-blm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WC7-dJ-B1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="CalendarViewController" id="MUk-He-Fbh" customClass="CalendarViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SGc-Ce-osR"/>
@@ -23,11 +22,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sZ1-8n-I3T"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="sZ1-8n-I3T"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WC7-dJ-B1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-518" y="754"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab-bar-cal" width="25" height="26"/>
+    </resources>
 </document>

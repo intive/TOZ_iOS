@@ -49,9 +49,10 @@
 		A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */; };
 		AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */; };
-		CE0BB3A11E958927006E23C7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A01E958927006E23C7 /* Help.storyboard */; };
 		CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */; };
 		CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A41E958980006E23C7 /* Calendar.storyboard */; };
+		CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A61E9A7059006E23C7 /* Help.storyboard */; };
+		CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A81E9A7127006E23C7 /* News.storyboard */; };
 		FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -114,9 +115,10 @@
 		A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOZ_iOSTests.swift; sourceTree = "<group>"; };
 		A1CABC0B1E6AEB1F009A06F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3D1325AC6CF9A0833CE20E0 /* Pods-TOZ_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		CE0BB3A01E958927006E23C7 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Help.storyboard; path = ../Help.storyboard; sourceTree = "<group>"; };
 		CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		CE0BB3A41E958980006E23C7 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		CE0BB3A61E9A7059006E23C7 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		CE0BB3A81E9A7127006E23C7 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		D193989766D107F5788BF823 /* Pods-TOZ_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC024A7099B1ED00E959A5C1 /* Pods-TOZ_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB010738E58D345E5DABAD84 /* Pods-TOZ_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,8 +265,9 @@
 				3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
+				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
+				CE0BB3A61E9A7059006E23C7 /* Help.storyboard */,
 				CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */,
-				CE0BB3A01E958927006E23C7 /* Help.storyboard */,
 				CE0BB3A41E958980006E23C7 /* Calendar.storyboard */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
 				A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */,
@@ -373,11 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */,
+				CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */,
 				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */,
+				CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */,
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
-				CE0BB3A11E958927006E23C7 /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
