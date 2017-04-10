@@ -16,11 +16,13 @@ class CalendarViewController: UIViewController {
     @IBAction func nextWeek(_ sender: Any) {
         currentCalendar.nextWeek()
         nextPage()
+        updateDate()
     }
 
     @IBAction func previousWeek(_ sender: Any) {
         currentCalendar.previousWeek()
         previousPage()
+        updateDate()
     }
 
     @IBOutlet weak var currDateLabel: UILabel!
@@ -79,6 +81,8 @@ class CalendarViewController: UIViewController {
         pageBoss.setViewControllers([weekBefore], direction: .forward, animated: true, completion: nil)
 
         let week = currentCalendar.getCurrentWeek()
+        updateDate()
+
         calendarData = requestWeeklyData(with: week[0], to: week[6])
         //calendarData = calendarService.requestWeeklyData(with: week[0], to: week[6])!
     }
@@ -110,49 +114,14 @@ class CalendarViewController: UIViewController {
         calendarData = requestWeeklyData(with: week[0], to: week[6])
     }
 
-    func updateUX() {
-
+    func updateDate() {
         currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
-
-        let weekDayViews = weekPages[indexPage].weekDayViews
-        for dayAfterDay in weekDayViews! {
-            dayAfterDay.dayOfweek.text = calendarDataUI[dayAfterDay.tag].dayOfWeek
-            dayAfterDay.valueOfDay.setTitle(calendarDataUI[dayAfterDay.tag].date, for: .normal)
-            if indexDay == dayAfterDay.tag {
-                dayAfterDay.valueOfDay.backgroundColor = UIColor.white
-                dayAfterDay.valueOfDay.setTitleColor(UIColor.darkText, for: .normal)
-                dayAfterDay.dayOfweek.textColor = UIColor.white
-            } else {
-                dayAfterDay.valueOfDay.backgroundColor = UIColor.lightGray
-                dayAfterDay.valueOfDay.setTitleColor(UIColor.white, for: .normal)
-                dayAfterDay.dayOfweek.textColor = UIColor.white
-            }
-        }
-
-        let scheduleMoringViews = weekPages[indexPage].scheduleMoringViews
-        for scheduleItem in scheduleMoringViews! {
-            if calendarDataUI[scheduleItem.tag].morning {
-                scheduleItem.switchControl.backgroundColor = UIColor.lightGray
-                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
-            } else {
-                scheduleItem.switchControl.backgroundColor = UIColor.white
-                scheduleItem.switchControl.setTitle(nil, for: .normal)
-            }
-        }
-
-        let scheduleAfterViews = weekPages[indexPage].scheduleAfterViews
-        for scheduleItem in scheduleAfterViews! {
-            if calendarDataUI[scheduleItem.tag].afterNoon {
-                scheduleItem.switchControl.backgroundColor = UIColor.lightGray
-                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
-            } else {
-                scheduleItem.switchControl.backgroundColor = UIColor.white
-                scheduleItem.switchControl.setTitle(nil, for: .normal)
-            }
-        }
-
     }
 
+    func updateUX() {
+        weekPages[indexPage].dataObj = calendarDataUI[indexDay]
+        weekPages[indexPage].updateUX()
+    }
 }
 
 extension CalendarViewController: UIPageViewControllerDataSource {

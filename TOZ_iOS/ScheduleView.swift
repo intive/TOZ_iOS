@@ -13,12 +13,6 @@ class ScheduleView: UIControl {
     @IBOutlet var sView: UIView!
     @IBOutlet weak var switchControl: UIButton!
 
-    func scheduleTap() {
-        let alertController = UIAlertController(title: "Dos†ępność terminu", message:
-            "Tak/Nie", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
        Bundle.main.loadNibNamed("Schedule", owner: self, options: nil)
