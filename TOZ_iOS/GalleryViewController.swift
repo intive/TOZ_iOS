@@ -12,6 +12,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var galleryTableView: UITableView!
 
     var animalsArray = [GalleryEntity]()
+    var selectedGalleryCellID: String?
 
     @IBOutlet weak var imageView: UIImageView!
     //@IBOutlet weak var indicator: UIActivityIndicatorView!
@@ -41,11 +42,17 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedAnimal = animalsArray[indexPath.row]
-        let destinationVC = GalleryDetailViewController()
-        destinationVC.animalID = selectedAnimal.animalID
-        performSegue(withIdentifier: "showGalleryDetail", sender: self)
+        let selectedCell = animalsArray[indexPath.row]
+        selectedGalleryCellID = selectedCell.animalID
+        performSegue(withIdentifier: "showGalleryDetail", sender: selectedGalleryCellID)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGalleryDetail" {
+            let GalleryDetailViewController = segue.destination as? GalleryDetailViewController
+            GalleryDetailViewController?.selectedCell = selectedGalleryCellID
+            }
+        }
 
     let listOfAnimalsOperation = ListOfAnimalsOperation()
 

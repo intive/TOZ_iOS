@@ -8,6 +8,8 @@
 import UIKit
 import Foundation
 
+let animalID = "45eb78b5-6a4d-41cc-9bf9-52b09fe20c95"
+
 class GalleryDetailViewController: UIViewController {
 
     @IBOutlet weak var animalName: UILabel!
@@ -16,9 +18,8 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalCreationDate: UILabel!
     @IBOutlet weak var animalDescription: UITextView!
 
-    var animalID: String = ""
-    
-    let animalOperation = AnimalOperation(animalID: animalID)
+    var selectedCell: String?
+    let animalOperation = AnimalOperation(animalID: selectedCell)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,13 @@ class GalleryDetailViewController: UIViewController {
 
     }
 
+//    func getAnimal() {
+//                    self.animalName.text = selectedCell?.animalName.text
+//                    self.animalType.text = selectedCell?.animalType.text
+//                    self.animalSex.text = selectedCell?.animalSex.text
+//                    self.animalCreationDate.text = String(describing: selectedCell?.animalCreated.text)
+//                    self.animalDescription.text = selectedCell?.animalDescription.text
+//        }
     func getAnimal() {
         animalOperation.resultCompletion = { result in
             switch result {

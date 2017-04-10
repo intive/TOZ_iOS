@@ -103,6 +103,35 @@
             </objects>
             <point key="canvasLocation" x="1868" y="753.37331334332839"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vnG-v4-4xJ">
+            <objects>
+                <viewController id="Rrt-Ah-JJX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gik-zs-CHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="zoc-aN-xWM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jSu-wc-0w2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vKS-Ap-9O0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vKS-Ap-9O0" firstAttribute="top" secondItem="Gik-zs-CHE" secondAttribute="bottom" id="Qx4-xX-3Bl"/>
+                            <constraint firstItem="zoc-aN-xWM" firstAttribute="top" secondItem="vKS-Ap-9O0" secondAttribute="bottom" id="dbh-jy-9aZ"/>
+                            <constraint firstItem="vKS-Ap-9O0" firstAttribute="leading" secondItem="jSu-wc-0w2" secondAttribute="leading" id="iyO-Wa-BWd"/>
+                            <constraint firstAttribute="trailing" secondItem="vKS-Ap-9O0" secondAttribute="trailing" id="vWv-8M-1dM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBu-Ii-ADY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600.8000000000002" y="93.553223388305852"/>
+        </scene>
         <!--PROFIL-->
         <scene sceneID="wJd-uY-Gns">
             <objects>
@@ -124,7 +153,7 @@
                                             <constraint firstAttribute="height" constant="220" id="DtV-1a-JRD"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="fzs-nj-nQM" kind="embed" id="bW6-dU-KGK"/>
+                                            <segue destination="Rrt-Ah-JJX" kind="embed" id="410-0e-nvi"/>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epi-Pq-row" userLabel="Divider">
@@ -380,39 +409,6 @@
             </objects>
             <point key="canvasLocation" x="2640.8000000000002" y="752.47376311844084"/>
         </scene>
-        <!--Gallery Detail Photo View Controller-->
-        <scene sceneID="cME-vR-z7o">
-            <objects>
-                <viewController storyboardIdentifier="PageContentViewController" id="fzs-nj-nQM" customClass="GalleryDetailPhotoViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RX7-T5-gS4"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yn1-BG-v5B"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Tfg-iI-Gmj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8TM-Tf-hPS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="8TM-Tf-hPS" firstAttribute="top" secondItem="RX7-T5-gS4" secondAttribute="bottom" id="Eip-gb-6HM"/>
-                            <constraint firstItem="Yn1-BG-v5B" firstAttribute="top" secondItem="8TM-Tf-hPS" secondAttribute="bottom" id="X5e-Vv-CzB"/>
-                            <constraint firstItem="8TM-Tf-hPS" firstAttribute="leading" secondItem="Tfg-iI-Gmj" secondAttribute="leading" id="gYQ-mi-04h"/>
-                            <constraint firstAttribute="trailing" secondItem="8TM-Tf-hPS" secondAttribute="trailing" id="rgo-aU-gNN"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="animalPhoto" destination="8TM-Tf-hPS" id="anj-0d-F7c"/>
-                        <outlet property="profileImage" destination="8TM-Tf-hPS" id="ODI-Lq-tzT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb8-Lm-3Q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2856.8000000000002" y="119.64017991004499"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nPe-KG-0tU">
             <objects>
@@ -439,6 +435,7 @@
         <image name="galleryDetailGenders" width="52" height="52"/>
         <image name="galleryDetailName" width="60" height="44"/>
         <image name="galleryDetailType" width="84" height="36"/>
+        <image name="placeholder" width="705" height="720"/>
         <image name="tab-bar-gallery" width="30" height="27"/>
     </resources>
 </document>
