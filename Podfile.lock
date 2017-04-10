@@ -1,12 +1,17 @@
 PODS:
+  - HockeySDK (4.1.4):
+    - HockeySDK/DefaultLib (= 4.1.4)
+  - HockeySDK/DefaultLib (4.1.4)
   - SwiftLint (0.16.1)
 
 DEPENDENCIES:
+  - HockeySDK
   - SwiftLint
 
 SPEC CHECKSUMS:
+  HockeySDK: 78a3f8bb9100277b531defc56c970369a3ca267a
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
 
-PODFILE CHECKSUM: 4962d21e3b540650f1e4f67e63a9cdf216a5ec7d
+PODFILE CHECKSUM: c62fcfa02dd445c8ed4efcbe1f4c1f938ab7a0aa
 
 COCOAPODS: 1.2.0
