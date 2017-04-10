@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnN-kX-wp4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Zostań wolontariuszem"/>
@@ -31,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-OB-HVa">
-                                <rect key="frame" x="0.0" y="318" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="332" width="375" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Dane do przelewu"/>
@@ -64,16 +65,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dane do przelewu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-rf-0Xd">
-                                <rect key="frame" x="16" y="218" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dane do przelewu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-rf-0Xd">
+                                <rect key="frame" x="15" y="218" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="erN-ud-cTJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-GR-mUS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-GR-mUS">
+                                <rect key="frame" x="0.0" y="20" width="374" height="44"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="d1o-65-leJ">
@@ -86,58 +88,103 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Można pomóc wpłacając darowiznę na konto Szczecińskiego Towarzystwa Opieki nad Zwierzętami " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-Ai-UhB">
-                                <rect key="frame" x="50" y="247" width="274" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="id-card" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-4z-Ym8">
-                                <rect key="frame" x="23" y="313" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id-card" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-4z-Ym8">
+                                <rect key="frame" x="23" y="291" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="33y-RC-DPO"/>
+                                    <constraint firstAttribute="height" constant="40" id="9JZ-UE-EvP"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-tU-ciV">
-                                <rect key="frame" x="23" y="361" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-tU-ciV">
+                                <rect key="frame" x="23" y="339" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R0W-je-vJi"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="piggy-bank" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-O7-d4L">
-                                <rect key="frame" x="23" y="409" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggy-bank" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-O7-d4L">
+                                <rect key="frame" x="23" y="387" width="40" height="31.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Towarzystwo Opieki nad Zwierzętami Oddział w Szczecinie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCO-Ql-OZW">
-                                <rect key="frame" x="85" y="313" width="267" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fundacja Opieki nad Zwierzętami Oddział w Szczecinie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tCO-Ql-OZW">
+                                <rect key="frame" x="85" y="291" width="245" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ul. Ojca Beyzyma 17 71-391 Szczecin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyU-3h-MJy">
-                                <rect key="frame" x="85" y="361" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ul. Mickiewicza 77  77-777 Szczecin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wyU-3h-MJy">
+                                <rect key="frame" x="85" y="339" width="141" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="sal-W9-y8i"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ2-wr-COp">
-                                <rect key="frame" x="85" y="409" width="267" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">63 1020 4795 0000 9402 0103 5419
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YJ2-wr-COp">
+                                <rect key="frame" x="85" y="387" width="267" height="31.5"/>
+                                <string key="text">63 1020 44444 0000 9999 0101 0101
 PKO BO II O/Szczecin</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapka" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-l2-QLo">
-                                <rect key="frame" x="23" y="475" width="329" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="credit-card-2" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-7V-0WY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card-2" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-7V-0WY">
                                 <rect key="frame" x="123" y="82" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="FR7-9h-rqq"/>
+                                    <constraint firstAttribute="height" constant="128" id="wq7-h4-gna"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Można pomóc wpłacając darowiznę na konto Fundacji Opieki nad Zwierzętami " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-Ai-UhB">
+                                <rect key="frame" x="44" y="240" width="285" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="SHE-qk-sWF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapka" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-l2-QLo">
+                                <rect key="frame" x="22" y="426.5" width="329" height="180.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RMm-rf-0Xd" firstAttribute="top" secondItem="A0g-7V-0WY" secondAttribute="bottom" constant="8" id="2gc-CZ-sTV"/>
+                            <constraint firstItem="e5h-GR-mUS" firstAttribute="centerX" secondItem="A0g-7V-0WY" secondAttribute="centerX" id="6Le-Se-9M7"/>
+                            <constraint firstItem="Cwf-tU-ciV" firstAttribute="leading" secondItem="7eO-O7-d4L" secondAttribute="leading" id="6sY-iK-54o"/>
+                            <constraint firstItem="e5h-GR-mUS" firstAttribute="bottom" secondItem="AXL-8w-Ifi" secondAttribute="bottom" id="8KN-v7-IJ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YJ2-wr-COp" secondAttribute="trailing" constant="7" id="BJ7-cR-kxV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tCO-Ql-OZW" secondAttribute="trailing" constant="29" id="EpV-Xo-JSa"/>
+                            <constraint firstItem="hYu-Ai-UhB" firstAttribute="top" secondItem="RMm-rf-0Xd" secondAttribute="bottom" constant="1" id="EvZ-nE-j07"/>
+                            <constraint firstItem="3pg-4z-Ym8" firstAttribute="trailing" secondItem="Cwf-tU-ciV" secondAttribute="trailing" id="EzZ-Lu-8Zw"/>
+                            <constraint firstItem="YJ2-wr-COp" firstAttribute="top" secondItem="wyU-3h-MJy" secondAttribute="bottom" constant="8" symbolic="YES" id="F4y-Ff-xT9"/>
+                            <constraint firstItem="A0g-7V-0WY" firstAttribute="leading" secondItem="uoY-mt-jZ0" secondAttribute="leadingMargin" constant="107" id="Gtf-AP-hl9"/>
+                            <constraint firstItem="RMm-rf-0Xd" firstAttribute="centerX" secondItem="A0g-7V-0WY" secondAttribute="centerX" id="GwO-ko-zcc"/>
+                            <constraint firstItem="Cwf-tU-ciV" firstAttribute="top" secondItem="wyU-3h-MJy" secondAttribute="top" id="H74-wC-kRA"/>
+                            <constraint firstItem="7eO-O7-d4L" firstAttribute="top" secondItem="YJ2-wr-COp" secondAttribute="top" id="KYg-Iv-2dB"/>
+                            <constraint firstItem="7eO-O7-d4L" firstAttribute="top" secondItem="Cwf-tU-ciV" secondAttribute="bottom" constant="8" symbolic="YES" id="L2A-VZ-n4k"/>
+                            <constraint firstItem="3pg-4z-Ym8" firstAttribute="top" secondItem="hYu-Ai-UhB" secondAttribute="bottom" constant="2" id="PSz-kK-qPh"/>
+                            <constraint firstItem="RMm-rf-0Xd" firstAttribute="leading" secondItem="uoY-mt-jZ0" secondAttribute="leadingMargin" constant="-1" id="Pr4-Ih-Viy"/>
+                            <constraint firstItem="hYu-Ai-UhB" firstAttribute="centerX" secondItem="CvY-l2-QLo" secondAttribute="centerX" id="QEd-om-yPc"/>
+                            <constraint firstItem="A0g-7V-0WY" firstAttribute="top" secondItem="AXL-8w-Ifi" secondAttribute="bottom" constant="18" id="Sf5-tV-b5i"/>
+                            <constraint firstItem="3pg-4z-Ym8" firstAttribute="leading" secondItem="uoY-mt-jZ0" secondAttribute="leadingMargin" constant="7" id="Sgr-OD-bZU"/>
+                            <constraint firstItem="CvY-l2-QLo" firstAttribute="leading" secondItem="uoY-mt-jZ0" secondAttribute="leadingMargin" constant="6" id="VUZ-ft-AoX"/>
+                            <constraint firstItem="3pg-4z-Ym8" firstAttribute="leading" secondItem="Cwf-tU-ciV" secondAttribute="leading" id="Xie-Os-47f"/>
+                            <constraint firstItem="3pg-4z-Ym8" firstAttribute="top" secondItem="tCO-Ql-OZW" secondAttribute="top" id="YYj-q7-NQ1"/>
+                            <constraint firstItem="CvY-l2-QLo" firstAttribute="top" secondItem="YJ2-wr-COp" secondAttribute="bottom" constant="8" symbolic="YES" id="bnQ-T6-83k"/>
+                            <constraint firstItem="hYu-Ai-UhB" firstAttribute="leading" secondItem="uoY-mt-jZ0" secondAttribute="leadingMargin" constant="28" id="cdD-y5-AHs"/>
+                            <constraint firstItem="Cwf-tU-ciV" firstAttribute="trailing" secondItem="7eO-O7-d4L" secondAttribute="trailing" id="fzB-Jy-PRg"/>
+                            <constraint firstItem="tCO-Ql-OZW" firstAttribute="leading" secondItem="wyU-3h-MJy" secondAttribute="leading" id="hGo-v9-ePg"/>
+                            <constraint firstItem="Cwf-tU-ciV" firstAttribute="top" secondItem="3pg-4z-Ym8" secondAttribute="bottom" constant="8" symbolic="YES" id="k4p-oM-yHh"/>
+                            <constraint firstItem="CvY-l2-QLo" firstAttribute="top" secondItem="7eO-O7-d4L" secondAttribute="bottom" constant="8" symbolic="YES" id="ml8-9g-iWL"/>
+                            <constraint firstItem="wyU-3h-MJy" firstAttribute="leading" secondItem="YJ2-wr-COp" secondAttribute="leading" id="pF1-iE-cgi"/>
+                            <constraint firstItem="e5h-GR-mUS" firstAttribute="leading" secondItem="uoY-mt-jZ0" secondAttribute="leading" id="q9s-DY-uzp"/>
+                            <constraint firstItem="tCO-Ql-OZW" firstAttribute="leading" secondItem="3pg-4z-Ym8" secondAttribute="trailing" constant="22" id="qRN-7a-9vO"/>
+                            <constraint firstItem="RMm-rf-0Xd" firstAttribute="centerX" secondItem="hYu-Ai-UhB" secondAttribute="centerX" id="t0U-Km-LBS"/>
+                            <constraint firstItem="RMm-rf-0Xd" firstAttribute="top" secondItem="A0g-7V-0WY" secondAttribute="bottom" constant="8" id="wBT-Zb-Zwd"/>
+                            <constraint firstItem="wyU-3h-MJy" firstAttribute="top" secondItem="tCO-Ql-OZW" secondAttribute="bottom" constant="8" symbolic="YES" id="xlQ-G3-nX0"/>
+                            <constraint firstItem="NOt-jw-dSw" firstAttribute="top" secondItem="CvY-l2-QLo" secondAttribute="bottom" constant="11" id="zLX-1X-uUG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xoq-Q9-bX6"/>
                 </viewController>
@@ -159,7 +206,7 @@ PKO BO II O/Szczecin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZ0-lg-Kdo">
-                                <rect key="frame" x="43" y="198" width="288" height="279"/>
+                                <rect key="frame" x="43.5" y="228" width="288" height="279"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="CBJ-52-dfS"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="279" id="Ov3-4b-wIY"/>
@@ -168,7 +215,7 @@ PKO BO II O/Szczecin</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaI-WR-tvL">
-                                <rect key="frame" x="97" y="462" width="180" height="50"/>
+                                <rect key="frame" x="97.5" y="462" width="180" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ulb-Bz-dtR"/>
@@ -180,7 +227,7 @@ PKO BO II O/Szczecin</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46S-SG-vo5" userLabel="LoginView">
-                                <rect key="frame" x="37" y="287" width="300" height="82"/>
+                                <rect key="frame" x="37.5" y="287" width="300" height="82"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-f4-QFG">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -216,7 +263,7 @@ PKO BO II O/Szczecin</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Z-mD-UYy" userLabel="PasswordView">
-                                <rect key="frame" x="38" y="370" width="300" height="82"/>
+                                <rect key="frame" x="37.5" y="370" width="300" height="82"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Hasło" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czo-1M-3EZ">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -248,15 +295,8 @@ PKO BO II O/Szczecin</string>
                                     <constraint firstAttribute="width" constant="300" id="s4j-ca-6qX"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long company name. Very long company name. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R14-f6-Ag7">
-                                <rect key="frame" x="25" y="30" width="325" height="47"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaloguj się" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-1C-MuQ">
-                                <rect key="frame" x="145" y="117" width="85" height="21"/>
+                                <rect key="frame" x="145" y="147" width="85" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Iee-Uq-SA3"/>
                                     <constraint firstAttribute="width" constant="85" id="OCQ-T9-0ZL"/>
@@ -265,15 +305,22 @@ PKO BO II O/Szczecin</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long company name. Very long company name. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R14-f6-Ag7">
+                                <rect key="frame" x="25" y="72" width="325" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="46S-SG-vo5" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="9Lh-pS-Afd"/>
                             <constraint firstItem="R14-f6-Ag7" firstAttribute="leading" secondItem="loI-oy-q98" secondAttribute="leading" constant="25" id="ElY-ct-JMZ"/>
-                            <constraint firstItem="R14-f6-Ag7" firstAttribute="top" secondItem="loI-oy-q98" secondAttribute="top" constant="30" id="MiC-Pk-lyN"/>
-                            <constraint firstItem="46S-SG-vo5" firstAttribute="top" secondItem="R14-f6-Ag7" secondAttribute="bottom" constant="210" id="Q18-c0-NDI"/>
+                            <constraint firstItem="R14-f6-Ag7" firstAttribute="top" secondItem="loI-oy-q98" secondAttribute="top" constant="72" id="MiC-Pk-lyN"/>
+                            <constraint firstItem="46S-SG-vo5" firstAttribute="top" secondItem="R14-f6-Ag7" secondAttribute="bottom" constant="168" id="Q18-c0-NDI"/>
                             <constraint firstItem="pZ0-lg-Kdo" firstAttribute="top" secondItem="iLE-1C-MuQ" secondAttribute="bottom" constant="60" id="QQ3-ba-SXl"/>
-                            <constraint firstItem="iLE-1C-MuQ" firstAttribute="top" secondItem="R14-f6-Ag7" secondAttribute="bottom" constant="40" id="WEX-y8-9I7"/>
+                            <constraint firstItem="iLE-1C-MuQ" firstAttribute="top" secondItem="R14-f6-Ag7" secondAttribute="bottom" constant="28" id="WEX-y8-9I7"/>
                             <constraint firstItem="iLE-1C-MuQ" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="YvU-Fz-wFI"/>
                             <constraint firstItem="FaI-WR-tvL" firstAttribute="top" secondItem="Y5Z-mD-UYy" secondAttribute="bottom" constant="10" id="aGS-yf-uLq"/>
                             <constraint firstItem="FaI-WR-tvL" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="cOS-jh-gYp"/>
