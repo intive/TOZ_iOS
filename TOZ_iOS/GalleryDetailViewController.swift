@@ -8,8 +8,6 @@
 import UIKit
 import Foundation
 
-var animalID = "133d5dd6-d616-454b-b3b7-50b8865997f1"
-
 class GalleryDetailViewController: UIViewController {
 
     @IBOutlet weak var animalName: UILabel!
@@ -18,11 +16,14 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalCreationDate: UILabel!
     @IBOutlet weak var animalDescription: UITextView!
 
+    var animalID: String = ""
+    
     let animalOperation = AnimalOperation(animalID: animalID)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getAnimal()
+
     }
 
     func getAnimal() {
@@ -42,4 +43,5 @@ class GalleryDetailViewController: UIViewController {
         }
         animalOperation.start()
     }
+
 }
