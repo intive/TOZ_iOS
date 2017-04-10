@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SXL-2F-4vk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HelpViewController-->
+        <scene sceneID="4Sq-kJ-UTy">
+            <objects>
+                <viewController title="Help" id="SXL-2F-4vk" userLabel="HelpViewController" customClass="HelpViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IO3-Hx-GBt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iib-Jj-wTU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zug-YU-hu3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnN-kX-wp4">
+                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Zostań wolontariuszem"/>
+                                <connections>
+                                    <segue destination="rjM-1G-CYG" kind="presentation" id="DLs-6f-bgP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-OB-HVa">
+                                <rect key="frame" x="0.0" y="318" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Dane do przelewu"/>
+                                <connections>
+                                    <action selector="financeHelpButton:" destination="SXL-2F-4vk" eventType="touchUpInside" id="kBR-xd-4Yv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-help" id="NqN-pX-M0k"/>
+                    <navigationItem key="navigationItem" title="Title" id="rEs-6D-MYl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="MoG-qp-HFg" kind="presentation" identifier="financeView" id="cTK-i3-ZJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHf-0s-jwh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="-734.48275862068976"/>
+        </scene>
+        <!--Help Finance View Controller-->
+        <scene sceneID="l6z-wk-tat">
+            <objects>
+                <viewController id="MoG-qp-HFg" customClass="HelpFinanceViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AXL-8w-Ifi"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOt-jw-dSw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uoY-mt-jZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dane do przelewu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-rf-0Xd">
+                                <rect key="frame" x="16" y="218" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-GR-mUS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem id="d1o-65-leJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Wróć" id="YWE-pF-j69">
+                                            <connections>
+                                                <action selector="backButton:" destination="MoG-qp-HFg" id="dWO-Eg-Vdd"/>
+                                                <segue destination="N7Y-vl-AVo" kind="unwind" unwindAction="unwindToHelpWithSegue:" id="C49-Jy-aiO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Można pomóc wpłacając darowiznę na konto Szczecińskiego Towarzystwa Opieki nad Zwierzętami " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-Ai-UhB">
+                                <rect key="frame" x="50" y="247" width="274" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="id-card" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-4z-Ym8">
+                                <rect key="frame" x="23" y="313" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-tU-ciV">
+                                <rect key="frame" x="23" y="361" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="piggy-bank" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-O7-d4L">
+                                <rect key="frame" x="23" y="409" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Towarzystwo Opieki nad Zwierzętami Oddział w Szczecinie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCO-Ql-OZW">
+                                <rect key="frame" x="85" y="313" width="267" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ul. Ojca Beyzyma 17 71-391 Szczecin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyU-3h-MJy">
+                                <rect key="frame" x="85" y="361" width="130" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ2-wr-COp">
+                                <rect key="frame" x="85" y="409" width="267" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">63 1020 4795 0000 9402 0103 5419
+PKO BO II O/Szczecin</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapka" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-l2-QLo">
+                                <rect key="frame" x="23" y="475" width="329" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="credit-card-2" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-7V-0WY">
+                                <rect key="frame" x="123" y="82" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xoq-Q9-bX6"/>
+                </viewController>
+                <exit id="N7Y-vl-AVo" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnw-gJ-4vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-719"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="U7l-Es-Rht">
+            <objects>
+                <viewController id="rjM-1G-CYG" customClass="LoginViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zn3-gM-Iuf"/>
+                        <viewControllerLayoutGuide type="bottom" id="LB2-OI-uVv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="loI-oy-q98" userLabel="LoginMainView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZ0-lg-Kdo">
+                                <rect key="frame" x="43" y="198" width="288" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="CBJ-52-dfS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="279" id="Ov3-4b-wIY"/>
+                                    <constraint firstAttribute="width" constant="288" id="WfR-w7-01t"/>
+                                    <constraint firstAttribute="height" constant="279" id="i9n-19-iij"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaI-WR-tvL">
+                                <rect key="frame" x="97" y="462" width="180" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ulb-Bz-dtR"/>
+                                    <constraint firstAttribute="width" constant="180" id="wwe-RG-qh1"/>
+                                </constraints>
+                                <state key="normal" title="Zaloguj się"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="rjM-1G-CYG" eventType="touchUpInside" id="Yvv-DT-VGm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46S-SG-vo5" userLabel="LoginView">
+                                <rect key="frame" x="37" y="287" width="300" height="82"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-f4-QFG">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BZi-9D-UEe"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOq-a2-Xyr" userLabel="InccorectLoginLabel">
+                                        <rect key="frame" x="0.0" y="48" width="45" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Kv1-uJ-KQ9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.041046944600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="0.0" blue="0.041046944600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="G1c-wj-ILX"/>
+                                    <constraint firstAttribute="trailing" secondItem="ogU-f4-QFG" secondAttribute="trailing" id="X45-Ud-0Tw"/>
+                                    <constraint firstItem="dOq-a2-Xyr" firstAttribute="leading" secondItem="46S-SG-vo5" secondAttribute="leading" id="emx-hq-80j"/>
+                                    <constraint firstAttribute="height" constant="82" id="faw-b1-ayR"/>
+                                    <constraint firstItem="ogU-f4-QFG" firstAttribute="leading" secondItem="46S-SG-vo5" secondAttribute="leading" id="oZP-6a-YC8"/>
+                                    <constraint firstItem="dOq-a2-Xyr" firstAttribute="top" secondItem="ogU-f4-QFG" secondAttribute="bottom" constant="8" id="quO-Qs-eKf"/>
+                                    <constraint firstItem="ogU-f4-QFG" firstAttribute="top" secondItem="46S-SG-vo5" secondAttribute="top" id="xjq-OW-LGd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Z-mD-UYy" userLabel="PasswordView">
+                                <rect key="frame" x="38" y="370" width="300" height="82"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Hasło" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czo-1M-3EZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tDc-SM-D0M"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaD-iu-FIf" userLabel="IncorrectPasswordLabel">
+                                        <rect key="frame" x="0.0" y="48" width="45" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="JYp-T2-hbA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.041046944600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="czo-1M-3EZ" secondAttribute="trailing" id="Fcd-i9-lkp"/>
+                                    <constraint firstItem="czo-1M-3EZ" firstAttribute="top" secondItem="Y5Z-mD-UYy" secondAttribute="top" id="Mnq-r9-Kqx"/>
+                                    <constraint firstAttribute="height" constant="82" id="Zim-ep-ZHX"/>
+                                    <constraint firstItem="czo-1M-3EZ" firstAttribute="leading" secondItem="Y5Z-mD-UYy" secondAttribute="leading" id="e8f-bH-ScZ"/>
+                                    <constraint firstItem="HaD-iu-FIf" firstAttribute="top" secondItem="czo-1M-3EZ" secondAttribute="bottom" constant="8" id="eqB-Cg-fon"/>
+                                    <constraint firstItem="HaD-iu-FIf" firstAttribute="leading" secondItem="Y5Z-mD-UYy" secondAttribute="leading" id="pxp-fu-ydd"/>
+                                    <constraint firstAttribute="width" constant="300" id="s4j-ca-6qX"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long company name. Very long company name. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R14-f6-Ag7">
+                                <rect key="frame" x="25" y="30" width="325" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaloguj się" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-1C-MuQ">
+                                <rect key="frame" x="145" y="117" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Iee-Uq-SA3"/>
+                                    <constraint firstAttribute="width" constant="85" id="OCQ-T9-0ZL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="46S-SG-vo5" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="9Lh-pS-Afd"/>
+                            <constraint firstItem="R14-f6-Ag7" firstAttribute="leading" secondItem="loI-oy-q98" secondAttribute="leading" constant="25" id="ElY-ct-JMZ"/>
+                            <constraint firstItem="R14-f6-Ag7" firstAttribute="top" secondItem="loI-oy-q98" secondAttribute="top" constant="30" id="MiC-Pk-lyN"/>
+                            <constraint firstItem="46S-SG-vo5" firstAttribute="top" secondItem="R14-f6-Ag7" secondAttribute="bottom" constant="210" id="Q18-c0-NDI"/>
+                            <constraint firstItem="pZ0-lg-Kdo" firstAttribute="top" secondItem="iLE-1C-MuQ" secondAttribute="bottom" constant="60" id="QQ3-ba-SXl"/>
+                            <constraint firstItem="iLE-1C-MuQ" firstAttribute="top" secondItem="R14-f6-Ag7" secondAttribute="bottom" constant="40" id="WEX-y8-9I7"/>
+                            <constraint firstItem="iLE-1C-MuQ" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="YvU-Fz-wFI"/>
+                            <constraint firstItem="FaI-WR-tvL" firstAttribute="top" secondItem="Y5Z-mD-UYy" secondAttribute="bottom" constant="10" id="aGS-yf-uLq"/>
+                            <constraint firstItem="FaI-WR-tvL" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="cOS-jh-gYp"/>
+                            <constraint firstAttribute="trailing" secondItem="R14-f6-Ag7" secondAttribute="trailing" constant="25" id="dL0-JA-ave"/>
+                            <constraint firstItem="R14-f6-Ag7" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="enf-un-vMf"/>
+                            <constraint firstItem="Y5Z-mD-UYy" firstAttribute="top" secondItem="46S-SG-vo5" secondAttribute="bottom" constant="1" id="hA6-6h-e7N"/>
+                            <constraint firstItem="pZ0-lg-Kdo" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="oz4-3Y-X49"/>
+                            <constraint firstItem="Y5Z-mD-UYy" firstAttribute="centerX" secondItem="loI-oy-q98" secondAttribute="centerX" id="zAJ-pa-V10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="companyNameLabel" destination="R14-f6-Ag7" id="1pJ-FC-YPU"/>
+                        <outlet property="incorrectLoginLabel" destination="dOq-a2-Xyr" id="fgm-9Y-vTp"/>
+                        <outlet property="incorrectPasswordLabel" destination="HaD-iu-FIf" id="ILX-lr-b1N"/>
+                        <outlet property="loginTextField" destination="ogU-f4-QFG" id="rBv-8Q-myw"/>
+                        <outlet property="loginView" destination="46S-SG-vo5" id="hnM-d0-C1t"/>
+                        <outlet property="logoImageView" destination="pZ0-lg-Kdo" id="fpx-cR-ge4"/>
+                        <outlet property="passwordTextField" destination="czo-1M-3EZ" id="oHv-k0-xiJ"/>
+                        <outlet property="passwordView" destination="Y5Z-mD-UYy" id="yeC-1f-2Wt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TsE-vm-E0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-1436"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="credit-card-2" width="128" height="128"/>
+        <image name="id-card" width="64" height="64"/>
+        <image name="mapka" width="930" height="514"/>
+        <image name="piggy-bank" width="64" height="64"/>
+        <image name="placeholder" width="705" height="720"/>
+        <image name="tab-bar-help" width="25" height="25"/>
+    </resources>
+</document>
