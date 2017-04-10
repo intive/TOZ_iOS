@@ -22,7 +22,7 @@ class ScheduleView: UIControl {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
        Bundle.main.loadNibNamed("Schedule", owner: self, options: nil)
-        switchControl.layer.cornerRadius = switchControl.bounds.height * 0.4
+        switchControl.layer.cornerRadius = switchControl.bounds.height * 0.35
 
         self.sView.frame = self.bounds
         if let titleLabel = switchControl.titleLabel {

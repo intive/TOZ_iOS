@@ -21,8 +21,8 @@ class WeekDayView: UIControl {
         if let titleLabel = valueOfDay.titleLabel {
             titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 8)
         }
-        dayOfweek.layer.cornerRadius = dayOfweek.bounds.height * 0.4
-        valueOfDay.layer.cornerRadius = dayOfweek.bounds.height * 0.4
+        dayOfweek.layer.cornerRadius = dayOfweek.bounds.height * 0.35
+        valueOfDay.layer.cornerRadius = dayOfweek.bounds.height * 0.35
         self.view.frame = self.bounds
         self.addSubview(self.view)
     }

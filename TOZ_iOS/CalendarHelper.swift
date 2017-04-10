@@ -41,7 +41,7 @@ class CalendarHelper {
 
     func getDay() -> Int {
         let dayWeek = currentCalendar.component(.weekday, from: currentDate)
-        let dayFromMon = (dayWeek != 1 ? dayWeek-2 : 7)
+        let dayFromMon = (dayWeek != 1 ? dayWeek - 2 : 7)
         return dayFromMon
     }
 

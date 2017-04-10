@@ -58,8 +58,8 @@
 		A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */; };
 		A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */; };
-		AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */; };
-		FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		AA04D596234770687A312BCC /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		FD74D32931BCD4088F24DCF6 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37434B5C1E7F1B7E00336605 /* NewsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
 		37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
@@ -116,7 +115,6 @@
 		54C8F4091E8A9D0300896924 /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		54D095451E8D3B9800083EC7 /* Schedule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Schedule.xib; sourceTree = "<group>"; };
 		54D095471E8D3BBA00083EC7 /* WeekDay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDay.xib; sourceTree = "<group>"; };
-		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */,
+				FD74D32931BCD4088F24DCF6 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */,
+				AA04D596234770687A312BCC /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,8 +226,8 @@
 			children = (
 				5426448B1E9277B000C3BB06 /* CalendarViewController.swift */,
 				54AEE4D11E8B0FCF00F647DD /* CalendarPageViewController.swift */,
-				54A2D8D91E92FBD7009CFFB9 /* CalendarHelper.swift */,
 				54C8F4091E8A9D0300896924 /* WeekViewController.swift */,
+				54A2D8D91E92FBD7009CFFB9 /* CalendarHelper.swift */,
 				54D095451E8D3B9800083EC7 /* Schedule.xib */,
 				54D095471E8D3BBA00083EC7 /* WeekDay.xib */,
 				54C25DD01E8E5ACC0027A88B /* ScheduleView.swift */,
@@ -243,8 +241,6 @@
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */,
-				0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

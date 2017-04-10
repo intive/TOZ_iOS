@@ -8,28 +8,53 @@ import UIKit
 
 class WeekViewController: UIViewController {
 
-    @IBAction func weekAction(_ sender: WeekDayView) {
-        print("weekAction")
+    var delegate: CalendarViewController!
 
+    @IBAction func weekAction(_ sender: WeekDayView) {
         let tag = sender.tag
-        for button in weekDayViews {
-            if tag == button.tag {
-                weekDayViews[tag].valueOfDay.backgroundColor = UIColor.white
-                weekDayViews[tag].valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
-            } else {
-                weekDayViews[tag].valueOfDay.backgroundColor = UIColor.lightGray
-                weekDayViews[tag].valueOfDay.setTitleColor(UIColor.white, for: .normal)
-            }
+        if tag != delegate.indexDay {
+            print(tag)
+            print(delegate.indexDay)
+            weekDayViews[delegate.indexDay].valueOfDay.backgroundColor = UIColor.lightGray
+            weekDayViews[delegate.indexDay].valueOfDay.setTitleColor(UIColor.white, for: .normal)
+            weekDayViews[tag].valueOfDay.backgroundColor = UIColor.white
+            weekDayViews[tag].valueOfDay.setTitleColor(UIColor.lightGray, for: .normal)
+            delegate.indexDay = tag
         }
     }
 
     @IBAction func scheduleMorningAction(_ sender: ScheduleView) {
-        print(scheduleMoringViews.count)
-        print(scheduleMoringViews[1].tag)
-        print("scheduleMorningAction")
+        let tag = sender.tag
+        if tag == delegate.indexDay {
+            if scheduleMoringViews[delegate.indexDay].switchControl.title(for: .normal) == nil {
+                print("make reservation")
+                scheduleMoringViews[delegate.indexDay].switchControl.setTitle("RK", for: .normal)
+                scheduleMoringViews[delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
+                scheduleMoringViews[delegate.indexDay].switchControl.backgroundColor = UIColor.lightGray
+            } else {
+                print("delete reservation")
+                scheduleMoringViews[delegate.indexDay].switchControl.setTitle(nil, for: .normal)
+                scheduleMoringViews[delegate.indexDay].switchControl.setTitleColor(UIColor.lightGray, for: .normal)
+                scheduleMoringViews[delegate.indexDay].switchControl.backgroundColor = UIColor.white
+            }
+        }
     }
-//scheduleAfterAction
+
     @IBAction func scheduleAfterAction(_ sender: ScheduleView) {
+        let tag = sender.tag
+        if tag == delegate.indexDay {
+            if scheduleAfterViews[delegate.indexDay].switchControl.title(for: .normal) == nil {
+                print("make reservation")
+                scheduleAfterViews[delegate.indexDay].switchControl.setTitle("RK", for: .normal)
+                scheduleAfterViews[delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
+                scheduleAfterViews[delegate.indexDay].switchControl.backgroundColor = UIColor.lightGray
+            } else {
+                print("delete reservation")
+                scheduleAfterViews[delegate.indexDay].switchControl.setTitle(nil, for: .normal)
+                scheduleAfterViews[delegate.indexDay].switchControl.setTitleColor(UIColor.lightGray, for: .normal)
+                scheduleAfterViews[delegate.indexDay].switchControl.backgroundColor = UIColor.white
+            }
+        }
     }
 
     @IBOutlet var weekDayViews: [WeekDayView]!

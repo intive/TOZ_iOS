@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import Foundation
 
 class CalendarViewController: UIViewController {
 
@@ -31,12 +32,22 @@ class CalendarViewController: UIViewController {
     }
 
     var pageBoss: CalendarPageViewController!
+    var weekPages = [WeekViewController]()
+    var indexPage: Int = 0
+    var indexDay: Int = 0
+    var getNewIndexPage: Int {
+        indexPage -= 1
+        indexPage = abs(indexPage)
+
+        return indexPage
+    }
 
     var calendarData: [CalendarEntity] = [] {
         didSet {
             calendarDataUI = mapRequestDataToUI(from: calendarData)
         }
     }
+
     var calendarDataUI: [CalendarDataUI] = [] {
         didSet {
             updateUX()
@@ -52,15 +63,24 @@ class CalendarViewController: UIViewController {
 
         var calendarService = CalendarService()
 
-        prevButtonVar.layer.cornerRadius = prevButtonVar.bounds.height * 0.4
-        nextButtonVar.layer.cornerRadius = nextButtonVar.bounds.height * 0.4
+        prevButtonVar.layer.cornerRadius = prevButtonVar.bounds.height * 0.45
+        nextButtonVar.layer.cornerRadius = nextButtonVar.bounds.height * 0.45
 
         pageBoss = self.childViewControllers.first as? CalendarPageViewController
+        pageBoss.dataSource = self
+        let weekAfter: WeekViewController = (self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as? WeekViewController)!
+        guard let weekBefore: WeekViewController = self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as? WeekViewController else { return }
+
+        weekBefore.delegate = self
+        weekAfter.delegate = self
+        weekPages.append(weekBefore)
+        weekPages.append(weekAfter)
+        //set initial view
+        pageBoss.setViewControllers([weekBefore], direction: .forward, animated: true, completion: nil)
 
         let week = currentCalendar.getCurrentWeek()
         calendarData = requestWeeklyData(with: week[0], to: week[6])
         //calendarData = calendarService.requestWeeklyData(with: week[0], to: week[6])!
-        calendarDataUI = mapRequestDataToUI(from: calendarData)
     }
 
     func requestWeeklyData(with fromDate: Date, to endDate: Date) -> [CalendarEntity] {
@@ -72,60 +92,79 @@ class CalendarViewController: UIViewController {
 
         return calExamplUI
     }
-    
+
     func mapUIToRequestData(from uiData: [CalendarDataUI]) -> [CalendarEntity] {
-        
+
         return calExamplRequest
     }
 
     func nextPage() {
         let week = currentCalendar.getCurrentWeek()
+        pageBoss.setViewControllers([weekPages[getNewIndexPage]], direction: .forward, animated: true, completion: nil)
         calendarData = requestWeeklyData(with: week[0], to: week[6])
-        pageBoss.setViewControllers([pageBoss.weekPages[pageBoss.getNextIndex()]], direction: .forward, animated: true, completion: nil)
     }
 
     func previousPage() {
         let week = currentCalendar.getCurrentWeek()
+        pageBoss.setViewControllers([weekPages[getNewIndexPage]], direction: .reverse, animated: true, completion: nil)
         calendarData = requestWeeklyData(with: week[0], to: week[6])
-        pageBoss.setViewControllers([pageBoss.weekPages[pageBoss.getPreviousIndex()]], direction: .reverse, animated: true, completion: nil)
     }
 
     func updateUX() {
 
         currDateLabel.text = currentCalendar.getStringfromDate(date: currentCalendar.getCurrentDay(), format: "MMMM YYYY")
 
-        let weekDayViews = pageBoss.weekPages[pageBoss.indexPage].weekDayViews
+        let weekDayViews = weekPages[indexPage].weekDayViews
         for dayAfterDay in weekDayViews! {
             dayAfterDay.dayOfweek.text = calendarDataUI[dayAfterDay.tag].dayOfWeek
             dayAfterDay.valueOfDay.setTitle(calendarDataUI[dayAfterDay.tag].date, for: .normal)
-            if (currentCalendar.getDay()) == dayAfterDay.tag {
+            if indexDay == dayAfterDay.tag {
                 dayAfterDay.valueOfDay.backgroundColor = UIColor.white
-                dayAfterDay.valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
+                dayAfterDay.valueOfDay.setTitleColor(UIColor.darkText, for: .normal)
+                dayAfterDay.dayOfweek.textColor = UIColor.white
+            } else {
+                dayAfterDay.valueOfDay.backgroundColor = UIColor.lightGray
+                dayAfterDay.valueOfDay.setTitleColor(UIColor.white, for: .normal)
                 dayAfterDay.dayOfweek.textColor = UIColor.white
             }
         }
 
-        let scheduleMoringViews = pageBoss.weekPages[pageBoss.indexPage].scheduleMoringViews
+        let scheduleMoringViews = weekPages[indexPage].scheduleMoringViews
         for scheduleItem in scheduleMoringViews! {
             if calendarDataUI[scheduleItem.tag].morning {
-                scheduleItem.switchControl.backgroundColor = UIColor.darkGray
+                scheduleItem.switchControl.backgroundColor = UIColor.lightGray
+                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
             } else {
                 scheduleItem.switchControl.backgroundColor = UIColor.white
-                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
+                scheduleItem.switchControl.setTitle(nil, for: .normal)
             }
         }
 
-        let scheduleAfterViews = pageBoss.weekPages[pageBoss.indexPage].scheduleAfterViews
+        let scheduleAfterViews = weekPages[indexPage].scheduleAfterViews
         for scheduleItem in scheduleAfterViews! {
             if calendarDataUI[scheduleItem.tag].afterNoon {
-                scheduleItem.switchControl.backgroundColor = UIColor.darkGray
+                scheduleItem.switchControl.backgroundColor = UIColor.lightGray
                 scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
             } else {
                 scheduleItem.switchControl.backgroundColor = UIColor.white
-                scheduleItem.switchControl.setTitle(calendarDataUI[scheduleItem.tag].ownerId, for: .normal)
+                scheduleItem.switchControl.setTitle(nil, for: .normal)
             }
         }
 
+    }
+
+}
+
+extension CalendarViewController: UIPageViewControllerDataSource {
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+
+        return nil
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+
+        return nil
     }
 
 }
