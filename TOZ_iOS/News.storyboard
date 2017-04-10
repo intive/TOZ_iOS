@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="2119" y="-99"/>
         </scene>
-        <!--Title-->
+        <!--News Detail View Controller-->
         <scene sceneID="5Rb-gm-0Lh">
             <objects>
                 <viewController storyboardIdentifier="NewsDetailViewController" id="QIr-6d-S0g" customClass="NewsDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -220,12 +220,12 @@
                             <constraint firstItem="sYB-le-XH6" firstAttribute="top" secondItem="mL5-VE-uXX" secondAttribute="bottom" constant="5" id="xyR-eb-H72"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Ge8-WL-TA1"/>
+                    <navigationItem key="navigationItem" id="Ge8-WL-TA1"/>
                     <connections>
-                        <outlet property="selectedContentLabel" destination="ieT-o8-xi8" id="1Xy-UH-Tmx"/>
-                        <outlet property="selectedDateLabel" destination="AJQ-Bf-YG3" id="81m-FF-OcV"/>
-                        <outlet property="selectedImageView" destination="sYB-le-XH6" id="woR-4a-NBn"/>
-                        <outlet property="selectedTitleLabel" destination="Mxm-Qm-aM7" id="ja1-qe-FYc"/>
+                        <outlet property="contentLabel" destination="ieT-o8-xi8" id="VHX-gh-8eh"/>
+                        <outlet property="dateLabel" destination="AJQ-Bf-YG3" id="N6c-2c-auA"/>
+                        <outlet property="photoImageView" destination="sYB-le-XH6" id="elb-JL-2NZ"/>
+                        <outlet property="titleLabel" destination="Mxm-Qm-aM7" id="FtJ-0y-9im"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5t-ca-dnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
