@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SXL-2F-4vk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Zostań wolontariuszem"/>
                                 <connections>
-                                    <segue destination="rjM-1G-CYG" kind="presentation" id="DLs-6f-bgP"/>
+                                    <segue destination="rjM-1G-CYG" kind="show" id="DLs-6f-bgP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-OB-HVa">
@@ -42,16 +42,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab-bar-help" id="NqN-pX-M0k"/>
-                    <navigationItem key="navigationItem" title="Title" id="rEs-6D-MYl"/>
+                    <navigationItem key="navigationItem" title="Jak pomóc?" id="rEs-6D-MYl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="MoG-qp-HFg" kind="presentation" identifier="financeView" id="cTK-i3-ZJA"/>
+                        <segue destination="MoG-qp-HFg" kind="show" identifier="financeView" id="cTK-i3-ZJA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHf-0s-jwh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880.79999999999995" y="-734.48275862068976"/>
+            <point key="canvasLocation" x="1820" y="-734.48275862068976"/>
         </scene>
         <!--Help Finance View Controller-->
         <scene sceneID="l6z-wk-tat">
@@ -145,7 +144,7 @@ PKO BO II O/Szczecin</string>
                 <exit id="N7Y-vl-AVo" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnw-gJ-4vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="-719"/>
+            <point key="canvasLocation" x="2724" y="-719.19040479760122"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="U7l-Es-Rht">
@@ -298,7 +297,26 @@ PKO BO II O/Szczecin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsE-vm-E0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="-1436"/>
+            <point key="canvasLocation" x="2724" y="-1399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="33o-lP-WWO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wBG-Z6-AmU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-help" id="NqN-pX-M0k"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bfV-Fy-mNw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SXL-2F-4vk" kind="relationship" relationship="rootViewController" id="J8l-oQ-KV7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fz4-pf-Srg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="-734.48275862068976"/>
         </scene>
     </scenes>
     <resources>
