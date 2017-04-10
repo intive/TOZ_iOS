@@ -28,7 +28,7 @@ class WeekViewController: UIViewController {
         let tag = sender.tag
         if tag == delegate.indexDay {
             if scheduleMoringViews[delegate.indexDay].switchControl.title(for: .normal) == nil {
-                let alertController = UIAlertController(title: "Potwierdzasz?", message:
+                let alertController = UIAlertController(title: "Potwierdzasz \(delegate.calendarData[tag].date)?", message:
                     "Zarezerowałeś termin", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //make reservation
@@ -47,7 +47,7 @@ class WeekViewController: UIViewController {
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Usunięcie", message:
+                let alertController = UIAlertController(title: "Usunięcie  \(dataObj.ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //detlete reservation
@@ -69,7 +69,7 @@ class WeekViewController: UIViewController {
         let tag = sender.tag
         if tag == delegate.indexDay {
             if scheduleAfterViews[delegate.indexDay].switchControl.title(for: .normal) == nil {
-                let alertController = UIAlertController(title: "Potwierdzasz?", message:
+                let alertController = UIAlertController(title: "Potwierdzasz \(delegate.calendarData[tag].date)?", message:
                     "Zarezerowałeś termin", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //make reservation
@@ -88,7 +88,7 @@ class WeekViewController: UIViewController {
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Usunięcie", message:
+                let alertController = UIAlertController(title: "Usunięcie \(dataObj.ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //detlete reservation
