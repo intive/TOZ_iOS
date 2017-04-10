@@ -337,7 +337,7 @@ PKO BO II O/Szczecin</string>
                                             <constraint firstAttribute="height" constant="220" id="DtV-1a-JRD"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="o07-4C-Rvy" kind="embed" id="QoQ-2y-lJ5"/>
+                                            <segue destination="sNN-eG-N49" kind="embed" id="aSu-CK-Z1K"/>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epi-Pq-row" userLabel="Divider">
@@ -816,11 +816,11 @@ PKO BO II O/Szczecin</string>
                         <viewControllerLayoutGuide type="bottom" id="NDP-eC-Y8p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kcb-Cy-fOZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galleryDetailDeafaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="FrT-eh-cF4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="5yH-ga-XVU"/>
@@ -832,7 +832,6 @@ PKO BO II O/Szczecin</string>
                             <constraint firstItem="FrT-eh-cF4" firstAttribute="leading" secondItem="kcb-Cy-fOZ" secondAttribute="leading" id="3lm-iL-U4w"/>
                             <constraint firstAttribute="trailing" secondItem="FrT-eh-cF4" secondAttribute="trailing" id="DIb-3W-0ok"/>
                             <constraint firstItem="FrT-eh-cF4" firstAttribute="top" secondItem="kcb-Cy-fOZ" secondAttribute="top" id="fMf-hy-6g6"/>
-                            <constraint firstAttribute="bottom" secondItem="FrT-eh-cF4" secondAttribute="bottom" id="lHl-cZ-wMA"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -846,7 +845,7 @@ PKO BO II O/Szczecin</string>
                 <pageViewController storyboardIdentifier="GalleryDetailPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="sNN-eG-N49" customClass="GalleryDetailPageViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0D-5y-PLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3780" y="172"/>
+            <point key="canvasLocation" x="4012" y="241"/>
         </scene>
     </scenes>
     <resources>
