@@ -11,9 +11,5 @@ import UIKit
 class GalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var animalImage: UIImageView!
     @IBOutlet weak var animalName: UILabel!
-    @IBOutlet weak var animalAge: UILabel!
-    @IBOutlet weak var animalDescription: UILabel!
-//    weak var animalSex: UILabel!
-//    weak var animalType: UILabel!
-//    weak var animalCreated: UILabel!
+    @IBOutlet weak var animalType: UILabel!
 }

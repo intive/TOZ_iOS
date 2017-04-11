@@ -14,7 +14,7 @@ struct AnimalItem: ParsedItem {
     let sex: String
     let description: String?
     let address: String?
-    let created: Int?
+    let created: Date?
     let lastModified: Int?
     let imageUrl: String?
 }

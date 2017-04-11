@@ -41,7 +41,7 @@ class GalleryDetailViewController: UIViewController {
                     self.animalName.text = localAnimal.name
                     self.animalType.text = localAnimal.type
                     self.animalSex.text = localAnimal.sex
-                    self.animalCreationDate.text = String(describing: localAnimal.created)
+                    self.animalCreationDate.text = localAnimal.created?.dateToFormattedString()
                     self.animalDescription.text = localAnimal.description
                 }
             case .failure(let error):

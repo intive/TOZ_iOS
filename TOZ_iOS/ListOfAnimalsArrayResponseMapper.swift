@@ -17,10 +17,14 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
             guard let sex = jsonNode["sex"] as? String else { throw ResponseMapperError.responseParsingFailed }
             guard let description = jsonNode["description"] as? String? else { throw ResponseMapperError.responseParsingFailed }
             guard let address = jsonNode["address"] as? String? else { throw ResponseMapperError.responseParsingFailed }
-            guard let created = jsonNode["created"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
+            guard let createdInt = jsonNode["created"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
+            var createdDate: Date? = nil
+            if let createdInt = createdInt {
+                createdDate = Date(timeIntervalSince1970: TimeInterval(createdInt))
+            }
             guard let lastModified = jsonNode["lastModified"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
             guard let imageUrl = jsonNode["imageUrl"] as? String? else { throw ResponseMapperError.responseParsingFailed }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: created, lastModified: lastModified, imageUrl: imageUrl)
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModified, imageUrl: imageUrl)
         })
     }
 }

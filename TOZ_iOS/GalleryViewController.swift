@@ -20,9 +20,9 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 //        getListOfAnimals()
-        let firstAnimal = GalleryEntity(name: "Piorun", age: "3 lata", description: "Dog ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus.", image: UIImage(named: "dog1"), animalID: "45eb78b5-6a4d-41cc-9bf9-52b09fe20c95")
-        let secondAnimal = GalleryEntity(name: "Asti", age: "5 lat", description: "Dog ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.", image: UIImage(named: "dog2"), animalID: "a3e652a5-91cd-45a7-9327-6608f675f05b")
-        let thirdAnimal = GalleryEntity(name: "Lola", age: "4 lata", description: "Dog ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies.", image: UIImage(named: "dog3"), animalID: "45eb78b5-6a4d-41cc-9bf9-52b09fe20c95")
+        let firstAnimal = GalleryEntity(name: "Piorun", type: "Golden Retriever", image: UIImage(named: "dog1"), animalID: "45eb78b5-6a4d-41cc-9bf9-52b09fe20c95")
+        let secondAnimal = GalleryEntity(name: "Asti", type: "Beagle", image: UIImage(named: "dog2"), animalID: "a3e652a5-91cd-45a7-9327-6608f675f05b")
+        let thirdAnimal = GalleryEntity(name: "Lola", type: "Owczarek", image: UIImage(named: "dog3"), animalID: "45eb78b5-6a4d-41cc-9bf9-52b09fe20c95")
         animalsArray = [firstAnimal, secondAnimal, thirdAnimal]
     }
     // UITableViewDataSource
@@ -33,9 +33,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "galleryTableViewCell", for: indexPath)
         if let cell = cell as? GalleryTableViewCell {
             let animalInfo = animalsArray[indexPath.row]
-            cell.animalDescription.text = animalInfo.description
             cell.animalName.text = animalInfo.name
-            cell.animalAge.text = animalInfo.age
+            cell.animalType.text = animalInfo.type
             cell.animalImage.image = animalInfo.image
         }
         return cell
@@ -51,8 +50,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         if segue.identifier == "showGalleryDetail" {
             let GalleryDetailViewController = segue.destination as? GalleryDetailViewController
             GalleryDetailViewController?.selectedCell = selectedGalleryCellID
-            }
         }
+    }
 
     let listOfAnimalsOperation = ListOfAnimalsOperation()
 

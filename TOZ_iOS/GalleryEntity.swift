@@ -10,8 +10,7 @@ import UIKit
 
 struct GalleryEntity {
     var name: String
-    var age: String
-    var description: String
+    var type: String
     var image: UIImage?
     var animalID: String
 }
