@@ -12,17 +12,16 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePublishedLabel: UILabel!
     @IBOutlet weak var photoView: ProfilePhotoView!
-    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var contentLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentTextView.isUserInteractionEnabled = false
         self.backgroundColor = Color.Cell.Background.primary
     }
 
     func configure(with news: NewsItem) {
 
         titleLabel.text = news.title
-        contentTextView.text = news.contents
+        contentLabel.text = news.contents
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
         if let published = news.published {
