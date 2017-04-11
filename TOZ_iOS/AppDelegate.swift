@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        BITHockeyManager.shared().configure(withIdentifier: "1c4560d21290458c8ae1e5156e194155")
+        BITHockeyManager.shared().start()
 
         UITableView.appearance().backgroundColor = Color.TableView.background
         UITableView.appearance().separatorColor = Color.TableView.separator

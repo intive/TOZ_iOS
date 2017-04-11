@@ -20,10 +20,14 @@ final class AnimalResponseMapper: ResponseMapper<AnimalItem>, ResponseMapperProt
             guard let sex = json["sex"] as? String else { return nil }
             guard let description = json["description"] as? String? else { return nil }
             guard let address = json["address"] as? String? else { return nil }
-            guard let created = json["created"] as? Int? else { return nil }
+            guard let createdInt = json["created"] as? Int? else { return nil }
+            var createdDate: Date? = nil
+            if let createdInt = createdInt {
+                createdDate = Date(timeIntervalSince1970: TimeInterval(createdInt))
+            }
             guard let lastModified = json["lastModified"] as? Int? else { return nil }
             guard let imageUrl = json["imageUrl"] as? String? else { return nil }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: created, lastModified: lastModified, imageUrl: imageUrl)
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModified, imageUrl: imageUrl)
         })
     }
 }
