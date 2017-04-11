@@ -8,8 +8,6 @@
 import UIKit
 import Foundation
 
-let animalID = "45eb78b5-6a4d-41cc-9bf9-52b09fe20c95"
-
 class GalleryDetailViewController: UIViewController {
 
     @IBOutlet weak var animalName: UILabel!
@@ -19,23 +17,24 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalDescription: UITextView!
 
     var selectedCell: String?
-    let animalOperation = AnimalOperation(animalID: selectedCell)
+    var animalOperation: AnimalOperation?
+
+    func makeAnimalOperation() {
+        if let selectedCell = selectedCell {
+            animalOperation = AnimalOperation(animalID: selectedCell)
+        } else {
+            animalOperation = nil
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeAnimalOperation()
         getAnimal()
-
     }
 
-//    func getAnimal() {
-//                    self.animalName.text = selectedCell?.animalName.text
-//                    self.animalType.text = selectedCell?.animalType.text
-//                    self.animalSex.text = selectedCell?.animalSex.text
-//                    self.animalCreationDate.text = String(describing: selectedCell?.animalCreated.text)
-//                    self.animalDescription.text = selectedCell?.animalDescription.text
-//        }
     func getAnimal() {
-        animalOperation.resultCompletion = { result in
+        animalOperation?.resultCompletion = { result in
             switch result {
             case .success(let localAnimal):
                 DispatchQueue.main.async {
@@ -49,7 +48,6 @@ class GalleryDetailViewController: UIViewController {
                 print ("\(error)")
             }
         }
-        animalOperation.start()
+        animalOperation?.start()
     }
-
 }

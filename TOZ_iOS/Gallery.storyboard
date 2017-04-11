@@ -92,7 +92,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4pR-O5-XWs"/>
+                    <navigationItem key="navigationItem" title="GALERIA" id="4pR-O5-XWs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="galleryTableView" destination="1wV-q0-plX" id="EVT-oJ-f16"/>
@@ -132,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="2600.8000000000002" y="93.553223388305852"/>
         </scene>
-        <!--PROFIL-->
+        <!--GALERIA-->
         <scene sceneID="wJd-uY-Gns">
             <objects>
                 <viewController id="Edr-KM-NY0" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,17 +236,16 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animalDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6w-So-eXY">
-                                        <rect key="frame" x="80" y="342" width="90" height="16"/>
+                                        <rect key="frame" x="80" y="342" width="287" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="4tO-gJ-T8O"/>
-                                            <constraint firstAttribute="width" constant="90" id="Uvi-O3-JaD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data dodania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjh-pY-Q1d">
-                                        <rect key="frame" x="80" y="358" width="90" height="16"/>
+                                        <rect key="frame" x="80" y="358" width="287" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="MRV-Yk-3iP"/>
                                         </constraints>
@@ -379,6 +378,7 @@
                                     <constraint firstAttribute="trailing" secondItem="cWk-DY-oSP" secondAttribute="trailing" id="p0I-RM-3on"/>
                                     <constraint firstItem="L6w-So-eXY" firstAttribute="leading" secondItem="3eX-9Q-fAz" secondAttribute="trailing" constant="25" id="qka-4j-nYq"/>
                                     <constraint firstAttribute="trailing" secondItem="MIV-WZ-UTn" secondAttribute="trailing" constant="12" id="r9h-dt-wWj"/>
+                                    <constraint firstAttribute="trailing" secondItem="L6w-So-eXY" secondAttribute="trailing" constant="8" id="rcm-9q-Nj7"/>
                                     <constraint firstItem="70I-WD-RE9" firstAttribute="leading" secondItem="i6I-h2-VtI" secondAttribute="trailing" constant="25" id="v1f-VK-xup"/>
                                     <constraint firstItem="epi-Pq-row" firstAttribute="top" secondItem="cWk-DY-oSP" secondAttribute="bottom" id="wWZ-b4-xWO"/>
                                     <constraint firstItem="3eX-9Q-fAz" firstAttribute="height" secondItem="aX9-BQ-YSu" secondAttribute="height" id="xRd-a8-FLG"/>
@@ -396,7 +396,7 @@
                             <constraint firstAttribute="trailing" secondItem="aTI-77-iyz" secondAttribute="trailing" id="s7c-bR-Pkp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PROFIL" id="T7h-RI-Ugm"/>
+                    <navigationItem key="navigationItem" title="GALERIA" id="T7h-RI-Ugm"/>
                     <connections>
                         <outlet property="animalCreationDate" destination="L6w-So-eXY" id="zHD-kN-ezs"/>
                         <outlet property="animalDescription" destination="70I-WD-RE9" id="ne7-oK-5gi"/>
