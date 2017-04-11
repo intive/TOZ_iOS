@@ -16,5 +16,5 @@ struct AnimalItem: ParsedItem {
     let address: String?
     let created: Date?
     let lastModified: Int?
-    let imageUrl: String?
+    let imageUrl: URL?
 }

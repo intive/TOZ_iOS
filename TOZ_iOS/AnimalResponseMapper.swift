@@ -11,7 +11,7 @@ import Foundation
  Parses response from OrganizationInfo operation. Inherits from generic ResponseMapper class.
  */
 final class AnimalResponseMapper: ResponseMapper<AnimalItem>, ResponseMapperProtocol {
-
+    // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> AnimalItem {
         return try process(obj, parse: { json in
             guard let animalID = json["id"] as? String else { return nil }
@@ -26,8 +26,12 @@ final class AnimalResponseMapper: ResponseMapper<AnimalItem>, ResponseMapperProt
                 createdDate = Date(timeIntervalSince1970: TimeInterval(createdInt))
             }
             guard let lastModified = json["lastModified"] as? Int? else { return nil }
-            guard let imageUrl = json["imageUrl"] as? String? else { return nil }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModified, imageUrl: imageUrl)
+            guard let imageString = json["imageUrl"] as? String? else { return nil }
+            var imageURL: URL? = nil
+            if let imageString = imageString {
+                imageURL = BackendConfiguration.shared.baseURL.appendingPathComponent(imageString)
+            }
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModified, imageUrl: imageURL)
         })
     }
 }
