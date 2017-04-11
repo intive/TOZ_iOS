@@ -16,6 +16,9 @@ class NewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = Color.Cell.Background.primary
+        self.titleLabel.textColor = Color.Cell.Font.title
+        self.datePublishedLabel.textColor = Color.Cell.Font.date
+        self.contentLabel.textColor = Color.Cell.Font.content
     }
 
     func configure(with news: NewsItem) {
