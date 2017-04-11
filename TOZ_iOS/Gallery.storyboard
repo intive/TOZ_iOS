@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="2807.1999999999998" y="753.37331334332839"/>
         </scene>
-        <!--View Controller-->
+        <!--GalleryDetailPhotoViewController-->
         <scene sceneID="vnG-v4-4xJ">
             <objects>
-                <viewController id="Rrt-Ah-JJX" sceneMemberID="viewController">
+                <viewController id="Rrt-Ah-JJX" userLabel="GalleryDetailPhotoViewController" customClass="GalleryDetailPhotoViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gik-zs-CHE"/>
                         <viewControllerLayoutGuide type="bottom" id="zoc-aN-xWM"/>
@@ -118,10 +118,13 @@
                             <constraint firstAttribute="trailing" secondItem="vKS-Ap-9O0" secondAttribute="trailing" id="vWv-8M-1dM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="galleryDetailPhoto" destination="vKS-Ap-9O0" id="igu-s9-gbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBu-Ii-ADY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2600.8000000000002" y="93.553223388305852"/>
+            <point key="canvasLocation" x="3580" y="254"/>
         </scene>
         <!--GALERIA-->
         <scene sceneID="wJd-uY-Gns">
