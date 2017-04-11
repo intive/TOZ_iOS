@@ -14,8 +14,6 @@ class WeekViewController: UIViewController {
     @IBAction func weekAction(_ sender: WeekDayView) {
         let tag = sender.tag
         if tag != delegate.indexDay {
-            print(tag)
-            print(delegate.indexDay)
             weekDayViews[delegate.indexDay].valueOfDay.backgroundColor = UIColor.lightGray
             weekDayViews[delegate.indexDay].valueOfDay.setTitleColor(UIColor.white, for: .normal)
             weekDayViews[tag].valueOfDay.backgroundColor = UIColor.white
@@ -29,20 +27,21 @@ class WeekViewController: UIViewController {
         if tag == delegate.indexDay {
             if scheduleMoringViews[delegate.indexDay].switchControl.title(for: .normal) == nil {
                 let alertController = UIAlertController(title: "Potwierdzasz \(delegate.calendarData[tag].date)?", message:
-                    "Zarezerowałeś termin", preferredStyle: UIAlertControllerStyle.alert)
+                    "Zarezerwowałeś termin", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //make reservation
+                    print("make reservation \(action.title!)")
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitle("RK", for: .normal)
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.lightGray
-            
+
                     let alertView = UIAlertController(title: "Super", message: "Pomagasz ratować świat", preferredStyle: .alert)
                     alertView.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alertView, animated: true, completion: nil)
                 }
                 alertController.addAction(yesAction)
-                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action:UIAlertAction!) in
-                    //back
+                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action: UIAlertAction!) in
+                    print("Cancel action \(action.title!)")
                 }
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
@@ -50,14 +49,15 @@ class WeekViewController: UIViewController {
                 let alertController = UIAlertController(title: "Usunięcie  \(dataObj.ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
-                    //detlete reservation
+                    //delete reservation
+                    print("delete reservation \(action.title!)")
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitle(nil, for: .normal)
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.lightGray, for: .normal)
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.white
                 }
                 alertController.addAction(yesAction)
-                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action:UIAlertAction!) in
-                    //back
+                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action: UIAlertAction!) in
+                    print("Cancel action \(action.title!)")
                 }
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
@@ -70,20 +70,21 @@ class WeekViewController: UIViewController {
         if tag == delegate.indexDay {
             if scheduleAfterViews[delegate.indexDay].switchControl.title(for: .normal) == nil {
                 let alertController = UIAlertController(title: "Potwierdzasz \(delegate.calendarData[tag].date)?", message:
-                    "Zarezerowałeś termin", preferredStyle: UIAlertControllerStyle.alert)
+                    "Zarezerwowałeś termin", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //make reservation
+                    print("make reservation \(action.title!)")
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitle("RK", for: .normal)
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.lightGray
-                    
+
                     let alertView = UIAlertController(title: "Super", message: "Pomagasz ratować świat", preferredStyle: .alert)
                     alertView.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alertView, animated: true, completion: nil)
                 }
                 alertController.addAction(yesAction)
-                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action:UIAlertAction!) in
-                    //back
+                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action: UIAlertAction!) in
+                    print("Cancel action \(action.title!)")
                 }
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
@@ -91,14 +92,15 @@ class WeekViewController: UIViewController {
                 let alertController = UIAlertController(title: "Usunięcie \(dataObj.ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
-                    //detlete reservation
+                    //delete reservation
+                    print("delete reservation \(action.title!)")
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitle(nil, for: .normal)
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.lightGray, for: .normal)
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.white
                 }
                 alertController.addAction(yesAction)
-                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action:UIAlertAction!) in
-                    //back
+                let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action: UIAlertAction!) in
+                    print("Cancel action \(action.title!)")
                 }
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)

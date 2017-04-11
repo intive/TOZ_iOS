@@ -1,33 +1,381 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MUk-He-Fbh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YZv-Yc-BsZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CalendarViewController-->
-        <scene sceneID="ljX-cG-blm">
+        <!--WeekPage-->
+        <scene sceneID="Bd7-j6-QbN">
             <objects>
-                <viewController title="CalendarViewController" id="MUk-He-Fbh" customClass="CalendarViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeekViewController" autoresizesArchivedViewToFullSize="NO" title="WeekPage" modalPresentationStyle="pageSheet" id="2qI-9t-4cL" customClass="WeekViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SGc-Ce-osR"/>
-                        <viewControllerLayoutGuide type="bottom" id="e4p-Im-3lh"/>
+                        <viewControllerLayoutGuide type="top" id="BRv-bw-QlQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJT-uJ-PeZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m0L-cP-9pn">
+                    <view key="view" clipsSubviews="YES" contentMode="TopLeft" id="kGc-4b-gRv">
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="456"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-Xl-MF4">
+                                <rect key="frame" x="0.0" y="0.0" width="354" height="440"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="TopLeft" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Sfk-R7-S3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="220"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="W05-Tq-TnY">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-oj-Rrc" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="aQi-wg-awb"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voE-q9-MmI" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="51.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Oi5-Zm-yWY"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asw-hG-Vc3" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="103" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="lOj-Wz-Vkc"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="830-yz-vgJ" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="154.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Y0T-Oc-gax"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otC-73-ghE" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="205.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="p4B-qU-opw"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5O-xx-NcM" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="257" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Ofo-sf-GKa"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-Or-lwT" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="308.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="ZN5-mZ-tjm"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            </stackView>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2KZ-b0-upE">
+                                                <rect key="frame" x="0.0" y="59" width="354" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-uR-Oje">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="alM-nj-IK5">
+                                                <rect key="frame" x="0.0" y="84.5" width="354" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yys-bX-pjK" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="rcb-jr-OTS"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYm-6D-idH" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="51.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="vgy-JZ-zNO"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-g8-Xqc" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="103" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="iGn-dA-jPG"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rv-u0-qWd" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="154.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="2Kt-Gd-MRT"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiE-j1-q5b" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="205.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="PoV-0L-ny7"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R0-NW-i6R" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="257" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="BYJ-f9-1cm"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quW-Al-akA" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="308.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="WVk-wS-W2q"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            </stackView>
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-Hp-Zbl">
+                                                <rect key="frame" x="0.0" y="143.5" width="354" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-bd-LzO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-IU-q1c">
+                                                <rect key="frame" x="0.0" y="170" width="354" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jy4-yf-FPY" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="GhW-qB-kk5"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yq-pu-Lis" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="51.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Wfq-a5-9YI"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQf-f1-8hM" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="103" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="9T9-bl-SvS"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7X-TW-KDv" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="154.5" y="0.0" width="45" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="2jI-Lx-tfK"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azF-Mm-9oE" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="205.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="2B1-du-lfP"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t09-A0-p1V" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="257" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="zVg-dq-Ngx"/>
+                                                        </connections>
+                                                    </view>
+                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwo-90-oyq" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="308.5" y="0.0" width="45.5" height="50"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="ear-6z-mC2"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    </stackView>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mdQ-cV-tPm">
+                                        <rect key="frame" x="0.0" y="220" width="354" height="220"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6zM-Xl-MF4" firstAttribute="leading" secondItem="kGc-4b-gRv" secondAttribute="leading" id="0OO-dq-hhJ"/>
+                            <constraint firstItem="6zM-Xl-MF4" firstAttribute="top" secondItem="BRv-bw-QlQ" secondAttribute="bottom" id="Onc-6v-ycH"/>
+                            <constraint firstAttribute="trailing" secondItem="6zM-Xl-MF4" secondAttribute="trailing" id="mv0-LW-rQD"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="354" height="456"/>
+                    <connections>
+                        <outlet property="calendarStack" destination="W05-Tq-TnY" id="3g3-ph-ZZo"/>
+                        <outlet property="scheduleAfternoon" destination="fO3-IU-q1c" id="n1H-zp-0Hq"/>
+                        <outlet property="scheduleMorning" destination="alM-nj-IK5" id="Ya0-rc-PRc"/>
+                        <outlet property="weekView" destination="kGc-4b-gRv" id="y1c-Mr-Udd"/>
+                        <outletCollection property="weekDayViews" destination="Hxu-oj-Rrc" collectionClass="NSMutableArray" id="vD7-D6-5dY"/>
+                        <outletCollection property="weekDayViews" destination="voE-q9-MmI" collectionClass="NSMutableArray" id="o1n-9k-N2O"/>
+                        <outletCollection property="weekDayViews" destination="asw-hG-Vc3" collectionClass="NSMutableArray" id="4G3-Ez-XcA"/>
+                        <outletCollection property="weekDayViews" destination="830-yz-vgJ" collectionClass="NSMutableArray" id="YQ7-hX-vKC"/>
+                        <outletCollection property="weekDayViews" destination="otC-73-ghE" collectionClass="NSMutableArray" id="hJn-xF-XCY"/>
+                        <outletCollection property="weekDayViews" destination="D5O-xx-NcM" collectionClass="NSMutableArray" id="Cie-Kg-WXX"/>
+                        <outletCollection property="weekDayViews" destination="TmC-Or-lwT" collectionClass="NSMutableArray" id="Vry-m4-FR3"/>
+                        <outletCollection property="scheduleMoringViews" destination="Yys-bX-pjK" collectionClass="NSMutableArray" id="RvJ-DZ-lff"/>
+                        <outletCollection property="scheduleMoringViews" destination="pYm-6D-idH" collectionClass="NSMutableArray" id="7QB-VZ-ngG"/>
+                        <outletCollection property="scheduleMoringViews" destination="wGA-g8-Xqc" collectionClass="NSMutableArray" id="fla-s7-jcm"/>
+                        <outletCollection property="scheduleMoringViews" destination="0rv-u0-qWd" collectionClass="NSMutableArray" id="Kna-YG-Gev"/>
+                        <outletCollection property="scheduleMoringViews" destination="CiE-j1-q5b" collectionClass="NSMutableArray" id="0GY-9f-auQ"/>
+                        <outletCollection property="scheduleMoringViews" destination="3R0-NW-i6R" collectionClass="NSMutableArray" id="OC9-3n-JDz"/>
+                        <outletCollection property="scheduleMoringViews" destination="quW-Al-akA" collectionClass="NSMutableArray" id="keh-Uk-fKX"/>
+                        <outletCollection property="scheduleAfterViews" destination="Jy4-yf-FPY" collectionClass="NSMutableArray" id="e8L-yO-vCU"/>
+                        <outletCollection property="scheduleAfterViews" destination="9yq-pu-Lis" collectionClass="NSMutableArray" id="JO1-D0-6jn"/>
+                        <outletCollection property="scheduleAfterViews" destination="HQf-f1-8hM" collectionClass="NSMutableArray" id="SGk-dw-kBf"/>
+                        <outletCollection property="scheduleAfterViews" destination="r7X-TW-KDv" collectionClass="NSMutableArray" id="07W-aN-l79"/>
+                        <outletCollection property="scheduleAfterViews" destination="azF-Mm-9oE" collectionClass="NSMutableArray" id="G5i-W1-FGh"/>
+                        <outletCollection property="scheduleAfterViews" destination="t09-A0-p1V" collectionClass="NSMutableArray" id="Lg8-kR-0G6"/>
+                        <outletCollection property="scheduleAfterViews" destination="Fwo-90-oyq" collectionClass="NSMutableArray" id="r7r-C4-EAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGq-bd-vd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2111.594202898551" y="1530.9782608695652"/>
+        </scene>
+        <!--Calendar Page View Controller-->
+        <scene sceneID="pbB-xq-G0Z">
+            <objects>
+                <pageViewController storyboardIdentifier="CalendarPageViewController" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1HW-o9-YCa" customClass="CalendarPageViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="354" height="456"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPz-9U-aCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1282" y="1339"/>
+        </scene>
+        <!--CalendarViewController-->
+        <scene sceneID="Jtv-YF-wbc">
+            <objects>
+                <viewController title="CalendarViewController" id="YZv-Yc-BsZ" customClass="CalendarViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyd-3L-8BV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mww-0p-ylR"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="WDz-ap-GzN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-Og-A2t">
+                                <rect key="frame" x="16" y="126" width="343" height="383"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <connections>
+                                    <segue destination="1HW-o9-YCa" kind="embed" id="1KE-fz-xSw"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-qd-rLn">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrd-3P-8A6">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="r0U-3s-1Ao">
+                                        <rect key="frame" x="204" y="0.0" width="139" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-90-bpO">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.65000000000000002"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xgI-90-bpO" secondAttribute="height" multiplier="1:1" id="Nob-Zy-Nhs"/>
+                                                </constraints>
+                                                <state key="normal" title="&lt;">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="previousWeek:" destination="YZv-Yc-BsZ" eventType="touchUpInside" id="wYT-Qb-LjN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRC-aW-exF">
+                                                <rect key="frame" x="109" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hRC-aW-exF" secondAttribute="height" multiplier="1:1" id="hPy-5o-B7J"/>
+                                                </constraints>
+                                                <state key="normal" title="&gt;">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextWeek:" destination="YZv-Yc-BsZ" eventType="touchUpInside" id="ecZ-uD-fnd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="xgI-90-bpO" firstAttribute="height" secondItem="hRC-aW-exF" secondAttribute="height" id="R00-xe-ZqZ"/>
+                                            <constraint firstItem="xgI-90-bpO" firstAttribute="width" secondItem="hRC-aW-exF" secondAttribute="width" id="RAI-gK-kSA"/>
+                                            <constraint firstItem="xgI-90-bpO" firstAttribute="width" secondItem="hRC-aW-exF" secondAttribute="height" multiplier="1:1" id="XrV-pW-bHf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mww-0p-ylR" firstAttribute="top" secondItem="xCo-Og-A2t" secondAttribute="bottom" constant="109" id="5w2-gp-ode"/>
+                            <constraint firstItem="xCo-Og-A2t" firstAttribute="top" secondItem="5YR-qd-rLn" secondAttribute="bottom" constant="16" id="7ua-qn-QbR"/>
+                            <constraint firstItem="5YR-qd-rLn" firstAttribute="top" secondItem="jyd-3L-8BV" secondAttribute="bottom" constant="60" id="Ww9-Xw-Aox"/>
+                            <constraint firstItem="5YR-qd-rLn" firstAttribute="leading" secondItem="WDz-ap-GzN" secondAttribute="leadingMargin" id="cYx-7j-P0e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5YR-qd-rLn" secondAttribute="trailing" id="gzV-Rh-Vxb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xCo-Og-A2t" secondAttribute="trailing" id="jqQ-yV-IKi"/>
+                            <constraint firstItem="xCo-Og-A2t" firstAttribute="leading" secondItem="WDz-ap-GzN" secondAttribute="leadingMargin" id="mIq-aN-YPz"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="sZ1-8n-I3T"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="bkf-ed-W0D"/>
+                    <connections>
+                        <outlet property="currDateLabel" destination="nrd-3P-8A6" id="mwD-6q-dir"/>
+                        <outlet property="nextButtonVar" destination="hRC-aW-exF" id="BRh-sE-pp8"/>
+                        <outlet property="prevButtonVar" destination="xgI-90-bpO" id="j5v-84-BHS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WC7-dJ-B1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRG-fr-S3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="754"/>
+            <point key="canvasLocation" x="-352.5" y="777.46478873239437"/>
         </scene>
     </scenes>
     <resources>
