@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBu-Ii-ADY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3580" y="254"/>
+            <point key="canvasLocation" x="3580" y="290"/>
         </scene>
         <!--GALERIA-->
         <scene sceneID="wJd-uY-Gns">
@@ -147,7 +147,7 @@
                                             <constraint firstAttribute="height" constant="220" id="DtV-1a-JRD"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="Rrt-Ah-JJX" kind="embed" id="410-0e-nvi"/>
+                                            <segue destination="Rrt-Ah-JJX" kind="embed" identifier="profilePhotoSegue" id="410-0e-nvi"/>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epi-Pq-row" userLabel="Divider">
