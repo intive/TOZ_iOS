@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="dayOfweek" destination="cYZ-97-doL" id="VzU-Xx-1b9"/>
+                <outlet property="valueOfDay" destination="O6d-zj-5P5" id="erg-5X-r1I"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wI7-Eu-i1D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="UIControl">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mKU-9T-4E4">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-97-doL">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6d-zj-5P5" customClass="UIButton">
+                            <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="O6d-zj-5P5" secondAttribute="height" multiplier="1:1" id="HHE-YH-Y8R"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="O6d-zj-5P5" firstAttribute="height" secondItem="cYZ-97-doL" secondAttribute="height" id="4N2-PQ-bH4"/>
+                        <constraint firstItem="O6d-zj-5P5" firstAttribute="width" secondItem="cYZ-97-doL" secondAttribute="height" multiplier="1:1" id="InS-IG-Wwe"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mKU-9T-4E4" secondAttribute="trailing" id="7gc-JO-qaP"/>
+                <constraint firstAttribute="bottom" secondItem="mKU-9T-4E4" secondAttribute="bottom" id="Ho0-Yw-lBB"/>
+                <constraint firstItem="mKU-9T-4E4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QTR-6D-C4X"/>
+                <constraint firstItem="mKU-9T-4E4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xmJ-LR-XeD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-45" y="-186"/>
+        </view>
+    </objects>
+</document>
