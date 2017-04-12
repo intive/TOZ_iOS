@@ -119,7 +119,7 @@ class CalendarViewController: UIViewController {
     }
 
     func updateUX() {
-        weekPages[indexPage].dataObj = calendarDataUI[indexDay]
+        weekPages[indexPage].dataObj = calendarDataUI
         weekPages[indexPage].updateUX()
     }
 }

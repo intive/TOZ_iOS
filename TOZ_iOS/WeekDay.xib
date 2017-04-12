@@ -28,9 +28,6 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYZ-97-doL">
                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="cYZ-97-doL" secondAttribute="height" multiplier="1:1" id="q94-C8-IaV"/>
-                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="8"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -44,6 +41,10 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="O6d-zj-5P5" firstAttribute="height" secondItem="cYZ-97-doL" secondAttribute="height" id="4N2-PQ-bH4"/>
+                        <constraint firstItem="O6d-zj-5P5" firstAttribute="width" secondItem="cYZ-97-doL" secondAttribute="height" multiplier="1:1" id="InS-IG-Wwe"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

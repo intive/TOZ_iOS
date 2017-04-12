@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YZv-Yc-BsZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4hj-16-Prl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,58 +24,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-Xl-MF4">
-                                <rect key="frame" x="0.0" y="0.0" width="354" height="440"/>
+                                <rect key="frame" x="10" y="0.0" width="334" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="TopLeft" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Sfk-R7-S3i">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="185"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="W05-Tq-TnY">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W05-Tq-TnY">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-oj-Rrc" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="aQi-wg-awb"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voE-q9-MmI" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="51.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="49" y="0.0" width="39.5" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Oi5-Zm-yWY"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asw-hG-Vc3" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="103" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="98.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="lOj-Wz-Vkc"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="830-yz-vgJ" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="154.5" y="0.0" width="45" height="50"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Y0T-Oc-gax"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otC-73-ghE" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="205.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="196.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="p4B-qU-opw"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5O-xx-NcM" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="245.5" y="0.0" width="39.5" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Ofo-sf-GKa"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-Or-lwT" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="308.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="295" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="weekAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="ZN5-mZ-tjm"/>
@@ -85,10 +85,10 @@
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                             </stackView>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2KZ-b0-upE">
-                                                <rect key="frame" x="0.0" y="59" width="354" height="17"/>
+                                                <rect key="frame" x="0.0" y="50" width="334" height="17"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-uR-Oje">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,53 +97,53 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="alM-nj-IK5">
-                                                <rect key="frame" x="0.0" y="84.5" width="354" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="alM-nj-IK5">
+                                                <rect key="frame" x="0.0" y="67" width="334" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yys-bX-pjK" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="rcb-jr-OTS"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYm-6D-idH" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="51.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="49" y="0.0" width="39.5" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="vgy-JZ-zNO"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-g8-Xqc" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="103" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="98.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="iGn-dA-jPG"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rv-u0-qWd" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="154.5" y="0.0" width="45" height="50"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="2Kt-Gd-MRT"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiE-j1-q5b" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="205.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="196.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="PoV-0L-ny7"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R0-NW-i6R" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="245.5" y="0.0" width="39.5" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="BYJ-f9-1cm"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quW-Al-akA" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="308.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="295" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleMorningAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="WVk-wS-W2q"/>
@@ -153,10 +153,10 @@
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                             </stackView>
                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-Hp-Zbl">
-                                                <rect key="frame" x="0.0" y="143.5" width="354" height="18"/>
+                                                <rect key="frame" x="0.0" y="117" width="334" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popoludniu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-bd-LzO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,53 +165,53 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-IU-q1c">
-                                                <rect key="frame" x="0.0" y="170" width="354" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-IU-q1c">
+                                                <rect key="frame" x="0.0" y="135" width="334" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jy4-yf-FPY" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="GhW-qB-kk5"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yq-pu-Lis" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="51.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="49" y="0.0" width="39.5" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="Wfq-a5-9YI"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQf-f1-8hM" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="103" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="98.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="9T9-bl-SvS"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7X-TW-KDv" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="154.5" y="0.0" width="45" height="50"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="2jI-Lx-tfK"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azF-Mm-9oE" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="205.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="196.5" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="2B1-du-lfP"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t09-A0-p1V" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="257" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="245.5" y="0.0" width="39.5" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="zVg-dq-Ngx"/>
                                                         </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwo-90-oyq" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="308.5" y="0.0" width="45.5" height="50"/>
+                                                        <rect key="frame" x="295" y="0.0" width="39" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <connections>
                                                             <action selector="scheduleAfterAction:" destination="2qI-9t-4cL" eventType="touchUpInside" id="ear-6z-mC2"/>
@@ -223,19 +223,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </stackView>
-                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mdQ-cV-tPm">
-                                        <rect key="frame" x="0.0" y="220" width="354" height="220"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6zM-Xl-MF4" firstAttribute="leading" secondItem="kGc-4b-gRv" secondAttribute="leading" id="0OO-dq-hhJ"/>
+                            <constraint firstItem="EJT-uJ-PeZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6zM-Xl-MF4" secondAttribute="bottom" multiplier="4:3" id="0tZ-Pg-DnU"/>
                             <constraint firstItem="6zM-Xl-MF4" firstAttribute="top" secondItem="BRv-bw-QlQ" secondAttribute="bottom" id="Onc-6v-ycH"/>
-                            <constraint firstAttribute="trailing" secondItem="6zM-Xl-MF4" secondAttribute="trailing" id="mv0-LW-rQD"/>
+                            <constraint firstAttribute="trailing" secondItem="6zM-Xl-MF4" secondAttribute="trailing" constant="10" id="U2p-a8-5hq"/>
+                            <constraint firstItem="6zM-Xl-MF4" firstAttribute="leading" secondItem="kGc-4b-gRv" secondAttribute="leading" constant="10" id="iBX-AH-uku"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -297,32 +294,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-Og-A2t">
-                                <rect key="frame" x="16" y="126" width="343" height="432"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="1HW-o9-YCa" kind="embed" id="1KE-fz-xSw"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-qd-rLn">
-                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="165" translatesAutoresizingMaskIntoConstraints="NO" id="5YR-qd-rLn">
+                                <rect key="frame" x="10" y="74" width="355" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrd-3P-8A6">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="r0U-3s-1Ao">
-                                        <rect key="frame" x="204" y="0.0" width="139" height="30"/>
+                                        <rect key="frame" x="272.5" y="0.0" width="82.5" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-90-bpO">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-90-bpO">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.65000000000000002"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xgI-90-bpO" secondAttribute="height" multiplier="1:1" id="Nob-Zy-Nhs"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="&lt;">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -331,11 +329,12 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRC-aW-exF">
-                                                <rect key="frame" x="109" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="hRC-aW-exF" secondAttribute="height" multiplier="1:1" id="hPy-5o-B7J"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="&gt;">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -357,16 +356,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Mww-0p-ylR" firstAttribute="top" secondItem="xCo-Og-A2t" secondAttribute="bottom" constant="109" id="5w2-gp-ode"/>
-                            <constraint firstItem="xCo-Og-A2t" firstAttribute="top" secondItem="5YR-qd-rLn" secondAttribute="bottom" constant="16" id="7ua-qn-QbR"/>
-                            <constraint firstItem="5YR-qd-rLn" firstAttribute="top" secondItem="jyd-3L-8BV" secondAttribute="bottom" constant="60" id="Ww9-Xw-Aox"/>
-                            <constraint firstItem="5YR-qd-rLn" firstAttribute="leading" secondItem="WDz-ap-GzN" secondAttribute="leadingMargin" id="cYx-7j-P0e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5YR-qd-rLn" secondAttribute="trailing" id="gzV-Rh-Vxb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xCo-Og-A2t" secondAttribute="trailing" id="jqQ-yV-IKi"/>
-                            <constraint firstItem="xCo-Og-A2t" firstAttribute="leading" secondItem="WDz-ap-GzN" secondAttribute="leadingMargin" id="mIq-aN-YPz"/>
+                            <constraint firstItem="Mww-0p-ylR" firstAttribute="top" secondItem="xCo-Og-A2t" secondAttribute="bottom" id="D0i-r2-Q8u"/>
+                            <constraint firstAttribute="trailing" secondItem="xCo-Og-A2t" secondAttribute="trailing" id="FM2-jO-it1"/>
+                            <constraint firstAttribute="trailing" secondItem="5YR-qd-rLn" secondAttribute="trailing" constant="10" id="OHF-Mw-tlb"/>
+                            <constraint firstItem="5YR-qd-rLn" firstAttribute="leading" secondItem="WDz-ap-GzN" secondAttribute="leading" constant="10" id="SYr-1s-vSt"/>
+                            <constraint firstItem="5YR-qd-rLn" firstAttribute="top" secondItem="jyd-3L-8BV" secondAttribute="bottom" constant="10" id="TqI-BX-zx7"/>
+                            <constraint firstItem="xCo-Og-A2t" firstAttribute="top" secondItem="5YR-qd-rLn" secondAttribute="bottom" id="VQL-IA-R68"/>
+                            <constraint firstItem="xCo-Og-A2t" firstAttribute="leading" secondItem="WDz-ap-GzN" secondAttribute="leading" id="jCy-AG-H45"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="bkf-ed-W0D"/>
+                    <navigationItem key="navigationItem" title="GRAFIK" id="nLl-e8-w7Z"/>
                     <connections>
                         <outlet property="currDateLabel" destination="nrd-3P-8A6" id="mwD-6q-dir"/>
                         <outlet property="nextButtonVar" destination="hRC-aW-exF" id="BRh-sE-pp8"/>
@@ -375,7 +374,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRG-fr-S3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352.5" y="777.46478873239437"/>
+            <point key="canvasLocation" x="586.39999999999998" y="776.76161919040487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mie-ZU-aJY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hj-16-Prl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="bkf-ed-W0D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1l-uE-5QE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YZv-Yc-BsZ" kind="relationship" relationship="rootViewController" id="JhT-xB-J8A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vT2-dV-kap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352.80000000000001" y="776.76161919040487"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,7 @@ import UIKit
 class WeekViewController: UIViewController {
 
     var delegate: CalendarViewController!
-    var dataObj: CalendarDataUI!
+    var dataObj: [CalendarDataUI]!
 
     @IBAction func weekAction(_ sender: WeekDayView) {
         let tag = sender.tag
@@ -49,7 +49,7 @@ class WeekViewController: UIViewController {
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Usunięcie  \(dataObj.ownerId)", message:
+                let alertController = UIAlertController(title: "Usunięcie  \(dataObj[self.delegate.indexDay].ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //delete reservation
@@ -68,6 +68,7 @@ class WeekViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+        updateCalendarDataUI()
     }
 
     @IBAction func scheduleAfterAction(_ sender: ScheduleView) {
@@ -95,7 +96,7 @@ class WeekViewController: UIViewController {
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Usunięcie  \(dataObj.ownerId)", message:
+                let alertController = UIAlertController(title: "Usunięcie  \(dataObj[self.delegate.indexDay].ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //delete reservation
@@ -114,6 +115,7 @@ class WeekViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+        updateCalendarDataUI()
     }
 
     @IBOutlet var weekDayViews: [WeekDayView]!
@@ -132,13 +134,42 @@ class WeekViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.weekView.layer.borderColor = UIColor.lightGray.cgColor
+        self.weekView.layer.borderWidth = 0.5
+
         }
+
+    func updateCalendarDataUI() {
+        for dayAfterDay in weekDayViews! {
+            dataObj[dayAfterDay.tag].dayOfWeek = dayAfterDay.dayOfweek.text!
+            dataObj[dayAfterDay.tag].date = (dayAfterDay.valueOfDay.titleLabel?.text)!
+        }
+
+        for scheduleItem in scheduleMoringViews! {
+            if dataObj[scheduleItem.tag].morning {
+                guard (scheduleItem.switchControl.titleLabel?.text) == nil else { dataObj[scheduleItem.tag].ownerId =  (scheduleItem.switchControl.titleLabel?.text)!
+                    return}
+            } else {
+                dataObj[scheduleItem.tag].ownerId = ""
+            }
+        }
+
+        for scheduleItem in scheduleAfterViews! {
+            if dataObj[scheduleItem.tag].afterNoon {
+                guard (scheduleItem.switchControl.titleLabel?.text) == nil else { dataObj[scheduleItem.tag].ownerId =  (scheduleItem.switchControl.titleLabel?.text)!
+                    return}
+            } else {
+                dataObj[scheduleItem.tag].ownerId = ""
+            }
+        }
+        self.delegate.calendarDataUI = self.dataObj
+    }
 
     func updateUX() {
 
         for dayAfterDay in weekDayViews! {
-            dayAfterDay.dayOfweek.text = dataObj.dayOfWeek
-            dayAfterDay.valueOfDay.setTitle(dataObj.date, for: .normal)
+            dayAfterDay.dayOfweek.text = dataObj[dayAfterDay.tag].dayOfWeek
+            dayAfterDay.valueOfDay.setTitle(dataObj[dayAfterDay.tag].date, for: .normal)
             if delegate.indexDay == dayAfterDay.tag {
                 dayAfterDay.valueOfDay.backgroundColor = UIColor.white
                 dayAfterDay.valueOfDay.setTitleColor(UIColor.lightGray, for: .normal)
@@ -153,10 +184,10 @@ class WeekViewController: UIViewController {
         }
 
         for scheduleItem in scheduleMoringViews! {
-            if dataObj.morning {
+            if dataObj[scheduleItem.tag].morning {
                 scheduleItem.switchControl.backgroundColor = UIColor.lightGray
                 scheduleItem.switchControl.setTitleColor(UIColor.darkGray, for: .normal)
-                scheduleItem.switchControl.setTitle(dataObj.ownerId, for: .normal)
+                scheduleItem.switchControl.setTitle(dataObj[scheduleItem.tag].ownerId, for: .normal)
                 scheduleItem.switchControl.layer.borderColor = UIColor.lightGray.cgColor
             } else {
                 scheduleItem.switchControl.backgroundColor = UIColor.white
@@ -167,10 +198,10 @@ class WeekViewController: UIViewController {
         }
 
         for scheduleItem in scheduleAfterViews! {
-            if dataObj.afterNoon {
+            if dataObj[scheduleItem.tag].afterNoon {
                 scheduleItem.switchControl.backgroundColor = UIColor.lightGray
                 scheduleItem.switchControl.setTitleColor(UIColor.darkGray, for: .normal)
-                scheduleItem.switchControl.setTitle(dataObj.ownerId, for: .normal)
+                scheduleItem.switchControl.setTitle(dataObj[scheduleItem.tag].ownerId, for: .normal)
                 scheduleItem.switchControl.layer.borderColor = UIColor.lightGray.cgColor
             } else {
                 scheduleItem.switchControl.backgroundColor = UIColor.white
