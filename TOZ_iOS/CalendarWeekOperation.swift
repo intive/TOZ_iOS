@@ -13,7 +13,7 @@ class CalendarWeekOperation: ServiceOperation {
     private(set) var result: RequestResult<[CalendarItem]>?
     var resultCompletion: ((RequestResult<[CalendarItem]>) -> Void)?
 
-    public init(from: Date, to: Date) {
+    public init(from: String, to: String) {
         self.request = CalendarWeekRequest(from: from, to: to)
     }
 

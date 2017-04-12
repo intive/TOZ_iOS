@@ -9,10 +9,10 @@ import Foundation
 
 final class CalendarWeekRequest: BackendAPIRequest {
 
-    private let from: Date
-    private let to: Date
+    private let from: String
+    private let to: String
 
-    init(from: Date, to: Date) {
+    init(from: String, to: String) {
         self.from = from
         self.to = to
     }

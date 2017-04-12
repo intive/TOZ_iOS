@@ -62,4 +62,12 @@ class CalendarHelper {
         return dateToString.string(from: date)
     }
 
+    func getDatefromString(date: String, format: String = "yyyy-MM-dd") -> Date {
+        let stringToDate = DateFormatter()
+        stringToDate.dateFormat = format
+
+        return stringToDate.date(from: date)!
+
+    }
+
 }

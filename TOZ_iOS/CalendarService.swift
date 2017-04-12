@@ -8,11 +8,11 @@
 import Foundation
 
 class CalendarService {
-    let weekCalendarOperation: CalendarWeekOperation! = nil
+    var weekCalendarOperation: CalendarWeekOperation! = nil
     var calendarData = [CalendarItem]()
 
-    func requestWeeklyData(with fromDate: Date, to endDate: Date) -> [CalendarItem]? {
-
+    func requestWeeklyData(with fromDate: String, to endDate: String) -> [CalendarItem]? {
+        weekCalendarOperation = CalendarWeekOperation(from: fromDate, to: endDate)
         weekCalendarOperation.resultCompletion = { result in
 
             switch result {

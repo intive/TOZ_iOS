@@ -64,6 +64,7 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
 
         //var calendarService = CalendarService()
+        //calendarService.requestWeeklyData(with: week[0], to: week[6])
 
         prevButtonVar.layer.cornerRadius = prevButtonVar.bounds.height * 0.45
         nextButtonVar.layer.cornerRadius = nextButtonVar.bounds.height * 0.45

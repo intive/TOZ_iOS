@@ -18,7 +18,7 @@ final class CalendarResponseMapper: ArrayResponseMapper<CalendarItem>, ResponseM
             for resItem in arrayOfReservations! {
                 guard let date = resItem["date"] as? Date? else { return nil }
                 let stringToDate = DateFormatter()
-                stringToDate.dateFormat = "HH:MM"
+                stringToDate.dateFormat = "HH:mm"
                 guard let startTimeTmp = resItem["startTime"] as? String? else { return nil }
                 let startTime = stringToDate.date(from: startTimeTmp!)
                 guard let endTimeTmp = resItem["endTime"] as? String? else { return nil }
