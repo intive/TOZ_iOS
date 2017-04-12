@@ -23,14 +23,14 @@
             <subviews>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eJ-yH-h7w" customClass="UIButton">
                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="7eJ-yH-h7w" secondAttribute="height" multiplier="1:1" id="d4Y-DH-vRf"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="7eJ-yH-h7w" secondAttribute="bottom" id="4Yo-vs-qwy"/>
                 <constraint firstAttribute="trailing" secondItem="7eJ-yH-h7w" secondAttribute="trailing" id="KbU-pX-4Hw"/>

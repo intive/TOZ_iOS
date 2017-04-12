@@ -17,6 +17,8 @@ class ScheduleView: UIControl {
         super.init(coder: aDecoder)
        Bundle.main.loadNibNamed("Schedule", owner: self, options: nil)
         switchControl.layer.cornerRadius = switchControl.bounds.height * 0.35
+        switchControl.layer.borderWidth = 1
+        switchControl.layer.borderColor = UIColor.white.cgColor
 
         self.sView.frame = self.bounds
         if let titleLabel = switchControl.titleLabel {

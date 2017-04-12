@@ -14,10 +14,12 @@ class WeekViewController: UIViewController {
     @IBAction func weekAction(_ sender: WeekDayView) {
         let tag = sender.tag
         if tag != delegate.indexDay {
-            weekDayViews[delegate.indexDay].valueOfDay.backgroundColor = UIColor.lightGray
-            weekDayViews[delegate.indexDay].valueOfDay.setTitleColor(UIColor.white, for: .normal)
+            weekDayViews[delegate.indexDay].valueOfDay.backgroundColor = UIColor.white
+        weekDayViews[delegate.indexDay].valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
+            weekDayViews[delegate.indexDay].valueOfDay.layer.borderColor = UIColor.white.cgColor
             weekDayViews[tag].valueOfDay.backgroundColor = UIColor.white
-            weekDayViews[tag].valueOfDay.setTitleColor(UIColor.lightGray, for: .normal)
+            weekDayViews[tag].valueOfDay.setTitleColor(UIColor.darkGray, for: .normal)
+            weekDayViews[tag].valueOfDay.layer.borderColor = UIColor.lightGray.cgColor
             delegate.indexDay = tag
         }
     }
@@ -31,9 +33,10 @@ class WeekViewController: UIViewController {
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //make reservation
                     print("make reservation \(action.title!)")
-                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitle("RK", for: .normal)
-                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
+                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitle("BL", for: .normal)
+                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.darkText, for: .normal)
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.lightGray
+                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.layer.borderColor = UIColor.lightGray.cgColor
 
                     let alertView = UIAlertController(title: "Super", message: "Pomagasz ratować świat", preferredStyle: .alert)
                     alertView.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -52,8 +55,10 @@ class WeekViewController: UIViewController {
                     //delete reservation
                     print("delete reservation \(action.title!)")
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitle(nil, for: .normal)
-                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.lightGray, for: .normal)
+                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
                     self.scheduleMoringViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.white
+                    self.scheduleMoringViews[self.delegate.indexDay].switchControl.layer.borderColor = UIColor.lightGray.cgColor
+
                 }
                 alertController.addAction(yesAction)
                 let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action: UIAlertAction!) in
@@ -74,9 +79,10 @@ class WeekViewController: UIViewController {
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //make reservation
                     print("make reservation \(action.title!)")
-                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitle("RK", for: .normal)
-                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
+                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitle("BL", for: .normal)
+                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.darkText, for: .normal)
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.lightGray
+                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.layer.borderColor = UIColor.lightGray.cgColor
 
                     let alertView = UIAlertController(title: "Super", message: "Pomagasz ratować świat", preferredStyle: .alert)
                     alertView.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -89,14 +95,16 @@ class WeekViewController: UIViewController {
                 alertController.addAction(noAction)
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Usunięcie \(dataObj.ownerId)", message:
+                let alertController = UIAlertController(title: "Usunięcie  \(dataObj.ownerId)", message:
                     "Czy potwierdzasz usunięcie?", preferredStyle: UIAlertControllerStyle.alert)
                 let yesAction = UIAlertAction(title: "Tak", style: .default) { (action: UIAlertAction!) in
                     //delete reservation
                     print("delete reservation \(action.title!)")
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitle(nil, for: .normal)
-                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.lightGray, for: .normal)
+                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.setTitleColor(UIColor.white, for: .normal)
                     self.scheduleAfterViews[self.delegate.indexDay].switchControl.backgroundColor = UIColor.white
+                    self.scheduleAfterViews[self.delegate.indexDay].switchControl.layer.borderColor = UIColor.lightGray.cgColor
+
                 }
                 alertController.addAction(yesAction)
                 let noAction = UIAlertAction(title: "Nie", style: .cancel) { (action: UIAlertAction!) in
@@ -133,32 +141,42 @@ class WeekViewController: UIViewController {
             dayAfterDay.valueOfDay.setTitle(dataObj.date, for: .normal)
             if delegate.indexDay == dayAfterDay.tag {
                 dayAfterDay.valueOfDay.backgroundColor = UIColor.white
-                dayAfterDay.valueOfDay.setTitleColor(UIColor.darkText, for: .normal)
-                dayAfterDay.dayOfweek.textColor = UIColor.white
+                dayAfterDay.valueOfDay.setTitleColor(UIColor.lightGray, for: .normal)
+                dayAfterDay.valueOfDay.layer.borderColor = UIColor.lightGray.cgColor
+                dayAfterDay.dayOfweek.textColor = UIColor.lightGray
             } else {
-                dayAfterDay.valueOfDay.backgroundColor = UIColor.lightGray
-                dayAfterDay.valueOfDay.setTitleColor(UIColor.white, for: .normal)
-                dayAfterDay.dayOfweek.textColor = UIColor.white
+                dayAfterDay.valueOfDay.backgroundColor = UIColor.white
+                dayAfterDay.valueOfDay.setTitleColor(UIColor.lightGray, for: .normal)
+                dayAfterDay.valueOfDay.layer.borderColor = UIColor.white.cgColor
+                dayAfterDay.dayOfweek.textColor = UIColor.lightGray
             }
         }
 
         for scheduleItem in scheduleMoringViews! {
             if dataObj.morning {
                 scheduleItem.switchControl.backgroundColor = UIColor.lightGray
+                scheduleItem.switchControl.setTitleColor(UIColor.darkGray, for: .normal)
                 scheduleItem.switchControl.setTitle(dataObj.ownerId, for: .normal)
+                scheduleItem.switchControl.layer.borderColor = UIColor.lightGray.cgColor
             } else {
                 scheduleItem.switchControl.backgroundColor = UIColor.white
+                scheduleItem.switchControl.setTitleColor(UIColor.white, for: .normal)
                 scheduleItem.switchControl.setTitle(nil, for: .normal)
+                scheduleItem.switchControl.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
 
         for scheduleItem in scheduleAfterViews! {
             if dataObj.afterNoon {
                 scheduleItem.switchControl.backgroundColor = UIColor.lightGray
+                scheduleItem.switchControl.setTitleColor(UIColor.darkGray, for: .normal)
                 scheduleItem.switchControl.setTitle(dataObj.ownerId, for: .normal)
+                scheduleItem.switchControl.layer.borderColor = UIColor.lightGray.cgColor
             } else {
                 scheduleItem.switchControl.backgroundColor = UIColor.white
+                scheduleItem.switchControl.setTitleColor(UIColor.white, for: .normal)
                 scheduleItem.switchControl.setTitle(nil, for: .normal)
+                scheduleItem.switchControl.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
 
