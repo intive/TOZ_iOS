@@ -16,6 +16,9 @@ class NewsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.textColor = Color.Cell.Font.title
+        dateLabel.textColor = Color.Cell.Font.date
+        contentLabel.textColor = Color.Cell.Font.title
         titleLabel.text = selectedNews?.title
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
         let photoURL: URL? = selectedNews?.photoUrl
