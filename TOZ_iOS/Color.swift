@@ -40,7 +40,7 @@ struct Color {
     }
     struct Cell {
         struct Background {
-            static let primary = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
+            static let primary = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.00)
         }
         struct Button {
             static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)

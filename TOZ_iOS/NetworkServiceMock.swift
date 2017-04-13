@@ -16,15 +16,13 @@ class NetworkServiceMock: NetworkService {
                               success: ((Data?) -> Void)?,
                               failure: ((Data?, RequestError, Int) -> Void)?) {
         var jsonObj: NSData?
+        var path: String?
         // News request
         if url.absoluteString == "http://dev.patronage2017.intive-projects.com/news?shortened=false" ||
             url.absoluteString == "http://dev.patronage2017.intive-projects.com/news?shortened=true" {
             switch method {
             case .GET:
-                let path = Bundle.main.path(forResource: "GetNews", ofType: "json")
-                if let path = path {
-                    jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                }
+                path = Bundle.main.path(forResource: "GetNews", ofType: "json")
                 break
             default:
                 failure?(nil, RequestError.InvalidRequest, 0)
@@ -32,10 +30,7 @@ class NetworkServiceMock: NetworkService {
         } else if url.absoluteString == "http://dev.patronage2017.intive-projects.com/organization/info" {
             switch method {
             case .GET:
-                let path = Bundle.main.path(forResource: "GetOrganizationInfo", ofType: "json")
-                if let path = path {
-                    jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                }
+                path = Bundle.main.path(forResource: "GetOrganizationInfo", ofType: "json")
                 break
             default:
                 failure?(nil, RequestError.InvalidRequest, 0)
@@ -43,14 +38,14 @@ class NetworkServiceMock: NetworkService {
         } else if url.absoluteString == "http://dev.patronage2017.intive-projects.com/pets" {
             switch method {
             case .GET:
-                let path = Bundle.main.path(forResource: "GetAnimals", ofType: "json")
-                if let path = path {
-                jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                }
+                path = Bundle.main.path(forResource: "GetAnimals", ofType: "json")
                 break
             default:
                 failure?(nil, RequestError.InvalidRequest, 0)
             }
+        }
+        if let path = path {
+            jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
         }
         var mutableRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
         mutableRequest.allHTTPHeaderFields = headers

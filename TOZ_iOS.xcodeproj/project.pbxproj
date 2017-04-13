@@ -25,6 +25,7 @@
 		3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */; };
 		4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281CABE1E91C51500F16519 /* LoginViewController.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
+		42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
 		4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */; };
@@ -53,6 +54,10 @@
 		A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */; };
 		AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */; };
+		CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */; };
+		CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A41E958980006E23C7 /* Calendar.storyboard */; };
+		CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A61E9A7059006E23C7 /* Help.storyboard */; };
+		CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A81E9A7127006E23C7 /* News.storyboard */; };
 		FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,7 @@
 		3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponseMapper.swift; sourceTree = "<group>"; };
 		4281CABE1E91C51500F16519 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoRequest.swift; sourceTree = "<group>"; };
@@ -119,6 +125,10 @@
 		A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOZ_iOSTests.swift; sourceTree = "<group>"; };
 		A1CABC0B1E6AEB1F009A06F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3D1325AC6CF9A0833CE20E0 /* Pods-TOZ_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		CE0BB3A41E958980006E23C7 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		CE0BB3A61E9A7059006E23C7 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		CE0BB3A81E9A7127006E23C7 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		D193989766D107F5788BF823 /* Pods-TOZ_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC024A7099B1ED00E959A5C1 /* Pods-TOZ_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB010738E58D345E5DABAD84 /* Pods-TOZ_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +273,7 @@
 				4BB31FDB1E84512700D2E6EF /* NetworkMappers */,
 				37434B5C1E7F1B7E00336605 /* NewsEntity.swift */,
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
+				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4281CABE1E91C51500F16519 /* LoginViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
@@ -277,6 +288,10 @@
 				3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
+				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
+				CE0BB3A61E9A7059006E23C7 /* Help.storyboard */,
+				CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */,
+				CE0BB3A41E958980006E23C7 /* Calendar.storyboard */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
 				A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */,
 				A1CABC001E6AEB1F009A06F8 /* Info.plist */,
@@ -383,9 +398,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */,
 				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */,
+
+				CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */,
+				CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */,
+				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
+				CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */,
+				CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */,
+
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
 				052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
@@ -533,6 +556,7 @@
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
 				3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */,
+				42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
