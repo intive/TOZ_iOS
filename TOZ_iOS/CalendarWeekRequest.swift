@@ -9,12 +9,12 @@ import Foundation
 
 final class CalendarWeekRequest: BackendAPIRequest {
 
-    private let from: String
-    private let to: String
+    private let fromDate: String
+    private let toDate: String
 
-    init(from: String, to: String) {
-        self.from = from
-        self.to = to
+    init(fromDate: String, toDate: String) {
+        self.fromDate = fromDate
+        self.toDate = toDate
     }
 
     var endpoint: String {
@@ -25,8 +25,8 @@ final class CalendarWeekRequest: BackendAPIRequest {
     }
     var parameters: [String: Any]? {
         var params = [String: Any]()
-        params["from"] = from
-        params["to"] = to
+        params["from"] = fromDate
+        params["to"] = toDate
 
         return params
     }

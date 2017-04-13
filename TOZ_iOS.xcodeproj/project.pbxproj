@@ -40,6 +40,12 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		541223A11E9F70B30089C3A9 /* UpdateScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541223A01E9F70B30089C3A9 /* UpdateScheduleRequest.swift */; };
+		541223A31E9F71870089C3A9 /* DeleteScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541223A21E9F71870089C3A9 /* DeleteScheduleRequest.swift */; };
+		541223A51E9F76F20089C3A9 /* AddScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541223A41E9F76F20089C3A9 /* AddScheduleRequest.swift */; };
+		541223A71E9F87D70089C3A9 /* UpdateScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541223A61E9F87D70089C3A9 /* UpdateScheduleOperation.swift */; };
+		541223A91E9F89670089C3A9 /* AddScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541223A81E9F89670089C3A9 /* AddScheduleOperation.swift */; };
+		541223AB1E9F89A00089C3A9 /* DeleteScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541223AA1E9F89A00089C3A9 /* DeleteScheduleOperation.swift */; };
 		544556B91E9D6BA000795AEC /* CalendarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544556B11E9D6BA000795AEC /* CalendarEntity.swift */; };
 		544556BA1E9D6BA000795AEC /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544556B21E9D6BA000795AEC /* WeekDayView.swift */; };
 		544556BB1E9D6BA000795AEC /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544556B31E9D6BA000795AEC /* ScheduleView.swift */; };
@@ -115,6 +121,12 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		541223A01E9F70B30089C3A9 /* UpdateScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateScheduleRequest.swift; sourceTree = "<group>"; };
+		541223A21E9F71870089C3A9 /* DeleteScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteScheduleRequest.swift; sourceTree = "<group>"; };
+		541223A41E9F76F20089C3A9 /* AddScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleRequest.swift; sourceTree = "<group>"; };
+		541223A61E9F87D70089C3A9 /* UpdateScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateScheduleOperation.swift; sourceTree = "<group>"; };
+		541223A81E9F89670089C3A9 /* AddScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleOperation.swift; sourceTree = "<group>"; };
+		541223AA1E9F89A00089C3A9 /* DeleteScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteScheduleOperation.swift; sourceTree = "<group>"; };
 		544556B11E9D6BA000795AEC /* CalendarEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEntity.swift; sourceTree = "<group>"; };
 		544556B21E9D6BA000795AEC /* WeekDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		544556B31E9D6BA000795AEC /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
@@ -207,6 +219,9 @@
 				4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */,
 				4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */,
 				544556C71E9D7FD500795AEC /* CalendarWeekRequest.swift */,
+				541223A01E9F70B30089C3A9 /* UpdateScheduleRequest.swift */,
+				541223A41E9F76F20089C3A9 /* AddScheduleRequest.swift */,
+				541223A21E9F71870089C3A9 /* DeleteScheduleRequest.swift */,
 			);
 			name = NetworkRequests;
 			sourceTree = "<group>";
@@ -218,6 +233,9 @@
 				4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */,
 				4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */,
 				544556C91E9D803C00795AEC /* CalendarWeekOperation.swift */,
+				541223A61E9F87D70089C3A9 /* UpdateScheduleOperation.swift */,
+				541223A81E9F89670089C3A9 /* AddScheduleOperation.swift */,
+				541223AA1E9F89A00089C3A9 /* DeleteScheduleOperation.swift */,
 			);
 			name = NetworkOperations;
 			sourceTree = "<group>";
@@ -559,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541223A91E9F89670089C3A9 /* AddScheduleOperation.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				544556BF1E9D6BA000795AEC /* WeekViewController.swift in Sources */,
@@ -567,6 +586,7 @@
 				3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */,
 				3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
+				541223AB1E9F89A00089C3A9 /* DeleteScheduleOperation.swift in Sources */,
 				544556BB1E9D6BA000795AEC /* ScheduleView.swift in Sources */,
 				4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */,
 				544556CC1E9D80BF00795AEC /* CalendarResponseMapper.swift in Sources */,
@@ -592,15 +612,19 @@
 				544556CA1E9D803C00795AEC /* CalendarWeekOperation.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
+				541223A11E9F70B30089C3A9 /* UpdateScheduleRequest.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
 				4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */,
 				4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */,
+				541223A71E9F87D70089C3A9 /* UpdateScheduleOperation.swift in Sources */,
+				541223A51E9F76F20089C3A9 /* AddScheduleRequest.swift in Sources */,
 				4B98B2EE1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift in Sources */,
 				4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */,
 				4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */,
 				8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */,
 				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
+				541223A31E9F71870089C3A9 /* DeleteScheduleRequest.swift in Sources */,
 				4B98B2E81E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift in Sources */,
 				544556B91E9D6BA000795AEC /* CalendarEntity.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,

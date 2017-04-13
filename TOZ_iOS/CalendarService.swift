@@ -12,7 +12,7 @@ class CalendarService {
     var calendarData = [CalendarItem]()
 
     func requestWeeklyData(with fromDate: String, to endDate: String) -> [CalendarItem]? {
-        weekCalendarOperation = CalendarWeekOperation(from: fromDate, to: endDate)
+        weekCalendarOperation = CalendarWeekOperation(fromDate: fromDate, toDate: endDate)
         weekCalendarOperation.resultCompletion = { result in
 
             switch result {

@@ -1,5 +1,5 @@
 //
-//  CalendarWeekOperation.swift
+//  UpdateScheduleOperation.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-class CalendarWeekOperation: ServiceOperation {
-    private let request: CalendarWeekRequest
+class UpdateScheduleOperation: ServiceOperation {
+    private let request: UpdateScheduleRequest
 
     private(set) var result: RequestResult<[CalendarItem]>?
     var resultCompletion: ((RequestResult<[CalendarItem]>) -> Void)?
 
-    public init(fromDate: String, toDate: String) {
-        self.request = CalendarWeekRequest(fromDate: fromDate, toDate: toDate)
+    public init(idObject: String, dataObject: CalendarItem) {
+        self.request = UpdateScheduleRequest(idObject: idObject, dataObject: dataObject)
     }
 
     func start() {
