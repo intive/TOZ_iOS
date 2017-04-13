@@ -16,10 +16,9 @@ class NetworkServiceMock: NetworkService {
                               success: ((Data?) -> Void)?,
                               failure: ((_ data: Data?, _ error: RequestError, _ responseCode: Int) -> Void)? = nil) {
         DispatchQueue.global().async {
-            var jsonObj: NSData?
             var nameOfFile: String?
             // News request
-            if url.path == "news?shortened=true" || url.path == "news?shortened=false" {
+            if url.path == "/news" {
                 switch method {
                 case .GET:
                     nameOfFile = "GetNews"
@@ -27,7 +26,7 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 } // organization info request
-            } else if url.path == "info" {
+            } else if url.path == "/info" {
                 switch method {
                 case .GET:
                     nameOfFile = "GetOrganizationInfo"
@@ -35,7 +34,7 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 } // animal list request
-            } else if url.path == "pets" {
+            } else if url.path == "/pets" {
                 switch method {
                 case .GET:
                     nameOfFile = "GetAnimals"
@@ -44,19 +43,19 @@ class NetworkServiceMock: NetworkService {
                     print("Method is not appropriate.")
                 }
             }
-            if let nameOfFile = nameOfFile {
-                let path = Bundle.main.path(forResource: nameOfFile, ofType: "json")
-                if let path = path {
-                    jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                    if let jsonObj = jsonObj {
-                        success?(jsonObj as Data)
-                    }
-                } else {
-                    failure?(jsonObj as Data?, RequestError.InvalidRequest, 0)
-                }
-            } else {
+            guard nameOfFile != nil else {
                 failure?(nil, RequestError.InvalidRequest, 0)
+                return
             }
+            guard let path = Bundle.main.path(forResource: nameOfFile, ofType: "json") else {
+                failure?(nil, RequestError.InvalidRequest, 0)
+                return
+            }
+            guard let jsonObj = try? NSData(contentsOfFile: path, options: []) else {
+                failure?(nil, RequestError.InvalidRequest, 0)
+                return
+            }
+            success?(jsonObj as Data)
         }
     }
 }
