@@ -15,36 +15,48 @@ class NetworkServiceMock: NetworkService {
                               headers: [String : String]?,
                               success: ((Data?) -> Void)?,
                               failure: ((_ data: Data?, _ error: RequestError, _ responseCode: Int) -> Void)? = nil) {
-        var jsonObj: NSData?
-        var path: String?
-        // News request
-        if url.absoluteString == url.path {
-            switch method {
-            case .GET:
-                path = Bundle.main.path(forResource: "GetNews", ofType: "json")
-                break
-            default:
-                failure?(nil, RequestError.InvalidRequest, 0)
-            } // organization info request
-        } else if url.absoluteString == url.path {
-            switch method {
-            case .GET:
-                path = Bundle.main.path(forResource: "GetOrganizationInfo", ofType: "json")
-                break
-            default:
-                failure?(nil, RequestError.InvalidRequest, 0)
-            } // animal list request
-        } else if url.absoluteString == url.path {
-            switch method {
-            case .GET:
-                path = Bundle.main.path(forResource: "GetAnimals", ofType: "json")
-                break
-            default:
+        DispatchQueue.global().async {
+            var jsonObj: NSData?
+            var nameOfFile: String?
+            // News request
+            if url.path == "news?shortened=true" || url.path == "news?shortened=false" {
+                switch method {
+                case .GET:
+                    nameOfFile = "GetNews"
+                    break
+                default:
+                    print("Method is not appropriate.")
+                } // organization info request
+            } else if url.path == "info" {
+                switch method {
+                case .GET:
+                    nameOfFile = "GetOrganizationInfo"
+                    break
+                default:
+                    print("Method is not appropriate.")
+                } // animal list request
+            } else if url.path == "pets" {
+                switch method {
+                case .GET:
+                    nameOfFile = "GetAnimals"
+                    break
+                default:
+                    print("Method is not appropriate.")
+                }
+            }
+            if let nameOfFile = nameOfFile {
+                let path = Bundle.main.path(forResource: nameOfFile, ofType: "json")
+                if let path = path {
+                    jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+                    if let jsonObj = jsonObj {
+                        success?(jsonObj as Data)
+                    }
+                } else {
+                    failure?(jsonObj as Data?, RequestError.InvalidRequest, 0)
+                }
+            } else {
                 failure?(nil, RequestError.InvalidRequest, 0)
             }
-        }
-        if let path = path {
-            jsonObj = try? NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
         }
     }
 }
