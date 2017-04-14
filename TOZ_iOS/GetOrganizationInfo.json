@@ -1,0 +1,21 @@
+{
+    "name": "TOZ Szczecin",
+    "address": {
+        "street": "ul. Przykładowa",
+        "houseNumber": "1",
+        "apartmentNumber": "1",
+        "postCode": "02-123",
+        "city": "string",
+        "country": "string"
+    },
+    "contact": {
+        "email": "mail@example.com",
+        "phone": "+48123123123",
+        "fax": "+48123123123",
+        "website": "http://example.com/"
+    },
+    "bankAccount": {
+        "number": "61109010140000071219812874",
+        "bankName": "string"
+    }
+}

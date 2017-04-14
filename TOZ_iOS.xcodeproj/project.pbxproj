@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B681E9E4FD9001AE31A /* GetNews.json */; };
+		052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */; };
+		052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6E1E9E5154001AE31A /* GetAnimals.json */; };
+		05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */; };
 		37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5C1E7F1B7E00336605 /* NewsEntity.swift */; };
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
@@ -68,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052E3B681E9E4FD9001AE31A /* GetNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetNews.json; sourceTree = "<group>"; };
+		052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetOrganizationInfo.json; sourceTree = "<group>"; };
+		052E3B6E1E9E5154001AE31A /* GetAnimals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAnimals.json; sourceTree = "<group>"; };
+		05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37434B5C1E7F1B7E00336605 /* NewsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
 		37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +154,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052E3B651E9E4E53001AE31A /* MockJSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				052E3B681E9E4FD9001AE31A /* GetNews.json */,
+				052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */,
+				052E3B6E1E9E5154001AE31A /* GetAnimals.json */,
+			);
+			name = MockJSONFiles;
+			sourceTree = "<group>";
+		};
 		1418CBC7DB576509170E411F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +188,7 @@
 				4BFF98621E7F129100951035 /* ParsedItem.swift */,
 				4BFF98661E7F16A000951035 /* ResponseMapper.swift */,
 				4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */,
+				05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -246,6 +265,7 @@
 		A1CABBF11E6AEB1F009A06F8 /* TOZ_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				052E3B651E9E4E53001AE31A /* MockJSONFiles */,
 				4B5185881E7E9D4500CD343F /* Network */,
 				4BB31FD81E8450D600D2E6EF /* NetworkRequests */,
 				4BB31FD91E8450F800D2E6EF /* NetworkOperations */,
@@ -378,12 +398,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */,
+				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
+				052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */,
+
 				CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */,
 				CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */,
 				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */,
 				CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */,
+
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
+				052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +549,7 @@
 				4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */,
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
+				05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
