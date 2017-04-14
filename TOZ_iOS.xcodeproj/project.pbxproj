@@ -45,13 +45,13 @@
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
 		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
+		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
 		A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */; };
 		A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */; };
 		A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */; };
 		A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */; };
-		A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */; };
 		AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */; };
 		CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */; };
@@ -278,11 +278,11 @@
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
+				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
 				54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */,
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
 				3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */,
 				3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */,
-				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */,
 				3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */,
@@ -360,7 +360,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = intive;
 				TargetAttributes = {
 					A1CABBEE1E6AEB1F009A06F8 = {
@@ -398,17 +398,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */,
-				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
+				8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */,
 				052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */,
-
 				CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */,
 				CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */,
-				A1CABBFF1E6AEB1F009A06F8 /* LaunchScreen.storyboard in Resources */,
 				CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */,
 				CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */,
-
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
 				052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
