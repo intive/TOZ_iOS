@@ -30,15 +30,16 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         return animalsArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "galleryTableViewCell") as? GalleryTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "galleryTableViewCell", for: indexPath)
+        if let cell = cell as? GalleryTableViewCell {
             let animalInfo = animalsArray[indexPath.row]
             cell.animalName.text = animalInfo.name
             cell.animalType.text = animalInfo.type
             cell.animalImage.image = animalInfo.image
-            return cell
         }
-        return UITableViewCell()
+        return cell
     }
+
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showGalleryDetail", sender: self)
