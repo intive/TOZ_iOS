@@ -8,7 +8,7 @@
 import Foundation
 
 final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseMapperProtocol {
-
+    // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> [AnimalItem] {
         return try process(obj, mapper: { jsonNode in
             guard let animalID = jsonNode["id"] as? String else { throw ResponseMapperError.responseParsingFailed }
@@ -17,10 +17,18 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
             guard let sex = jsonNode["sex"] as? String else { throw ResponseMapperError.responseParsingFailed }
             guard let description = jsonNode["description"] as? String? else { throw ResponseMapperError.responseParsingFailed }
             guard let address = jsonNode["address"] as? String? else { throw ResponseMapperError.responseParsingFailed }
-            guard let created = jsonNode["created"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
+            guard let createdInt = jsonNode["created"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
+            var createdDate: Date? = nil
+            if let createdInt = createdInt {
+                createdDate = Date(timeIntervalSince1970: TimeInterval(createdInt))
+            }
             guard let lastModified = jsonNode["lastModified"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
-            guard let imageUrl = jsonNode["imageUrl"] as? String? else { throw ResponseMapperError.responseParsingFailed }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: created, lastModified: lastModified, imageUrl: imageUrl)
+            guard let imageString = jsonNode["imageUrl"] as? String? else { throw ResponseMapperError.responseParsingFailed }
+            var imageURL: URL? = nil
+            if let imageString = imageString {
+                imageURL = BackendConfiguration.shared.baseURL.appendingPathComponent(imageString)
+            }
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModified, imageUrl: imageURL)
         })
     }
 }

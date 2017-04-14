@@ -12,4 +12,5 @@ struct GalleryEntity {
     var name: String
     var type: String
     var image: UIImage?
+    var animalID: String
 }
