@@ -14,9 +14,9 @@ import Foundation
 */
 class NetworkService {
 
-    /*private */var task: URLSessionDataTask?
-    /*private */var successCodes: CountableRange<Int> = 200..<299
-    /*private */var failureCodes: CountableRange<Int> = 400..<499
+    private var task: URLSessionDataTask?
+    private var successCodes: CountableRange<Int> = 200..<299
+    private var failureCodes: CountableRange<Int> = 400..<499
 
     /// enum for choosing HTTP request method
     enum Method: String {
