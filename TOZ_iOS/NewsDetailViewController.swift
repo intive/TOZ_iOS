@@ -21,6 +21,7 @@ class NewsDetailViewController: UIViewController {
         contentLabel.textColor = Color.Cell.Font.title
         titleLabel.text = selectedNews?.title
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
+        photoImageView.photo = nil
         let photoURL: URL? = selectedNews?.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in

@@ -132,7 +132,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxm-Qm-aM7">
                                 <rect key="frame" x="5" y="79" width="404" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -146,7 +146,7 @@
                                 <rect key="frame" x="0.0" y="142" width="414" height="545"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieT-o8-xi8">
-                                        <rect key="frame" x="5" y="214" width="404" height="19.666666666666686"/>
+                                        <rect key="frame" x="5" y="234" width="404" height="19.666666666666686"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -167,7 +167,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ieT-o8-xi8" secondAttribute="bottom" id="4gh-4P-cn8"/>
                                     <constraint firstAttribute="trailing" secondItem="ieT-o8-xi8" secondAttribute="trailing" constant="5" id="8nu-jZ-p8q"/>
-                                    <constraint firstItem="ieT-o8-xi8" firstAttribute="top" secondItem="sYB-le-XH6" secondAttribute="bottom" constant="10" id="Alm-ny-wZu"/>
+                                    <constraint firstItem="ieT-o8-xi8" firstAttribute="top" secondItem="sYB-le-XH6" secondAttribute="bottom" constant="30" id="Alm-ny-wZu"/>
                                     <constraint firstItem="ieT-o8-xi8" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="5" id="ChR-kk-hzN"/>
                                     <constraint firstItem="sYB-le-XH6" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="5" id="QkY-Gw-JNh"/>
                                     <constraint firstItem="sYB-le-XH6" firstAttribute="centerX" secondItem="LIN-3u-tug" secondAttribute="centerX" id="Rl6-Gl-gDX"/>
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5t-ca-dnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925.5999999999999" y="-99.400299850074973"/>
+            <point key="canvasLocation" x="2924.6376811594205" y="-99.456521739130437"/>
         </scene>
         <!--News-->
         <scene sceneID="ge0-nh-dXU">
