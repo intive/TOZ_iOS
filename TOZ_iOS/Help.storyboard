@@ -22,18 +22,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnN-kX-wp4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="270"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnN-kX-wp4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="268"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Zostań wolontariuszem"/>
                                 <connections>
                                     <segue destination="rjM-1G-CYG" kind="show" id="DLs-6f-bgP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-OB-HVa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-OB-HVa">
                                 <rect key="frame" x="0.0" y="332" width="375" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Dane do przelewu"/>
                                 <connections>
@@ -42,6 +40,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s8T-OB-HVa" firstAttribute="top" secondItem="IO3-Hx-GBt" secondAttribute="bottom" constant="268" id="6Rf-XK-yS8"/>
+                            <constraint firstItem="XnN-kX-wp4" firstAttribute="leading" secondItem="zug-YU-hu3" secondAttribute="leading" id="IoY-Mm-fGS"/>
+                            <constraint firstItem="Iib-Jj-wTU" firstAttribute="top" secondItem="s8T-OB-HVa" secondAttribute="bottom" id="PNS-ku-xah"/>
+                            <constraint firstAttribute="trailing" secondItem="XnN-kX-wp4" secondAttribute="trailing" id="SbF-UH-DQg"/>
+                            <constraint firstAttribute="trailing" secondItem="s8T-OB-HVa" secondAttribute="trailing" id="XQd-IM-d0A"/>
+                            <constraint firstItem="XnN-kX-wp4" firstAttribute="top" secondItem="IO3-Hx-GBt" secondAttribute="bottom" id="ebV-7V-Dld"/>
+                            <constraint firstItem="s8T-OB-HVa" firstAttribute="top" secondItem="XnN-kX-wp4" secondAttribute="bottom" id="gku-6l-8Bc"/>
+                            <constraint firstItem="s8T-OB-HVa" firstAttribute="leading" secondItem="zug-YU-hu3" secondAttribute="leading" id="lt6-1c-lba"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jak pomóc?" id="rEs-6D-MYl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
