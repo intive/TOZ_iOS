@@ -57,7 +57,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
             case .failure(let error):
                 print ("\(error)")
             }
-            self.listOfAnimalsOperation.start()
+        }
+            listOfAnimalsOperation.start()
         }
     }
-}
+
