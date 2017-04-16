@@ -15,7 +15,6 @@
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
 		37434B631E7F1BAA00336605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B621E7F1BAA00336605 /* Color.swift */; };
-		3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */; };
 		3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */; };
 		3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */; };
 		3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */; };
@@ -86,7 +85,6 @@
 		37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
 		37434B621E7F1BAA00336605 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryEntity.swift; sourceTree = "<group>"; };
 		3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFinanceViewController.swift; sourceTree = "<group>"; };
 		3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
@@ -303,7 +301,6 @@
 				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
 				54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */,
 				A1CABBF61E6AEB1F009A06F8 /* NewsViewController.swift */,
-				3777B0AF1E8E479C00FF385A /* GalleryEntity.swift */,
 				3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */,
@@ -576,7 +573,6 @@
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
-				3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */,
 				42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
