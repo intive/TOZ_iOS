@@ -13,7 +13,7 @@ class AddScheduleOperation: ServiceOperation {
     private(set) var result: RequestResult<[ScheduleItem]>?
     var resultCompletion: ((RequestResult<[ScheduleItem]>) -> Void)?
 
-    public init(idObject: String, dataObject: ScheduleItem) {
+    public init(idObject: String, dataObject: ScheduleItem.ReservationItem) {
         self.request = AddScheduleRequest(idObject: idObject, dataObject: dataObject)
     }
 

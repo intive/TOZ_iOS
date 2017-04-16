@@ -14,33 +14,26 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem>, ResponseM
     static func process(_ obj: AnyObject?) throws -> [ScheduleItem] {
         return try process(obj, mapper: { jsonNode in
 
-            var listOfObjects = [AnyObject]()
+            var listOfObjects = Array<ScheduleItem.ReservationItem>()
             guard let arrayOfReservations = jsonNode["reservations"] as? [[String: AnyObject]]? else { return nil }
             for resItem in arrayOfReservations! {
-                guard let idObject = resItem["id"] as? String? else { return nil }
-                guard let date = resItem["date"] as? Date? else { return nil }
-                guard let startTime = resItem["startTime"] as? String? else { return nil }
-                guard let endTime = resItem["endTime"] as? String? else { return nil }
-                var partDay: PartDay
-                if (startTime == "08:00" || endTime == "17:00") {
-                    partDay = PartDay.morning
+                guard let idObject = resItem["id"] as? String else { return nil }
+                guard let date = resItem["date"] as? Date else { return nil }
+                guard let startTime = resItem["startTime"] as? String else { return nil }
+                guard let endTime = resItem["endTime"] as? String else { return nil }
+                var timeOfDay: TimeOfDay
+                if startTime == "08:00" || endTime == "12:00" {
+                    timeOfDay = TimeOfDay.morning
                 } else {
-                    partDay = PartDay.afternoon
+                    timeOfDay = TimeOfDay.afternoon
                 }
-                guard let ownerForename = resItem["ownerForename"] as? String? else { return nil }
-                guard let ownerSurname = resItem["ownerSurname"] as? String? else { return nil }
-                let oneItem = ScheduleItem.ReservationItem(idObject: idObject!, date: date!, partDay: partDay, ownerSurname: ownerSurname!, ownerForename: ownerForename!)
-                listOfObjects.append(oneItem as AnyObject)
+                guard let ownerForename = resItem["ownerForename"] as? String else { return nil }
+                guard let ownerSurname = resItem["ownerSurname"] as? String else { return nil }
+                let oneItem = ScheduleItem.ReservationItem(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
+                listOfObjects.append(oneItem)
             }
 
-            struct ReservationItem {
-                var idObject: String
-                var date: Date
-                var partDay: PartDay
-                var ownerSurname: String
-                var ownerForename: String
-            }
-            return ScheduleItem(reservation: listOfObjects as? [ScheduleItem.ReservationItem])
+            return ScheduleItem(reservations: listOfObjects)
         })
     }
 }

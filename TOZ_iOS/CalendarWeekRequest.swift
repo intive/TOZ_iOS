@@ -24,11 +24,8 @@ final class CalendarWeekRequest: BackendAPIRequest {
         return .GET
     }
     var parameters: [String: Any]? {
-        var params = [String: Any]()
-        params["from"] = fromDate
-        params["to"] = toDate
 
-        return params
+        return ["from": fromDate, "to": toDate]
     }
     var headers: [String: String]? {
         return defaultJSONHeaders()

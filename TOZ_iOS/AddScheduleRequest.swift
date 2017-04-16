@@ -9,11 +9,9 @@ import Foundation
 
 final class AddScheduleRequest: BackendAPIRequest {
 
-    private let idObject: String
-    private let dataObject: ScheduleItem
+    private let dataObject: ScheduleItem.ReservationItem
 
-    init(idObject: String, dataObject: ScheduleItem) {
-        self.idObject = idObject
+    init(idObject: String, dataObject: ScheduleItem.ReservationItem) {
         self.dataObject = dataObject
     }
 
@@ -25,7 +23,23 @@ final class AddScheduleRequest: BackendAPIRequest {
     }
     var parameters: [String: Any]? {
 
-        return nil
+        var startTime = ""
+        var endTime = ""
+        if dataObject.timeOfDay == .morning {
+            startTime = "08:00"
+            endTime   = "12:00"
+        } else {
+            startTime = "12:00"
+            endTime   = "16:00"
+        }
+
+        return [
+            "date": dataObject.date,
+            "ownerSurname": dataObject.ownerSurname,
+            "ownerForename": dataObject.ownerForename,
+            "startTime": startTime,
+            "endTime": endTime
+        ]
     }
     var headers: [String: String]? {
         return defaultJSONHeaders()
