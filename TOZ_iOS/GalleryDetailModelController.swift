@@ -22,24 +22,23 @@ class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
         }
 
         // Create a new view controller and pass suitable data.
-        // swiftlint:disable force_cast
-        let dataViewController = storyboard.instantiateViewController(withIdentifier: "GalleryDetailDataViewController") as! GalleryDetailDataViewController
+        guard let dataViewController = storyboard.instantiateViewController(withIdentifier: "GalleryDetailDataViewController") as? GalleryDetailDataViewController else { return nil }
         dataViewController.dataObject = self.pageData[index]
         dataViewController.photoIndex = index + 1
         dataViewController.photosCount = self.pageData.count
         return dataViewController
     }
 
+    // Return the index of the given data view controller.
     func indexOfViewController(_ viewController: GalleryDetailDataViewController) -> Int {
-        // Return the index of the given data view controller.
         return pageData.index(of: viewController.dataObject) ?? NSNotFound
     }
 
     // MARK: - Page View Controller Data Source
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        // swiftlint:disable force_cast
-        var index = self.indexOfViewController(viewController as! GalleryDetailDataViewController)
+        guard (viewController as? GalleryDetailDataViewController) != nil else { return nil }
+        var index = self.indexOfViewController((viewController as? GalleryDetailDataViewController)!)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
@@ -49,8 +48,8 @@ class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        // swiftlint:disable force_cast
-        var index = self.indexOfViewController(viewController as! GalleryDetailDataViewController)
+        guard (viewController as? GalleryDetailDataViewController) != nil else { return nil }
+        var index = self.indexOfViewController((viewController as? GalleryDetailDataViewController)!)
         if index == NSNotFound {
             return nil
         }
