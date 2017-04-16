@@ -9,8 +9,4 @@
 import UIKit
 
 class HelpFinanceViewController: UIViewController {
-
-    @IBAction func HelpBackButton(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "financeView", sender: self)
-    }
 }

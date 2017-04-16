@@ -16,8 +16,12 @@ class NewsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.textColor = Color.Cell.Font.title
+        dateLabel.textColor = Color.Cell.Font.date
+        contentLabel.textColor = Color.Cell.Font.title
         titleLabel.text = selectedNews?.title
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
+        photoImageView.photo = nil
         let photoURL: URL? = selectedNews?.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
@@ -27,13 +31,4 @@ class NewsDetailViewController: UIViewController {
         contentLabel.text = selectedNews?.contents
     }
 
-}
-
-extension Date {
-
-    func dateToFormattedString() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: self)
-    }
 }
