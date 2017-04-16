@@ -10,13 +10,10 @@ import Foundation
 
 class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var galleryTableView: UITableView!
-    
     var animalsArray = [AnimalItem]()
     var selectedGalleryCellID: String?
-    
     @IBOutlet weak var imageView: UIImageView!
     //@IBOutlet weak var indicator: UIActivityIndicatorView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getListOfAnimals()
@@ -32,10 +29,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "galleryTableViewCell", for: indexPath)
         if let cell = cell as? GalleryTableViewCell {
-            let animalInfo = animalsArray[indexPath.row]
-            cell.animalName.text = animalInfo.name
-            cell.animalType.text = animalInfo.type
-            cell.animalImage.image = animalInfo.image
+           cell.configure(with: animalsArray[indexPath.row])
         }
         return cell
     }
@@ -45,16 +39,13 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         selectedGalleryCellID = selectedCell.animalID
         performSegue(withIdentifier: "showGalleryDetail", sender: selectedGalleryCellID)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showGalleryDetail" {
             let GalleryDetailViewController = segue.destination as? GalleryDetailViewController
             GalleryDetailViewController?.selectedCell = selectedGalleryCellID
         }
     }
-    
     let listOfAnimalsOperation = ListOfAnimalsOperation()
-    
     func getListOfAnimals() {
         listOfAnimalsOperation.resultCompletion = { result in
             switch result {
@@ -63,11 +54,10 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.animalsArray = listOfAnimals
                     self.galleryTableView.reloadData()
                 }
-                
-                
             case .failure(let error):
                 print ("\(error)")
             }
             self.listOfAnimalsOperation.start()
         }
+    }
 }
