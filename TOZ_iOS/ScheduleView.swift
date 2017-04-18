@@ -2,7 +2,6 @@
 //  ScheduleView.swift
 //  TOZ_iOS
 //
-//  Created by RKB on 31/03/2017.
 //  Copyright © 2017 intive. All rights reserved.
 //
 
@@ -21,9 +20,8 @@ class ScheduleView: UIControl {
         self.addSubview(self.view)
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        switchControl.layer.cornerRadius = switchControl.bounds.height * 0.3
+    override func layoutSubviews() {
+        switchControl.layer.cornerRadius = switchControl.bounds.height * 0.5
         switchControl.layer.borderWidth = 1
         switchControl.layer.borderColor = UIColor.gray.cgColor
         switchControl.layer.backgroundColor = UIColor.white.cgColor

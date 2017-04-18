@@ -57,10 +57,13 @@ class CalendarViewController: UIViewController {
     }
 
     func configureLayOut() {
-        prevButtonVar.layer.cornerRadius = prevButtonVar.bounds.height * 0.4
+        prevButtonVar.layoutIfNeeded()
+        prevButtonVar.layer.cornerRadius = prevButtonVar.bounds.height * 0.5
         prevButtonVar.setTitleColor(UIColor.darkGray, for: .normal)
         prevButtonVar.backgroundColor = UIColor.lightGray
-        nextButtonVar.layer.cornerRadius = nextButtonVar.bounds.height * 0.4
+
+        nextButtonVar.layoutIfNeeded()
+        nextButtonVar.layer.cornerRadius = nextButtonVar.bounds.height * 0.5
         nextButtonVar.setTitleColor(UIColor.white, for: .normal)
         nextButtonVar.backgroundColor = UIColor.darkText
 

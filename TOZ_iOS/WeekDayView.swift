@@ -21,16 +21,13 @@ class WeekDayView: UIControl {
         self.addSubview(self.view)
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
+    override func layoutSubviews() {
         dayOfWeek.textColor = UIColor.lightGray
-        valueOfDay.layer.cornerRadius = valueOfDay.bounds.height * 0.35
+        valueOfDay.layer.cornerRadius = valueOfDay.bounds.height * 0.5
         valueOfDay.layer.borderWidth = 1
         valueOfDay.layer.borderColor = UIColor.white.cgColor
         valueOfDay.textColor = UIColor.darkGray
 
-        isOff()
     }
 
     func isOn() {
