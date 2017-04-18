@@ -13,11 +13,10 @@ import UIKit
 
 class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData: [UIImage] = []
+    var pageData: [URL] = []
 
-    func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> GalleryDetailDataViewController? {
-        // Return the data view controller for the given index.
-        if (self.pageData.count == 0) || (index >= self.pageData.count) {
+    func viewController(at index: Int, storyboard: UIStoryboard) -> GalleryDetailDataViewController? {
+        guard (self.pageData.count > 0) || (index <= self.pageData.count) else {
             return nil
         }
 
@@ -30,26 +29,26 @@ class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
     }
 
     // Return the index of the given data view controller.
-    func indexOfViewController(_ viewController: GalleryDetailDataViewController) -> Int {
-        return pageData.index(of: viewController.dataObject) ?? NSNotFound
+    func index(of viewController: GalleryDetailDataViewController) -> Int {
+        return pageData.index(of: viewController.dataObject!) ?? NSNotFound
     }
 
     // MARK: - Page View Controller Data Source
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard (viewController as? GalleryDetailDataViewController) != nil else { return nil }
-        var index = self.indexOfViewController((viewController as? GalleryDetailDataViewController)!)
+        var index = self.index(of: (viewController as? GalleryDetailDataViewController)!)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
 
         index -= 1
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        return self.viewController(at: index, storyboard: viewController.storyboard!)
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard (viewController as? GalleryDetailDataViewController) != nil else { return nil }
-        var index = self.indexOfViewController((viewController as? GalleryDetailDataViewController)!)
+        var index = self.index(of: (viewController as? GalleryDetailDataViewController)!)
         if index == NSNotFound {
             return nil
         }
@@ -58,7 +57,6 @@ class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
         if index == self.pageData.count {
             return nil
         }
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        return self.viewController(at: index, storyboard: viewController.storyboard!)
     }
-
 }
