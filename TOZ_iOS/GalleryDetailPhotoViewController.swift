@@ -10,8 +10,10 @@ import UIKit
 class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDelegate {
 
     var galleryDetailPhotoURL: URL?
-    var photos: [UIImage] = []
+    var photos: [URL] = []
     var pageViewController: UIPageViewController?
+
+    lazy var modelController = GalleryDetailModelController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,25 +21,21 @@ class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDe
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController!.delegate = self
 
-        // For now add photo of the Animal to array of photos.
+        // For now if there is photoURL for the Animal than add it to array of photos.
         // To be changed when backend starts to return array of urls instead of just one url.
-        if let galleryDetailPhotoURL = galleryDetailPhotoURL {
-            PhotoManager.shared.getPhoto(from: galleryDetailPhotoURL, completion: {(image) -> (Void) in
-                if let image = image {
-                    self.photos.append(image)
-                }
-            })
-        }
-
-        // Use placeholder image when Animal does not have photo.
-        if photos.count > 0 {
-            self.modelController.pageData = photos
+        if let myGalleryDetailPhotoURL = galleryDetailPhotoURL {
+            self.photos.append(myGalleryDetailPhotoURL)
         } else {
-        // Currently pageData contains more images than one placeholder just to show how swiping through images work.
-            self.modelController.pageData = [#imageLiteral(resourceName: "placeholder"), #imageLiteral(resourceName: "dog1"), #imageLiteral(resourceName: "dog2"), #imageLiteral(resourceName: "dog3")]
+            // change to a placeholder image provided by backend (todo)
+            let placeholderURL = URL(string: "https://placeimg.com/640/480/animals/grayscale")
+            if let placeholderURL = placeholderURL {
+                self.photos.append(placeholderURL)
+            }
         }
 
-        let startingViewController: GalleryDetailDataViewController = self.modelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
+        self.modelController.pageData = photos
+
+        let startingViewController: GalleryDetailDataViewController = self.modelController.viewController(at: 0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
         self.pageViewController!.setViewControllers(viewControllers, direction: .forward, animated: false)
 
@@ -48,14 +46,4 @@ class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDe
 
         self.pageViewController!.didMove(toParentViewController: self)
     }
-
-    var modelController: GalleryDetailModelController {
-        // Return the model controller object, creating it if necessary.
-        if initialModelController == nil {
-            initialModelController = GalleryDetailModelController()
-        }
-        return initialModelController!
-    }
-
-    var initialModelController: GalleryDetailModelController?
 }
