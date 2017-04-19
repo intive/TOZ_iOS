@@ -12,14 +12,21 @@ class GalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var animalImage: UIImageView!
     @IBOutlet weak var animalName: UILabel!
     @IBOutlet weak var animalType: UILabel!
-func configure(for animal: AnimalItem) {
-    self.animalName.text = animal.name
-    self.animalType.text = animal.type
-    let imageUrl: URL? = animal.imageUrl
-    if let imageUrl = imageUrl {
-        PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> (Void) in
-            self.animalImage.image = image
-        })
+
+    private var animalID: String?
+
+    func configure(for animal: AnimalItem) {
+        animalID = animal.animalID
+        self.animalName.text = animal.name
+        self.animalType.text = animal.type
+        let imageUrl: URL? = URL(string: "https://placehold.it/350x350")
+        animalImage.image = nil
+        if let imageUrl = imageUrl {
+            PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> (Void) in
+                if self.animalID == animal.animalID {
+                    self.animalImage.image = image
+                }
+            })
+        }
     }
-}
 }
