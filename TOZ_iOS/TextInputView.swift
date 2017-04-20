@@ -19,7 +19,7 @@ class TextInputView: UIView, UITextFieldDelegate {
     private let textField = UITextField()
     private let label = UILabel()
 
-    var textChecker: TextChecker? = nil
+    var textChecker: TextChecker?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
