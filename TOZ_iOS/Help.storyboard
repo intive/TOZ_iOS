@@ -105,6 +105,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="helpFinanceView" destination="UAa-oT-tIt" id="62W-jX-mQW"/>
+                        <outlet property="helpScrollView" destination="Xym-su-N70" id="3F6-YJ-z8F"/>
                         <outlet property="helpVolunteerView" destination="NUN-Se-TZn" id="PE2-bo-2DW"/>
                     </connections>
                 </viewController>
