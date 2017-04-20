@@ -23,7 +23,11 @@
 		3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BB1E91932500FF385A /* NewsOperation.swift */; };
 		3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BD1E91932E00FF385A /* NewsItem.swift */; };
 		3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */; };
+		422D761E1EA95A4700C89A03 /* CheckName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761D1EA95A4700C89A03 /* CheckName.swift */; };
+		422D76201EA95A5A00C89A03 /* CheckSurname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761F1EA95A5A00C89A03 /* CheckSurname.swift */; };
+		422D76221EA95A6F00C89A03 /* CheckPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D76211EA95A6F00C89A03 /* CheckPhoneNumber.swift */; };
 		4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281CABE1E91C51500F16519 /* LoginViewController.swift */; };
+		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
 		42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
 		42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */; };
@@ -102,7 +106,11 @@
 		3777B0BB1E91932500FF385A /* NewsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsOperation.swift; sourceTree = "<group>"; };
 		3777B0BD1E91932E00FF385A /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponseMapper.swift; sourceTree = "<group>"; };
+		422D761D1EA95A4700C89A03 /* CheckName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckName.swift; sourceTree = "<group>"; };
+		422D761F1EA95A5A00C89A03 /* CheckSurname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckSurname.swift; sourceTree = "<group>"; };
+		422D76211EA95A6F00C89A03 /* CheckPhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPhoneNumber.swift; sourceTree = "<group>"; };
 		4281CABE1E91C51500F16519 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +207,17 @@
 				D193989766D107F5788BF823 /* Pods-TOZ_iOSTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4298D0051EA80A66009EDC8E /* LoginTextView */ = {
+			isa = PBXGroup;
+			children = (
+				4298D0061EA80AE3009EDC8E /* TextInputView.swift */,
+				422D761D1EA95A4700C89A03 /* CheckName.swift */,
+				422D761F1EA95A5A00C89A03 /* CheckSurname.swift */,
+				422D76211EA95A6F00C89A03 /* CheckPhoneNumber.swift */,
+			);
+			name = LoginTextView;
 			sourceTree = "<group>";
 		};
 		42ADC4321E9FA5A8002D318E /* Extensions */ = {
@@ -315,6 +334,7 @@
 		A1CABBF11E6AEB1F009A06F8 /* TOZ_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4298D0051EA80A66009EDC8E /* LoginTextView */,
 				54D139011EA117210064BE00 /* Calendar */,
 				052E3B651E9E4E53001AE31A /* MockJSONFiles */,
 				42ADC4321E9FA5A8002D318E /* Extensions */,
@@ -614,9 +634,11 @@
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
 				3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */,
+				422D76221EA95A6F00C89A03 /* CheckPhoneNumber.swift in Sources */,
 				42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
+				422D761E1EA95A4700C89A03 /* CheckName.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
@@ -638,7 +660,9 @@
 				54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
+				4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */,
 				42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */,
+				422D76201EA95A5A00C89A03 /* CheckSurname.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
