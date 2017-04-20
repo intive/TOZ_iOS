@@ -1,5 +1,5 @@
 //
-//  AddScheduleOperation.swift
+//  GetScheduleOperation.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-class AddScheduleOperation: ServiceOperation {
-    private let request: AddScheduleRequest
+class GetScheduleOperation: ServiceOperation {
+    private let request: GetScheduleRequest
 
     private(set) var result: RequestResult<ScheduleItem.ReservationItem>?
     var resultCompletion: ((RequestResult<ScheduleItem.ReservationItem>) -> Void)?
 
     public init(idObject: String, dataObject: ScheduleItem.ReservationItem) {
-        self.request = AddScheduleRequest(idObject: idObject, dataObject: dataObject)
+        self.request = GetScheduleRequest(idObject: idObject)
     }
 
     func start() {
