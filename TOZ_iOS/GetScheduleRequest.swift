@@ -16,14 +16,14 @@ final class GetScheduleRequest: BackendAPIRequest {
     }
 
     var endpoint: String {
-        return "/schedule"
+        return "/schedule/\(idObject)"
     }
     var method: NetworkService.Method {
         return .GET
     }
     var parameters: [String: Any]? {
 
-        return ["id": idObject]
+        return nil
     }
     var headers: [String: String]? {
         return defaultJSONHeaders()
