@@ -15,6 +15,8 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.newsTableView.rowHeight = UITableViewAutomaticDimension
+        self.newsTableView.estimatedRowHeight = 300
         self.newsTableView.backgroundColor = Color.Background.primary
         self.newsTableView.separatorColor = Color.TableView.separator
         getNews()
