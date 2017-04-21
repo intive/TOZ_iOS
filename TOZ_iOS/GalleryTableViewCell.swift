@@ -19,7 +19,7 @@ class GalleryTableViewCell: UITableViewCell {
         animalID = animal.animalID
         self.animalName.text = animal.name
         self.animalType.text = animal.type
-        let imageUrl: URL? = URL(string: "https://placehold.it/350x350")
+        let imageUrl: URL? = animal.imageUrl
         animalImage.image = nil
         if let imageUrl = imageUrl {
             PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> (Void) in
