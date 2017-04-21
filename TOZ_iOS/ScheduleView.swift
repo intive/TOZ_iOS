@@ -36,18 +36,8 @@ class ScheduleView: UIControl {
         switchControl.layer.cornerRadius = switchControl.bounds.height * 0.5
         switchControl.layer.borderWidth = 1
         switchControl.layer.borderColor = UIColor.gray.cgColor
-        switchControl.layer.backgroundColor = UIColor.white.cgColor
-        switchControl.textColor = UIColor.white
+        switchEnable = false
 
     }
 
-    func isOn() {
-        switchControl.layer.backgroundColor = UIColor.lightGray.cgColor
-        switchControl.textColor = UIColor.darkText
-    }
-
-    func isOff() {
-        switchControl.layer.backgroundColor = UIColor.white.cgColor
-        switchControl.textColor = UIColor.white
-    }
 }

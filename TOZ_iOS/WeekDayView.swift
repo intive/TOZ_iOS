@@ -20,7 +20,6 @@ class WeekDayView: UIControl {
 
             } else {
                 valueOfDay.layer.borderColor = UIColor.white.cgColor
-
             }
         }
     }
@@ -37,9 +36,8 @@ class WeekDayView: UIControl {
         dayOfWeek.textColor = UIColor.lightGray
         valueOfDay.layer.cornerRadius = valueOfDay.bounds.height * 0.5
         valueOfDay.layer.borderWidth = 1
-        valueOfDay.layer.borderColor = UIColor.white.cgColor
         valueOfDay.textColor = UIColor.darkGray
-
+        weekdayEnable = false
     }
 
 }
