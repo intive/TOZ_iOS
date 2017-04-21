@@ -299,12 +299,13 @@
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="628.53260869565224"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Calendar-->
         <scene sceneID="9de-CM-Lgb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yja-75-tEo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab-bar-cal" id="n7P-Xt-uKX"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="tab-bar-cal" id="lWy-D4-9qn"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bql-mh-RmU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

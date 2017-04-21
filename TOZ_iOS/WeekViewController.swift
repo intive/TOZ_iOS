@@ -8,9 +8,4 @@ import UIKit
 
 class WeekViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        }
-
   }

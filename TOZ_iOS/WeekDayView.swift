@@ -13,6 +13,18 @@ class WeekDayView: UIControl {
     @IBOutlet weak var dayOfWeek: UILabel!
     @IBOutlet weak var valueOfDay: UILabel!
 
+    var weekdayEnable: Bool = false {
+        didSet {
+            if weekdayEnable {
+                valueOfDay.layer.borderColor = UIColor.lightGray.cgColor
+
+            } else {
+                valueOfDay.layer.borderColor = UIColor.white.cgColor
+
+            }
+        }
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         Bundle.main.loadNibNamed("WeekDayView", owner: self, options: nil)
@@ -30,11 +42,4 @@ class WeekDayView: UIControl {
 
     }
 
-    func isOn() {
-        valueOfDay.layer.borderColor = UIColor.lightGray.cgColor
-    }
-
-    func isOff() {
-        valueOfDay.layer.borderColor = UIColor.white.cgColor
-    }
 }
