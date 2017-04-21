@@ -34,17 +34,21 @@ class TextInputView: UIView, UITextFieldDelegate {
             case .name:
                 self.textField.placeholder = typeString
                 self.textChecker = CheckName()
+                self.label.text = "Nieprawidłowe " + typeString
             case .surname:
                 textField.placeholder = typeString
                 self.textChecker = CheckSurname()
+                self.label.text = "Nieprawidłowe " + typeString
             case .password:
                 textField.placeholder = typeString
                 self.textField.isSecureTextEntry = true
                 self.textChecker = CheckName()
+                self.label.text = "Nieprawidłowe " + typeString
             case .phoneNumber:
                 self.textField.placeholder = typeString
                 self.textField.keyboardType = .numbersAndPunctuation
                 self.textChecker = CheckPhoneNumber()
+                self.label.text = "Nieprawidłowy " + typeString
             default: break
             }
         }
@@ -68,6 +72,10 @@ class TextInputView: UIView, UITextFieldDelegate {
 
         self.addSubview(textField)
         self.addSubview(label)
+
+        self.label.textColor = .red
+        self.label.alpha = 0
+        self.label.adjustsFontSizeToFitWidth = true
 
         self.textField.layer.shadowColor = UIColor.lightGray.cgColor
         self.textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
@@ -101,12 +109,12 @@ class TextInputView: UIView, UITextFieldDelegate {
 
     private func successLayout() {
         self.textField.layer.shadowColor = UIColor.green.cgColor
-
+        self.label.alpha = 0
     }
 
     private func errorLayout() {
         self.textField.layer.shadowColor = UIColor.red.cgColor
-
+        self.label.alpha = 1
     }
 
     func textFieldDidEndEditing() {
