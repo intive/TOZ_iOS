@@ -51,6 +51,7 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */; };
 		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
 		54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139021EA118350064BE00 /* AddScheduleRequest.swift */; };
 		54D139061EA118350064BE00 /* CalendarWeekRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139031EA118350064BE00 /* CalendarWeekRequest.swift */; };
@@ -130,6 +131,7 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetSchedule.json; sourceTree = "<group>"; };
 		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		54D139021EA118350064BE00 /* AddScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleRequest.swift; sourceTree = "<group>"; };
 		54D139031EA118350064BE00 /* CalendarWeekRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekRequest.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		052E3B651E9E4E53001AE31A /* MockJSONFiles */ = {
 			isa = PBXGroup;
 			children = (
+				54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */,
 				052E3B681E9E4FD9001AE31A /* GetNews.json */,
 				052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */,
 				052E3B6E1E9E5154001AE31A /* GetAnimals.json */,
@@ -276,13 +279,6 @@
 			name = NetworkMappers;
 			sourceTree = "<group>";
 		};
-		54D139011EA117210064BE00 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Calendar;
-			sourceTree = "<group>";
-		};
 		953F92F689D1A03FDDBE7578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,7 +311,6 @@
 		A1CABBF11E6AEB1F009A06F8 /* TOZ_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				54D139011EA117210064BE00 /* Calendar */,
 				052E3B651E9E4E53001AE31A /* MockJSONFiles */,
 				42ADC4321E9FA5A8002D318E /* Extensions */,
 				4B5185881E7E9D4500CD343F /* Network */,
@@ -453,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */,
 				052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */,
 				8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */,
 				052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */,
