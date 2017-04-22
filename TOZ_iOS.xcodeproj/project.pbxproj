@@ -37,6 +37,8 @@
 		4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858B1E7EA08C00CD343F /* NetworkService.swift */; };
 		4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */; };
 		4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858F1E7EAD7B00CD343F /* BackendService.swift */; };
+		4B5EBAD01EA2A7470015663C /* GalleryDetailModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */; };
+		4B5EBAD21EA2A7740015663C /* GalleryDetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */; };
 		4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8ADB381E8AE36000EE4EB2 /* BackendConfiguration.swift */; };
 		4B98B2E81E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */; };
 		4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */; };
@@ -49,12 +51,19 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */; };
 		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
 		54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB311EA2CFB600503317 /* WeekViewController.swift */; };
 		54FBAB341EA2CFCC00503317 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB331EA2CFCC00503317 /* WeekDayView.swift */; };
 		54FBAB361EA2CFD600503317 /* WeekDayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB351EA2CFD600503317 /* WeekDayView.xib */; };
 		54FBAB381EA2CFE000503317 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB371EA2CFE000503317 /* ScheduleView.swift */; };
 		54FBAB3A1EA2D00D00503317 /* ScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB391EA2D00D00503317 /* ScheduleView.xib */; };
+		54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139021EA118350064BE00 /* AddScheduleRequest.swift */; };
+		54D139061EA118350064BE00 /* CalendarWeekRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139031EA118350064BE00 /* CalendarWeekRequest.swift */; };
+		54D139091EA1187B0064BE00 /* AddScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139081EA1187B0064BE00 /* AddScheduleOperation.swift */; };
+		54D1390B1EA118BF0064BE00 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D1390A1EA118BF0064BE00 /* ScheduleItem.swift */; };
+		54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D1390C1EA119240064BE00 /* ScheduleResponseMapper.swift */; };
+		54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D1390E1EA119520064BE00 /* GetScheduleWeekOperation.swift */; };
 		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
@@ -113,6 +122,8 @@
 		4B51858B1E7EA08C00CD343F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendAPIRequest.swift; sourceTree = "<group>"; };
 		4B51858F1E7EAD7B00CD343F /* BackendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailModelController.swift; sourceTree = "<group>"; };
+		4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailDataViewController.swift; sourceTree = "<group>"; };
 		4B8ADB381E8AE36000EE4EB2 /* BackendConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendConfiguration.swift; sourceTree = "<group>"; };
 		4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsRequest.swift; sourceTree = "<group>"; };
 		4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalItem.swift; sourceTree = "<group>"; };
@@ -125,12 +136,19 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetSchedule.json; sourceTree = "<group>"; };
 		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		54FBAB311EA2CFB600503317 /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		54FBAB331EA2CFCC00503317 /* WeekDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		54FBAB351EA2CFD600503317 /* WeekDayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekDayView.xib; sourceTree = "<group>"; };
 		54FBAB371EA2CFE000503317 /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		54FBAB391EA2D00D00503317 /* ScheduleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleView.xib; sourceTree = "<group>"; };
+		54D139021EA118350064BE00 /* AddScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleRequest.swift; sourceTree = "<group>"; };
+		54D139031EA118350064BE00 /* CalendarWeekRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekRequest.swift; sourceTree = "<group>"; };
+		54D139081EA1187B0064BE00 /* AddScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleOperation.swift; sourceTree = "<group>"; };
+		54D1390A1EA118BF0064BE00 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		54D1390C1EA119240064BE00 /* ScheduleResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleResponseMapper.swift; sourceTree = "<group>"; };
+		54D1390E1EA119520064BE00 /* GetScheduleWeekOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleWeekOperation.swift; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +195,7 @@
 		052E3B651E9E4E53001AE31A /* MockJSONFiles */ = {
 			isa = PBXGroup;
 			children = (
+				54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */,
 				052E3B681E9E4FD9001AE31A /* GetNews.json */,
 				052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */,
 				052E3B6E1E9E5154001AE31A /* GetAnimals.json */,
@@ -224,6 +243,8 @@
 		4BB31FD81E8450D600D2E6EF /* NetworkRequests */ = {
 			isa = PBXGroup;
 			children = (
+				54D139021EA118350064BE00 /* AddScheduleRequest.swift */,
+				54D139031EA118350064BE00 /* CalendarWeekRequest.swift */,
 				3777B0B91E91931900FF385A /* NewsRequest.swift */,
 				4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */,
 				4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */,
@@ -235,6 +256,8 @@
 		4BB31FD91E8450F800D2E6EF /* NetworkOperations */ = {
 			isa = PBXGroup;
 			children = (
+				54D1390E1EA119520064BE00 /* GetScheduleWeekOperation.swift */,
+				54D139081EA1187B0064BE00 /* AddScheduleOperation.swift */,
 				3777B0BB1E91932500FF385A /* NewsOperation.swift */,
 				4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */,
 				4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */,
@@ -246,6 +269,7 @@
 		4BB31FDA1E84511600D2E6EF /* NetworkItems */ = {
 			isa = PBXGroup;
 			children = (
+				54D1390A1EA118BF0064BE00 /* ScheduleItem.swift */,
 				3777B0BD1E91932E00FF385A /* NewsItem.swift */,
 				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
@@ -256,6 +280,7 @@
 		4BB31FDB1E84512700D2E6EF /* NetworkMappers */ = {
 			isa = PBXGroup;
 			children = (
+				54D1390C1EA119240064BE00 /* ScheduleResponseMapper.swift */,
 				3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */,
 				4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */,
 				4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */,
@@ -331,6 +356,8 @@
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */,
 				4B00D1401E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift */,
+				4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */,
+				4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */,
 				3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
@@ -444,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */,
 				052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */,
 				8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */,
 				052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */,
@@ -581,11 +609,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D139061EA118350064BE00 /* CalendarWeekRequest.swift in Sources */,
+				4B5EBAD21EA2A7740015663C /* GalleryDetailDataViewController.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
 				3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */,
+				54D139091EA1187B0064BE00 /* AddScheduleOperation.swift in Sources */,
 				3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */,
@@ -599,7 +630,9 @@
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
+				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
+				54D1390B1EA118BF0064BE00 /* ScheduleItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
 				3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */,
@@ -610,6 +643,7 @@
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
+				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
 				4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */,
 				4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */,
@@ -618,11 +652,13 @@
 				4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */,
 				54FBAB381EA2CFE000503317 /* ScheduleView.swift in Sources */,
 				8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */,
+				4B5EBAD01EA2A7470015663C /* GalleryDetailModelController.swift in Sources */,
 				4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */,
 				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
 				4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */,
 				4B98B2E81E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
+				54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
 				42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */,
