@@ -261,6 +261,11 @@ ul. Przykładowa 12
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xoq-Q9-bX6"/>
+                    <connections>
+                        <outlet property="financeDescription" destination="hYu-Ai-UhB" id="Bhb-6l-FW4"/>
+                        <outlet property="financeHeader" destination="RMm-rf-0Xd" id="6E0-2r-jMH"/>
+                        <outlet property="financeInfo" destination="fBy-VT-btt" id="NAy-gB-RQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnw-gJ-4vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
