@@ -78,4 +78,63 @@ struct Color {
             }
         }
     }
+  
+    struct HelpUIViews {
+        static let background = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
+    }
+  
+    struct Calendar {
+        static let background = UIColor.white
+        static let separator = UIColor.lightGray
+        struct DataLabel {
+            static let text = UIColor.darkGray
+            static let background = UIColor.white
+        }
+        struct PreviousButton {
+            static let text = UIColor.darkGray
+            static let background = UIColor.lightGray
+        }
+        struct NextButton {
+            static let text = UIColor.white
+            static let background = UIColor.darkText
+        }
+        struct WeekDayControl {
+            struct DayName {
+                struct primary {
+                    static let text = UIColor.black
+                    static let background = UIColor.black
+                    static let border = UIColor.black
+                }
+                struct pressed {
+                    static let text = UIColor.black
+                    static let background = UIColor.black
+                    static let border = UIColor.black
+                }
+            }
+            struct DayNumber {
+                struct primary {
+                    static let text = UIColor.black
+                    static let background = UIColor.black
+                    static let border = UIColor.black
+                }
+                struct pressed {
+                    static let text = UIColor.black
+                    static let background = UIColor.black
+                    static let border = UIColor.black
+                }
+            }
+        }
+        struct ScheduleControl {
+            struct primary {
+                static let text = UIColor.white
+                static let background = UIColor.white
+                static let border = UIColor.gray
+            }
+            struct pressed {
+                static let text = UIColor.darkText
+                static let background = UIColor.lightGray
+                static let border = UIColor.gray
+            }
+        }
+    }
 }

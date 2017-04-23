@@ -1,12 +1,15 @@
 {
-    "name": "TOZ Szczecin",
+    "header": "Nagłówek",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "name": "Fundacja Towarzystwo Pomocy Zwierzętom",
+    "branch": "Oddział FTOZ Szczecin",
     "address": {
         "street": "ul. Przykładowa",
-        "houseNumber": "1",
+        "houseNumber": "12",
         "apartmentNumber": "1",
-        "postCode": "02-123",
-        "city": "string",
-        "country": "string"
+        "postCode": "71-111",
+        "city": "Szczecin",
+        "country": "Poland"
     },
     "contact": {
         "email": "mail@example.com",
@@ -15,7 +18,7 @@
         "website": "http://example.com/"
     },
     "bankAccount": {
-        "number": "61109010140000071219812874",
+        "number": "63 1020 4999 0000 9876 5432 1010",
         "bankName": "string"
     }
 }
