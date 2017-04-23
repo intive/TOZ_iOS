@@ -12,7 +12,9 @@ protocol TextChecker {
 
 fileprivate struct TextInputViewDimensions {
     static let margin: CGFloat = 5
-    static let offset: CGFloat = 8
+    static let offset: CGFloat = 5
+    static let textFieldHeight: CGFloat = 24
+    static let labelHeight: CGFloat = 18
 }
 
 class TextInputView: UIView, UITextFieldDelegate {
@@ -64,16 +66,21 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.layer.cornerRadius = 5
         self.layer.cornerRadius = 5
 
-        let textFieldLeft: NSLayoutConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: TextInputViewDimensions.margin)
-        let textFieldRight: NSLayoutConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1, constant: -TextInputViewDimensions.margin)
-        let textFieldTop: NSLayoutConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.top, multiplier: 1, constant: TextInputViewDimensions.margin)
-        self.textField.translatesAutoresizingMaskIntoConstraints = false
+        setupConstraints()
+    }
 
-        let labelLeft: NSLayoutConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: TextInputViewDimensions.margin)
-        let labelRight: NSLayoutConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1, constant: -TextInputViewDimensions.margin)
-        let labelTop: NSLayoutConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: textField, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: TextInputViewDimensions.offset)
+    func setupConstraints() {
+        self.textField.translatesAutoresizingMaskIntoConstraints = false
+        self.textField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
+        self.textField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -TextInputViewDimensions.margin).isActive = true
+        self.textField.topAnchor.constraint(equalTo: self.topAnchor, constant: TextInputViewDimensions.offset).isActive = true
+        self.textField.heightAnchor.constraint(equalToConstant: TextInputViewDimensions.textFieldHeight).isActive = true
+
         self.label.translatesAutoresizingMaskIntoConstraints = false
-        self.addConstraints([textFieldLeft, textFieldRight, textFieldTop, labelLeft, labelRight, labelTop])
+        self.label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
+        self.label.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -TextInputViewDimensions.margin).isActive = true
+        self.label.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: TextInputViewDimensions.offset).isActive = true
+        self.label.heightAnchor.constraint(equalToConstant: TextInputViewDimensions.labelHeight).isActive = true
     }
 
     func checkText() {
