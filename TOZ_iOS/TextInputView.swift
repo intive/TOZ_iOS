@@ -15,46 +15,26 @@ fileprivate struct TextInputViewDimensions {
     static let offset: CGFloat = 8
 }
 
-enum Type: String {
-    case name = "Imię"
-    case surname = "Nazwisko"
-    case password = "Hasło"
-    case phoneNumber = "Numer Telefonu"
-    case other = "inne"
-}
-
 class TextInputView: UIView, UITextFieldDelegate {
     private let textField = UITextField()
     private let label = UILabel()
+    var textChecker: TextChecker?
 
-    var type: Type = .other {
+    var text: String {
+        return self.textField.text ?? ""
+    }
+
+    var isValid: Bool {
+        return textChecker?.check(text: text) ?? false
+    }
+
+    var placeholder: String = "" {
         didSet {
-            let typeString = self.type.rawValue
-            switch self.type {
-            case .name:
-                self.textField.placeholder = typeString
-                self.textChecker = CheckName()
-                self.label.text = "Nieprawidłowe " + typeString
-            case .surname:
-                textField.placeholder = typeString
-                self.textChecker = CheckSurname()
-                self.label.text = "Nieprawidłowe " + typeString
-            case .password:
-                textField.placeholder = typeString
-                self.textField.isSecureTextEntry = true
-                self.textChecker = CheckName()
-                self.label.text = "Nieprawidłowe " + typeString
-            case .phoneNumber:
-                self.textField.placeholder = typeString
-                self.textField.keyboardType = .numbersAndPunctuation
-                self.textChecker = CheckPhoneNumber()
-                self.label.text = "Nieprawidłowy " + typeString
-            default: break
-            }
+            self.textField.placeholder = placeholder
         }
     }
 
-    var textChecker: TextChecker?
+    var errorString: String?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,14 +53,14 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.addSubview(textField)
         self.addSubview(label)
 
-        self.label.textColor = .red
+        self.label.textColor = Color.LoginTextView.Label.error
         self.label.alpha = 0
         self.label.adjustsFontSizeToFitWidth = true
 
-        self.textField.layer.shadowColor = UIColor.lightGray.cgColor
+        self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.passive
         self.textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
         self.textField.layer.shadowOpacity = 1.0
-        self.textField.backgroundColor = .white
+        self.textField.backgroundColor = Color.LoginTextView.TextField.background
         self.textField.layer.cornerRadius = 5
         self.layer.cornerRadius = 5
 
@@ -97,7 +77,7 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     func checkText() {
-        let text = self.textField.text ?? ""
+        let text = self.text
         if let textChecker = self.textChecker {
             if textChecker.check(text: text) {
                 successLayout()
@@ -108,18 +88,18 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     private func successLayout() {
-        self.textField.layer.shadowColor = UIColor.green.cgColor
+        self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.success
         self.label.alpha = 0
     }
 
     private func errorLayout() {
-        self.textField.layer.shadowColor = UIColor.red.cgColor
+        self.label.text = errorString
+        self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.error
         self.label.alpha = 1
     }
 
     func textFieldDidEndEditing() {
         checkText()
-        textField.resignFirstResponder()
     }
 
 }

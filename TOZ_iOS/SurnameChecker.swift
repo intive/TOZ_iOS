@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CheckSurname: TextChecker {
+class SurnameChecker: TextChecker {
     func check(text surname: String) -> Bool {
         return surname.characters.count <= 35
     }
