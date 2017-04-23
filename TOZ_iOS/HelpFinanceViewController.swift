@@ -17,6 +17,7 @@ class HelpFinanceViewController: UIViewController {
     var organizationInfoOperation = OrganizationInfoOperation()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         getOrganizationInfo()
     }
 
