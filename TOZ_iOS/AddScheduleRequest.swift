@@ -11,7 +11,7 @@ final class AddScheduleRequest: BackendAPIRequest {
 
     private let dataObject: ScheduleItem.ReservationItem
 
-    init(idObject: String, dataObject: ScheduleItem.ReservationItem) {
+    init(dataObject: ScheduleItem.ReservationItem) {
         self.dataObject = dataObject
     }
 

@@ -9,11 +9,13 @@
 import Foundation
 
 class NetworkServiceMock: NetworkService {
+    // swiftlint:disable cyclomatic_complexity
     override func makeRequest(for url: URL,
                               method: NetworkService.Method,
                               params: [String : Any]?,
                               headers: [String : String]?,
                               success: ((Data?) -> Void)?,
+                              // swiftlint:disable large_tuple
                               failure: ((_ data: Data?, _ error: RequestError, _ responseCode: Int) -> Void)? = nil) {
         DispatchQueue.global().async {
             var nameOfFile: String?
@@ -26,7 +28,7 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 } // organization info request
-            } else if url.path == "/info" {
+            } else if url.path == "/organization/info" {
                 switch method {
                 case .GET:
                     nameOfFile = "GetOrganizationInfo"
@@ -38,6 +40,14 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetAnimals"
+                    break
+                default:
+                    print("Method is not appropriate.")
+                }
+            } else if url.path == "/schedule" {
+                switch method {
+                case .GET:
+                    nameOfFile = "GetSchedule"
                     break
                 default:
                     print("Method is not appropriate.")
