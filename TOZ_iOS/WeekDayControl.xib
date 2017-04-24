@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeekDayView" customModule="TOZ_iOS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeekDayControl" customModule="TOZ_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="dayOfWeek" destination="cYZ-97-doL" id="P4z-YF-4rH"/>
-                <outlet property="valueOfDay" destination="CZi-2h-qRZ" id="McB-mG-SUV"/>
+                <outlet property="dayOfWeekLabel" destination="cYZ-97-doL" id="zQo-Zr-1wg"/>
+                <outlet property="valueOfDayLabel" destination="CZi-2h-qRZ" id="lev-JW-VQL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wI7-Eu-i1D"/>
             </connections>
         </placeholder>

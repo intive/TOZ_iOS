@@ -10,9 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleView" customModule="TOZ_iOS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="switchControl" destination="9LR-CI-fcG" id="d4d-q9-SXa"/>
+                <outlet property="scheduleLabel" destination="9LR-CI-fcG" id="CLF-CA-XCU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wHh-x0-pm6"/>
             </connections>
         </placeholder>
