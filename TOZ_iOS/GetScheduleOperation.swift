@@ -25,7 +25,7 @@ class GetScheduleOperation: ServiceOperation {
         switch response {
         case .success(let object):
             do {
-                callCompletion(.success(try GetResponseMapper.process(object)))
+                callCompletion(.success(try GetScheduleResponseMapper.process(object)))
             } catch let error {
                 callCompletion(.failure(error))
             }

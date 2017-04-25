@@ -1,5 +1,5 @@
 //
-//  GetResponseMapper.swift
+//  GGetScheduleResponseMapper.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class GetResponseMapper: ResponseMapper<ScheduleItem.ReservationItem>, ResponseMapperProtocol {
+final class GetScheduleResponseMapper: ResponseMapper<ScheduleItem.ReservationItem>, ResponseMapperProtocol {
     // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> ScheduleItem.ReservationItem {
         return try process(obj, parse: { json in
@@ -21,8 +21,8 @@ final class GetResponseMapper: ResponseMapper<ScheduleItem.ReservationItem>, Res
             } else {
                 timeOfDay = TimeOfDay.afternoon
             }
-            guard let ownerForename = json["ownerForename"] as? String else { return nil }
-            guard let ownerSurname = json["ownerSurname"] as? String else { return nil }
+            guard let ownerForename = json["ownerForename"] as? String? else { return nil }
+            guard let ownerSurname = json["ownerSurname"] as? String? else { return nil }
             return ScheduleItem.ReservationItem(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
         })
     }

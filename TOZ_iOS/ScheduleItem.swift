@@ -17,8 +17,8 @@ struct ScheduleItem: ParsedItem {
         var idObject: String
         var date: Date
         var timeOfDay: TimeOfDay
-        var ownerSurname: String
-        var ownerForename: String
+        var ownerSurname: String?
+        var ownerForename: String?
     }
 
     var reservations: [ReservationItem]?
