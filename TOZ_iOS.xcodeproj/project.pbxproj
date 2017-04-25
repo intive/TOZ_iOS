@@ -41,6 +41,7 @@
 		4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858B1E7EA08C00CD343F /* NetworkService.swift */; };
 		4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */; };
 		4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858F1E7EAD7B00CD343F /* BackendService.swift */; };
+		4B5901E01EAF9C8C0050C5BB /* UnitTestForOrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5901DF1EAF9C8C0050C5BB /* UnitTestForOrganizationInfoResponseMapper.swift */; };
 		4B5EBAD01EA2A7470015663C /* GalleryDetailModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */; };
 		4B5EBAD21EA2A7740015663C /* GalleryDetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */; };
 		4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8ADB381E8AE36000EE4EB2 /* BackendConfiguration.swift */; };
@@ -128,6 +129,7 @@
 		4B51858B1E7EA08C00CD343F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendAPIRequest.swift; sourceTree = "<group>"; };
 		4B51858F1E7EAD7B00CD343F /* BackendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4B5901DF1EAF9C8C0050C5BB /* UnitTestForOrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestForOrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailModelController.swift; sourceTree = "<group>"; };
 		4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailDataViewController.swift; sourceTree = "<group>"; };
 		4B8ADB381E8AE36000EE4EB2 /* BackendConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendConfiguration.swift; sourceTree = "<group>"; };
@@ -340,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				4298D0051EA80A66009EDC8E /* LoginTextView */,
-				54D139011EA117210064BE00 /* Calendar */,
 				052E3B651E9E4E53001AE31A /* MockJSONFiles */,
 				42ADC4321E9FA5A8002D318E /* Extensions */,
 				4B5185881E7E9D4500CD343F /* Network */,
@@ -383,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */,
+				4B5901DF1EAF9C8C0050C5BB /* UnitTestForOrganizationInfoResponseMapper.swift */,
 				A1CABC0B1E6AEB1F009A06F8 /* Info.plist */,
 			);
 			path = TOZ_iOSTests;
@@ -680,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5901E01EAF9C8C0050C5BB /* UnitTestForOrganizationInfoResponseMapper.swift in Sources */,
 				A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
