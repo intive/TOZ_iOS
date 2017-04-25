@@ -11,10 +11,10 @@ protocol TextChecker {
 }
 
 fileprivate struct TextInputViewDimensions {
-    static let margin: CGFloat = 5
-    static let offset: CGFloat = 5
+    static let margin: CGFloat = 0
+    static let offset: CGFloat = 4
     static let textFieldHeight: CGFloat = 24
-    static let labelHeight: CGFloat = 18
+    static let labelHeight: CGFloat = 16
 }
 
 class TextInputView: UIView, UITextFieldDelegate {
@@ -50,6 +50,7 @@ class TextInputView: UIView, UITextFieldDelegate {
 
     private func configureView() {
         self.textField.delegate = self
+        self.textField.addTarget(self, action: #selector(textFieldDidEndEditing), for: UIControlEvents.editingDidEnd)
         self.textField.addTarget(self, action: #selector(textFieldDidEndEditing), for: UIControlEvents.editingDidEndOnExit)
 
         self.addSubview(textField)
@@ -99,7 +100,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.label.alpha = 0
     }
 
-    private func errorLayout() {
+    func errorLayout() {
         self.label.text = errorString
         self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.error
         self.label.alpha = 1
