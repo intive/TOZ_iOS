@@ -9,30 +9,22 @@ import UIKit
 
 class HelpViewController: UIViewController {
 
-    let organizationInfoOperation = OrganizationInfoOperation()
+    @IBOutlet var helpScrollView: UIScrollView!
+    @IBOutlet weak var helpFinanceView: UIView!
+    @IBOutlet weak var helpVolunteerView: UIView!
 
     override func viewDidLoad() {
-//        getOrganizationInfo()
+        helpScrollView.backgroundColor = Color.Background.primary
+        configureAsTile(helpVolunteerView)
+        configureAsTile(helpFinanceView)
     }
 
-    @IBAction func financeHelpButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "financeView", sender: self)
+    func configureAsTile(_ UIView: UIView) {
+        UIView.backgroundColor = Color.HelpUIViews.background
+        UIView.layer.shadowColor = UIColor.darkGray.cgColor
+        UIView.layer.shadowOffset = CGSize.zero
+        UIView.layer.shadowOpacity = 1
+        UIView.layer.shadowRadius = 3.0
+        UIView.layer.cornerRadius = 3
     }
-
-    @IBAction func unwindToHelp(segue: UIStoryboardSegue) {
-    }
-//    func getOrganizationInfo() {
-//        organizationInfoOperation.resultCompletion = { result in
-//
-//            switch result {
-//            case .success(let organizationInfoItem): break
-//            case .failure(let error): break
-//            }
-//
-//            DispatchQueue.main.async {
-//                // Do someting
-//            }
-//        }
-//        organizationInfoOperation.start()
-//    }
 }

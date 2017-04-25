@@ -14,7 +14,7 @@ class AddScheduleOperation: ServiceOperation {
     var resultCompletion: ((RequestResult<ScheduleItem.ReservationItem>) -> Void)?
 
     public init(idObject: String, dataObject: ScheduleItem.ReservationItem) {
-        self.request = AddScheduleRequest(idObject: idObject, dataObject: dataObject)
+        self.request = AddScheduleRequest(dataObject: dataObject)
     }
 
     func start() {

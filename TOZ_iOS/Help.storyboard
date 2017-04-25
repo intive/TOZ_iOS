@@ -13,58 +13,120 @@
         <!--HelpViewController-->
         <scene sceneID="4Sq-kJ-UTy">
             <objects>
-                <viewController title="Help" id="SXL-2F-4vk" userLabel="HelpViewController" customClass="HelpViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController" title="Help" id="SXL-2F-4vk" userLabel="HelpViewController" customClass="HelpViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IO3-Hx-GBt"/>
-                        <viewControllerLayoutGuide type="bottom" id="Iib-Jj-wTU"/>
+                        <viewControllerLayoutGuide type="top" id="Ig3-kW-Fss"/>
+                        <viewControllerLayoutGuide type="bottom" id="vUo-ei-6zj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zug-YU-hu3">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Xym-su-N70" userLabel="HelpScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnN-kX-wp4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="268"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-Se-TZn" userLabel="HelpVolunteerView">
+                                <rect key="frame" x="12" y="12" width="351" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZOSTAŃ WOLONTARIUSZEM TOZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-Ea-gQz">
+                                        <rect key="frame" x="0.0" y="170" width="351" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="rwO-TX-Asn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelpVolunteer" translatesAutoresizingMaskIntoConstraints="NO" id="xII-KX-var">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="170"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Zostań wolontariuszem"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="47H-1v-GJT"/>
+                                    <constraint firstItem="ARk-Ea-gQz" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="CQB-O0-fAr"/>
+                                    <constraint firstAttribute="trailing" secondItem="ARk-Ea-gQz" secondAttribute="trailing" id="IMU-pA-oK9"/>
+                                    <constraint firstItem="xII-KX-var" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="top" id="a71-Dk-07R"/>
+                                    <constraint firstItem="xII-KX-var" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="eU6-08-9R2"/>
+                                    <constraint firstAttribute="trailing" secondItem="xII-KX-var" secondAttribute="trailing" id="gou-zi-u6T"/>
+                                    <constraint firstItem="ARk-Ea-gQz" firstAttribute="top" secondItem="xII-KX-var" secondAttribute="bottom" id="ma8-tX-wHS"/>
+                                    <constraint firstAttribute="bottom" secondItem="ARk-Ea-gQz" secondAttribute="bottom" id="tUO-Nf-ctG"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="rjM-1G-CYG" kind="show" id="DLs-6f-bgP"/>
+                                    <outletCollection property="gestureRecognizers" destination="7E9-TS-8t2" appends="YES" id="suG-DD-U3g"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-OB-HVa">
-                                <rect key="frame" x="0.0" y="332" width="375" height="286"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Dane do przelewu"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAa-oT-tIt" userLabel="HelpFinanceView">
+                                <rect key="frame" x="12" y="227" width="351" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WESPRZYJ TOZ FINANSOWO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-ST-Ptc">
+                                        <rect key="frame" x="0.0" y="170" width="351" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XLh-TG-9I3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpFinance" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-UD-p4z">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="170"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sKI-ST-Ptc" secondAttribute="bottom" id="Dvt-cx-fll"/>
+                                    <constraint firstItem="sKI-ST-Ptc" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" id="EEP-kF-jW0"/>
+                                    <constraint firstItem="sKI-ST-Ptc" firstAttribute="top" secondItem="OOx-UD-p4z" secondAttribute="bottom" id="Vv9-TO-V00"/>
+                                    <constraint firstAttribute="trailing" secondItem="sKI-ST-Ptc" secondAttribute="trailing" id="Y8n-p9-MNm"/>
+                                    <constraint firstItem="OOx-UD-p4z" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" id="aRX-pB-mxO"/>
+                                    <constraint firstAttribute="trailing" secondItem="OOx-UD-p4z" secondAttribute="trailing" id="eI6-RA-omR"/>
+                                    <constraint firstAttribute="height" constant="200" id="f05-hE-r8r"/>
+                                    <constraint firstItem="OOx-UD-p4z" firstAttribute="top" secondItem="UAa-oT-tIt" secondAttribute="top" id="x9s-fs-4XS"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="financeHelpButton:" destination="SXL-2F-4vk" eventType="touchUpInside" id="kBR-xd-4Yv"/>
+                                    <outletCollection property="gestureRecognizers" destination="ss0-46-fpj" appends="YES" id="Vc5-eF-FRh"/>
                                 </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="s8T-OB-HVa" firstAttribute="top" secondItem="IO3-Hx-GBt" secondAttribute="bottom" constant="268" id="6Rf-XK-yS8"/>
-                            <constraint firstItem="XnN-kX-wp4" firstAttribute="leading" secondItem="zug-YU-hu3" secondAttribute="leading" id="IoY-Mm-fGS"/>
-                            <constraint firstItem="Iib-Jj-wTU" firstAttribute="top" secondItem="s8T-OB-HVa" secondAttribute="bottom" id="PNS-ku-xah"/>
-                            <constraint firstAttribute="trailing" secondItem="XnN-kX-wp4" secondAttribute="trailing" id="SbF-UH-DQg"/>
-                            <constraint firstAttribute="trailing" secondItem="s8T-OB-HVa" secondAttribute="trailing" id="XQd-IM-d0A"/>
-                            <constraint firstItem="XnN-kX-wp4" firstAttribute="top" secondItem="IO3-Hx-GBt" secondAttribute="bottom" id="ebV-7V-Dld"/>
-                            <constraint firstItem="s8T-OB-HVa" firstAttribute="top" secondItem="XnN-kX-wp4" secondAttribute="bottom" id="gku-6l-8Bc"/>
-                            <constraint firstItem="s8T-OB-HVa" firstAttribute="leading" secondItem="zug-YU-hu3" secondAttribute="leading" id="lt6-1c-lba"/>
+                            <constraint firstItem="NUN-Se-TZn" firstAttribute="leading" secondItem="Xym-su-N70" secondAttribute="leading" constant="12" id="7dK-Tq-VeS"/>
+                            <constraint firstItem="NUN-Se-TZn" firstAttribute="top" secondItem="Xym-su-N70" secondAttribute="top" constant="12" id="BzB-4t-0Gh"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="height" secondItem="NUN-Se-TZn" secondAttribute="height" id="CA0-pk-uHd"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" id="Q8o-fp-kUa"/>
+                            <constraint firstItem="NUN-Se-TZn" firstAttribute="centerX" secondItem="Xym-su-N70" secondAttribute="centerX" id="jPt-yW-mkQ"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="l3b-nk-1BR"/>
+                            <constraint firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" constant="12" id="nz6-0s-V9b"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="bottom" constant="15" id="xNC-Q0-Tkw"/>
                         </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Jak pomóc?" id="rEs-6D-MYl"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="CHCĘ POMÓC TOZ!" id="rEs-6D-MYl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="MoG-qp-HFg" kind="show" identifier="financeView" id="cTK-i3-ZJA"/>
+                        <outlet property="helpFinanceView" destination="UAa-oT-tIt" id="62W-jX-mQW"/>
+                        <outlet property="helpScrollView" destination="Xym-su-N70" id="3F6-YJ-z8F"/>
+                        <outlet property="helpVolunteerView" destination="NUN-Se-TZn" id="PE2-bo-2DW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHf-0s-jwh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7E9-TS-8t2" userLabel="HelpVolunteerTap">
+                    <connections>
+                        <segue destination="rjM-1G-CYG" kind="show" id="sUh-bO-Pyb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ss0-46-fpj" userLabel="HelpFinanceTap">
+                    <connections>
+                        <segue destination="MoG-qp-HFg" kind="show" id="hRd-FU-sBa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1820" y="-734.48275862068976"/>
         </scene>
         <!--Help Finance View Controller-->
         <scene sceneID="l6z-wk-tat">
             <objects>
-                <viewController id="MoG-qp-HFg" customClass="HelpFinanceViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpFinanceViewController" id="MoG-qp-HFg" customClass="HelpFinanceViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AXL-8w-Ifi"/>
                         <viewControllerLayoutGuide type="bottom" id="NOt-jw-dSw"/>
@@ -74,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-GR-mUS">
-                                <rect key="frame" x="0.0" y="20" width="374" height="44"/>
+                                <rect key="frame" x="0.0" y="-24" width="374" height="44"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="d1o-65-leJ">
@@ -87,7 +149,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dog-finance image" translatesAutoresizingMaskIntoConstraints="NO" id="uO1-AT-6NF">
-                                <rect key="frame" x="0.0" y="64" width="375" height="187"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="187"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="187" id="SUa-bf-1nN"/>
                                 </constraints>
@@ -106,8 +168,8 @@
                                     <constraint firstAttribute="height" constant="1" id="duj-ph-k50"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8if-9M-IvP">
-                                <rect key="frame" x="16" y="304" width="343" height="1"/>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="8if-9M-IvP">
+                                <rect key="frame" x="16" y="260" width="343" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="S9I-g9-2fn"/>
@@ -139,19 +201,19 @@ ul. Przykładowa 12
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nagłówek" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-rf-0Xd">
-                                <rect key="frame" x="142.5" y="272" width="89.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Nagłówek" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-rf-0Xd">
+                                <rect key="frame" x="142.5" y="228" width="89.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(numer konta)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1U-C9-iZz">
-                                <rect key="frame" x="157" y="548" width="61.5" height="11"/>
+                                <rect key="frame" x="157" y="548" width="61.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="4" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-Ai-UhB">
-                                <rect key="frame" x="33" y="326" width="308" height="78"/>
+                                <rect key="frame" x="33" y="282" width="308" height="122"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="highlightedColor"/>
@@ -199,15 +261,20 @@ ul. Przykładowa 12
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xoq-Q9-bX6"/>
+                    <connections>
+                        <outlet property="financeDescription" destination="hYu-Ai-UhB" id="Bhb-6l-FW4"/>
+                        <outlet property="financeHeader" destination="RMm-rf-0Xd" id="6E0-2r-jMH"/>
+                        <outlet property="financeInfo" destination="fBy-VT-btt" id="NAy-gB-RQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnw-gJ-4vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2724" y="-712.89355322338838"/>
+            <point key="canvasLocation" x="2724" y="-669"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="U7l-Es-Rht">
             <objects>
-                <viewController id="rjM-1G-CYG" customClass="LoginViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="rjM-1G-CYG" customClass="LoginViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zn3-gM-Iuf"/>
                         <viewControllerLayoutGuide type="bottom" id="LB2-OI-uVv"/>
@@ -355,14 +422,15 @@ ul. Przykładowa 12
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsE-vm-E0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2724" y="-1399"/>
+            <point key="canvasLocation" x="2724" y="-1428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Help-->
         <scene sceneID="33o-lP-WWO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wBG-Z6-AmU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab-bar-help" id="NqN-pX-M0k"/>
+                    <tabBarItem key="tabBarItem" title="Help" image="tab-bar-help" id="Hqy-BJ-gAa"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bfV-Fy-mNw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -379,6 +447,8 @@ ul. Przykładowa 12
     </scenes>
     <resources>
         <image name="Dog-finance image" width="720" height="361"/>
+        <image name="HelpVolunteer" width="640" height="320"/>
+        <image name="helpFinance" width="640" height="320"/>
         <image name="tab-bar-help" width="25" height="25"/>
     </resources>
 </document>
