@@ -13,12 +13,12 @@ enum TimeOfDay {
 
 struct ScheduleItem: ParsedItem {
 
-    struct ReservationItem {
+    struct ReservationItem: ParsedItem {
         var idObject: String
         var date: Date
         var timeOfDay: TimeOfDay
-        var ownerSurname: String
-        var ownerForename: String
+        var ownerSurname: String?
+        var ownerForename: String?
     }
 
     var reservations: [ReservationItem]?
