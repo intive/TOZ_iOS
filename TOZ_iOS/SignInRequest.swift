@@ -27,8 +27,8 @@ final class SignInRequest: BackendAPIRequest {
 
     var parameters: [String: Any]? {
         return [
-            "email" : email,
-            "password" : password
+            "email": email,
+            "password": password
         ]
     }
 

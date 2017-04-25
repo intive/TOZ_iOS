@@ -59,11 +59,11 @@ struct Color {
             }
         }
     }
-  
+
     struct HelpUIViews {
         static let background = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
     }
-  
+
     struct Calendar {
         static let background = UIColor.white
         static let separator = UIColor.lightGray
