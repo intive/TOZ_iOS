@@ -101,26 +101,26 @@ struct Color {
         struct WeekDayControl {
             struct DayName {
                 struct primary {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
                 struct pressed {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
             }
             struct DayNumber {
                 struct primary {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.darkGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
                 struct pressed {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.gray
                 }
             }
         }
