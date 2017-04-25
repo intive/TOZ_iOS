@@ -63,6 +63,7 @@
 		CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A41E958980006E23C7 /* Calendar.storyboard */; };
 		CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A61E9A7059006E23C7 /* Help.storyboard */; };
 		CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A81E9A7127006E23C7 /* News.storyboard */; };
+		CE134B2F1EAF92CF00147FB2 /* RegistrationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE134B2E1EAF92CF00147FB2 /* RegistrationFormViewController.swift */; };
 		FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,7 @@
 		CE0BB3A41E958980006E23C7 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		CE0BB3A61E9A7059006E23C7 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		CE0BB3A81E9A7127006E23C7 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		CE134B2E1EAF92CF00147FB2 /* RegistrationFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFormViewController.swift; sourceTree = "<group>"; };
 		D193989766D107F5788BF823 /* Pods-TOZ_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC024A7099B1ED00E959A5C1 /* Pods-TOZ_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB010738E58D345E5DABAD84 /* Pods-TOZ_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				4281CABE1E91C51500F16519 /* LoginViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
+				CE134B2E1EAF92CF00147FB2 /* RegistrationFormViewController.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
 				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
 				54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */,
@@ -599,6 +602,7 @@
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
 				42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */,
+				CE134B2F1EAF92CF00147FB2 /* RegistrationFormViewController.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
