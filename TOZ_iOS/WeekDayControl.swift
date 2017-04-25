@@ -28,8 +28,12 @@ class WeekDayControl: UIControl {
         super.init(coder: aDecoder)
         Bundle.main.loadNibNamed("WeekDayControl", owner: self, options: nil)
         addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        valueOfDayLabel.layer.borderWidth = 1
+        valueOfDayLabel.textColor = UIColor.darkGray
+        valueOfDayLabel.layer.borderColor = UIColor.white.cgColor
 
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
@@ -39,9 +43,6 @@ class WeekDayControl: UIControl {
     override func layoutSubviews() {
         dayOfWeekLabel.textColor = UIColor.lightGray
         valueOfDayLabel.layer.cornerRadius = valueOfDayLabel.bounds.height * 0.5
-        valueOfDayLabel.layer.borderWidth = 1
-        valueOfDayLabel.textColor = UIColor.darkGray
-        valueOfDayLabel.layer.borderColor = UIColor.white.cgColor
     }
 
 }

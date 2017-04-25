@@ -29,6 +29,9 @@ class ScheduleControl: UIControl {
         Bundle.main.loadNibNamed("ScheduleControl", owner: self, options: nil)
         addSubview(view)
 
+        scheduleLabel.layer.borderWidth = 1
+        scheduleLabel.layer.borderColor = UIColor.gray.cgColor
+
         view.translatesAutoresizingMaskIntoConstraints = false
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -38,8 +41,6 @@ class ScheduleControl: UIControl {
 
     override func layoutSubviews() {
         scheduleLabel.layer.cornerRadius = scheduleLabel.bounds.height * 0.5
-        scheduleLabel.layer.borderWidth = 1
-        scheduleLabel.layer.borderColor = UIColor.gray.cgColor
     }
 
 }

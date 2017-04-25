@@ -36,8 +36,7 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // swiftlint:disable:next force_cast
-        //pageController = self.childViewControllers.first as! UIPageViewController
+
         pageController.dataSource = self
         // swiftlint:disable:next force_cast
         let weekAfter: WeekViewController = self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as! WeekViewController
