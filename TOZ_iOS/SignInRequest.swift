@@ -18,7 +18,7 @@ final class SignInRequest: BackendAPIRequest {
     }
 
     var endpoint: String {
-        return "/users"
+        return "/tokens/acquire"
     }
 
     var method: NetworkService.Method {

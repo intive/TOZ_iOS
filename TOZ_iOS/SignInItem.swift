@@ -8,10 +8,5 @@
 import Foundation
 
 struct SignInItem: ParsedItem {
-    let email: String
-    let password: String
-    let userID: String?
-    let forename: String
-    let surname: String
-    let role: String
+    let jwt: String
 }
