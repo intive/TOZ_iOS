@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yja-75-tEo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yja-75-tEo">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,10 +55,16 @@
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-KV-fyb" customClass="WeekDayControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="263.66666666666669" y="0.0" width="37.666666666666629" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="ww:" destination="yqD-q7-aDC" eventType="valueChanged" id="BMH-Iv-Buw"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oay-nn-jxZ" customClass="WeekDayControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="316.33333333333326" y="0.0" width="37.666666666666686" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="ww:" destination="yqD-q7-aDC" eventType="touchUpInside" id="hz8-8e-hLe"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -82,30 +88,51 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wft-hb-9Lm" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="IZG-5M-Lno"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfT-Pe-unw" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="52.666666666666671" y="0.0" width="37.666666666666671" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="ru8-Vv-O5h"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXH-7K-hxH" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="105.33333333333331" y="0.0" width="37.666666666666686" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="Jsj-LN-4dw"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrU-DP-kRg" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="0.0" width="38" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="CSr-S9-ZOz"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-0N-Qhv" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="211" y="0.0" width="37.666666666666657" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="rBR-uj-jyx"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-1F-LqZ" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="263.66666666666669" y="0.0" width="37.666666666666629" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="Wck-cO-p6J"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klw-qA-8ap" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="316.33333333333326" y="0.0" width="37.666666666666686" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleMorningButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="UyC-mA-g4N"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -129,30 +156,51 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-r7-fnx" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="6gH-9E-XuW"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DK-IT-xcp" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="52.666666666666671" y="0.0" width="37.666666666666671" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="RLR-a0-SN9"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-UJ-84r" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="105.33333333333331" y="0.0" width="37.666666666666686" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="Uq9-P1-nax"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlw-DP-u5X" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="0.0" width="38" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="Wmd-2a-OuV"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IT-VV-w4C" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="211" y="0.0" width="37.666666666666657" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="6uU-S3-OiO"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSi-KH-juX" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="263.66666666666669" y="0.0" width="37.666666666666629" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="Ckj-2I-H3D"/>
+                                                        </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-po-Tdx" customClass="ScheduleControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="316.33333333333326" y="0.0" width="37.666666666666686" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <connections>
+                                                            <action selector="didTapScheduleAfternoonButton:" destination="yqD-q7-aDC" eventType="touchUpInside" id="LMA-Mo-fOI"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,10 +223,33 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="354" height="456"/>
+                    <connections>
+                        <outletCollection property="weekdayLabelCollection" destination="8Ou-oZ-Mgg" collectionClass="NSMutableArray" id="NkU-e1-PIO"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="wft-hb-9Lm" collectionClass="NSMutableArray" id="Isb-H9-7Qs"/>
+                        <outletCollection property="weekdayLabelCollection" destination="ntq-EA-qP7" collectionClass="NSMutableArray" id="BvE-pJ-gcx"/>
+                        <outletCollection property="weekdayLabelCollection" destination="rgK-RE-GQa" collectionClass="NSMutableArray" id="Dgd-6y-nnC"/>
+                        <outletCollection property="weekdayLabelCollection" destination="nD8-dk-jes" collectionClass="NSMutableArray" id="WOi-gW-yCB"/>
+                        <outletCollection property="weekdayLabelCollection" destination="Xhn-g0-1Is" collectionClass="NSMutableArray" id="45h-4x-MDf"/>
+                        <outletCollection property="weekdayLabelCollection" destination="bFz-KV-fyb" collectionClass="NSMutableArray" id="ozd-51-CHO"/>
+                        <outletCollection property="weekdayLabelCollection" destination="Oay-nn-jxZ" collectionClass="NSMutableArray" id="wXe-cN-Geg"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="cfT-Pe-unw" collectionClass="NSMutableArray" id="TqD-Yy-Kds"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="bXH-7K-hxH" collectionClass="NSMutableArray" id="A9H-Bf-tHS"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="QrU-DP-kRg" collectionClass="NSMutableArray" id="v37-Rc-lkq"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="nBN-0N-Qhv" collectionClass="NSMutableArray" id="i2n-ze-8T8"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="gO0-1F-LqZ" collectionClass="NSMutableArray" id="SAi-Tf-o5e"/>
+                        <outletCollection property="scheduleMorningLabelCollection" destination="Klw-qA-8ap" collectionClass="NSMutableArray" id="a5U-jq-mXx"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="Je6-r7-fnx" collectionClass="NSMutableArray" id="vbD-Ce-aTa"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="2DK-IT-xcp" collectionClass="NSMutableArray" id="oOd-7Y-aYY"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="X3A-UJ-84r" collectionClass="NSMutableArray" id="TuK-7I-duV"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="wlw-DP-u5X" collectionClass="NSMutableArray" id="VVB-BR-Dci"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="0IT-VV-w4C" collectionClass="NSMutableArray" id="S4Q-Qt-LtN"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="cSi-KH-juX" collectionClass="NSMutableArray" id="izL-zv-Vqn"/>
+                        <outletCollection property="scheduleAfternoonLabelCollection" destination="aNy-po-Tdx" collectionClass="NSMutableArray" id="4qK-Hk-Sle"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsJ-2O-kG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="1915"/>
+            <point key="canvasLocation" x="208.69565217391306" y="1914.9456521739132"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="tRJ-Bb-GWZ">
@@ -267,7 +338,7 @@
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-VJ-ckK">
-                                <rect key="frame" x="0.0" y="117.66666666666666" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="117.66666666666667" width="414" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="aeK-Ld-1s6"/>
