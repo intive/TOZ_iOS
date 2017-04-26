@@ -28,7 +28,7 @@ struct Color {
     }
 
     struct TableView {
-        static let separator = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        static let separator = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
         static let background = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
     }
 
@@ -58,7 +58,7 @@ struct Color {
 
     struct Cell {
         struct Background {
-            static let primary = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.00)
+            static let primary = UIColor(red:0.9, green:0.9, blue:0.9, alpha:1.00)
         }
         struct Font {
             static let title = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
@@ -78,11 +78,11 @@ struct Color {
             }
         }
     }
-  
+
     struct HelpUIViews {
         static let background = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
     }
-  
+
     struct Calendar {
         static let background = UIColor.white
         static let separator = UIColor.lightGray
