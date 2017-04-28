@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     func configureView() {
         self.view.backgroundColor = Color.LoginViewController.background
-        emailInput.textChecker = NameChecker()
+        emailInput.textChecker = EmailChecker()
         emailInput.attributedPlaceholder = addIconToString(icon: #imageLiteral(resourceName: "loginIcon"), string: "   Login")
         emailInput.errorString = "Wpisz prawidłową nazwę użytkownika"
 
