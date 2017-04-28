@@ -26,7 +26,6 @@
 		422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761D1EA95A4700C89A03 /* NameChecker.swift */; };
 		422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */; };
 		422D76221EA95A6F00C89A03 /* PhoneNumberChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */; };
-		4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281CABE1E91C51500F16519 /* LoginViewController.swift */; };
 		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
 		42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
@@ -37,6 +36,7 @@
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
+		4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AFF891EB124C8000FB02E /* LoginViewController.swift */; };
 		4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */; };
 		4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858B1E7EA08C00CD343F /* NetworkService.swift */; };
 		4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */; };
@@ -122,7 +122,6 @@
 		422D761D1EA95A4700C89A03 /* NameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameChecker.swift; sourceTree = "<group>"; };
 		422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurnameChecker.swift; sourceTree = "<group>"; };
 		422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberChecker.swift; sourceTree = "<group>"; };
-		4281CABE1E91C51500F16519 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +132,7 @@
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		4B3AFF891EB124C8000FB02E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoRequest.swift; sourceTree = "<group>"; };
 		4B51858B1E7EA08C00CD343F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendAPIRequest.swift; sourceTree = "<group>"; };
@@ -386,7 +386,7 @@
 				37434B5C1E7F1B7E00336605 /* NewsEntity.swift */,
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
-				4281CABE1E91C51500F16519 /* LoginViewController.swift */,
+				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
@@ -662,7 +662,6 @@
 				4B53F4DA1EAA665C00D894F8 /* SignInOperation.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */,
-				4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */,
 				4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */,
 				54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
@@ -687,6 +686,7 @@
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
+				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
