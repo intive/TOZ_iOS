@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginTextfieldViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailInput: TextInputView!
     @IBOutlet weak var passwordInput: TextInputView!
     @IBOutlet weak var loginButton: UIButton!
