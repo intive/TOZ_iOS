@@ -55,16 +55,10 @@
                                                     <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFz-KV-fyb" customClass="WeekDayControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="263.66666666666669" y="0.0" width="37.666666666666629" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                        <connections>
-                                                            <action selector="ww:" destination="yqD-q7-aDC" eventType="valueChanged" id="BMH-Iv-Buw"/>
-                                                        </connections>
                                                     </view>
                                                     <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oay-nn-jxZ" customClass="WeekDayControl" customModule="TOZ_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="316.33333333333326" y="0.0" width="37.666666666666686" height="50"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                        <connections>
-                                                            <action selector="ww:" destination="yqD-q7-aDC" eventType="touchUpInside" id="hz8-8e-hLe"/>
-                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
