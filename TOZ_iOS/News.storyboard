@@ -34,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yws-Xw-xPG">
-                                                    <rect key="frame" x="4" y="4" width="406" height="272"/>
+                                                    <rect key="frame" x="4" y="2" width="406" height="272"/>
                                                     <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datePublish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id4-Wy-sQv">
@@ -71,16 +71,16 @@
                                                 <constraint firstItem="iTE-me-Oi4" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="30" id="162-AN-BQv"/>
                                                 <constraint firstItem="id4-Wy-sQv" firstAttribute="top" secondItem="3jV-sR-T6U" secondAttribute="topMargin" constant="10" id="2ng-Wd-OC7"/>
                                                 <constraint firstItem="id4-Wy-sQv" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="30" id="700-me-WIm"/>
-                                                <constraint firstAttribute="bottom" secondItem="yws-Xw-xPG" secondAttribute="bottom" id="8Z7-jV-4V5"/>
                                                 <constraint firstAttribute="trailing" secondItem="yws-Xw-xPG" secondAttribute="trailing" constant="4" id="Eak-o7-Qaf"/>
                                                 <constraint firstAttribute="trailing" secondItem="iTE-me-Oi4" secondAttribute="trailing" constant="29" id="F1g-Wh-sYZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="AVb-ju-0dy" secondAttribute="trailing" constant="29" id="Jp3-8D-Cqr"/>
+                                                <constraint firstAttribute="bottom" secondItem="yws-Xw-xPG" secondAttribute="bottom" constant="2" id="Krh-Nc-Hfy"/>
                                                 <constraint firstItem="AVb-ju-0dy" firstAttribute="top" secondItem="id4-Wy-sQv" secondAttribute="bottom" constant="6.9999999999999964" id="OiY-Lz-NtT"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="iTE-me-Oi4" secondAttribute="bottom" constant="7" id="W5O-3g-sq8"/>
                                                 <constraint firstAttribute="trailing" secondItem="BwT-8f-ihx" secondAttribute="trailing" constant="29" id="Xqx-cK-kN4"/>
+                                                <constraint firstItem="yws-Xw-xPG" firstAttribute="top" secondItem="3jV-sR-T6U" secondAttribute="top" constant="2" id="XwT-Nb-XrZ"/>
                                                 <constraint firstItem="yws-Xw-xPG" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="4" id="aiH-wt-F5I"/>
                                                 <constraint firstItem="AVb-ju-0dy" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="30" id="c5M-hp-WlB"/>
-                                                <constraint firstItem="yws-Xw-xPG" firstAttribute="top" secondItem="3jV-sR-T6U" secondAttribute="top" constant="4" id="dkD-io-94U"/>
                                                 <constraint firstItem="BwT-8f-ihx" firstAttribute="top" secondItem="AVb-ju-0dy" secondAttribute="bottom" constant="18.333333333333343" id="kSP-UI-an9"/>
                                                 <constraint firstItem="BwT-8f-ihx" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="30" id="nlG-fc-dyh"/>
                                                 <constraint firstItem="iTE-me-Oi4" firstAttribute="top" secondItem="BwT-8f-ihx" secondAttribute="bottom" constant="8" id="re7-j9-FOg"/>
@@ -214,7 +214,13 @@
         <scene sceneID="ge0-nh-dXU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VL-lz-GRm" customClass="NavigationController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="AKTUALNOŚCI" image="tab-bar-feed" id="VmM-Vg-2oV"/>
+                    <tabBarItem key="tabBarItem" title="AKTUALNOŚCI" image="tab-bar-feed" id="VmM-Vg-2oV">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f3m-9u-fwC">
