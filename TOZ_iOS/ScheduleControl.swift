@@ -15,11 +15,11 @@ class ScheduleControl: UIControl {
     var scheduleSelected: Bool = false {
         didSet {
             if scheduleSelected {
-                scheduleLabel.layer.backgroundColor = UIColor.lightGray.cgColor
-                scheduleLabel.textColor = UIColor.darkText
+                scheduleLabel.layer.backgroundColor = Color.Calendar.ScheduleControl.pressed.background.cgColor
+                scheduleLabel.textColor = Color.Calendar.ScheduleControl.pressed.text
             } else {
-                scheduleLabel.layer.backgroundColor = UIColor.white.cgColor
-                scheduleLabel.textColor = UIColor.white
+                scheduleLabel.layer.backgroundColor = Color.Calendar.ScheduleControl.primary.background.cgColor
+                scheduleLabel.textColor = Color.Calendar.ScheduleControl.primary.text
             }
         }
     }
@@ -30,7 +30,7 @@ class ScheduleControl: UIControl {
         addSubview(view)
 
         scheduleLabel.layer.borderWidth = 1
-        scheduleLabel.layer.borderColor = UIColor.gray.cgColor
+        scheduleLabel.layer.borderColor = Color.Calendar.ScheduleControl.primary.border.cgColor
 
         view.translatesAutoresizingMaskIntoConstraints = false
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
