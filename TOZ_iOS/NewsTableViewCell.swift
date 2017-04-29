@@ -12,6 +12,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePublishedLabel: UILabel!
     @IBOutlet weak var photoView: ProfilePhotoView!
+    @IBOutlet weak var photoViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,8 +35,12 @@ class NewsTableViewCell: UITableViewCell {
         let photoURL: URL? = news.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
-                self.photoView.photo = image
+                if photoURL == news.photoUrl {
+                    self.photoView.photo = image
+                }
             })
+        } else {
+            self.photoViewHeight.constant = 0
         }
     }
 }

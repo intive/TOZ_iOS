@@ -16,13 +16,13 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalCreationDate: UILabel!
     @IBOutlet weak var animalDescription: UITextView!
 
-    var selectedCell: String?
+    var selectedCellID: String?
     var photoURL: URL?
     var animalOperation: AnimalOperation?
 
     func makeAnimalOperation() {
-        if let selectedCell = selectedCell {
-            animalOperation = AnimalOperation(animalID: selectedCell)
+        if let selectedCellID = selectedCellID {
+            animalOperation = AnimalOperation(animalID: selectedCellID)
         } else {
             animalOperation = nil
         }

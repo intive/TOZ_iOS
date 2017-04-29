@@ -48,7 +48,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let GalleryDetailViewController = segue.destination as? GalleryDetailViewController
         if segue.identifier == "showGalleryDetail" {
-            GalleryDetailViewController?.selectedCell = selectedGalleryCellID
+            let galleryDetailViewController = segue.destination as? GalleryDetailViewController
+            galleryDetailViewController?.selectedCellID = selectedGalleryCellID
         }
     }
 
