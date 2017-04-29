@@ -38,7 +38,7 @@ struct Color {
 
     struct TitleBar {
         struct Background {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 83.0/255.0, green: 209.0/255.0, blue: 120.0/255.0, alpha: 1.0)
         }
         struct Button {
             static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
@@ -58,7 +58,7 @@ struct Color {
 
     struct Cell {
         struct Background {
-            static let primary = UIColor(red:0.9, green:0.9, blue:0.9, alpha:1.00)
+            static let primary = UIColor(red:212.0/255.0, green:212.0/255.0, blue:212.0/255.0, alpha:1.00)
         }
         struct Font {
             static let title = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
