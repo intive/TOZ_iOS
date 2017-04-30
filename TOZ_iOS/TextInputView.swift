@@ -6,8 +6,21 @@
 //
 import UIKit
 
+enum CheckResult {
+    case Valid
+    case Invalid(error: String)
+
+    func isValid() -> Bool {
+        switch self {
+        case .Valid: return true
+        default: return false
+        }
+    }
+
+}
+
 protocol TextChecker {
-    func check(text: String) -> Bool
+    func check(text: String) -> CheckResult
 }
 
 fileprivate struct TextInputViewDimensions {
@@ -27,12 +40,18 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     var isValid: Bool {
-        return textChecker?.check(text: text) ?? false
+        return textChecker?.check(text: text).isValid() ?? false
     }
 
     var placeholder: String = "" {
         didSet {
             self.textField.placeholder = placeholder
+        }
+    }
+
+    var isTextSecure: Bool = false {
+        didSet {
+            self.textField.isSecureTextEntry = isTextSecure
         }
     }
 
@@ -70,7 +89,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         setupConstraints()
     }
 
-    func setupConstraints() {
+    private func setupConstraints() {
         self.textField.translatesAutoresizingMaskIntoConstraints = false
         self.textField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
         self.textField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -TextInputViewDimensions.margin).isActive = true
@@ -84,10 +103,10 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.label.heightAnchor.constraint(equalToConstant: TextInputViewDimensions.labelHeight).isActive = true
     }
 
-    func checkText() {
+    private func checkText() {
         let text = self.text
         if let textChecker = self.textChecker {
-            if textChecker.check(text: text) {
+            if textChecker.check(text: text).isValid() {
                 successLayout()
             } else {
                 errorLayout()
@@ -100,7 +119,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.label.alpha = 0
     }
 
-    func errorLayout() {
+    private func errorLayout() {
         self.label.text = errorString
         self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.error
         self.label.alpha = 1

@@ -8,7 +8,13 @@
 import Foundation
 
 class SurnameChecker: TextChecker {
-    func check(text surname: String) -> Bool {
-        return surname.characters.count <= 35
+    func check(text: String) -> CheckResult {
+        if text == "" {
+            return .Invalid(error: "Pole wymagane")
+        } else if text.characters.count > 35 {
+            return .Invalid(error: "Wpisz poprawne Nazwisko")
+        } else {
+            return .Valid
+        }
     }
 }

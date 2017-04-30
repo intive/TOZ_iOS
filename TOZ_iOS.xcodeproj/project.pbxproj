@@ -30,6 +30,7 @@
 		4281CABF1E91C51500F16519 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281CABE1E91C51500F16519 /* LoginViewController.swift */; };
 		4292CCFB1EAFC70400C08229 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */; };
 		4292CCFD1EAFF46000C08229 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */; };
+		4292CD011EB2AD2E00C08229 /* ConfirmationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CD001EB2AD2E00C08229 /* ConfirmationChecker.swift */; };
 		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
 		42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
@@ -125,6 +126,7 @@
 		4281CABE1E91C51500F16519 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
+		4292CD001EB2AD2E00C08229 /* ConfirmationChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationChecker.swift; sourceTree = "<group>"; };
 		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */,
 				422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */,
 				4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */,
+				4292CD001EB2AD2E00C08229 /* ConfirmationChecker.swift */,
 			);
 			name = LoginTextView;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				422D76221EA95A6F00C89A03 /* PhoneNumberChecker.swift in Sources */,
 				42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
+				4292CD011EB2AD2E00C08229 /* ConfirmationChecker.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
 				422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,

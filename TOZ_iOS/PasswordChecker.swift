@@ -8,7 +8,15 @@
 import Foundation
 
 class PasswordChecker: TextChecker {
-    func check(text password: String) -> Bool {
-        return password.characters.count <= 30 && password.characters.count >= 6
+
+    func check(text: String) -> CheckResult {
+        if text == "" {
+            return .Invalid(error: "Pole wymagane")
+        } else if text.characters.count > 30 || text.characters.count < 6 {
+            return .Invalid(error: "Poprawne hasło ma od 6 do 30 znaków")
+        } else {
+            return .Valid
+        }
     }
+
 }
