@@ -110,13 +110,16 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     private func checkText() {
-        let text = self.text
         if let textChecker = self.textChecker {
-            if textChecker.check(text: text).isValid() {
-                successLayout()
-            } else {
-                errorLayout()
+            switch textChecker.check(text: self.text) {
+                case .Valid:
+                    successLayout()
+                case .Invalid(error: let errorString):
+                    errorLayout()
+                    self.label.text = errorString
+
             }
+
         }
     }
 
@@ -126,12 +129,12 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     private func errorLayout() {
-        self.label.text = errorString
         self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.error
         self.label.alpha = 1
     }
 
     func textFieldDidEndEditing() {
+        self.label.text = errorString
         checkText()
     }
 

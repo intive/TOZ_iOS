@@ -14,19 +14,18 @@ class ChangePasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let passwordFields = [oldPassword, newPassword, confirmNewPassword]
-        for textField in passwordFields {
-            textField?.textChecker = PasswordChecker()
-            textField?.isTextSecure = true
-            textField?.errorString = "Dicks"
-        }
 
-//        self.oldPassword.textChecker = PasswordChecker()
-//        self.newPassword.textChecker = PasswordChecker()
-//        self.confirmNewPassword.textChecker = PasswordChecker()
-//        self.oldPassword.isTextSecure = true
-//        self.newPassword.isTextSecure = true
-//        self.confirmNewPassword.isTextSecure = true
+        oldPassword.textChecker = PasswordChecker()
+        oldPassword.isTextSecure = true
+        newPassword.textChecker = PasswordChecker()
+        newPassword.isTextSecure = true
+
+        let confirmationTextChecker = PasswordChecker()
+        confirmationTextChecker.confirmView = self.newPassword
+
+        confirmNewPassword.textChecker = confirmationTextChecker
+        confirmNewPassword.isTextSecure = true
+
         self.view.backgroundColor = Color.Background.primary
     }
 
@@ -41,20 +40,6 @@ class ChangePasswordViewController: UIViewController {
 //        //to be continued when possible
 //        //send request to BE for confirmation
 //        return false
-    }
-
-    func isPasswwordValid() -> Bool {
-        var isValid: Bool = false
-        if oldPassword.isValid, newPassword.isValid, confirmNewPassword.isValid == false {
-        //check if oldPassword matches real password
-        } else if confirmNewPassword.text != newPassword.text {
-            //error
-        } else if newPassword.text == oldPassword.text {
-            //error
-        } else {
-            isValid = true
-        }
-        return isValid
     }
 
 }
