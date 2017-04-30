@@ -11,8 +11,9 @@ import Foundation
  Parses response from OrganizationInfo operation. Inherits from generic ResponseMapper class.
  */
 final class OrganizationInfoResponseMapper: ResponseMapper<OrganizationInfoItem>, ResponseMapperProtocol {
-
+    // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> OrganizationInfoItem {
+    // swiftlint:enable cyclomatic_complexity
         return try process(obj, parse: { json in
             guard let header = json["header"] as? String else { return nil }
             guard let description = json["description"] as? String else { return nil }
@@ -26,7 +27,7 @@ final class OrganizationInfoResponseMapper: ResponseMapper<OrganizationInfoItem>
             guard let bankAccount = json["bankAccount"] as? [String : Any] else { return nil }
             guard let bankAccountNumber = bankAccount["number"] as? String else { return nil }
             guard let bankAccountBankName = bankAccount["bankName"] as? String else { return nil }
-            return OrganizationInfoItem(header:header,description:description,name:name,branch:branch,addressStreet:addressStreet,addressHouseNumber:addressHouseNumber,addressPostcode:addressPostcode,addressCity:addressCity,bankAccountNumber: bankAccountNumber,bankAccountBankName: bankAccountBankName)
+            return OrganizationInfoItem(header:header, description:description, name:name, branch:branch, addressStreet:addressStreet, addressHouseNumber:addressHouseNumber, addressPostcode:addressPostcode, addressCity:addressCity, bankAccountNumber: bankAccountNumber, bankAccountBankName: bankAccountBankName)
         })
     }
 }
