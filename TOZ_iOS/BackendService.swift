@@ -20,6 +20,7 @@ class BackendService {
     private let conf: BackendConfiguration
     private let service = NetworkService() // commented in order to run NetworkServiceMock
 //    private let service = NetworkServiceMock() // test of NetworkService
+
     init(_ conf: BackendConfiguration) {
         self.conf = conf
     }

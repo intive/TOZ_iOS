@@ -13,8 +13,9 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem>, ResponseM
     // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> [ScheduleItem] {
         return try process(obj, mapper: { jsonNode in
-
+    // swiftlint:disable syntactic_sugar
             var listOfObjects = Array<ScheduleItem.ReservationItem>()
+    // swiftlint:enable syntactic_sugar
             guard let arrayOfReservations = jsonNode["reservations"] as? [[String: AnyObject]]? else { return nil }
             for resItem in arrayOfReservations! {
                 guard let idObject = resItem["id"] as? String else { return nil }

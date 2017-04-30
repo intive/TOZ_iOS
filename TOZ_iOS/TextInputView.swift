@@ -49,6 +49,12 @@ class TextInputView: UIView, UITextFieldDelegate {
         }
     }
 
+    var attributedPlaceholder: NSAttributedString? {
+        didSet {
+            self.textField.attributedPlaceholder = attributedPlaceholder
+        }
+    }
+
     var isTextSecure: Bool = false {
         didSet {
             self.textField.isSecureTextEntry = isTextSecure
