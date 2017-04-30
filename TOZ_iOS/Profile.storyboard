@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NwP-TC-Tgg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ZaX-gB-IN5">
+            <objects>
+                <viewController id="vlS-GD-RqA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m8H-2j-4P1"/>
+                        <viewControllerLayoutGuide type="bottom" id="vf5-Jn-0OF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0HV-8Z-azN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DkM-M7-Vnl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwU-Ol-kGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="55.322338830584712"/>
+        </scene>
+        <!--KONTO-->
+        <scene sceneID="Rxp-nF-cKI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NwP-TC-Tgg" customClass="NavigationController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="KONTO" image="tab-bar-user" id="FgZ-h9-HPM"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jcI-iK-wC5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vlS-GD-RqA" kind="relationship" relationship="rootViewController" id="MhK-pd-nfi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owO-vE-UpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="55.322338830584712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab-bar-user" width="25" height="25"/>
+    </resources>
+</document>
