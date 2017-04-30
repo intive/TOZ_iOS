@@ -36,6 +36,12 @@ class TextInputView: UIView, UITextFieldDelegate {
         }
     }
 
+    var attributedPlaceholder: NSAttributedString? {
+        didSet {
+            self.textField.attributedPlaceholder = attributedPlaceholder
+        }
+    }
+
     var errorString: String?
 
     override init(frame: CGRect) {
