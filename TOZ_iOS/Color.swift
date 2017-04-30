@@ -101,26 +101,26 @@ struct Color {
         struct WeekDayControl {
             struct DayName {
                 struct primary {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
                 struct pressed {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
             }
             struct DayNumber {
                 struct primary {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.darkGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
                 struct pressed {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.gray
                 }
             }
         }
@@ -135,6 +135,15 @@ struct Color {
                 static let background = UIColor.lightGray
                 static let border = UIColor.gray
             }
+        }
+    }
+
+    struct LoginViewController {
+        static let background = UIColor(red: 188.0/255.0, green: 189.0/255.0, blue: 190.0/255.0, alpha: 1.0)
+
+        struct Button {
+            static let background = UIColor.white
+            static let tint = UIColor(red: 129.0/255.0, green: 130.0/255.0, blue: 131.0/255.0, alpha: 1.0)
         }
     }
 }
