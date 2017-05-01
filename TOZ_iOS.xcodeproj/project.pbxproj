@@ -76,8 +76,6 @@
 		54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB351EA2CFD600503317 /* WeekDayControl.xib */; };
 		54FBAB381EA2CFE000503317 /* ScheduleControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB371EA2CFE000503317 /* ScheduleControl.swift */; };
 		54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB391EA2D00D00503317 /* ScheduleControl.xib */; };
-		8F19719A1EB5313C00C59456 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1971991EB5313C00C59456 /* MyTabBarController.swift */; };
-		8F19719E1EB5365700C59456 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F19719D1EB5365700C59456 /* NavigationController.swift */; };
 		8F824A271EB5545F00BFC67F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F824A261EB5545F00BFC67F /* Profile.storyboard */; };
 		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
@@ -177,8 +175,6 @@
 		54FBAB371EA2CFE000503317 /* ScheduleControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleControl.swift; sourceTree = "<group>"; };
 		54FBAB391EA2D00D00503317 /* ScheduleControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleControl.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F1971991EB5313C00C59456 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
-		8F19719D1EB5365700C59456 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = ../NavigationController.swift; sourceTree = "<group>"; };
 		8F824A261EB5545F00BFC67F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,8 +405,6 @@
 				4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */,
 				3777B0B71E8FE7FD00FF385A /* PhotoManager.swift */,
 				37434B621E7F1BAA00336605 /* Color.swift */,
-				8F1971991EB5313C00C59456 /* MyTabBarController.swift */,
-				8F19719D1EB5365700C59456 /* NavigationController.swift */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				8F824A261EB5545F00BFC67F /* Profile.storyboard */,
 				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
@@ -680,7 +674,6 @@
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */,
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
-				8F19719A1EB5313C00C59456 /* MyTabBarController.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
 				05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */,
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
@@ -718,7 +711,6 @@
 				4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */,
 				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
 				4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */,
-				8F19719E1EB5365700C59456 /* NavigationController.swift in Sources */,
 				4B98B2E81E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 				54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */,
