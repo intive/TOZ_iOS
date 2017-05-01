@@ -28,7 +28,7 @@ struct Color {
     }
 
     struct TableView {
-        static let separator = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        static let separator = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         static let background = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
     }
 
@@ -38,11 +38,11 @@ struct Color {
 
     struct TitleBar {
         struct Background {
-            static let primary = UIColor(red: 83.0/255.0, green: 209.0/255.0, blue: 120.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 63.0/255.0, green: 211.0/255.0, blue: 126.0/255.0, alpha: 1.0)
         }
         struct Button {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-            static let pressed = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            static let primary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
         struct Font {
             static let primary = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0)
@@ -54,14 +54,14 @@ struct Color {
             static let primary = UIColor(red:51.0/255.0, green:51.0/255.0, blue:51.0/255.0, alpha:1.00)
         }
         struct Icons {
-            static let primary = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0)
-            static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 175.0/255.0, green: 175.0/255.0, blue: 175.0/255.0, alpha: 1.0)
+            static let pressed = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
     }
 
     struct Cell {
         struct Background {
-            static let primary = UIColor(red:212.0/255.0, green:212.0/255.0, blue:212.0/255.0, alpha:1.00)
+            static let primary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
         struct Font {
             static let title = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
@@ -69,7 +69,8 @@ struct Color {
             static let date = UIColor(red: 149.0/255.0, green: 152.0/255.0, blue: 154.0/255.0, alpha: 1.0)
         }
         struct Button {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 255.0/255.0, green: 134.0/255.0, blue: 55.0/255.0, alpha: 1.0)
+            static let text = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             static let secondary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 

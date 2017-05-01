@@ -22,8 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableView.appearance().backgroundColor = Color.TableView.background
         UITableView.appearance().separatorColor = Color.TableView.separator
         UITableViewCell.appearance().backgroundColor = Color.Cell.Background.primary
-        UITabBar.appearance().backgroundColor = Color.TabBar.Background.primary
+
+        UITabBar.appearance().barTintColor = Color.TabBar.Background.primary
         UITabBar.appearance().tintColor = Color.TabBar.Icons.pressed
+        UITabBar.appearance().unselectedItemTintColor = Color.TabBar.Icons.primary
+        UITabBar.appearance().barStyle = .black
+
+        UINavigationBar.appearance().barTintColor = Color.TitleBar.Background.primary
+        UINavigationBar.appearance().tintColor = Color.TitleBar.Button.primary
+        UINavigationBar.appearance().barStyle = .black
 
         return true
     }
