@@ -52,7 +52,7 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 }
-            } else if url.path == "/tokens" {
+            } else if url.path == "/tokens/acquire" {
                 switch method {
                 case .POST:
                     nameOfFile = "PostLogin"
