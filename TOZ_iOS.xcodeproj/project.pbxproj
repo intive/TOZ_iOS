@@ -45,6 +45,7 @@
 		4B53F4D61EAA610100D894F8 /* SignInItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F4D51EAA610100D894F8 /* SignInItem.swift */; };
 		4B53F4D81EAA640B00D894F8 /* SignInResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F4D71EAA640B00D894F8 /* SignInResponseMapper.swift */; };
 		4B53F4DA1EAA665C00D894F8 /* SignInOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F4D91EAA665C00D894F8 /* SignInOperation.swift */; };
+		4B5901E01EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5901DF1EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift */; };
 		4B5901E21EAFB1370050C5BB /* BackendAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5901E11EAFB1370050C5BB /* BackendAuth.swift */; };
 		4B5901E41EAFD54C0050C5BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5901E31EAFD54C0050C5BB /* User.swift */; };
 		4B5EBAD01EA2A7470015663C /* GalleryDetailModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */; };
@@ -143,6 +144,7 @@
 		4B53F4D51EAA610100D894F8 /* SignInItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInItem.swift; sourceTree = "<group>"; };
 		4B53F4D71EAA640B00D894F8 /* SignInResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInResponseMapper.swift; sourceTree = "<group>"; };
 		4B53F4D91EAA665C00D894F8 /* SignInOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOperation.swift; sourceTree = "<group>"; };
+		4B5901DF1EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapperTests.swift; sourceTree = "<group>"; };
 		4B5901E11EAFB1370050C5BB /* BackendAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendAuth.swift; sourceTree = "<group>"; };
 		4B5901E31EAFD54C0050C5BB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailModelController.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */,
+				4B5901DF1EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift */,
 				A1CABC0B1E6AEB1F009A06F8 /* Info.plist */,
 			);
 			path = TOZ_iOSTests;
@@ -683,7 +686,6 @@
 				54D1390B1EA118BF0064BE00 /* ScheduleItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
 				4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */,
-				3777B0B21E8E479C00FF385A /* GalleryEntity.swift in Sources */,
 				422D76221EA95A6F00C89A03 /* PhoneNumberChecker.swift in Sources */,
 				42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
@@ -732,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5901E01EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift in Sources */,
 				A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -54,7 +54,7 @@ class CalendarViewController: UIViewController {
         prevButton.backgroundColor = Color.Calendar.PreviousButton.background
         nextButton.setTitleColor(Color.Calendar.NextButton.text, for: .normal)
         nextButton.backgroundColor = Color.Calendar.NextButton.background
-        
+
         prevButton.layer.cornerRadius = prevButton.bounds.height * 0.5
         nextButton.layer.cornerRadius = nextButton.bounds.height * 0.5
     }
