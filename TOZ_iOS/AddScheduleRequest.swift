@@ -35,8 +35,8 @@ final class AddScheduleRequest: BackendAPIRequest {
 
         return [
             "date": dataObject.date,
-            "ownerSurname": dataObject.ownerSurname,
-            "ownerForename": dataObject.ownerForename,
+            "ownerSurname": dataObject.ownerSurname ?? "",
+            "ownerForename": dataObject.ownerForename ?? "",
             "startTime": startTime,
             "endTime": endTime
         ]
