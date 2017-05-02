@@ -8,15 +8,13 @@
 import Foundation
 
 final class User {
-    private(set) var isSignedIn: Bool
+    static let shared: User = User()
 
-    static var shared: User = User(token: BackendAuth.shared.token)
-
-    init(token: String?) {
-        if token != nil {
-            self.isSignedIn = true
+    var isSignedIn: Bool {
+        if BackendAuth.shared.token != nil {
+            return true
         } else {
-            self.isSignedIn = false
+            return false
         }
     }
 }
