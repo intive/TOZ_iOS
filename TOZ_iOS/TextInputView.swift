@@ -37,12 +37,11 @@ class TextInputView: UIView, UITextFieldDelegate {
         }
     }
 
-    var attributedPlaceholder: NSAttributedString? {
+    var icon: UIImage? {
         didSet {
-            self.textField.attributedPlaceholder = attributedPlaceholder
+            configureView()
         }
     }
-
     var errorString: String?
 
     override init(frame: CGRect) {
@@ -72,6 +71,13 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.backgroundColor = Color.LoginTextView.TextField.background
         self.textField.layer.cornerRadius = 5
         self.layer.cornerRadius = 5
+        if let icon = self.icon {
+            self.textField.leftViewMode = UITextFieldViewMode.always
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 16))
+            imageView.image = icon
+            imageView.contentMode = .scaleAspectFit
+            self.textField.leftView = imageView
+        }
 
         setupConstraints()
     }
@@ -115,5 +121,4 @@ class TextInputView: UIView, UITextFieldDelegate {
     func textFieldDidEndEditing() {
         checkText()
     }
-
 }
