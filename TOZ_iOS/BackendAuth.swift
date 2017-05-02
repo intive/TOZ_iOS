@@ -9,10 +9,10 @@ import Foundation
 
 final class BackendAuth {
 
-    let key = "BackendAuthToken"
-    let defaults: UserDefaults
+   private let key = "BackendAuthToken"
+   private let defaults: UserDefaults
 
-    static var shared: BackendAuth = BackendAuth(defaults: UserDefaults.standard)
+    static let shared: BackendAuth = BackendAuth(defaults: UserDefaults.standard)
 
     init(defaults: UserDefaults) {
         self.defaults = defaults
@@ -27,6 +27,8 @@ final class BackendAuth {
     }
 
     func deleteToken() {
-        defaults.removeObject(forKey: key)
+        if self.token != nil {
+            defaults.removeObject(forKey: key)
+        }
     }
 }
