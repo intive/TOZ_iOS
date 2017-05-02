@@ -52,6 +52,14 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 }
+            } else if url.path == "/tokens/acquire" {
+                switch method {
+                case .POST:
+                    nameOfFile = "PostLogin"
+                    break;
+                default:
+                    print("Method is not appropriate.")
+                }
             }
             guard let path = Bundle.main.path(forResource: nameOfFile, ofType: "json") else {
                 failure?(nil, RequestError.InvalidRequest, 0)
