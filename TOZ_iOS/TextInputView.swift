@@ -17,6 +17,7 @@ fileprivate struct TextInputViewDimensions {
     static let labelHeight: CGFloat = 18
 }
 
+@IBDesignable
 class TextInputView: UIView, UITextFieldDelegate {
     private let textField = UITextField()
     private let label = UILabel()
