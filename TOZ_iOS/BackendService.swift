@@ -31,7 +31,9 @@ class BackendService {
         /// Adds endpoint to backend URL
         let url = conf.baseURL.appendingPathComponent(request.endpoint)
 
-        let headers = request.headers
+        var headers = request.headers
+        /// Set authentication token if available.
+        headers?["X-Api-Auth-Token"] = BackendAuth.shared.token
 
         /// Uses NetworkService class to execute HTTP request
         service.makeRequest(for: url, method: request.method, params: request.parameters, headers: headers, success: { data in
@@ -45,6 +47,7 @@ class BackendService {
             guard statusCode != 401 else {
                 /// Operation not authorized
                 NotificationCenter.default.post(name: .didPerformUnauthorizedOperation, object: nil)
+                BackendAuth.shared.deleteToken()
                 return
             }
 
