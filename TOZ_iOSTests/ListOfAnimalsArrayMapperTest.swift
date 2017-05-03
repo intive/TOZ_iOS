@@ -2,7 +2,6 @@
 //  AnimalResponseMapperTest.swift
 //  TOZ_iOS
 //
-//  Created by Rafal Gorczynski on 01.05.2017.
 //  Copyright © 2017 intive. All rights reserved.
 //
 
@@ -32,7 +31,7 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testListOfAnimalsArrayMapper() {
-        let firstAnimal = self.animalItems?[0]
+        let firstAnimal = self.animalItems?.first
         XCTAssertEqual(firstAnimal?.animalID, "c5296892-347f-4b2e-b1c6-6faff971f767")
         XCTAssertEqual(firstAnimal?.name, "Burek")
         XCTAssertEqual(firstAnimal?.type, "DOG")
