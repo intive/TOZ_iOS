@@ -56,7 +56,7 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostLogin"
-                    break;
+                    break
                 default:
                     print("Method is not appropriate.")
                 }
