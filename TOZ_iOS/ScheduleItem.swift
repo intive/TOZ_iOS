@@ -20,7 +20,4 @@ struct ScheduleItem: ParsedItem {
         var ownerSurname: String?
         var ownerForename: String?
     }
-
-    var reservations: [ReservationItem]?
-
 }
