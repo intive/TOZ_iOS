@@ -12,7 +12,7 @@ Class creates BackendService instance internally so it doesn’t need to be crea
  */
 class ServiceOperation {
 
-    let service: BackendService
+    var service: BackendService
 
     init(_ service: BackendService = BackendService(BackendConfiguration.shared)) {
         self.service = service
