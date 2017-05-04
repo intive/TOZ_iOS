@@ -213,7 +213,7 @@
         <!--AKTUALNOŚCI-->
         <scene sceneID="ge0-nh-dXU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VL-lz-GRm" customClass="NavigationController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VL-lz-GRm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="AKTUALNOŚCI" image="tab-bar-feed" id="VmM-Vg-2oV">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="keyPath">

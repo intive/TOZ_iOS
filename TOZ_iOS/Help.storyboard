@@ -341,7 +341,7 @@ ul. Przykładowa 12
         <!--POMOC-->
         <scene sceneID="33o-lP-WWO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wBG-Z6-AmU" customClass="NavigationController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wBG-Z6-AmU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="POMOC" image="tab-bar-help" id="Hqy-BJ-gAa"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

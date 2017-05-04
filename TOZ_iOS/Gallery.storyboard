@@ -461,7 +461,7 @@
         <!--GALERIA-->
         <scene sceneID="q7M-YA-ZMF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s9e-va-0TA" customClass="NavigationController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s9e-va-0TA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="GALERIA" image="tab-bar-gallery" id="cr2-Vx-0K8"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
