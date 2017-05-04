@@ -30,6 +30,7 @@ fileprivate struct TextInputViewDimensions {
     static let labelHeight: CGFloat = 16
 }
 
+@IBDesignable
 class TextInputView: UIView, UITextFieldDelegate {
     private let textField = UITextField()
     private let label = UILabel()
@@ -49,12 +50,12 @@ class TextInputView: UIView, UITextFieldDelegate {
         }
     }
 
-    var attributedPlaceholder: NSAttributedString? {
+    var icon: UIImage? {
         didSet {
-            self.textField.attributedPlaceholder = attributedPlaceholder
+            addIconToTextField()
         }
     }
-
+  
     var isTextSecure: Bool = false {
         didSet {
             self.textField.isSecureTextEntry = isTextSecure
@@ -138,4 +139,11 @@ class TextInputView: UIView, UITextFieldDelegate {
         checkText()
     }
 
+    func addIconToTextField() {
+        self.textField.leftViewMode = UITextFieldViewMode.always
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 16))
+        imageView.image = icon
+        imageView.contentMode = .scaleAspectFit
+        self.textField.leftView = imageView
+    }
 }
