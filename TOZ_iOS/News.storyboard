@@ -48,9 +48,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-8f-ihx" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="19" y="75" width="368" height="150"/>
+                                                            <rect key="frame" x="19" y="74" width="368" height="152"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="150" id="mWu-dU-k68"/>
+                                                                <constraint firstAttribute="height" constant="152" id="mJg-vY-rcO"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -59,7 +59,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Content" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="354" translatesAutoresizingMaskIntoConstraints="NO" id="iTE-me-Oi4">
-                                                            <rect key="frame" x="19" y="233" width="368" height="60"/>
+                                                            <rect key="frame" x="19" y="235" width="368" height="58"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -67,21 +67,19 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="BwT-8f-ihx" secondAttribute="trailing" constant="19" id="0ZA-oR-q40"/>
-                                                        <constraint firstItem="iTE-me-Oi4" firstAttribute="top" secondItem="BwT-8f-ihx" secondAttribute="bottom" constant="8" id="6Oc-b4-OlE"/>
-                                                        <constraint firstAttribute="trailing" secondItem="id4-Wy-sQv" secondAttribute="trailing" constant="19" id="GSy-dK-Cdm"/>
-                                                        <constraint firstItem="id4-Wy-sQv" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="ICB-iU-VjW"/>
-                                                        <constraint firstItem="AVb-ju-0dy" firstAttribute="top" secondItem="id4-Wy-sQv" secondAttribute="bottom" constant="8" id="Mfk-J4-TMP"/>
-                                                        <constraint firstItem="BwT-8f-ihx" firstAttribute="top" secondItem="AVb-ju-0dy" secondAttribute="bottom" constant="31" id="N1c-LY-YLP"/>
-                                                        <constraint firstItem="AVb-ju-0dy" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="NxQ-HI-51e"/>
-                                                        <constraint firstItem="id4-Wy-sQv" firstAttribute="top" secondItem="I0b-Ec-P3M" secondAttribute="top" constant="8" id="O6V-wE-HlE"/>
-                                                        <constraint firstItem="AVb-ju-0dy" firstAttribute="top" secondItem="id4-Wy-sQv" secondAttribute="bottom" constant="8" id="apO-0G-PsA"/>
-                                                        <constraint firstAttribute="bottom" secondItem="iTE-me-Oi4" secondAttribute="bottom" constant="8" id="esa-pG-y3N"/>
-                                                        <constraint firstItem="iTE-me-Oi4" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="lHS-Gd-mTi"/>
-                                                        <constraint firstAttribute="trailing" secondItem="AVb-ju-0dy" secondAttribute="trailing" constant="19" id="nTN-YD-UhL"/>
-                                                        <constraint firstItem="iTE-me-Oi4" firstAttribute="top" secondItem="BwT-8f-ihx" secondAttribute="bottom" constant="8" id="o52-6m-IH1"/>
-                                                        <constraint firstItem="BwT-8f-ihx" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="uHe-Tp-1dC"/>
-                                                        <constraint firstAttribute="trailing" secondItem="iTE-me-Oi4" secondAttribute="trailing" constant="19" id="wJY-nR-juF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iTE-me-Oi4" secondAttribute="bottom" constant="8" id="FrI-SM-r5m"/>
+                                                        <constraint firstItem="AVb-ju-0dy" firstAttribute="top" secondItem="id4-Wy-sQv" secondAttribute="bottom" constant="8" id="GeQ-m3-wgU"/>
+                                                        <constraint firstItem="AVb-ju-0dy" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="KuL-Jh-i22"/>
+                                                        <constraint firstItem="id4-Wy-sQv" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="MTi-2D-Ts9"/>
+                                                        <constraint firstItem="BwT-8f-ihx" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="Sdi-PF-Lfj"/>
+                                                        <constraint firstItem="BwT-8f-ihx" firstAttribute="top" secondItem="AVb-ju-0dy" secondAttribute="bottom" constant="30" id="StB-7y-J6Z"/>
+                                                        <constraint firstItem="iTE-me-Oi4" firstAttribute="leading" secondItem="I0b-Ec-P3M" secondAttribute="leading" constant="19" id="WS3-Jm-pCR"/>
+                                                        <constraint firstItem="iTE-me-Oi4" firstAttribute="top" secondItem="BwT-8f-ihx" secondAttribute="bottom" constant="9" id="c29-Ta-TGC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BwT-8f-ihx" secondAttribute="trailing" constant="19" id="dF0-Vo-dhw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iTE-me-Oi4" secondAttribute="trailing" constant="19" id="dQk-uF-wUC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AVb-ju-0dy" secondAttribute="trailing" constant="19" id="dbm-gL-2eu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="id4-Wy-sQv" secondAttribute="trailing" constant="19" id="kd6-KY-V0x"/>
+                                                        <constraint firstItem="id4-Wy-sQv" firstAttribute="top" secondItem="I0b-Ec-P3M" secondAttribute="top" constant="8" id="ybs-hY-b05"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
