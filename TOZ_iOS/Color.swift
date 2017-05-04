@@ -44,6 +44,9 @@ struct Color {
             static let primary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
+        struct Font {
+            static let primary = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.0)
+        }
     }
 
     struct TabBar {
@@ -58,7 +61,7 @@ struct Color {
 
     struct Cell {
         struct Background {
-            static let primary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 224.0/255.0, green: 224.0/255.0, blue: 224.0/255.0, alpha: 1.0)
         }
         struct Font {
             static let title = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)

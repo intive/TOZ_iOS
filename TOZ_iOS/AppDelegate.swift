@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+
         BITHockeyManager.shared().configure(withIdentifier: "1c4560d21290458c8ae1e5156e194155")
         BITHockeyManager.shared().start()
 
