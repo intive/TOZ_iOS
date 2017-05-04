@@ -15,9 +15,8 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem.Reservation
         guard let reservationsNode = obj?["reservations"] as? [[String: AnyObject]] else { throw ResponseMapperError.invalid }
 
         let reservationsParsed = try process(reservationsNode as AnyObject, mapper: { json in
-            guard let idObject = json["id"] as? String else {
-                print("DUPA") ; return nil }
-            guard let dateFromJson = json["date"] as? String else { print("DUPA2") ;  return nil }
+            guard let idObject = json["id"] as? String else { return nil }
+            guard let dateFromJson = json["date"] as? String else { return nil }
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             formatter.timeZone = TimeZone(abbreviation: "UTC")
@@ -25,7 +24,7 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem.Reservation
             guard let startTime = json["startTime"] as? String else { return nil }
             guard let endTime = json["endTime"] as? String else { return nil }
             var timeOfDay: TimeOfDay
-            if startTime == "08:00" || endTime == "12:00" {
+            if startTime == "08:00" && endTime == "12:00" {
                 timeOfDay = TimeOfDay.morning
             } else {
                 timeOfDay = TimeOfDay.afternoon
