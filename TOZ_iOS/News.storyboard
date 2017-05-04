@@ -50,7 +50,7 @@
                                                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-8f-ihx" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
                                                             <rect key="frame" x="19" y="74" width="368" height="152"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="152" id="mJg-vY-rcO"/>
+                                                                <constraint firstAttribute="height" constant="152" id="OFh-qH-Ijd"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -95,6 +95,7 @@
                                             <outlet property="contentLabel" destination="iTE-me-Oi4" id="t9z-Z8-LUy"/>
                                             <outlet property="datePublishedLabel" destination="id4-Wy-sQv" id="zvN-o4-lAI"/>
                                             <outlet property="photoView" destination="BwT-8f-ihx" id="quZ-7N-AKr"/>
+                                            <outlet property="photoViewHeight" destination="OFh-qH-Ijd" id="EdN-7g-WNd"/>
                                             <outlet property="titleLabel" destination="AVb-ju-0dy" id="oq2-db-jWJ"/>
                                         </connections>
                                     </tableViewCell>
