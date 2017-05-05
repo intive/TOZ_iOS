@@ -19,10 +19,10 @@ class CalendarViewController: UIViewController {
     var weekdayArray: [WeekdayItem]! {
         didSet {
             //Calendar Help function to parse MONTH and YEAR
-            if (weekdayArray?.isEmpty)! {
+            if weekdayArray.isEmpty {
                 currentDateLabel.text = ""
             } else {
-                currentDateLabel.text = weekdayArray?[0].dataLabel
+                currentDateLabel.text = weekdayArray[0].dataLabel
             }
         }
     }
@@ -99,7 +99,7 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController: WeekViewControllerDelegate {
-    func didUpdateReservations(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem]) {
+    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem]) {
         self.reservations = controller.reservations
     }
 }

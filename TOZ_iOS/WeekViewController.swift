@@ -7,7 +7,7 @@
 import UIKit
 
 protocol WeekViewControllerDelegate: class {
-    func didUpdateReservations(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem])
+    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem])
 }
 
 class WeekViewController: UIViewController {
@@ -24,7 +24,7 @@ class WeekViewController: UIViewController {
         if scheduleMorningLabelCollection[index!].scheduleSelected == false {
             //user with privilege to add operation (todo)
             scheduleMorningLabelCollection[index!].scheduleSelected = true
-            delegate?.didUpdateReservations(self, didUpdate: reservations)
+            delegate?.weekViewController(self, didUpdate: reservations)
         } else {
             //admin with privilege to delete operation (todo)
         }
@@ -34,7 +34,7 @@ class WeekViewController: UIViewController {
         if scheduleAfternoonLabelCollection[index!].scheduleSelected == false {
             //user with privilege to add operation (todo)
             scheduleAfternoonLabelCollection[index!].scheduleSelected = true
-            delegate?.didUpdateReservations(self, didUpdate: reservations)
+            delegate?.weekViewController(self, didUpdate: reservations)
         } else {
             //admin with privilege to delete operation (todo)
         }
