@@ -15,7 +15,7 @@ class WeekViewController: UIViewController {
     @IBOutlet var weekdayLabelCollection: [WeekDayControl]!
     @IBOutlet var scheduleMorningLabelCollection: [ScheduleControl]!
     @IBOutlet var scheduleAfternoonLabelCollection: [ScheduleControl]!
-    var weekdayArray: [String]!
+    var weekdayArray: [WeekdayItem]!
     var reservations: [ScheduleItem.ReservationItem] = []
     weak var delegate: WeekViewControllerDelegate?
 
@@ -53,12 +53,13 @@ class WeekViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd"
         for (i, item) in weekdayArray.enumerated() {
             //set day numbers and select current data
-            let indexAtDay = item.index(weekdayArray[i].endIndex, offsetBy: -2)
-            weekdayLabelCollection[i].valueOfDayLabel.text = item[indexAtDay..<item.endIndex]
+            weekdayLabelCollection[i].valueOfDayLabel.text = weekdayArray[i].day
             weekdayLabelCollection[i].weekdaySelected = false
 
             var firstCharForenameString, firstCharSurnameString: String
-            if let index = reservations.index(where: { item == formatter.string(from: $0.date) }) {
+            // add help function helper to compare current date to WeekdayItem
+            let dateTemp: String = "\(item.year)-\(item.month)-\(item.day)"
+            if let index = reservations.index(where: { dateTemp == formatter.string(from: $0.date) }) {
                 if let firstCharForename = reservations[index].ownerForename?.characters.first {
                     firstCharForenameString = String(firstCharForename)
                 } else {
@@ -82,7 +83,9 @@ class WeekViewController: UIViewController {
             }
         }
 
-        if let index = weekdayArray.index(where: { $0 == formatter.string(from: Date()) }) {
+        // add help function helper to compare current date to WeekdayItem
+        let dateTemp: WeekdayItem = WeekdayItem(day: "05", month: "05", year: "2017", dataLabel: "May 2017")
+        if let index = weekdayArray.index(where: { $0.day == dateTemp.day && $0.month == dateTemp.month && $0.year == dateTemp.year }) {
             weekdayLabelCollection[index].weekdaySelected = true
         }
     }

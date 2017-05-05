@@ -16,23 +16,20 @@ class CalendarViewController: UIViewController {
     var weekPages = [WeekViewController]()
     private var indexPage = 0
     var reservations: [ScheduleItem.ReservationItem] = []
-    var weekdayArray: [String]! {
+    var weekdayArray: [WeekdayItem]! {
         didSet {
             //Calendar Help function to parse MONTH and YEAR
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd"
-            if weekdayArray.isEmpty == false {
-                if let dateFromString = formatter.date(from: weekdayArray[0]) {
-                    formatter.dateFormat = "MMMM yyyy"
-                    currentDateLabel.text = formatter.string(from: dateFromString)
-                }
+            if (weekdayArray?.isEmpty)! {
+                currentDateLabel.text = ""
+            } else {
+                currentDateLabel.text = weekdayArray?[0].dataLabel
             }
         }
     }
 
     @IBAction func nextWeek(_ sender: Any) {
         //Add calendarhelper with data week range for selected week
-        weekdayArray = []
+
         //Add calendar datasource class instance
 
         let currentWeekController = nextWeekController()
