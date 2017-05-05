@@ -27,7 +27,7 @@ fileprivate struct TextInputViewDimensions {
     static let margin: CGFloat = 0
     static let offset: CGFloat = 4
     static let textFieldHeight: CGFloat = 24
-    static let labelHeight: CGFloat = 16
+    static let labelHeight: CGFloat = 20
 }
 
 @IBDesignable

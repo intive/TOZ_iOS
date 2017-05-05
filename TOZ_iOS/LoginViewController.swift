@@ -17,7 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        BackendAuth.shared.deleteToken() // for development process
+//        BackendAuth.shared.deleteToken() // for development process
         configureView()
     }
 
@@ -26,7 +26,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signInOperation?.resultCompletion = { result in
             switch result {
             case .success(let successfullSignIn):
-                //Use main queue synchronously to wait for backend response before taking further actions
                 DispatchQueue.main.async {
                     BackendAuth.shared.setToken(successfullSignIn.jwt)
                     if let token = BackendAuth.shared.token {
@@ -35,10 +34,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.goToNavigationControllerRoot()
                 }
             case .failure(let error):
-                print(error)
-                self.errorLabel.alpha = 1
-                self.errorLabel.textColor = Color.LoginTextView.Label.error
-                self.errorLabel.text = "Błąd logowania"
+                DispatchQueue.main.sync {
+                    print(error)
+                    self.errorLabel.alpha = 1
+                    self.errorLabel.textColor = Color.LoginTextView.Label.error
+                    self.errorLabel.text = "Błąd logowania: spróbuj ponownie później"
+                }
             }
         }
         if self.emailInput.isValid && self.passwordInput.isValid {
