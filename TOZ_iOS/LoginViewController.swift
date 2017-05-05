@@ -12,9 +12,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordInput: TextInputView!
     @IBOutlet weak var loginButton: UIButton!
 
+    var signInOperation: SignInOperation?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+    }
+
+    @IBAction func handleSignIn(_ sender: Any) {
+        signInOperation = SignInOperation(email: emailInput.text, password: passwordInput.text)
+        signInOperation?.resultCompletion = { result in
+            switch result {
+            case .success(let successfullSignIn):
+                DispatchQueue.main.async {
+                    BackendAuth.shared.setToken(successfullSignIn.jwt)
+                    print("Token \(BackendAuth.shared.token ?? "was not") successfully set for email \(self.emailInput.text)")
+                    BackendAuth.shared.deleteToken()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        signInOperation?.start()
     }
 
     func configureView() {
@@ -28,6 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.backgroundColor = Color.LoginViewController.Button.background
         loginButton.tintColor = Color.LoginViewController.Button.tint
         loginButton.layer.cornerRadius = 5
+//        loginButton.addTarget(self, action: handleSignIn(), for: .touchUpInside)
     }
 
     func addIconToString(icon: UIImage, string: String) -> NSMutableAttributedString {
@@ -41,4 +61,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         iconString.append(placeholderString)
         return iconString
     }
+
+
 }
