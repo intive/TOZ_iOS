@@ -17,7 +17,7 @@ class AMockIfSetTest: XCTestCase {
     }
 
     func testAddScheduleResponse() {
-        XCTAssert(type(of: serviceOperation?.service.service) == NetworkServiceMock?.self, "The application is not in Mock mode")
+        XCTAssert(type(of: serviceOperation?.service.service) == NetworkService?.self, "The application is in Mock mode")
     }
 
 }
