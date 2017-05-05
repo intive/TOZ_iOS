@@ -15,42 +15,41 @@ class CalendarViewController: UIViewController {
     var pageController: UIPageViewController!
     var weekPages = [WeekViewController]()
     private var indexPage = 0
-    var contents: [ScheduleItem.ReservationItem] = []
+    var reservations: [ScheduleItem.ReservationItem] = []
     var weekdayArray: [String]! {
         didSet {
             //Calendar Help function to parse MONTH and YEAR
-            //albo i nie
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
-            let dateFromString = formatter.date(from: weekdayArray[0])
-            formatter.dateFormat = "MMMM yyyy"
-            currentDateLabel.text = formatter.string(from: dateFromString!)
+            if weekdayArray.isEmpty == false {
+                if let dateFromString = formatter.date(from: weekdayArray[0]) {
+                    formatter.dateFormat = "MMMM yyyy"
+                    currentDateLabel.text = formatter.string(from: dateFromString)
+                }
+            }
         }
     }
 
     @IBAction func nextWeek(_ sender: Any) {
         //Add calendarhelper with data week range for selected week
-        weekdayArray = ["2017-05-01", "2017-05-02", "2017-05-03", "2017-05-04", "2017-05-05", "2017-05-06", "2017-05-07"]
+        weekdayArray = []
         //Add calendar datasource class instance
-        contents.append(ScheduleItem.ReservationItem.init(idObject:"11", date: Calendar.current.date(byAdding: .day, value: +2, to: Date())!, timeOfDay: TimeOfDay.afternoon, ownerSurname: "Name", ownerForename: "First" ))
-        pageController.setViewControllers([nextWeekController()], direction: .forward, animated: true)
-        if let currentWeekController = pageController.viewControllers?.first as? WeekViewController {
-            currentWeekController.weekdayArray = weekdayArray
-            currentWeekController.contentsWeekController = contents
-        }
+
+        let currentWeekController = nextWeekController()
+        currentWeekController.weekdayArray = weekdayArray
+        currentWeekController.reservations = reservations
+        pageController.setViewControllers([currentWeekController], direction: .forward, animated: true)
     }
 
     @IBAction func previousWeek(_ sender: Any) {
         //Add calendarhelper with data week range for selected week
-        weekdayArray = ["2017-04-17", "2017-04-18", "2017-04-19", "2017-04-20", "2017-04-21", "2017-04-22", "2017-05-23"]
+        weekdayArray = []
         //Add calendar datasource class instance
 
-        pageController.setViewControllers([nextWeekController()], direction: .reverse, animated: true)
-        if let currentWeekController = pageController.viewControllers?.first as? WeekViewController {
-            currentWeekController.weekdayArray = weekdayArray
-            currentWeekController.contentsWeekController = contents
-        }
-
+        let currentWeekController = nextWeekController()
+        currentWeekController.weekdayArray = weekdayArray
+        currentWeekController.reservations = reservations
+        pageController.setViewControllers([currentWeekController], direction: .reverse, animated: true)
     }
 
     func nextWeekController() -> WeekViewController {
@@ -75,12 +74,11 @@ class CalendarViewController: UIViewController {
         weekAfter.delegate = self
 
         //Add calendarhelper with data week range for selected week
-        weekdayArray = ["2017-04-24", "2017-04-25", "2017-04-26", "2017-04-27", "2017-04-28", "2017-04-29", "2017-04-30"]
+        weekdayArray = []
         //Add calendar datasource class instance with result for selected range of dates
-        contents.append(ScheduleItem.ReservationItem.init(idObject:"11", date: Calendar.current.date(byAdding: .day, value: +0, to: Date())!, timeOfDay: TimeOfDay.morning, ownerSurname: "Guten", ownerForename: "Tag" ))
 
         weekBefore.weekdayArray = weekdayArray
-        weekBefore.contentsWeekController = contents
+        weekBefore.reservations = reservations
         //set initial view
         pageController.setViewControllers([weekBefore], direction: .forward, animated: true)
 
@@ -104,8 +102,8 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController: WeekViewControllerDelegate {
-    func didUpdateContents(_ sender: WeekViewController) {
-        contents = sender.contentsWeekController
+    func didUpdateReservations(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem]) {
+        self.reservations = controller.reservations
     }
 }
 
