@@ -305,19 +305,26 @@ ul. Przykładowa 12
                                     <constraint firstAttribute="height" constant="40" id="GNB-wW-uMN"/>
                                 </constraints>
                                 <state key="normal" title="Zaloguj się"/>
-                                <connections>
-                                    <action selector="handleSignIn:" destination="5US-Ud-5vF" eventType="primaryActionTriggered" id="O8g-oN-2zS"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8I-ly-sUd" userLabel="passwordInput" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
                                 <rect key="frame" x="46" y="265" width="283" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl0-vm-Z13">
+                                <rect key="frame" x="46" y="373" width="283" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="iTF-cU-0Dn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.50570756196975708" green="0.50977981090545654" blue="0.51386749744415283" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J18-my-cxj" firstAttribute="trailing" secondItem="c8I-ly-sUd" secondAttribute="trailing" id="1wA-cL-bcN"/>
                             <constraint firstItem="J18-my-cxj" firstAttribute="top" secondItem="c8I-ly-sUd" secondAttribute="bottom" constant="10" id="5rx-XU-eKD"/>
+                            <constraint firstItem="sl0-vm-Z13" firstAttribute="top" secondItem="J18-my-cxj" secondAttribute="bottom" constant="8" id="6K3-oA-Ykj"/>
                             <constraint firstItem="yI4-Jz-gyM" firstAttribute="leading" secondItem="osC-rQ-mq9" secondAttribute="leadingMargin" constant="30" id="6aU-x7-MEC"/>
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="leading" secondItem="osC-rQ-mq9" secondAttribute="leadingMargin" id="Aga-Qo-UTT"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="height" secondItem="yI4-Jz-gyM" secondAttribute="height" id="Bh1-DP-i41"/>
@@ -327,19 +334,22 @@ ul. Przykładowa 12
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="leading" secondItem="yI4-Jz-gyM" secondAttribute="leading" id="SI4-3F-YYv"/>
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="trailing" secondItem="osC-rQ-mq9" secondAttribute="trailingMargin" id="WYh-K2-c4j"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="trailing" secondItem="yI4-Jz-gyM" secondAttribute="trailing" id="bTR-5o-bfX"/>
+                            <constraint firstItem="sl0-vm-Z13" firstAttribute="leading" secondItem="J18-my-cxj" secondAttribute="leading" id="d1A-ww-yMm"/>
+                            <constraint firstItem="sl0-vm-Z13" firstAttribute="trailing" secondItem="J18-my-cxj" secondAttribute="trailing" id="hNp-22-qes"/>
                             <constraint firstItem="J18-my-cxj" firstAttribute="leading" secondItem="c8I-ly-sUd" secondAttribute="leading" id="iWQ-bY-06b"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="top" secondItem="yI4-Jz-gyM" secondAttribute="bottom" constant="5" id="kSB-MZ-nhM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailInput" destination="yI4-Jz-gyM" id="fup-bF-6d6"/>
+                        <outlet property="errorLabel" destination="sl0-vm-Z13" id="kZr-G9-p19"/>
                         <outlet property="loginButton" destination="J18-my-cxj" id="LYI-zy-LVz"/>
                         <outlet property="passwordInput" destination="c8I-ly-sUd" id="5ZK-uX-CEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ll-8L-DQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2724" y="-1055"/>
+            <point key="canvasLocation" x="2724" y="-1055.6221889055473"/>
         </scene>
         <!--Help-->
         <scene sceneID="33o-lP-WWO">
