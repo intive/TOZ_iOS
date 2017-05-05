@@ -55,7 +55,7 @@ class TextInputView: UIView, UITextFieldDelegate {
             addIconToTextField()
         }
     }
-  
+
     var isTextSecure: Bool = false {
         didSet {
             self.textField.isSecureTextEntry = isTextSecure
