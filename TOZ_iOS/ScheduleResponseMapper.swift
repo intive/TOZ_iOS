@@ -29,8 +29,14 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem.Reservation
             } else {
                 timeOfDay = TimeOfDay.afternoon
             }
-            guard let ownerForename = json["ownerForename"] as? String else { return nil }
-            guard let ownerSurname = json["ownerSurname"] as? String else { return nil }
+            var ownerForename: String?
+            if let ownerForenameCheck = json["ownerForename"] as? String {
+                ownerForename = ownerForenameCheck
+            }
+            var ownerSurname: String?
+            if let ownerSurnameCheck = json["ownerSurname"] as? String {
+                ownerSurname = ownerSurnameCheck
+            }
             return ScheduleItem.ReservationItem.init(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
         })
         return reservationsParsed
