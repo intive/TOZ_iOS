@@ -305,6 +305,9 @@ ul. Przykładowa 12
                                     <constraint firstAttribute="height" constant="40" id="GNB-wW-uMN"/>
                                 </constraints>
                                 <state key="normal" title="Zaloguj się"/>
+                                <connections>
+                                    <action selector="handleSignIn:" destination="5US-Ud-5vF" eventType="primaryActionTriggered" id="O8g-oN-2zS"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8I-ly-sUd" userLabel="passwordInput" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
                                 <rect key="frame" x="46" y="265" width="283" height="50"/>
