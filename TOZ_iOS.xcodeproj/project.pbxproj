@@ -10,6 +10,8 @@
 		052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B681E9E4FD9001AE31A /* GetNews.json */; };
 		052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */; };
 		052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6E1E9E5154001AE31A /* GetAnimals.json */; };
+		05B515A91EBBB55500402F61 /* BecomeVolunteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B515A81EBBB55500402F61 /* BecomeVolunteerViewController.swift */; };
+		05B515AB1EBBB63700402F61 /* ApplicationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B515AA1EBBB63700402F61 /* ApplicationFormViewController.swift */; };
 		05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */; };
 		37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5C1E7F1B7E00336605 /* NewsEntity.swift */; };
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
@@ -106,6 +108,8 @@
 		052E3B681E9E4FD9001AE31A /* GetNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetNews.json; sourceTree = "<group>"; };
 		052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetOrganizationInfo.json; sourceTree = "<group>"; };
 		052E3B6E1E9E5154001AE31A /* GetAnimals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAnimals.json; sourceTree = "<group>"; };
+		05B515A81EBBB55500402F61 /* BecomeVolunteerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BecomeVolunteerViewController.swift; sourceTree = "<group>"; };
+		05B515AA1EBBB63700402F61 /* ApplicationFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFormViewController.swift; sourceTree = "<group>"; };
 		05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37434B5C1E7F1B7E00336605 /* NewsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
 				CE0BB3A61E9A7059006E23C7 /* Help.storyboard */,
+				05B515AA1EBBB63700402F61 /* ApplicationFormViewController.swift */,
+				05B515A81EBBB55500402F61 /* BecomeVolunteerViewController.swift */,
 				CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */,
 				CE0BB3A41E958980006E23C7 /* Calendar.storyboard */,
 				A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */,
@@ -706,9 +712,11 @@
 				4B5EBAD01EA2A7470015663C /* GalleryDetailModelController.swift in Sources */,
 				4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */,
 				54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */,
+				05B515A91EBBB55500402F61 /* BecomeVolunteerViewController.swift in Sources */,
 				4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */,
 				4B98B2E81E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift in Sources */,
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
+				05B515AB1EBBB63700402F61 /* ApplicationFormViewController.swift in Sources */,
 				54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */,
 				4B53F4D81EAA640B00D894F8 /* SignInResponseMapper.swift in Sources */,
 				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
