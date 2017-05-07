@@ -11,7 +11,7 @@ extension Date {
 
     func dateToFormattedString() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = "d/MM/YYYY"
         let calendar = Calendar.current
         let now = Date()
         let components = calendar.dateComponents([.day, .hour, .minute], from: self, to: now)
