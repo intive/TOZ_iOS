@@ -39,7 +39,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stk-Cv-GTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="541"/>
+            <point key="canvasLocation" x="98" y="540"/>
         </scene>
         <!--Account-->
         <scene sceneID="tEr-UP-OAc">
@@ -49,7 +49,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4o-xt-VXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-801" y="541"/>
+            <point key="canvasLocation" x="314" y="540"/>
         </scene>
         <!--Help-->
         <scene sceneID="aUU-LT-jUm">
@@ -59,7 +59,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmf-xT-udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547" y="541"/>
+            <point key="canvasLocation" x="-321" y="540"/>
         </scene>
         <!--News-->
         <scene sceneID="dIo-yN-asJ">
@@ -69,7 +69,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGv-Yk-DTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-534" y="541"/>
+            <point key="canvasLocation" x="-514" y="540"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="7iu-9d-I6K">
@@ -79,7 +79,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c56-Zn-jLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="541"/>
+            <point key="canvasLocation" x="-125" y="540"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.019811868667602539" green="0.011734841391444206" blue="0.011669095605611801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
