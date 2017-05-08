@@ -1,5 +1,5 @@
 //
-//  BasicChecker.swift
+//  TextLengthChecker.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BasicChecker: TextChecker {
+class TextLengthChecker: TextChecker {
 
     let charactersLimit: Int
 
