@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,18 +141,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-3u-tug">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieT-o8-xi8">
-                                        <rect key="frame" x="30" y="276" width="344" height="20"/>
+                                        <rect key="frame" x="30" y="232" width="344" height="20"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="72" width="344" height="194"/>
+                                        <rect key="frame" x="30" y="72" width="344" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="194" id="m2f-lG-zh9"/>
+                                            <constraint firstAttribute="height" constant="150" id="m2f-lG-zh9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -173,7 +173,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="sYB-le-XH6" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="30" id="2Eh-En-uE6"/>
                                     <constraint firstItem="Mxm-Qm-aM7" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="30" id="455-R8-z3D"/>
@@ -192,9 +191,8 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="mL5-VE-uXX" secondAttribute="bottom" id="5jN-up-EUn"/>
+                            <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="O3K-O4-qrq" secondAttribute="top" id="1GI-1N-5wx"/>
                             <constraint firstItem="LIN-3u-tug" firstAttribute="leading" secondItem="O3K-O4-qrq" secondAttribute="leading" id="C70-X7-06R"/>
                             <constraint firstAttribute="trailing" secondItem="LIN-3u-tug" secondAttribute="trailing" id="kRJ-np-g1I"/>
                             <constraint firstItem="t8m-8W-cGz" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="bottom" id="olL-VY-r0L"/>
@@ -206,6 +204,7 @@
                         <outlet property="dateLabel" destination="AJQ-Bf-YG3" id="N6c-2c-auA"/>
                         <outlet property="photoImageView" destination="sYB-le-XH6" id="elb-JL-2NZ"/>
                         <outlet property="photoImageViewHeight" destination="m2f-lG-zh9" id="YJp-MV-Fcd"/>
+                        <outlet property="scrollView" destination="LIN-3u-tug" id="dZl-eV-Dp4"/>
                         <outlet property="titleLabel" destination="Mxm-Qm-aM7" id="FtJ-0y-9im"/>
                     </connections>
                 </viewController>

@@ -15,10 +15,10 @@ class EmailChecker: TextChecker {
             if isEmail {
                 return .Valid
             } else {
-                return .Invalid(error: "Wprowadź poprawny mail")
+                return .Invalid(error: "Wpisz prawidłową nazwę użytkownika")
             }
         } catch {
-            return .Invalid(error: "Wprowadź poprawny mail")
+            return .Invalid(error: "Wpisz prawidłową nazwę użytkownika")
         }
     }
 }
