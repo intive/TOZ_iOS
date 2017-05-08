@@ -1,5 +1,5 @@
 //
-//  CalendarResponseMapperTests.swift
+//  ScheduleResponseMapperTests.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -8,9 +8,10 @@
 import XCTest
 @testable import TOZ_iOS
 
-class CalendarResponseMapperTests: XCTestCase {
+class ScheduleResponseMapperTests: XCTestCase {
 
-    var scheduleItem: [ScheduleItem.ReservationItem]?
+    var reservationItemArray: [ReservationItem]?
+    var firstReservationItem: ReservationItem?
 
     override func setUp() {
         var responseData: NSData?
@@ -23,17 +24,29 @@ class CalendarResponseMapperTests: XCTestCase {
         if let responseData = responseData {
             json = try? JSONSerialization.jsonObject(with: responseData as Data, options: [])
         }
-        scheduleItem = try? ScheduleResponseMapper.process(json as AnyObject)
+        reservationItemArray = try? ScheduleResponseMapper.process(json as AnyObject)
+        firstReservationItem = (reservationItemArray?[0])!
     }
 
-    func testCalendarResponseMapper() {
-        XCTAssertEqual(self.scheduleItem?[0].idObject, "c5296892-347f-4b2e-b1c6-6faff971f767")
+    func testReservationItemID() {
+        XCTAssertEqual(self.firstReservationItem?.idObject, "c5296892-347f-4b2e-b1c6-6faff971f767")
+    }
+
+    func testReservationItemTimeOfDay() {        XCTAssertEqual(self.firstReservationItem?.timeOfDay, TimeOfDay.afternoon)
+    }
+
+    func testReservationItemDate() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.timeZone = TimeZone(abbreviation: "UTC")
-        XCTAssertEqual(formatter.string(from: (self.scheduleItem?[0].date)!), "2017-01-20")
-        XCTAssertEqual(self.scheduleItem?[0].timeOfDay, TimeOfDay.afternoon)
-        XCTAssertEqual(self.scheduleItem?[0].ownerForename, "John")
-        XCTAssertEqual(self.scheduleItem?[0].ownerSurname, "Doe")
+        XCTAssertEqual(formatter.string(from: (self.firstReservationItem!.date)), "2017-01-20")
+    }
+
+    func testReservationItemOwnerForename() {
+        XCTAssertEqual(self.firstReservationItem?.ownerForename, "John")
+    }
+
+    func testReservationItemOwnerSurname() {
+        XCTAssertEqual(self.firstReservationItem?.ownerSurname, "Doe")
     }
 }

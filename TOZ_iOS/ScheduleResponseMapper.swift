@@ -8,10 +8,10 @@
 
 import Foundation
 
-final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem.ReservationItem>, ResponseMapperProtocol {
+final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, ResponseMapperProtocol {
 
     // swiftlint:disable cyclomatic_complexity
-    static func process(_ obj: AnyObject?) throws -> [ScheduleItem.ReservationItem] {
+    static func process(_ obj: AnyObject?) throws -> [ReservationItem] {
         guard let reservationsNode = obj?["reservations"] as? [[String: AnyObject]] else { throw ResponseMapperError.invalid }
 
         let reservationsParsed = try process(reservationsNode as AnyObject, mapper: { json in
@@ -37,7 +37,7 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem.Reservation
             if let ownerSurnameCheck = json["ownerSurname"] as? String {
                 ownerSurname = ownerSurnameCheck
             }
-            return ScheduleItem.ReservationItem.init(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
+            return ReservationItem.init(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
         })
         return reservationsParsed
     }
