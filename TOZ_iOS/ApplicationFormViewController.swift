@@ -19,38 +19,11 @@ class ApplicationFormViewController: UIViewController {
     @IBOutlet weak var surnameErrorLabel: UILabel!
     @IBOutlet weak var phoneNumberErrorLabel: UILabel!
     @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var formSuccessLabel: UILabel!
+    
     var errorHandler: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        if nameTextField.isEqual("") {
-            nameErrorLabel.text = "Pole wymagane"
-            errorHandler = true
-        } else if nameTextField.text!.characters.count > 35 {
-            nameErrorLabel.text = "Niepoprawne dane"
-            errorHandler = true
-        }
-        if surnameTextField.isEqual("") {
-            surnameErrorLabel.text = "Pole wymagane"
-            errorHandler = true
-        } else if surnameTextField.text!.characters.count > 35 {
-            surnameErrorLabel.text = "Niepoprawne dane"
-            errorHandler = true
-        }
-        if phoneNumberTextField.isEqual("") {
-            phoneNumberErrorLabel.text = "Pole wymagane"
-            errorHandler = true
-        } else if phoneNumberTextField.text!.characters.count != 9 &&
-            phoneNumberTextField.text!.characters.count != 11 {
-            phoneNumberErrorLabel.text = "Niepoprawne dane"
-            errorHandler = true
-        }
-        if emailTextField.isEqual("") {
-            emailErrorLabel.text = "Pole wymagane"
-            errorHandler = true
-        } else if emailTextField.text!.characters.count > 255 {
-                emailErrorLabel.text = "Niepoprawne dane"
-                errorHandler = true
-        }
     }
     func isEmailCorrect(email: String) -> Bool {
         var amountOfMonkeySigns = 0
@@ -105,5 +78,41 @@ class ApplicationFormViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func isFormCorect(_ sender: Any) {
+        if nameTextField.text?.characters.count == 0 {
+            nameErrorLabel.text = "Pole wymagane"
+            errorHandler = true
+        } else if nameTextField.text!.characters.count > 35 {
+            nameErrorLabel.text = "Niepoprawne dane"
+            errorHandler = true
+        }
+        if surnameTextField.isEqual("") {
+            surnameErrorLabel.text = "Pole wymagane"
+            errorHandler = true
+        } else if surnameTextField.text!.characters.count > 35 {
+            surnameErrorLabel.text = "Niepoprawne dane"
+            errorHandler = true
+        }
+        if phoneNumberTextField.text?.characters.count == 0 {
+            phoneNumberErrorLabel.text = "Pole wymagane"
+            errorHandler = true
+        } else if phoneNumberTextField.text!.characters.count != 9 &&
+            phoneNumberTextField.text!.characters.count != 11 {
+            phoneNumberErrorLabel.text = "Niepoprawne dane"
+            errorHandler = true
+        }
+        if emailTextField.text?.characters.count == 0 {
+            emailErrorLabel.text = "Pole wymagane"
+            errorHandler = true
+        } else if emailTextField.text!.characters.count > 255 {
+            emailErrorLabel.text = "Niepoprawne dane"
+            errorHandler = true
+        } else if !isEmailCorrect(email: emailTextField.text!) {
+            emailErrorLabel.text = "Niepoprawne dane"
+            errorHandler = true
+        }
+        if errorHandler == false {
+            formSuccessLabel.text = "Formularz został wysłany do organizacji"
+        }
+    }
 }
