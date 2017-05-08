@@ -1,5 +1,5 @@
 //
-//  LoginTextfieldViewController.swift
+//  LoginViewController.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -17,11 +17,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        BackendAuth.shared.deleteToken() // for development process
         configureView()
     }
 
-    func handleSignIn(_ sender: UIButton) {
+    @IBAction func handleSignIn(_ sender: Any) {
         signInOperation = SignInOperation(email: emailInput.text, password: passwordInput.text)
         signInOperation?.resultCompletion = { result in
             switch result {
@@ -31,7 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if let token = BackendAuth.shared.token {
                         print("Token >\(token)< successfully set for email \(self.emailInput.text)")
                     }
-                    self.goToNavigationControllerRoot()
+                    _ = self.navigationController?.popToRootViewController(animated: true)
                 }
             case .failure(let error):
                 DispatchQueue.main.sync {
@@ -54,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailInput.placeholder = "Login"
         emailInput.icon = UIImage(named: "loginIcon.png")
 
-        passwordInput.textChecker = BasicChecker()
+        passwordInput.textChecker = TextLengthChecker(charactersLimit: 35)
         passwordInput.placeholder = "Hasło"
         passwordInput.icon = UIImage(named: "passwordIcon.png")
         passwordInput.isTextSecure = true
@@ -62,12 +61,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.backgroundColor = Color.LoginViewController.Button.background
         loginButton.tintColor = Color.LoginViewController.Button.tint
         loginButton.layer.cornerRadius = 5
-        loginButton.addTarget(self, action: #selector(LoginViewController.handleSignIn(_:)), for: .touchUpInside)
 
         errorLabel.alpha = 0
-    }
-
-    func goToNavigationControllerRoot() {
-        _ = navigationController?.popToRootViewController(animated: true)
     }
 }
