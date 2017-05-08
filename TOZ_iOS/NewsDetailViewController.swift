@@ -8,6 +8,7 @@
 import UIKit
 
 class NewsDetailViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var photoImageView: ProfilePhotoView!
@@ -21,10 +22,12 @@ class NewsDetailViewController: UIViewController {
     }
 
     private func configureView() {
-        titleLabel.textColor = Color.Cell.Font.title
-        dateLabel.textColor = Color.Cell.Font.date
-        contentLabel.textColor = Color.Cell.Font.title
-        titleLabel.text = selectedNews?.title
+        scrollView.backgroundColor = Color.NewsDetailView.Background.secondary
+        self.view.backgroundColor = Color.NewsDetailView.Background.primary
+        titleLabel.textColor = Color.NewsDetailView.Font.title
+        dateLabel.textColor = Color.NewsDetailView.Font.date
+        contentLabel.textColor = Color.NewsDetailView.Font.content
+        titleLabel.text = selectedNews?.title.uppercased()
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
         photoImageView.photo = nil
         let photoURL: URL? = selectedNews?.photoUrl
@@ -36,7 +39,12 @@ class NewsDetailViewController: UIViewController {
             self.photoImageViewHeight.constant = 0
         }
 
-        contentLabel.text = selectedNews?.contents
+        let atributedContentString = NSMutableAttributedString(string: selectedNews?.contents ?? "")
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 8
+        atributedContentString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: atributedContentString.length))
+
+        contentLabel.attributedText = atributedContentString
     }
 
 }
