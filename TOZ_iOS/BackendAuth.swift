@@ -29,6 +29,7 @@ final class BackendAuth {
     func deleteToken() {
         if self.token != nil {
             defaults.removeObject(forKey: key)
+            print("Token was revoked")
         }
     }
 }
