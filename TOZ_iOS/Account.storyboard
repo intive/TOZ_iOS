@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,31 +18,23 @@
                         <viewControllerLayoutGuide type="bottom" id="JLL-qI-TIB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="07D-Hb-baa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y05-6a-5Ni" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="93" width="280" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3sA-Qx-1Eb"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axG-bT-WyZ" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="204" width="280" height="50"/>
+                                <rect key="frame" x="30" y="184" width="354" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="g19-VN-TgB"/>
+                                    <constraint firstAttribute="height" constant="50" id="ua5-KC-aft"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-u2-3lQ">
-                                <rect key="frame" x="36" y="352" width="248" height="50"/>
+                                <rect key="frame" x="30" y="299" width="354" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8k4-bx-8wk"/>
+                                    <constraint firstAttribute="height" constant="50" id="Dxv-yM-7JF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Zmień hasło">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Zmień hasło"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -53,87 +44,38 @@
                                     <action selector="confirmButtonAction:" destination="LMa-bv-mzV" eventType="touchUpInside" id="tae-Vw-V0a"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stare hasło" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4A-oO-8Rz">
-                                <rect key="frame" x="20" y="68" width="280" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="i6u-29-dHQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nowe hasło" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-BL-bnM">
-                                <rect key="frame" x="20" y="179" width="280" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="fiz-wU-jcv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAw-Ie-lwC">
-                                <rect key="frame" x="20" y="147" width="280" height="2"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="AOK-gY-PZf"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-96-jMB" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="291" width="280" height="50"/>
+                                <rect key="frame" x="30" y="239" width="354" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Avv-2O-8WS"/>
+                                    <constraint firstAttribute="height" constant="50" id="3FT-6l-shk"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powtórz nowe hasło" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hql-vZ-3IK">
-                                <rect key="frame" x="20" y="266" width="280" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y05-6a-5Ni" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
+                                <rect key="frame" x="30" y="94" width="354" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="jQ4-K5-s4q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-9Y-whh">
-                                <rect key="frame" x="20" y="345" width="280" height="2"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="jLo-0t-A5F"/>
+                                    <constraint firstAttribute="height" constant="50" id="foc-Pw-ePl"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="2Rl-LG-zJY"/>
-                            <constraint firstItem="cAw-Ie-lwC" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="4" id="2p3-bc-Nkk"/>
-                            <constraint firstItem="5MV-BL-bnM" firstAttribute="top" secondItem="cAw-Ie-lwC" secondAttribute="bottom" constant="30" id="5Dr-Up-vlY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CZh-u2-3lQ" secondAttribute="trailing" constant="20" id="9s6-C7-mwV"/>
-                            <constraint firstItem="k4A-oO-8Rz" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="CyN-ke-ODa"/>
-                            <constraint firstItem="cLc-96-jMB" firstAttribute="top" secondItem="Hql-vZ-3IK" secondAttribute="bottom" constant="4" id="Jfq-4a-ddD"/>
-                            <constraint firstAttribute="trailing" secondItem="5MV-BL-bnM" secondAttribute="trailing" constant="20" id="KnC-Ld-FMf"/>
-                            <constraint firstItem="5MV-BL-bnM" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="QI4-yw-a7m"/>
-                            <constraint firstAttribute="trailing" secondItem="cAw-Ie-lwC" secondAttribute="trailing" constant="20" id="RjM-mQ-MAf"/>
-                            <constraint firstItem="cAw-Ie-lwC" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="T1A-4b-4rY"/>
-                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="ThD-9Y-whh" secondAttribute="bottom" constant="5" id="TLb-uR-x1G"/>
-                            <constraint firstAttribute="trailing" secondItem="ThD-9Y-whh" secondAttribute="trailing" constant="20" id="Tzn-Uc-5n3"/>
-                            <constraint firstAttribute="trailing" secondItem="k4A-oO-8Rz" secondAttribute="trailing" constant="20" id="UbS-xR-nlk"/>
-                            <constraint firstItem="ThD-9Y-whh" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="4" id="VHZ-M6-5tx"/>
-                            <constraint firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" constant="20" id="Xnq-wC-qTT"/>
-                            <constraint firstAttribute="trailing" secondItem="axG-bT-WyZ" secondAttribute="trailing" constant="20" id="Z5w-gN-xdn"/>
-                            <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="5MV-BL-bnM" secondAttribute="bottom" constant="4" id="eeU-ti-xlf"/>
-                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="top" secondItem="k4A-oO-8Rz" secondAttribute="bottom" constant="4" id="el0-4D-Fho"/>
-                            <constraint firstItem="ThD-9Y-whh" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="g0h-bj-2HA"/>
-                            <constraint firstAttribute="trailing" secondItem="Hql-vZ-3IK" secondAttribute="trailing" constant="20" id="gNk-nQ-AP3"/>
-                            <constraint firstAttribute="trailing" secondItem="cLc-96-jMB" secondAttribute="trailing" constant="20" id="mUD-Hk-srl"/>
-                            <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="nye-WL-Ssi"/>
-                            <constraint firstItem="Hql-vZ-3IK" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="qkR-SC-ltz"/>
-                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leadingMargin" constant="20" id="rVm-eC-gkw"/>
-                            <constraint firstItem="k4A-oO-8Rz" firstAttribute="top" secondItem="F47-So-QJD" secondAttribute="bottom" constant="4" id="vsF-Qo-qCn"/>
-                            <constraint firstItem="Hql-vZ-3IK" firstAttribute="top" secondItem="axG-bT-WyZ" secondAttribute="bottom" constant="12" id="y1k-Fz-Juo"/>
-                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="20" id="y5O-Ph-Xg2"/>
+                            <constraint firstItem="cLc-96-jMB" firstAttribute="top" secondItem="axG-bT-WyZ" secondAttribute="bottom" constant="5" id="4xV-OO-TDQ"/>
+                            <constraint firstAttribute="trailing" secondItem="axG-bT-WyZ" secondAttribute="trailing" constant="30" id="8Ps-wk-UVG"/>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="G1W-ZP-eO8"/>
+                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="top" secondItem="F47-So-QJD" secondAttribute="bottom" constant="30" id="HPk-Wt-pUI"/>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="40" id="XeH-Fw-IAU"/>
+                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="10" id="Zar-Gr-zNI"/>
+                            <constraint firstAttribute="trailing" secondItem="cLc-96-jMB" secondAttribute="trailing" constant="30" id="cDV-qL-d3z"/>
+                            <constraint firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" constant="30" id="fTe-OD-Xgw"/>
+                            <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="gLn-SV-Ky1"/>
+                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="qnz-Q8-xen"/>
+                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="xcY-AY-6Bt"/>
+                            <constraint firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" constant="30" id="yU9-1G-E6t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zmiana hasła" id="SvL-02-iEd"/>
                     <connections>
+                        <outlet property="changePasswordButton" destination="CZh-u2-3lQ" id="wqf-q1-ksX"/>
                         <outlet property="confirmNewPassword" destination="cLc-96-jMB" id="p14-7h-7LV"/>
                         <outlet property="newPassword" destination="axG-bT-WyZ" id="kZp-Hh-Ybj"/>
                         <outlet property="oldPassword" destination="Y05-6a-5Ni" id="PsA-vT-rBO"/>
