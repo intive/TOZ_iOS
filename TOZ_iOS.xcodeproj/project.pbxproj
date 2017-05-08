@@ -94,6 +94,7 @@
 		A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFB1E6AEB1F009A06F8 /* Assets.xcassets */; };
 		A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */; };
 		AA04D596234770687A312BCC /* Pods_TOZ_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */; };
+		CE09D7FF1EC12C4400D21868 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09D7FE1EC12C4400D21868 /* SignUpViewController.swift */; };
 		CE0BB3A31E95894F006E23C7 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */; };
 		CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A41E958980006E23C7 /* Calendar.storyboard */; };
 		CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A61E9A7059006E23C7 /* Help.storyboard */; };
@@ -205,6 +206,7 @@
 		A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOZ_iOSTests.swift; sourceTree = "<group>"; };
 		A1CABC0B1E6AEB1F009A06F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3D1325AC6CF9A0833CE20E0 /* Pods-TOZ_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CE09D7FE1EC12C4400D21868 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE0BB3A21E95894F006E23C7 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		CE0BB3A41E958980006E23C7 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		CE0BB3A61E9A7059006E23C7 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
+				CE09D7FE1EC12C4400D21868 /* SignUpViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
@@ -724,6 +727,7 @@
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
+				CE09D7FF1EC12C4400D21868 /* SignUpViewController.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
 				4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */,
 				4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */,

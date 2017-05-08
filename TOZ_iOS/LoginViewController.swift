@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordInput: TextInputView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
 
     var signInOperation: SignInOperation?
 
@@ -63,5 +64,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.cornerRadius = 5
 
         errorLabel.alpha = 0
+
+        signUpButton.backgroundColor = Color.LoginViewController.Button.background
+        signUpButton.tintColor = Color.LoginViewController.Button.tint
+        signUpButton.layer.cornerRadius = 5
     }
+
+    @IBAction func unwindToLoginView(segue: UIStoryboardSegue) {}
+
 }
