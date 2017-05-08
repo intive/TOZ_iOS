@@ -8,11 +8,18 @@
 import Foundation
 
 class BasicChecker: TextChecker {
+
+    let charactersLimit: Int
+
+    init(charactersLimit: Int) {
+        self.charactersLimit = charactersLimit
+    }
+
     func check(text: String) -> CheckResult {
         if text.characters.count == 0 {
             return .Invalid(error: "Pole wymagane")
-        } else if text.characters.count > 35 {
-            return .Invalid(error: "Wpisz poprawne dane")
+        } else if text.characters.count > charactersLimit {
+            return .Invalid(error: "Zawartość pola nie powinna przekraczać długości \(charactersLimit) znaków")
         } else {
             return .Valid
         }
