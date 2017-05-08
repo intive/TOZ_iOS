@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -322,6 +322,10 @@ ul. Przykładowa 12
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TET-JG-y3u">
+                                <rect key="frame" x="164" y="411" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50570756196975708" green="0.50977981090545654" blue="0.51386749744415283" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -333,14 +337,17 @@ ul. Przykładowa 12
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="height" secondItem="yI4-Jz-gyM" secondAttribute="height" id="Bh1-DP-i41"/>
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="top" secondItem="Jr2-tX-50p" secondAttribute="bottom" constant="100" id="Bpy-fs-xk9"/>
                             <constraint firstItem="yI4-Jz-gyM" firstAttribute="top" secondItem="2yJ-br-VI7" secondAttribute="bottom" constant="30" id="J19-qU-zGq"/>
+                            <constraint firstItem="TET-JG-y3u" firstAttribute="top" secondItem="sl0-vm-Z13" secondAttribute="bottom" constant="8" id="K5Q-eT-D36"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yI4-Jz-gyM" secondAttribute="trailing" constant="30" id="SGP-Ah-ne8"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="leading" secondItem="yI4-Jz-gyM" secondAttribute="leading" id="SI4-3F-YYv"/>
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="trailing" secondItem="osC-rQ-mq9" secondAttribute="trailingMargin" id="WYh-K2-c4j"/>
+                            <constraint firstItem="TET-JG-y3u" firstAttribute="leading" secondItem="J18-my-cxj" secondAttribute="leading" id="bPN-sc-9ri"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="trailing" secondItem="yI4-Jz-gyM" secondAttribute="trailing" id="bTR-5o-bfX"/>
                             <constraint firstItem="sl0-vm-Z13" firstAttribute="leading" secondItem="J18-my-cxj" secondAttribute="leading" id="d1A-ww-yMm"/>
                             <constraint firstItem="sl0-vm-Z13" firstAttribute="trailing" secondItem="J18-my-cxj" secondAttribute="trailing" id="hNp-22-qes"/>
                             <constraint firstItem="J18-my-cxj" firstAttribute="leading" secondItem="c8I-ly-sUd" secondAttribute="leading" id="iWQ-bY-06b"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="top" secondItem="yI4-Jz-gyM" secondAttribute="bottom" constant="5" id="kSB-MZ-nhM"/>
+                            <constraint firstItem="TET-JG-y3u" firstAttribute="trailing" secondItem="J18-my-cxj" secondAttribute="trailing" id="qDT-hN-fnm"/>
                         </constraints>
                     </view>
                     <connections>
