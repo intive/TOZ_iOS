@@ -21,9 +21,9 @@ extension Date {
         let minute = components.minute ?? 0
 
         if day <= 1 {
-            result = "\(components.hour ?? 0) godzin temu"
+            result = "\(abs(components.hour ?? 0)) godzin temu"
         } else if hour <= 1 {
-            result = "\(components.minute ?? 0) minut temu"
+            result = "\(abs(components.minute ?? 0)) minut temu"
         } else if minute <= 1 {
             result = "przed chwilą"
         } else {
