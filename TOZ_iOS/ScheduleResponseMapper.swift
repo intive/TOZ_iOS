@@ -1,5 +1,5 @@
 //
-//  CalendarResponseMapper.swift
+//  ScheduleResponseMapper.swift
 //  TOZ_iOS
 //
 //  Created by RKB on 11/04/2017.
@@ -9,11 +9,11 @@
 import Foundation
 
 final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, ResponseMapperProtocol {
-
+    
     // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> [ReservationItem] {
         guard let reservationsNode = obj?["reservations"] as? [[String: AnyObject]] else { throw ResponseMapperError.invalid }
-
+        
         let reservationsParsed = try process(reservationsNode as AnyObject, mapper: { json in
             guard let idObject = json["id"] as? String else { return nil }
             guard let dateFromJson = json["date"] as? String else { return nil }
@@ -22,9 +22,8 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, Respon
             formatter.timeZone = TimeZone(abbreviation: "UTC")
             guard let date = formatter.date(from: dateFromJson) else { return nil }
             guard let startTime = json["startTime"] as? String else { return nil }
-            guard let endTime = json["endTime"] as? String else { return nil }
             var timeOfDay: TimeOfDay
-            if startTime == "08:00" && endTime == "12:00" {
+            if startTime == "08:00" {
                 timeOfDay = TimeOfDay.morning
             } else {
                 timeOfDay = TimeOfDay.afternoon
@@ -41,5 +40,5 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, Respon
         })
         return reservationsParsed
     }
-
+    
 }
