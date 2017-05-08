@@ -1,5 +1,5 @@
 //
-//  CalendarResponseMapper.swift
+//  ScheduleResponseMapper.swift
 //  TOZ_iOS
 //
 //  Created by RKB on 11/04/2017.
@@ -8,33 +8,37 @@
 
 import Foundation
 
-final class ScheduleResponseMapper: ArrayResponseMapper<ScheduleItem>, ResponseMapperProtocol {
+final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, ResponseMapperProtocol {
 
     // swiftlint:disable cyclomatic_complexity
-    static func process(_ obj: AnyObject?) throws -> [ScheduleItem] {
-        return try process(obj, mapper: { jsonNode in
-    // swiftlint:disable syntactic_sugar
-            var listOfObjects = Array<ScheduleItem.ReservationItem>()
-    // swiftlint:enable syntactic_sugar
-            guard let arrayOfReservations = jsonNode["reservations"] as? [[String: AnyObject]]? else { return nil }
-            for resItem in arrayOfReservations! {
-                guard let idObject = resItem["id"] as? String else { return nil }
-                guard let date = resItem["date"] as? Date else { return nil }
-                guard let startTime = resItem["startTime"] as? String else { return nil }
-                guard let endTime = resItem["endTime"] as? String else { return nil }
-                var timeOfDay: TimeOfDay
-                if startTime == "08:00" || endTime == "12:00" {
-                    timeOfDay = TimeOfDay.morning
-                } else {
-                    timeOfDay = TimeOfDay.afternoon
-                }
-                guard let ownerForename = resItem["ownerForename"] as? String else { return nil }
-                guard let ownerSurname = resItem["ownerSurname"] as? String else { return nil }
-                let oneItem = ScheduleItem.ReservationItem(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
-                listOfObjects.append(oneItem)
-            }
+    static func process(_ obj: AnyObject?) throws -> [ReservationItem] {
+        guard let reservationsNode = obj?["reservations"] as? [[String: AnyObject]] else { throw ResponseMapperError.invalid }
 
-            return ScheduleItem(reservations: listOfObjects)
+        let reservationsParsed = try process(reservationsNode as AnyObject, mapper: { json in
+            guard let idObject = json["id"] as? String else { return nil }
+            guard let dateFromJson = json["date"] as? String else { return nil }
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            formatter.timeZone = TimeZone(abbreviation: "UTC")
+            guard let date = formatter.date(from: dateFromJson) else { return nil }
+            guard let startTime = json["startTime"] as? String else { return nil }
+            var timeOfDay: TimeOfDay
+            if startTime == "08:00" {
+                timeOfDay = TimeOfDay.morning
+            } else {
+                timeOfDay = TimeOfDay.afternoon
+            }
+            var ownerForename: String?
+            if let ownerForenameCheck = json["ownerForename"] as? String {
+                ownerForename = ownerForenameCheck
+            }
+            var ownerSurname: String?
+            if let ownerSurnameCheck = json["ownerSurname"] as? String {
+                ownerSurname = ownerSurnameCheck
+            }
+            return ReservationItem.init(idObject: idObject, date: date, timeOfDay: timeOfDay, ownerSurname: ownerSurname, ownerForename: ownerForename)
         })
+        return reservationsParsed
     }
+
 }

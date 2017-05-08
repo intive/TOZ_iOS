@@ -9,10 +9,10 @@ import Foundation
 
 final class AddScheduleRequest: BackendAPIRequest {
 
-    private let dataObject: ScheduleItem.ReservationItem
+    private let dataObject: ReservationItem
     private let modificationMessage: String
 
-    init(dataObject: ScheduleItem.ReservationItem, modificationMessage: String) {
+    init(dataObject: ReservationItem, modificationMessage: String) {
         self.dataObject = dataObject
         self.modificationMessage = modificationMessage
     }

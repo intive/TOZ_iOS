@@ -10,10 +10,10 @@ import Foundation
 class AddScheduleOperation: ServiceOperation {
     private let request: AddScheduleRequest
 
-    private(set) var result: RequestResult<ScheduleItem.ReservationItem>?
-    var resultCompletion: ((RequestResult<ScheduleItem.ReservationItem>) -> Void)?
+    private(set) var result: RequestResult<ReservationItem>?
+    var resultCompletion: ((RequestResult<ReservationItem>) -> Void)?
 
-    public init(dataObject: ScheduleItem.ReservationItem, modificationMessage: String) {
+    public init(dataObject: ReservationItem, modificationMessage: String) {
         self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage)
     }
 
@@ -34,7 +34,7 @@ class AddScheduleOperation: ServiceOperation {
         }
     }
 
-    func callCompletion(_ result: RequestResult<ScheduleItem.ReservationItem>) {
+    func callCompletion(_ result: RequestResult<ReservationItem>) {
         self.result = result
         resultCompletion?(result)
     }

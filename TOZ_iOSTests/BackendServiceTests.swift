@@ -1,5 +1,5 @@
 //
-//  AMockIfSetTest.swift
+//  BackendServiceTests.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import TOZ_iOS
 
-class AMockIfSetTest: XCTestCase {
+class BackendServiceTests: XCTestCase {
 
     var serviceOperation: ServiceOperation?
 
@@ -16,7 +16,7 @@ class AMockIfSetTest: XCTestCase {
         serviceOperation = ServiceOperation()
     }
 
-    func testAddScheduleResponse() {
+    func testIsMockNetworkServiceEnabled() {
         XCTAssert(type(of: serviceOperation?.service.service) == NetworkService?.self, "The application is in Mock mode")
     }
 
