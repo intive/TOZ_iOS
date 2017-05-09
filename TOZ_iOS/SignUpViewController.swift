@@ -10,17 +10,20 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    var options = ["Chcę zostać wolontariuszem", "Chcę zostać domem tymczasowym"]
+
     @IBOutlet weak var firstNameInput: TextInputView!
     @IBOutlet weak var surnameInput: TextInputView!
     @IBOutlet weak var emailInput: TextInputView!
     @IBOutlet weak var phoneNumberInput: TextInputView!
+    @IBOutlet weak var goalInput: TextInputView!
 
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureView()
 
         // Do any additional setup after loading the view.
@@ -54,6 +57,7 @@ class SignUpViewController: UIViewController {
         surnameInput.placeholder = " Nazwisko..."
         emailInput.placeholder = " E-mail..."
         phoneNumberInput.placeholder = " Numer telefonu..."
+        goalInput.placeholder = " Wybierz cel..."
     }
     /*
     // MARK: - Navigation
