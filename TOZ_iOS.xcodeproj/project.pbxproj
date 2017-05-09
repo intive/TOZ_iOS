@@ -41,6 +41,7 @@
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
+		4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */; };
 		4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AFF891EB124C8000FB02E /* LoginViewController.swift */; };
 		4B3AFF8C1EB3AEF0000FB02E /* EmailChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AFF8B1EB3AEF0000FB02E /* EmailChecker.swift */; };
 		4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */; };
@@ -70,6 +71,7 @@
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
 		54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */; };
 		54A2FA661EBA77990020BBAC /* AddSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54A2FA651EBA77990020BBAC /* AddSchedule.json */; };
+		54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */; };
 		54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */; };
 		54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */; };
 		54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */; };
@@ -148,6 +150,7 @@
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLengthChecker.swift; sourceTree = "<group>"; };
 		4B3AFF891EB124C8000FB02E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4B3AFF8B1EB3AEF0000FB02E /* EmailChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailChecker.swift; sourceTree = "<group>"; };
 		4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoRequest.swift; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
 		54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A2FA651EBA77990020BBAC /* AddSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddSchedule.json; sourceTree = "<group>"; };
+		54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleRequest.swift; sourceTree = "<group>"; };
 		54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleOperation.swift; sourceTree = "<group>"; };
 		54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleResponseMapper.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 				422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */,
 				4B3AFF8B1EB3AEF0000FB02E /* EmailChecker.swift */,
 				4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */,
+				4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */,
 			);
 			name = LoginTextView;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 		A1CABC081E6AEB1F009A06F8 /* TOZ_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */,
 				A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */,
 				4B5901DF1EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift */,
 				54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */,
@@ -691,6 +697,7 @@
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
 				3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */,
+				4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
 				3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */,
 				54D139091EA1187B0064BE00 /* AddScheduleOperation.swift in Sources */,
@@ -767,6 +774,7 @@
 				42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */,
 				A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */,
 				54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */,
+				54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */,
 				42345F691EB78658007CA79E /* NewsResponseMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

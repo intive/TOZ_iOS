@@ -9,7 +9,7 @@
 import Foundation
 
 class NetworkServiceMock: NetworkService {
-    // swiftlint:disable cyclomatic_complexity
+    // swiftlint:disable cyclomatic_complexity function_body_length
     override func makeRequest(for url: URL,
                               method: NetworkService.Method,
                               params: [String : Any]?,
