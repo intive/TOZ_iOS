@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -56,6 +56,13 @@
                                     <constraint firstAttribute="height" constant="50" id="foc-Pw-ePl"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-wK-wI9">
+                                <rect key="frame" x="30" y="382" width="354" height="50"/>
+                                <state key="normal" title="Wyloguj"/>
+                                <connections>
+                                    <action selector="signOut:" destination="LMa-bv-mzV" eventType="touchUpInside" id="q76-nf-RP3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,10 +71,14 @@
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="G1W-ZP-eO8"/>
                             <constraint firstItem="Y05-6a-5Ni" firstAttribute="top" secondItem="F47-So-QJD" secondAttribute="bottom" constant="30" id="HPk-Wt-pUI"/>
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="40" id="XeH-Fw-IAU"/>
+                            <constraint firstItem="fbB-wK-wI9" firstAttribute="height" secondItem="CZh-u2-3lQ" secondAttribute="height" id="YSz-p6-0J5"/>
                             <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="10" id="Zar-Gr-zNI"/>
                             <constraint firstAttribute="trailing" secondItem="cLc-96-jMB" secondAttribute="trailing" constant="30" id="cDV-qL-d3z"/>
+                            <constraint firstItem="fbB-wK-wI9" firstAttribute="top" secondItem="CZh-u2-3lQ" secondAttribute="bottom" constant="33" id="fDD-Yq-LWF"/>
                             <constraint firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" constant="30" id="fTe-OD-Xgw"/>
                             <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="gLn-SV-Ky1"/>
+                            <constraint firstItem="fbB-wK-wI9" firstAttribute="leading" secondItem="CZh-u2-3lQ" secondAttribute="leading" id="ikD-pU-Ibc"/>
+                            <constraint firstItem="fbB-wK-wI9" firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" id="mPz-wO-Pr8"/>
                             <constraint firstItem="CZh-u2-3lQ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="qnz-Q8-xen"/>
                             <constraint firstItem="Y05-6a-5Ni" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="xcY-AY-6Bt"/>
                             <constraint firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" constant="30" id="yU9-1G-E6t"/>
@@ -79,16 +90,17 @@
                         <outlet property="confirmNewPassword" destination="cLc-96-jMB" id="p14-7h-7LV"/>
                         <outlet property="newPassword" destination="axG-bT-WyZ" id="kZp-Hh-Ybj"/>
                         <outlet property="oldPassword" destination="Y05-6a-5Ni" id="PsA-vT-rBO"/>
+                        <outlet property="signOutButton" destination="fbB-wK-wI9" id="eT0-bq-1XV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzQ-79-CxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="184.85757121439281"/>
+            <point key="canvasLocation" x="707.24637681159425" y="184.23913043478262"/>
         </scene>
         <!--Konto-->
         <scene sceneID="g3Y-QG-dZR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QM9-m6-VAq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AccountNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QM9-m6-VAq" customClass="AccountNavigationController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Konto" image="tab-bar-user" selectedImage="tab-bar-user" id="hjU-ZU-7tV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
