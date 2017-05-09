@@ -73,6 +73,8 @@
 		54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */; };
 		54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */; };
 		54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */; };
+		54AF58111EBCA26E009D488B /* WeekdayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AF58101EBCA26E009D488B /* WeekdayItem.swift */; };
+		54B11CBD1EBE266A0051C1E8 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11CBC1EBE266A0051C1E8 /* CalendarHelper.swift */; };
 		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
 		54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139021EA118350064BE00 /* AddScheduleRequest.swift */; };
 		54D139061EA118350064BE00 /* CalendarWeekRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139031EA118350064BE00 /* CalendarWeekRequest.swift */; };
@@ -179,6 +181,8 @@
 		54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleOperation.swift; sourceTree = "<group>"; };
 		54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleResponseMapper.swift; sourceTree = "<group>"; };
 		54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetSchedule.json; sourceTree = "<group>"; };
+		54AF58101EBCA26E009D488B /* WeekdayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayItem.swift; sourceTree = "<group>"; };
+		54B11CBC1EBE266A0051C1E8 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		54D139021EA118350064BE00 /* AddScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleRequest.swift; sourceTree = "<group>"; };
 		54D139031EA118350064BE00 /* CalendarWeekRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekRequest.swift; sourceTree = "<group>"; };
@@ -363,6 +367,8 @@
 				54FBAB371EA2CFE000503317 /* ScheduleControl.swift */,
 				54FBAB331EA2CFCC00503317 /* WeekDayControl.swift */,
 				54FBAB311EA2CFB600503317 /* WeekViewController.swift */,
+				54AF58101EBCA26E009D488B /* WeekdayItem.swift */,
+				54B11CBC1EBE266A0051C1E8 /* CalendarHelper.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -724,6 +730,8 @@
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
+				54AF58111EBCA26E009D488B /* WeekdayItem.swift in Sources */,
+				54B11CBD1EBE266A0051C1E8 /* CalendarHelper.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
 				4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */,
 				4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */,
