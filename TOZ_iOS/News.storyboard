@@ -140,18 +140,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-3u-tug">
-                                <rect key="frame" x="5" y="69" width="404" height="613"/>
+                                <rect key="frame" x="5" y="69" width="404" height="618"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieT-o8-xi8">
-                                        <rect key="frame" x="30" y="212" width="344" height="20"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                        <rect key="frame" x="23" y="195.66666666666669" width="358" height="19.666666666666629"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="8" width="344" height="194"/>
+                                        <rect key="frame" x="30" y="18.666666666666671" width="344" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="194" id="m2f-lG-zh9"/>
+                                            <constraint firstAttribute="height" constant="150" id="m2f-lG-zh9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -160,43 +160,41 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJQ-Bf-YG3">
-                                        <rect key="frame" x="30" y="-60" width="344" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <rect key="frame" x="22" y="-55" width="360" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxm-Qm-aM7">
-                                        <rect key="frame" x="30" y="-33" width="344" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <rect key="frame" x="22" y="-24.666666666666664" width="360" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="sYB-le-XH6" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="30" id="2Eh-En-uE6"/>
-                                    <constraint firstItem="Mxm-Qm-aM7" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="30" id="455-R8-z3D"/>
-                                    <constraint firstItem="ieT-o8-xi8" firstAttribute="top" secondItem="sYB-le-XH6" secondAttribute="bottom" constant="10" id="5Bj-DM-IkG"/>
-                                    <constraint firstItem="AJQ-Bf-YG3" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="top" constant="-60" id="7Ms-sA-7pp"/>
-                                    <constraint firstItem="sYB-le-XH6" firstAttribute="top" secondItem="Mxm-Qm-aM7" secondAttribute="bottom" constant="20" id="8TW-Fa-u0g"/>
-                                    <constraint firstItem="AJQ-Bf-YG3" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="30" id="9wl-S1-hwn"/>
+                                    <constraint firstItem="Mxm-Qm-aM7" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="22" id="455-R8-z3D"/>
+                                    <constraint firstItem="ieT-o8-xi8" firstAttribute="top" secondItem="sYB-le-XH6" secondAttribute="bottom" constant="27" id="5Bj-DM-IkG"/>
+                                    <constraint firstItem="AJQ-Bf-YG3" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="top" constant="-55" id="7Ms-sA-7pp"/>
+                                    <constraint firstItem="sYB-le-XH6" firstAttribute="top" secondItem="Mxm-Qm-aM7" secondAttribute="bottom" constant="23" id="8TW-Fa-u0g"/>
+                                    <constraint firstItem="AJQ-Bf-YG3" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="22" id="9wl-S1-hwn"/>
                                     <constraint firstItem="Mxm-Qm-aM7" firstAttribute="centerX" secondItem="LIN-3u-tug" secondAttribute="centerX" id="AM3-sa-xUu"/>
-                                    <constraint firstItem="ieT-o8-xi8" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="30" id="CHI-Ox-Okc"/>
-                                    <constraint firstAttribute="trailing" secondItem="ieT-o8-xi8" secondAttribute="trailing" constant="30" id="JvX-KH-Igq"/>
-                                    <constraint firstItem="Mxm-Qm-aM7" firstAttribute="top" secondItem="AJQ-Bf-YG3" secondAttribute="bottom" constant="10" id="Uft-3v-L9c"/>
-                                    <constraint firstAttribute="trailing" secondItem="AJQ-Bf-YG3" secondAttribute="trailing" constant="30" id="cCw-Zk-a5h"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mxm-Qm-aM7" secondAttribute="trailing" constant="30" id="gX9-Oj-Ihg"/>
+                                    <constraint firstItem="ieT-o8-xi8" firstAttribute="leading" secondItem="LIN-3u-tug" secondAttribute="leading" constant="23" id="CHI-Ox-Okc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ieT-o8-xi8" secondAttribute="trailing" constant="23" id="JvX-KH-Igq"/>
+                                    <constraint firstItem="Mxm-Qm-aM7" firstAttribute="top" secondItem="AJQ-Bf-YG3" secondAttribute="bottom" constant="16" id="Uft-3v-L9c"/>
+                                    <constraint firstAttribute="trailing" secondItem="AJQ-Bf-YG3" secondAttribute="trailing" constant="22" id="cCw-Zk-a5h"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mxm-Qm-aM7" secondAttribute="trailing" constant="22" id="gX9-Oj-Ihg"/>
                                     <constraint firstAttribute="bottom" secondItem="ieT-o8-xi8" secondAttribute="bottom" id="j4N-KB-5vY"/>
                                     <constraint firstAttribute="trailing" secondItem="sYB-le-XH6" secondAttribute="trailing" constant="30" id="maL-og-vTG"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="mL5-VE-uXX" secondAttribute="bottom" constant="5" id="5jN-up-EUn"/>
                             <constraint firstItem="LIN-3u-tug" firstAttribute="leading" secondItem="O3K-O4-qrq" secondAttribute="leading" constant="5" id="C70-X7-06R"/>
                             <constraint firstAttribute="trailing" secondItem="LIN-3u-tug" secondAttribute="trailing" constant="5" id="kRJ-np-g1I"/>
-                            <constraint firstItem="t8m-8W-cGz" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="bottom" constant="5" id="olL-VY-r0L"/>
+                            <constraint firstItem="t8m-8W-cGz" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="bottom" id="olL-VY-r0L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ge8-WL-TA1"/>
@@ -205,6 +203,7 @@
                         <outlet property="dateLabel" destination="AJQ-Bf-YG3" id="N6c-2c-auA"/>
                         <outlet property="photoImageView" destination="sYB-le-XH6" id="elb-JL-2NZ"/>
                         <outlet property="photoImageViewHeight" destination="m2f-lG-zh9" id="YJp-MV-Fcd"/>
+                        <outlet property="scrollView" destination="LIN-3u-tug" id="dZl-eV-Dp4"/>
                         <outlet property="titleLabel" destination="Mxm-Qm-aM7" id="FtJ-0y-9im"/>
                     </connections>
                 </viewController>
