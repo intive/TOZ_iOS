@@ -20,7 +20,6 @@ class ApplicationFormViewController: UIViewController {
     @IBOutlet weak var phoneNumberErrorLabel: UILabel!
     @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var formSuccessLabel: UILabel!
-    
     var errorHandler: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +36,7 @@ class ApplicationFormViewController: UIViewController {
         for char in email.characters {
             counter += 1
             if !CharacterSet.letters.contains(String(char).unicodeScalars.first!) &&
-            char != "_" && char != "-" && char != "." {
+            char != "_" && char != "-" && char != "." && char != "@" {
                 return false
             }
             if char == "@" {
@@ -86,7 +85,7 @@ class ApplicationFormViewController: UIViewController {
             nameErrorLabel.text = "Niepoprawne dane"
             errorHandler = true
         }
-        if surnameTextField.isEqual("") {
+        if surnameTextField.text?.characters.count == 0 {
             surnameErrorLabel.text = "Pole wymagane"
             errorHandler = true
         } else if surnameTextField.text!.characters.count > 35 {
@@ -112,7 +111,7 @@ class ApplicationFormViewController: UIViewController {
             errorHandler = true
         }
         if errorHandler == false {
-            formSuccessLabel.text = "Formularz został wysłany do organizacji"
+            formSuccessLabel.text = "Zgłoszenie zostało wysłane"
         }
     }
 }
