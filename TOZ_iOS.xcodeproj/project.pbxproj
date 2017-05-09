@@ -62,6 +62,7 @@
 		4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */; };
 		4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */; };
 		4B98B2EE1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */; };
+		4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */; };
 		4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */; };
 		4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98601E7F11E400951035 /* ServiceOperation.swift */; };
 		4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98621E7F129100951035 /* ParsedItem.swift */; };
@@ -169,6 +170,7 @@
 		4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalItem.swift; sourceTree = "<group>"; };
 		4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsOperation.swift; sourceTree = "<group>"; };
 		4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayResponseMapper.swift; sourceTree = "<group>"; };
+		4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoOperation.swift; sourceTree = "<group>"; };
 		4BFF98601E7F11E400951035 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		4BFF98621E7F129100951035 /* ParsedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedItem.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				4B5901E31EAFD54C0050C5BB /* User.swift */,
 				4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */,
+				4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */,
 				420FD4471EAFBC35009AC0E1 /* Account.storyboard */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
@@ -725,6 +728,7 @@
 				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
+				4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
