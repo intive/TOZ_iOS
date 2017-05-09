@@ -8,22 +8,26 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    var options = ["Chcę zostać wolontariuszem", "Chcę zostać domem tymczasowym"]
+    let options = ["Chcę zostać wolontariuszem","Chcę zostać domem tymczasowym"]
 
     @IBOutlet weak var firstNameInput: TextInputView!
     @IBOutlet weak var surnameInput: TextInputView!
     @IBOutlet weak var emailInput: TextInputView!
     @IBOutlet weak var phoneNumberInput: TextInputView!
-    @IBOutlet weak var goalInput: TextInputView!
+
+    @IBOutlet weak var goalButton: UIButton!
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var optionPicker: UIPickerView!
 
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        optionPicker.dataSource = self
+        optionPicker.delegate = self
         configureView()
 
         // Do any additional setup after loading the view.
@@ -36,6 +40,31 @@ class SignUpViewController: UIViewController {
 
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "unwindToLoginView", sender: self)
+    }
+
+    @IBAction func goalButtonTapped(_ sender: UIButton) {
+
+        optionPicker.isHidden = false
+
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return options.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return options[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+        goalLabel.isHidden = false
+        goalLabel.text = options[row]
+        optionPicker.isHidden = true
+
     }
 
     func configureView() {
@@ -53,11 +82,17 @@ class SignUpViewController: UIViewController {
         cancelButton.tintColor = Color.LoginViewController.Button.tint
         cancelButton.layer.cornerRadius = 5
 
+        goalButton.backgroundColor = Color.LoginViewController.Button.background
+        goalButton.tintColor = Color.LoginViewController.Button.tint
+        goalButton.layer.cornerRadius = 5
+
+        optionPicker.backgroundColor = Color.LoginViewController.background
+        optionPicker.tintColor = UIColor.white
+
         firstNameInput.placeholder = " Imię..."
         surnameInput.placeholder = " Nazwisko..."
         emailInput.placeholder = " E-mail..."
         phoneNumberInput.placeholder = " Numer telefonu..."
-        goalInput.placeholder = " Wybierz cel..."
     }
     /*
     // MARK: - Navigation
