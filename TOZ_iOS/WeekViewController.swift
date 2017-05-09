@@ -54,12 +54,18 @@ class WeekViewController: UIViewController {
         for (i, item) in weekdayArray.enumerated() {
             //set day numbers and select current data
             weekdayLabelCollection[i].valueOfDayLabel.text = weekdayArray[i].day
-            weekdayLabelCollection[i].weekdaySelected = false
+            // add help function helper to compare current date to WeekdayItem
+            let dateTemp: WeekdayItem = WeekdayItem(day: "05", month: "05", year: "2017", dataLabel: "May 2017")
+            if weekdayArray.first(where: { $0.day == dateTemp.day && $0.month == dateTemp.month && $0.year == dateTemp.year }) != nil {
+                weekdayLabelCollection[i].weekdaySelected = true
+            } else {
+                weekdayLabelCollection[i].weekdaySelected = false
+            }
 
             var firstCharForenameString, firstCharSurnameString: String
             // add help function helper to compare current date to WeekdayItem
-            let dateTemp: String = "\(item.year)-\(item.month)-\(item.day)"
-            if let index = reservations.index(where: { dateTemp == formatter.string(from: $0.date) }) {
+            let weekdayItemTemp: String = "\(item.year)-\(item.month)-\(item.day)"
+            if let index = reservations.index(where: { weekdayItemTemp == formatter.string(from: $0.date) }) {
                 if let firstCharForename = reservations[index].ownerForename?.characters.first {
                     firstCharForenameString = String(firstCharForename)
                 } else {
@@ -83,11 +89,6 @@ class WeekViewController: UIViewController {
             }
         }
 
-        // add help function helper to compare current date to WeekdayItem
-        let dateTemp: WeekdayItem = WeekdayItem(day: "05", month: "05", year: "2017", dataLabel: "May 2017")
-        if let index = weekdayArray.index(where: { $0.day == dateTemp.day && $0.month == dateTemp.month && $0.year == dateTemp.year }) {
-            weekdayLabelCollection[index].weekdaySelected = true
-        }
     }
 
   }
