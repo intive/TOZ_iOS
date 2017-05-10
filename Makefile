@@ -6,7 +6,7 @@ DEVICE_UUID:=$(shell xcrun instruments -s | grep -m 1 -o "iPhone 7 (10.3) \[.*\]
 BUILD_DESTINATION = platform=iOS Simulator,id=${DEVICE_UUID}
 WORKING_DIR = ./
 SCHEME = TOZ_iOS
-XCODE_BUILD = xcrun xcodebuild -workspace $(SCHEME).xcworkspace -scheme $(SCHEME) -sdk iphonesimulator GCC_TREAT_WARNINGS_AS_ERRORS = YES
+XCODE_BUILD = xcrun xcodebuild -workspace $(SCHEME).xcworkspace -scheme $(SCHEME) -sdk iphonesimulator GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 
 .PHONY: build test retest clean
 
