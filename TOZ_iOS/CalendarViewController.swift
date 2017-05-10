@@ -15,7 +15,7 @@ class CalendarViewController: UIViewController {
     var pageController: UIPageViewController!
     var weekPages = [WeekViewController]()
     private var indexPage = 0
-    var reservations: [ScheduleItem.ReservationItem] = []
+    var reservations: [ReservationItem] = []
     var weekdayArray: [WeekdayItem]! {
         didSet {
             //Calendar Help function to parse MONTH and YEAR
@@ -99,7 +99,7 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController: WeekViewControllerDelegate {
-    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem]) {
+    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ReservationItem]) {
         self.reservations = controller.reservations
     }
 }

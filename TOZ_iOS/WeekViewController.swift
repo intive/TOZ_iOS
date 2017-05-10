@@ -7,7 +7,7 @@
 import UIKit
 
 protocol WeekViewControllerDelegate: class {
-    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ScheduleItem.ReservationItem])
+    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ReservationItem])
 }
 
 class WeekViewController: UIViewController {
@@ -16,7 +16,7 @@ class WeekViewController: UIViewController {
     @IBOutlet var scheduleMorningLabelCollection: [ScheduleControl]!
     @IBOutlet var scheduleAfternoonLabelCollection: [ScheduleControl]!
     var weekdayArray: [WeekdayItem]!
-    var reservations: [ScheduleItem.ReservationItem] = []
+    var reservations: [ReservationItem] = []
     weak var delegate: WeekViewControllerDelegate?
 
     @IBAction func didTapScheduleMorningButton(_ sender: ScheduleControl) {
@@ -55,7 +55,7 @@ class WeekViewController: UIViewController {
             //set day numbers and select current data
             weekdayLabelCollection[i].valueOfDayLabel.text = weekdayArray[i].day
             // add help function helper to compare current date to WeekdayItem
-            let dateTemp: WeekdayItem = WeekdayItem(day: "05", month: "05", year: "2017", dataLabel: "May 2017")
+            let dateTemp: WeekdayItem = WeekdayItem(day: "05", month: "05", year: "2017")
             if weekdayArray.first(where: { $0.day == dateTemp.day && $0.month == dateTemp.month && $0.year == dateTemp.year }) != nil {
                 weekdayLabelCollection[i].weekdaySelected = true
             } else {
