@@ -23,32 +23,23 @@ class CalendarHelper {
 
         var daysInWeek: [WeekdayItem] = []
         for i in 0...6 {
-            let addNewItem = weekdayItem(from: calendar.date(byAdding: .day, value: i, to: currentMonday)!)
+            let addNewItem = WeekdayItem(from: calendar.date(byAdding: .day, value: i, to: currentMonday)!)
             daysInWeek.append(addNewItem)
         }
 
         return daysInWeek
     }
 
-    func weekdayItem(from date: Date) -> WeekdayItem {
-        var components = calendar.dateComponents([.year, .month, .day], from: date)
-
-        let day = String(format: "%02d", components.day!)
-        let month = String(format: "%02d", components.month!)
-        let year = String(format: "%d", components.year!)
-
-        let dateWeekdayItem = WeekdayItem(day: day, month: month, year: year)
-
-        return dateWeekdayItem
-    }
-
     func date(from weekdayItem: WeekdayItem) -> Date {
-        var components = calendar.dateComponents([.year, .month, .day], from: currentMonday)
+        var components = DateComponents()
+
         components.day = Int(weekdayItem.day)
         components.month = Int(weekdayItem.month)
         components.year = Int(weekdayItem.year)
+        components.calendar = Calendar.current
+        components.timeZone = TimeZone(abbreviation: "UTC")
 
-        return calendar.date(from: components)!
+        return components.date!
     }
 
     func nextWeek() {

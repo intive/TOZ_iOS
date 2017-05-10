@@ -19,11 +19,11 @@ struct WeekdayItem {
 extension WeekdayItem: Equatable {
 
     init(from date: Date) {
-            var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
 
-            day = String(format: "%02d", components.day!)
-            month = String(format: "%02d", components.month!)
-            year = String(format: "%d", components.year!)
+        day = String(format: "%02d", components.day!)
+        month = String(format: "%02d", components.month!)
+        year = String(format: "%d", components.year!)
     }
 
     static func == (lhs: WeekdayItem, rhs: WeekdayItem) -> Bool {
