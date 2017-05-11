@@ -349,11 +349,11 @@ ul. Przykładowa 12
             </objects>
             <point key="canvasLocation" x="2724" y="-1055.6221889055473"/>
         </scene>
-        <!--Help-->
+        <!--POMOC-->
         <scene sceneID="33o-lP-WWO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wBG-Z6-AmU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Help" image="tab-bar-help" id="Hqy-BJ-gAa"/>
+                    <tabBarItem key="tabBarItem" title="POMOC" image="tab-bar-help" id="Hqy-BJ-gAa"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bfV-Fy-mNw">

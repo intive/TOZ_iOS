@@ -458,11 +458,11 @@
             </objects>
             <point key="canvasLocation" x="5053.6231884057979" y="777.71739130434787"/>
         </scene>
-        <!--Galeria-->
+        <!--GALERIA-->
         <scene sceneID="q7M-YA-ZMF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s9e-va-0TA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Galeria" image="tab-bar-gallery" id="cr2-Vx-0K8"/>
+                    <tabBarItem key="tabBarItem" title="GALERIA" image="tab-bar-gallery" id="cr2-Vx-0K8"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G5s-AD-tgg">

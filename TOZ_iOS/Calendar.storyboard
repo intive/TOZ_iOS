@@ -364,11 +364,11 @@
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="628.53260869565224"/>
         </scene>
-        <!--Grafik-->
+        <!--GRAFIK-->
         <scene sceneID="9de-CM-Lgb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yja-75-tEo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grafik" image="tab-bar-cal" id="lWy-D4-9qn"/>
+                    <tabBarItem key="tabBarItem" title="GRAFIK" image="tab-bar-cal" id="lWy-D4-9qn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bql-mh-RmU">
