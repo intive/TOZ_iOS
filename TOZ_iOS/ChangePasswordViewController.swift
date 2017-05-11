@@ -14,6 +14,8 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
 
+    weak var delegate: TabBarDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,5 +64,6 @@ class ChangePasswordViewController: UIViewController {
 
     @IBAction func signOut(_ sender: Any) {
         BackendAuth.shared.deleteToken()
+        delegate?.switchAccountTab()
     }
 }
