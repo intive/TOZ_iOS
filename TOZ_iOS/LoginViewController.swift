@@ -14,7 +14,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLabel: UILabel!
 
     var signInOperation: SignInOperation?
-    weak var delegate: TabBarDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if let token = BackendAuth.shared.token {
                         print("Token >\(token)< successfully set for email \(self.emailInput.text)")
                     }
-                    self.delegate?.switchAccountTab()
                 }
             case .failure(let error):
                 DispatchQueue.main.sync {
