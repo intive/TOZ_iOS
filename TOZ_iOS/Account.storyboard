@@ -195,20 +195,11 @@
                         <outlet property="errorLabel" destination="By7-hq-OoG" id="wim-f6-L6z"/>
                         <outlet property="loginButton" destination="Cfk-ag-GnF" id="5js-Kv-PtA"/>
                         <outlet property="passwordInput" destination="lLb-uF-i8u" id="606-TO-IjD"/>
-                        <segue destination="7kL-AS-mua" kind="show" identifier="segueToMainStoryboard" id="NGH-Am-GcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNU-Sf-Hs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="707" y="958"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="ZaD-pr-yJe">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="7kL-AS-mua" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kPU-XQ-qMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1339" y="958"/>
         </scene>
     </scenes>
     <resources>
