@@ -40,16 +40,6 @@
             </objects>
             <point key="canvasLocation" x="98" y="540"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="tEr-UP-OAc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Account" id="aFZ-uA-MbJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Jjq-IR-aF2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w4o-xt-VXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="314" y="540"/>
-        </scene>
         <!--Help-->
         <scene sceneID="aUU-LT-jUm">
             <objects>
