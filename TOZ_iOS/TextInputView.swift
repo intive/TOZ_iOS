@@ -6,17 +6,31 @@
 //
 import UIKit
 
+enum CheckResult {
+    case Valid
+    case Invalid(error: String)
+
+    func isValid() -> Bool {
+        switch self {
+        case .Valid: return true
+        default: return false
+        }
+    }
+
+}
+
 protocol TextChecker {
-    func check(text: String) -> Bool
+    func check(text: String) -> CheckResult
 }
 
 fileprivate struct TextInputViewDimensions {
-    static let margin: CGFloat = 5
-    static let offset: CGFloat = 5
+    static let margin: CGFloat = 0
+    static let offset: CGFloat = 4
     static let textFieldHeight: CGFloat = 24
-    static let labelHeight: CGFloat = 18
+    static let labelHeight: CGFloat = 20
 }
 
+@IBDesignable
 class TextInputView: UIView, UITextFieldDelegate {
     private let textField = UITextField()
     private let label = UILabel()
@@ -27,12 +41,24 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     var isValid: Bool {
-        return textChecker?.check(text: text) ?? false
+        return textChecker?.check(text: text).isValid() ?? false
     }
 
     var placeholder: String = "" {
         didSet {
             self.textField.placeholder = placeholder
+        }
+    }
+
+    var icon: UIImage? {
+        didSet {
+            addIconToTextField()
+        }
+    }
+
+    var isTextSecure: Bool = false {
+        didSet {
+            self.textField.isSecureTextEntry = isTextSecure
         }
     }
 
@@ -50,6 +76,7 @@ class TextInputView: UIView, UITextFieldDelegate {
 
     private func configureView() {
         self.textField.delegate = self
+        self.textField.addTarget(self, action: #selector(textFieldDidEndEditing), for: UIControlEvents.editingDidEnd)
         self.textField.addTarget(self, action: #selector(textFieldDidEndEditing), for: UIControlEvents.editingDidEndOnExit)
 
         self.addSubview(textField)
@@ -69,7 +96,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         setupConstraints()
     }
 
-    func setupConstraints() {
+    private func setupConstraints() {
         self.textField.translatesAutoresizingMaskIntoConstraints = false
         self.textField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
         self.textField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -TextInputViewDimensions.margin).isActive = true
@@ -83,14 +110,17 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.label.heightAnchor.constraint(equalToConstant: TextInputViewDimensions.labelHeight).isActive = true
     }
 
-    func checkText() {
-        let text = self.text
+    private func checkText() {
         if let textChecker = self.textChecker {
-            if textChecker.check(text: text) {
-                successLayout()
-            } else {
-                errorLayout()
+            switch textChecker.check(text: self.text) {
+                case .Valid:
+                    successLayout()
+                case .Invalid(error: let errorString):
+                    errorLayout()
+                    self.label.text = errorString
+
             }
+
         }
     }
 
@@ -100,13 +130,20 @@ class TextInputView: UIView, UITextFieldDelegate {
     }
 
     private func errorLayout() {
-        self.label.text = errorString
         self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.error
         self.label.alpha = 1
     }
 
     func textFieldDidEndEditing() {
+        self.label.text = errorString
         checkText()
     }
 
+    func addIconToTextField() {
+        self.textField.leftViewMode = UITextFieldViewMode.always
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 16))
+        imageView.image = icon
+        imageView.contentMode = .scaleAspectFit
+        self.textField.leftView = imageView
+    }
 }

@@ -20,10 +20,11 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="C0M-Yv-gef" kind="relationship" relationship="viewControllers" id="OM8-8j-4fb"/>
                         <segue destination="GKz-Bm-V84" kind="relationship" relationship="viewControllers" id="pyS-hg-eeq"/>
+                        <segue destination="C0M-Yv-gef" kind="relationship" relationship="viewControllers" id="OM8-8j-4fb"/>
                         <segue destination="eUK-sm-Vqm" kind="relationship" relationship="viewControllers" id="iDH-BD-6MP"/>
                         <segue destination="Ugw-O6-7WE" kind="relationship" relationship="viewControllers" id="4s3-is-3wL"/>
+                        <segue destination="aFZ-uA-MbJ" kind="relationship" relationship="viewControllers" id="8Yq-aw-k8F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -33,12 +34,22 @@
         <!--Calendar-->
         <scene sceneID="5Qa-qD-8Qi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="stk-Cv-GTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Calendar" id="Ugw-O6-7WE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="I5b-eJ-DqT"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stk-Cv-GTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167" y="541"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="tEr-UP-OAc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" id="aFZ-uA-MbJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Jjq-IR-aF2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4o-xt-VXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="541"/>
         </scene>
         <!--Help-->
         <scene sceneID="aUU-LT-jUm">
@@ -48,7 +59,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmf-xT-udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547" y="541"/>
+            <point key="canvasLocation" x="-163" y="541"/>
         </scene>
         <!--News-->
         <scene sceneID="dIo-yN-asJ">
@@ -58,7 +69,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGv-Yk-DTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-534" y="541"/>
+            <point key="canvasLocation" x="-309" y="541"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="7iu-9d-I6K">
@@ -68,7 +79,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c56-Zn-jLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="541"/>
+            <point key="canvasLocation" x="-1" y="541"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.019811868667602539" green="0.011734841391444206" blue="0.011669095605611801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

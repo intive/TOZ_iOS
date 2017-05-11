@@ -38,27 +38,40 @@ struct Color {
 
     struct TitleBar {
         struct Background {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 63.0/255.0, green: 211.0/255.0, blue: 126.0/255.0, alpha: 1.0)
         }
         struct Button {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
     }
 
     struct TabBar {
         struct Background {
-            static let primary = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
+            static let primary = UIColor(red:51.0/255.0, green:51.0/255.0, blue:51.0/255.0, alpha:1.00)
         }
         struct Icons {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-            static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 175.0/255.0, green: 175.0/255.0, blue: 175.0/255.0, alpha: 1.0)
+            static let pressed = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
+    }
+
+    struct NewsDetailView {
+        struct Font {
+            static let date = UIColor(red: 135.0/255.0, green: 135.0/255.0, blue: 135.0/255.0, alpha: 1.0)
+            static let title = UIColor(red: 44.0/255.0, green: 44.0/255.0, blue: 44.0/255.0, alpha: 1.0)
+            static let content = UIColor(red: 95.0/255.0, green: 95.0/255.0, blue: 95.0/255.0, alpha: 1.0)
+        }
+        struct Background {
+            static let primary = UIColor(red: 227.0/255.0, green: 227.0/255.0, blue: 227.0/255.0, alpha: 1.0)
+            static let secondary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }
+
     }
 
     struct Cell {
         struct Background {
-            static let primary = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.00)
+            static let primary = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
         struct Font {
             static let title = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
@@ -66,7 +79,8 @@ struct Color {
             static let date = UIColor(red: 149.0/255.0, green: 152.0/255.0, blue: 154.0/255.0, alpha: 1.0)
         }
         struct Button {
-            static let primary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            static let primary = UIColor(red: 255.0/255.0, green: 134.0/255.0, blue: 55.0/255.0, alpha: 1.0)
+            static let text = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             static let secondary = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             static let pressed = UIColor(red: 147.0/255.0, green: 211.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 
@@ -101,26 +115,26 @@ struct Color {
         struct WeekDayControl {
             struct DayName {
                 struct primary {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
                 struct pressed {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
             }
             struct DayNumber {
                 struct primary {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.darkGray
+                    static let background = UIColor.white
+                    static let border = UIColor.white
                 }
                 struct pressed {
-                    static let text = UIColor.black
-                    static let background = UIColor.black
-                    static let border = UIColor.black
+                    static let text = UIColor.lightGray
+                    static let background = UIColor.white
+                    static let border = UIColor.gray
                 }
             }
         }
@@ -135,6 +149,15 @@ struct Color {
                 static let background = UIColor.lightGray
                 static let border = UIColor.gray
             }
+        }
+    }
+
+    struct LoginViewController {
+        static let background = UIColor(red: 188.0/255.0, green: 189.0/255.0, blue: 190.0/255.0, alpha: 1.0)
+
+        struct Button {
+            static let background = UIColor(red: 255.0/255.0, green: 134.0/255.0, blue: 55.0/255.0, alpha: 1.0)
+            static let tint = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         }
     }
 }

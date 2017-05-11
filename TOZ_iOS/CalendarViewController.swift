@@ -50,13 +50,13 @@ class CalendarViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        prevButton.layer.cornerRadius = prevButton.bounds.height * 0.5
-        prevButton.setTitleColor(UIColor.darkGray, for: .normal)
-        prevButton.backgroundColor = UIColor.lightGray
+        prevButton.setTitleColor(Color.Calendar.PreviousButton.text, for: .normal)
+        prevButton.backgroundColor = Color.Calendar.PreviousButton.background
+        nextButton.setTitleColor(Color.Calendar.NextButton.text, for: .normal)
+        nextButton.backgroundColor = Color.Calendar.NextButton.background
 
+        prevButton.layer.cornerRadius = prevButton.bounds.height * 0.5
         nextButton.layer.cornerRadius = nextButton.bounds.height * 0.5
-        nextButton.setTitleColor(UIColor.white, for: .normal)
-        nextButton.backgroundColor = UIColor.darkText
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

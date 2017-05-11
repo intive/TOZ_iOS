@@ -7,65 +7,61 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var emailInput: TextInputView!
+    @IBOutlet weak var passwordInput: TextInputView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
 
-    @IBOutlet weak var loginView: UIView!
-    @IBOutlet weak var passwordView: UIView!
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var incorrectLoginLabel: UILabel!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var incorrectPasswordLabel: UILabel!
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var companyNameLabel: UILabel!
-
-    @IBAction func loginButtonAction(_ sender: Any) {
-        incorrectPassword()
-        incorrectLogin()
-        sessionIsOutdated()
-    }
+    var signInOperation: SignInOperation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
     }
 
-    func incorrectPassword() {
-        self.passwordTextField.text = ""
-        self.incorrectPasswordLabel.text = "Wpisane hasło jest niepoprawne"
-        self.incorrectPasswordLabel.alpha = 0.8
-        self.incorrectPasswordLabel.backgroundColor = .white
-        self.passwordTextField.layer.borderColor = UIColor.red.cgColor
+    @IBAction func handleSignIn(_ sender: Any) {
+        signInOperation = SignInOperation(email: emailInput.text, password: passwordInput.text)
+        signInOperation?.resultCompletion = { result in
+            switch result {
+            case .success(let successfullSignIn):
+                DispatchQueue.main.async {
+                    BackendAuth.shared.setToken(successfullSignIn.jwt)
+                    if let token = BackendAuth.shared.token {
+                        print("Token >\(token)< successfully set for email \(self.emailInput.text)")
+                    }
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                }
+            case .failure(let error):
+                DispatchQueue.main.sync {
+                    print(error)
+                    self.errorLabel.alpha = 1
+                    self.errorLabel.textColor = Color.LoginTextView.Label.error
+                    self.errorLabel.text = "Błąd logowania: spróbuj ponownie później"
+                }
+            }
+        }
+        if self.emailInput.isValid && self.passwordInput.isValid {
+            signInOperation?.start()
+        }
     }
 
-    func incorrectLogin() {
-        self.loginTextField.text = ""
-        self.incorrectLoginLabel.text = "Wpisany login jest niepoprawny"
-        self.incorrectLoginLabel.alpha = 0.8
-        self.incorrectLoginLabel.backgroundColor = .white
-        self.loginTextField.layer.borderColor = UIColor.red.cgColor
+    func configureView() {
+        self.view.backgroundColor = Color.LoginViewController.background
+
+        emailInput.textChecker = EmailChecker()
+        emailInput.placeholder = "Login"
+        emailInput.icon = UIImage(named: "loginIcon.png")
+
+        passwordInput.textChecker = TextLengthChecker(charactersLimit: 35)
+        passwordInput.placeholder = "Hasło"
+        passwordInput.icon = UIImage(named: "passwordIcon.png")
+        passwordInput.isTextSecure = true
+
+        loginButton.backgroundColor = Color.LoginViewController.Button.background
+        loginButton.tintColor = Color.LoginViewController.Button.tint
+        loginButton.layer.cornerRadius = 5
+
+        errorLabel.alpha = 0
     }
-
-    func sessionIsOutdated() {
-        let alertView = UIAlertController(title: "Błąd", message: "Link aktywacyjny wygasł, skontaktuj się z administratorem", preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "Rozumiem", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alertView, animated: true, completion: nil)
-    }
-
-    private func configureView() {
-        self.view.backgroundColor = Color.Background.primary
-        self.incorrectLoginLabel.alpha = 0
-        self.loginView.alpha = 0.8
-
-        self.incorrectPasswordLabel.alpha = 0
-        self.passwordView.alpha = 0.8
-
-        self.logoImageView.image = UIImage(named: "pug_logo")
-        self.companyNameLabel.text = "Towarzystwo Opieki nad Zwierzętami"
-
-        self.loginTextField.layer.cornerRadius = 20
-        self.loginTextField.layer.borderWidth = 2
-        self.passwordTextField.layer.cornerRadius = 20
-        self.passwordTextField.layer.borderWidth = 2
-    }
-
 }
