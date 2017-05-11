@@ -85,11 +85,11 @@
             </objects>
             <point key="canvasLocation" x="708" y="184.85757121439281"/>
         </scene>
-        <!--Konto-->
+        <!--KONTO-->
         <scene sceneID="g3Y-QG-dZR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QM9-m6-VAq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Konto" image="tab-bar-user" selectedImage="tab-bar-user" id="hjU-ZU-7tV"/>
+                    <tabBarItem key="tabBarItem" title="KONTO" image="tab-bar-user" selectedImage="tab-bar-user" id="hjU-ZU-7tV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZU-cM-Kbl">
