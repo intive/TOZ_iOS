@@ -15,6 +15,8 @@ final class TabBarViewController: UITabBarController, TabBarDelegate {
     }
 
     func switchAccountTab() {
+        // When user signs in/out remove last viewcontroller from viewControllers
+        // so the correct one can be added later
         if self.viewControllers?.count == 5 {
             self.viewControllers?.remove(at: 4)
         }
@@ -25,10 +27,10 @@ final class TabBarViewController: UITabBarController, TabBarDelegate {
 
         if BackendAuth.shared.token != nil {
             // swiftlint:disable force_cast
-            let accountViewController = accountStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
-            accountViewController.delegate = self
-            accountViewController.tabBarItem = accountTabBarItemIcon
-            viewControllers.append(accountViewController)
+            let changePasswordViewController = accountStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+            changePasswordViewController.delegate = self
+            changePasswordViewController.tabBarItem = accountTabBarItemIcon
+            viewControllers.append(changePasswordViewController)
             self.viewControllers = viewControllers
         } else {
             // swiftlint:disable force_cast
