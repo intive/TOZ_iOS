@@ -26,16 +26,16 @@ final class TabBarViewController: UITabBarController, TabBarDelegate {
         let accountTabBarItemIcon = UITabBarItem(title: "Account", image: UIImage(named: "tab-bar-user.png"), selectedImage: UIImage(named: "tab-bar-user.png"))
 
         if BackendAuth.shared.token != nil {
-            // swiftlint:disable force_cast
             let changePasswordNavigationController = accountStoryboard.instantiateViewController(withIdentifier: "ChangePasswordNavigationController")
+            // swiftlint:disable force_cast
             let changePasswordViewController = accountStoryboard.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
             changePasswordViewController.delegate = self
             changePasswordNavigationController.tabBarItem = accountTabBarItemIcon
             viewControllers.append(changePasswordNavigationController)
             self.viewControllers = viewControllers
         } else {
-            // swiftlint:disable force_cast
             let loginNavigationController = accountStoryboard.instantiateViewController(withIdentifier: "LoginNavigationController") as! UINavigationController
+            // swiftlint:disable force_cast
             let loginViewController = accountStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             loginViewController.delegate = self
             loginNavigationController.tabBarItem = accountTabBarItemIcon
