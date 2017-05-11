@@ -12,6 +12,9 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var newPassword: TextInputView!
     @IBOutlet weak var confirmNewPassword: TextInputView!
     @IBOutlet weak var changePasswordButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
+
+    weak var delegate: TabBarDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,10 @@ class ChangePasswordViewController: UIViewController {
         changePasswordButton.backgroundColor = Color.LoginViewController.Button.background
         changePasswordButton.tintColor = Color.LoginViewController.Button.tint
         changePasswordButton.layer.cornerRadius = 5
+
+        signOutButton.backgroundColor = Color.LoginViewController.Button.background
+        signOutButton.tintColor = Color.LoginViewController.Button.tint
+        signOutButton.layer.cornerRadius = 5
 
         oldPassword.placeholder = "Stare hasło"
         newPassword.placeholder = "Nowe hasło"
@@ -55,4 +62,8 @@ class ChangePasswordViewController: UIViewController {
 //        return false
     }
 
+    @IBAction func signOut(_ sender: Any) {
+        BackendAuth.shared.deleteToken()
+        delegate?.switchAccountTab()
+    }
 }
