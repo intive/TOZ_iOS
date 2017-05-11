@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="707.24637681159425" y="184.23913043478262"/>
         </scene>
-        <!--Konto-->
+        <!--KONTO-->
         <scene sceneID="g3Y-QG-dZR">
             <objects>
                 <navigationController storyboardIdentifier="ChangePasswordNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QM9-m6-VAq" sceneMemberID="viewController">
