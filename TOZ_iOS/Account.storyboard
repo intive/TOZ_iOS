@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="707.24637681159425" y="184.23913043478262"/>
         </scene>
-        <!--KONTO-->
+        <!--Konto-->
         <scene sceneID="g3Y-QG-dZR">
             <objects>
                 <navigationController storyboardIdentifier="ChangePasswordNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QM9-m6-VAq" sceneMemberID="viewController">
@@ -205,7 +205,6 @@
         <!--Item-->
         <scene sceneID="Zrs-ec-qsD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CHy-46-FvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Rxg-MM-0yE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" selectedImage="tab-bar-user" id="jVT-i4-s4h"/>
                     <toolbarItems/>
@@ -219,6 +218,7 @@
                         <segue destination="wWv-EI-pVH" kind="relationship" relationship="rootViewController" id="AQy-mm-alc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHy-46-FvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-232" y="958"/>
         </scene>
