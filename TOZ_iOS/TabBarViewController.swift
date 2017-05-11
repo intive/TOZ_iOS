@@ -7,11 +7,13 @@
 
 import UIKit
 
-final class TabBarViewController: UITabBarController, SwitchAccountTabDelegate {
+let signInOrOutNotificationKey = "signInOrOut"
+
+final class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        BackendAuth.shared.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(switchAccountTab), name: Notification.Name(rawValue: signInOrOutNotificationKey), object: nil)
         switchAccountTab()
     }
 
@@ -25,17 +27,16 @@ final class TabBarViewController: UITabBarController, SwitchAccountTabDelegate {
         var viewControllers: [UIViewController] = self.viewControllers!
         let accountStoryboard: UIStoryboard = UIStoryboard(name: "Account", bundle: nil)
         let accountTabBarItemIcon = UITabBarItem(title: "KONTO", image: UIImage(named: "tab-bar-user.png"), selectedImage: UIImage(named: "tab-bar-user.png"))
+        var targetNavigationController: UIViewController
 
         if BackendAuth.shared.token != nil {
-            let changePasswordNavigationController = accountStoryboard.instantiateViewController(withIdentifier: "ChangePasswordNavigationController")
-            changePasswordNavigationController.tabBarItem = accountTabBarItemIcon
-            viewControllers.append(changePasswordNavigationController)
-            self.viewControllers = viewControllers
+            targetNavigationController = accountStoryboard.instantiateViewController(withIdentifier: "ChangePasswordNavigationController")
         } else {
-            let loginNavigationController = accountStoryboard.instantiateViewController(withIdentifier: "LoginNavigationController")
-            loginNavigationController.tabBarItem = accountTabBarItemIcon
-            viewControllers.append(loginNavigationController)
-            self.viewControllers = viewControllers
+            targetNavigationController = accountStoryboard.instantiateViewController(withIdentifier: "LoginNavigationController")
         }
+
+            targetNavigationController.tabBarItem = accountTabBarItemIcon
+            viewControllers.append(targetNavigationController)
+            self.viewControllers = viewControllers
     }
 }
