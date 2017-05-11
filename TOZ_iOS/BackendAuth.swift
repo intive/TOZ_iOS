@@ -11,7 +11,7 @@ final class BackendAuth {
 
     private let key = "BackendAuthToken"
     private let defaults: UserDefaults
-    weak var delegate: SwitchAccountTabDelegate?
+
     static let shared: BackendAuth = BackendAuth(defaults: UserDefaults.standard)
 
     init(defaults: UserDefaults) {
@@ -24,14 +24,14 @@ final class BackendAuth {
 
     func setToken(_ token: String) {
         defaults.setValue(token, forKey: key)
-        self.delegate?.switchAccountTab()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: signInOrOutNotificationKey), object: self)
     }
 
     func deleteToken() {
         if self.token != nil {
             defaults.removeObject(forKey: key)
             print("Token was revoked")
-            self.delegate?.switchAccountTab()
+            NotificationCenter.default.post(name: Notification.Name(rawValue: signInOrOutNotificationKey), object: self)
         }
     }
 }
