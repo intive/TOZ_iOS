@@ -63,6 +63,7 @@
 		4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */; };
 		4B98B2EE1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */; };
 		4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */; };
+		4BB5AF8D1EC3B32500D38105 /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5AF8C1EC3B32500D38105 /* TabBarDelegate.swift */; };
 		4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */; };
 		4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98601E7F11E400951035 /* ServiceOperation.swift */; };
 		4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98621E7F129100951035 /* ParsedItem.swift */; };
@@ -173,6 +174,7 @@
 		4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsOperation.swift; sourceTree = "<group>"; };
 		4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayResponseMapper.swift; sourceTree = "<group>"; };
 		4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4BB5AF8C1EC3B32500D38105 /* TabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
 		4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoOperation.swift; sourceTree = "<group>"; };
 		4BFF98601E7F11E400951035 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		4BFF98621E7F129100951035 /* ParsedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedItem.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				4B5901E31EAFD54C0050C5BB /* User.swift */,
 				4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */,
 				4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */,
+				4BB5AF8C1EC3B32500D38105 /* TabBarDelegate.swift */,
 				420FD4471EAFBC35009AC0E1 /* Account.storyboard */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
@@ -716,6 +719,7 @@
 				05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */,
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
+				4BB5AF8D1EC3B32500D38105 /* TabBarDelegate.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
