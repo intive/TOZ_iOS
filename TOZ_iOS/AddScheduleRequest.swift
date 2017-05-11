@@ -33,13 +33,23 @@ final class AddScheduleRequest: BackendAPIRequest {
             endTime   = "16:00"
         }
 
-        return [
-            "date": dataObject.date,
-            "ownerSurname": dataObject.ownerSurname,
-            "ownerForename": dataObject.ownerForename,
-            "startTime": startTime,
-            "endTime": endTime
-        ]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.string(from: dataObject.date)
+
+        var parametersInDictionary: [String: Any] = [:]
+        parametersInDictionary["date"] = date
+        parametersInDictionary["startTime"] = startTime
+        parametersInDictionary["endTime"] = endTime
+        if let ownerSurname = dataObject.ownerSurname {
+            parametersInDictionary["ownerSurname"] = ownerSurname
+        }
+        if let ownerForename = dataObject.ownerSurname {
+            parametersInDictionary["ownerForename"] = ownerForename
+        }
+
+        return parametersInDictionary
+
     }
     var headers: [String: String]? {
         return defaultJSONHeaders()

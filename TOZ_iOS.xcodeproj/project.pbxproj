@@ -737,6 +737,7 @@
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
+				54AF58111EBCA26E009D488B /* WeekdayItem.swift in Sources */,
 				54B11CBD1EBE266A0051C1E8 /* CalendarHelper.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
 				4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */,
