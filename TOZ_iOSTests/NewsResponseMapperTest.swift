@@ -34,10 +34,10 @@ class NewsResponseMapperTest: XCTestCase {
 
     func testNewsResponseMapper() {
         let firstNews = self.newsItems?[0]
-        XCTAssertEqual(firstNews?.title, "Do oddziału TOZ trafił nowy pies!")
-        XCTAssertEqual(firstNews?.contents, "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych.")
-        XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg"))
-        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1494352543)))
+        XCTAssertEqual(firstNews?.title, "WITAMY NOWEGO MIESZKAŃCA TOZ!")
+        XCTAssertEqual(firstNews?.contents, "Piorun został odnaleziony przy piekarni na ulicy Krzemiennej, gdy samotnie błąkał (...) Czytaj dalej")
+        XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("https://images.pexels.com/photos/47466/pexels-photo-47466.jpeg?w=1200&h=627&fit=crop&auto=compress&cs=tinysrgb"))
+        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1222333444555)))
     }
 
 }
