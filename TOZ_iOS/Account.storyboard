@@ -75,7 +75,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Zmiana hasła" id="SvL-02-iEd"/>
                     <connections>
-                        <outlet property="changePasswordButton" destination="CZh-u2-3lQ" id="wqf-q1-ksX"/>
                         <outlet property="confirmNewPassword" destination="cLc-96-jMB" id="p14-7h-7LV"/>
                         <outlet property="newPassword" destination="axG-bT-WyZ" id="kZp-Hh-Ybj"/>
                         <outlet property="oldPassword" destination="Y05-6a-5Ni" id="PsA-vT-rBO"/>
