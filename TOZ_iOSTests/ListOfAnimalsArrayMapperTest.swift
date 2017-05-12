@@ -27,20 +27,22 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testAnimalsCount() {
-        XCTAssertEqual(animalItems?.count, 1)
+        XCTAssertEqual(animalItems?.count, 4)
     }
 
     func testListOfAnimalsArrayMapper() {
-//        let firstAnimal = self.animalItems?.first
-//        XCTAssertEqual(firstAnimal?.animalID, "c5296892-347f-4b2e-b1c6-6faff971f767")
-//        XCTAssertEqual(firstAnimal?.name, "Burek")
-//        XCTAssertEqual(firstAnimal?.type, "DOG")
-//        XCTAssertEqual(firstAnimal?.sex, "MALE")
-//        XCTAssertEqual(firstAnimal?.description, "Jamnik niskopodłogowy")
-//        XCTAssertEqual(firstAnimal?.address, "Most cłowy")
-//        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968)))
-//        XCTAssertEqual(firstAnimal?.lastModified, 1490134074968)
+        let firstAnimal = self.animalItems?.first
+        XCTAssertEqual(firstAnimal?.animalID, "c5296892-347f-4b2e-b1c6-6faff971f767")
+        XCTAssertEqual(firstAnimal?.name, "PIORUN")
+        XCTAssertEqual(firstAnimal?.type, "PIES")
+        XCTAssertEqual(firstAnimal?.sex, "MALE")
+        XCTAssertEqual(firstAnimal?.description, "Jamnik niskopodłogowy")
+        XCTAssertEqual(firstAnimal?.address, "Most cłowy")
+        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968)))
+        XCTAssertEqual(firstAnimal?.lastModified, 1490134074968)
 //        XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("storage/a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg"))
+        XCTAssertEqual(firstAnimal?.imageUrl, URL(string: "https://static.pexels.com/photos/196547/pexels-photo-196547.jpeg"))
+
     }
 
 }
