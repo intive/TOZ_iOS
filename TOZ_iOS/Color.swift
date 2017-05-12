@@ -153,7 +153,7 @@ struct Color {
     }
 
     struct LoginViewController {
-        static let background = UIColor(red: 188.0/255.0, green: 189.0/255.0, blue: 190.0/255.0, alpha: 1.0)
+        static let background = UIColor.white
 
         struct Button {
             static let background = UIColor(red: 255.0/255.0, green: 134.0/255.0, blue: 55.0/255.0, alpha: 1.0)

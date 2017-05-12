@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axG-bT-WyZ" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="184" width="354" height="50"/>
+                                <rect key="frame" x="40" y="204" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ua5-KC-aft"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-u2-3lQ">
-                                <rect key="frame" x="30" y="299" width="354" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-u2-3lQ" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="319" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Dxv-yM-7JF"/>
+                                    <constraint firstAttribute="height" constant="40" id="Dxv-yM-7JF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Zmień hasło"/>
@@ -45,13 +45,13 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-96-jMB" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="239" width="354" height="50"/>
+                                <rect key="frame" x="40" y="259" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3FT-6l-shk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y05-6a-5Ni" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="94" width="354" height="50"/>
+                                <rect key="frame" x="40" y="124" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="foc-Pw-ePl"/>
                                 </constraints>
@@ -59,23 +59,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="Y05-6a-5Ni" secondAttribute="leading" id="1o6-Ou-bfE"/>
                             <constraint firstItem="cLc-96-jMB" firstAttribute="top" secondItem="axG-bT-WyZ" secondAttribute="bottom" constant="5" id="4xV-OO-TDQ"/>
-                            <constraint firstAttribute="trailing" secondItem="axG-bT-WyZ" secondAttribute="trailing" constant="30" id="8Ps-wk-UVG"/>
-                            <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="G1W-ZP-eO8"/>
-                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="top" secondItem="F47-So-QJD" secondAttribute="bottom" constant="30" id="HPk-Wt-pUI"/>
-                            <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="40" id="XeH-Fw-IAU"/>
+                            <constraint firstItem="cLc-96-jMB" firstAttribute="trailing" secondItem="axG-bT-WyZ" secondAttribute="trailing" id="9ZY-I4-N47"/>
+                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="trailing" secondItem="cLc-96-jMB" secondAttribute="trailing" id="GDl-Pc-00D"/>
+                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="top" secondItem="F47-So-QJD" secondAttribute="bottom" constant="60" id="HPk-Wt-pUI"/>
+                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="leading" secondItem="cLc-96-jMB" secondAttribute="leading" id="UA6-Gs-By6"/>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="30" id="XeH-Fw-IAU"/>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" id="Y2N-2c-aFG"/>
                             <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="10" id="Zar-Gr-zNI"/>
-                            <constraint firstAttribute="trailing" secondItem="cLc-96-jMB" secondAttribute="trailing" constant="30" id="cDV-qL-d3z"/>
-                            <constraint firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" constant="30" id="fTe-OD-Xgw"/>
-                            <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="gLn-SV-Ky1"/>
-                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="qnz-Q8-xen"/>
-                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="30" id="xcY-AY-6Bt"/>
-                            <constraint firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" constant="30" id="yU9-1G-E6t"/>
+                            <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="axG-bT-WyZ" secondAttribute="leading" id="Zxm-og-4M8"/>
+                            <constraint firstItem="Y05-6a-5Ni" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="40" id="xcY-AY-6Bt"/>
+                            <constraint firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" constant="40" id="yU9-1G-E6t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zmiana hasła" id="SvL-02-iEd"/>
                     <connections>
-                        <outlet property="changePasswordButton" destination="CZh-u2-3lQ" id="wqf-q1-ksX"/>
                         <outlet property="confirmNewPassword" destination="cLc-96-jMB" id="p14-7h-7LV"/>
                         <outlet property="newPassword" destination="axG-bT-WyZ" id="kZp-Hh-Ybj"/>
                         <outlet property="oldPassword" destination="Y05-6a-5Ni" id="PsA-vT-rBO"/>
