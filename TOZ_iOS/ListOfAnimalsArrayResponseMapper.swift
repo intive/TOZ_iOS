@@ -26,7 +26,8 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
             guard let imageString = jsonNode["imageUrl"] as? String? else { throw ResponseMapperError.responseParsingFailed }
             var imageURL: URL? = nil
             if let imageString = imageString {
-                imageURL = BackendConfiguration.shared.baseURL.appendingPathComponent(imageString)
+//                imageURL = BackendConfiguration.shared.baseURL.appendingPathComponent(imageString)
+                imageURL = URL(string: imageString)
             }
             return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModified, imageUrl: imageURL)
         })
