@@ -1,8 +1,41 @@
  [
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "name": "Burek",
-  "type": "DOG",
+  "name": "PIORUN",
+  "type": "PIES",
+  "sex": "MALE",
+  "description": "Jamnik niskopodłogowy",
+  "address": "Most cłowy",
+  "created": 1490134074968,
+  "lastModified": 1490134074968,
+  "imageUrl": "storage/a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "POLA",
+  "type": "KOT",
+  "sex": "MALE",
+  "description": "Jamnik niskopodłogowy",
+  "address": "Most cłowy",
+  "created": 1490134074968,
+  "lastModified": 1490134074968,
+  "imageUrl": "storage/a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "ASTERIX",
+  "type": "PIES",
+  "sex": "MALE",
+  "description": "Jamnik niskopodłogowy",
+  "address": "Most cłowy",
+  "created": 1490134074968,
+  "lastModified": 1490134074968,
+  "imageUrl": "storage/a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "BLACKY",
+  "type": "PIES",
   "sex": "MALE",
   "description": "Jamnik niskopodłogowy",
   "address": "Most cłowy",
