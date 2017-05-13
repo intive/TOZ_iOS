@@ -7,6 +7,10 @@
 
 import Foundation
 
+extension Notification.Name {
+    static let backendAuthStateChanged = Notification.Name("BackendAuthStateChanged")
+}
+
 final class BackendAuth {
 
     private let key = "BackendAuthToken"
@@ -24,14 +28,14 @@ final class BackendAuth {
 
     func setToken(_ token: String) {
         defaults.setValue(token, forKey: key)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: signInOrOutNotificationKey), object: self)
+        NotificationCenter.default.post(name: .backendAuthStateChanged, object: self)
     }
 
     func deleteToken() {
         if self.token != nil {
             defaults.removeObject(forKey: key)
             print("Token was revoked")
-            NotificationCenter.default.post(name: Notification.Name(rawValue: signInOrOutNotificationKey), object: self)
+            NotificationCenter.default.post(name: .backendAuthStateChanged, object: self)
         }
     }
 }

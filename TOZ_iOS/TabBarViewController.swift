@@ -7,13 +7,11 @@
 
 import UIKit
 
-let signInOrOutNotificationKey = "signInOrOut"
-
 final class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(switchAccountTab), name: Notification.Name(rawValue: signInOrOutNotificationKey), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(switchAccountTab), name: .backendAuthStateChanged, object: nil)
         switchAccountTab()
     }
 
