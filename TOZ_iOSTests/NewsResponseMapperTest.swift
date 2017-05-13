@@ -37,7 +37,7 @@ class NewsResponseMapperTest: XCTestCase {
         XCTAssertEqual(firstNews?.title, "Do oddziału TOZ trafił nowy pies!")
         XCTAssertEqual(firstNews?.contents, "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych.")
         XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg"))
-        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1222333444555)))
+        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1494352543)))
     }
 
 }
