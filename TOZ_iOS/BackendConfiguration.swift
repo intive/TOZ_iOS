@@ -17,5 +17,5 @@ final class BackendConfiguration {
         self.baseURL = baseURL
     }
 
-    static var shared: BackendConfiguration = BackendConfiguration(baseURL: URL(string: "http://dev.patronage2017.intive-projects.com")!)
+    static var shared: BackendConfiguration = BackendConfiguration(baseURL: URL(string: "http://dev.patronage2017.intive-projects.com/api")!)
 }

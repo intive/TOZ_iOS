@@ -11,8 +11,6 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var oldPassword: TextInputView!
     @IBOutlet weak var newPassword: TextInputView!
     @IBOutlet weak var confirmNewPassword: TextInputView!
-    @IBOutlet weak var changePasswordButton: UIButton!
-    @IBOutlet weak var signOutButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +27,6 @@ class ChangePasswordViewController: UIViewController {
         confirmNewPassword.isTextSecure = true
 
         self.view.backgroundColor = Color.LoginViewController.background
-
-        changePasswordButton.backgroundColor = Color.LoginViewController.Button.background
-        changePasswordButton.tintColor = Color.LoginViewController.Button.tint
-        changePasswordButton.layer.cornerRadius = 5
-
-        signOutButton.backgroundColor = Color.LoginViewController.Button.background
-        signOutButton.tintColor = Color.LoginViewController.Button.tint
-        signOutButton.layer.cornerRadius = 5
 
         oldPassword.placeholder = "Stare hasło"
         newPassword.placeholder = "Nowe hasło"
