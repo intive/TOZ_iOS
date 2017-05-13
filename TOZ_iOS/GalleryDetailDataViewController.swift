@@ -26,7 +26,9 @@ class GalleryDetailDataViewController: UIViewController {
             if let dataObject = self.dataObject {
                 DispatchQueue.main.async {
                     PhotoManager.shared.getPhoto(from: dataObject, completion: { [weak self] (image) -> (Void) in
-                    self?.dataImage.image = image
+                    if let image = image {
+                        self?.dataImage.image = image
+                    }
                 })
                 }
             } else {

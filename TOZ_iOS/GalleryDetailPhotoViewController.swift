@@ -21,15 +21,7 @@ class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDe
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController!.delegate = self
 
-        if photos.isEmpty {
-//            let placeholderPath: String = (Bundle.main.url(forResource: "pug_logo", withExtension: "png")?.path)!
-            let placeholderURL = URL(string: "https://placeimg.com/640/480/animals/grayscale")
-            if let placeholderURL = placeholderURL {
-                self.modelController.pageData = [placeholderURL]
-            }
-        } else {
-            self.modelController.pageData = photos
-        }
+        self.modelController.pageData = photos
 
         let startingViewController: GalleryDetailDataViewController = self.modelController.viewController(at: 0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]

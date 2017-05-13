@@ -22,6 +22,11 @@ class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
 
         // Create a new view controller and pass suitable data.
         guard let dataViewController = storyboard.instantiateViewController(withIdentifier: "GalleryDetailDataViewController") as? GalleryDetailDataViewController else { return nil }
+        if self.pageData.isEmpty {
+            //if there was no photo provided than GalleryDetailDataViewController
+            //will handle the url to nothing and display placeholder photo
+            self.pageData = [URL(string: "url")!]
+        }
         dataViewController.dataObject = self.pageData[index]
         dataViewController.photoIndex = index + 1
         dataViewController.photosCount = self.pageData.count
