@@ -18,6 +18,7 @@ class GalleryDetailViewController: UIViewController {
 
     var selectedCellID: String?
     var photoURL: URL?
+    var photos: [URL] = []
     var animalOperation: AnimalOperation?
 
     func makeAnimalOperation() {
@@ -44,7 +45,11 @@ class GalleryDetailViewController: UIViewController {
                     self.animalSex.text = localAnimal.sex
                     self.animalCreationDate.text = localAnimal.created?.dateToFormattedString()
                     self.animalDescription.text = localAnimal.description
-                    self.photoURL = localAnimal.imageUrl
+                    // For now if there is a imageURL for the Animal than add it to array of photos.
+                    // To be changed when backend starts to return array of urls instead of just one url.
+                    if let photoURL = localAnimal.imageUrl {
+                        self.photos.append(photoURL)
+                    }
                 }
             case .failure(let error):
                 print ("\(error)")
@@ -56,7 +61,7 @@ class GalleryDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "profilePhotoSegue" {
             let GalleryDetailPhotoViewController = segue.destination as? GalleryDetailPhotoViewController
-            GalleryDetailPhotoViewController?.galleryDetailPhotoURL = photoURL
+            GalleryDetailPhotoViewController?.photos = photos
         }
     }
 }
