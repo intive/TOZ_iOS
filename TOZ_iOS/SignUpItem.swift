@@ -9,5 +9,12 @@
 import Foundation
 
 struct SignUpItem: ParsedItem {
-    let jwt: String
+    private let id: String
+    private let password: String
+    private let roles: Array<String>
+    private let name: String
+    private let surname: String
+    private let phoneNumber: String
+    private let email: String
+    private let passwordChangeDate: Int
 }
