@@ -10,7 +10,7 @@ import Foundation
 
 final class SignUpRequest: BackendAPIRequest {
     
-    private let id: String
+    private let userID: String
     private let password: String
     private let roles: Array<String>
     private let name: String
@@ -19,9 +19,9 @@ final class SignUpRequest: BackendAPIRequest {
     private let email: String
     private let passwordChangeDate: Int
     
-    init(id: String, password: String, roles: Array<String>, name: String, surname: String,
+    init(userID: String, password: String, roles: Array<String>, name: String, surname: String,
          phoneNumber: String, email: String, passwordChangeDate:Int) {
-        self.id = id
+        self.userID = userID
         self.password = password
         self.roles = roles
         self.name = name
@@ -38,7 +38,7 @@ final class SignUpRequest: BackendAPIRequest {
     }
     var parameters: [String: Any]? {
         return [
-            "id": id,
+            "id": userID,
             "password": password,
             "roles": roles,
             "name": name,
