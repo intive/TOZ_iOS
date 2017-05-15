@@ -10,22 +10,20 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    let options = ["Chcę zostać wolontariuszem","Chcę zostać domem tymczasowym"]
+    let options = ["Chcę zostać wolontariuszem", "Chcę zostać domem tymczasowym"]
 
     @IBOutlet weak var firstNameInput: TextInputView!
     @IBOutlet weak var surnameInput: TextInputView!
     @IBOutlet weak var emailInput: TextInputView!
     @IBOutlet weak var phoneNumberInput: TextInputView!
 
-    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var goalSegmentedControl: UISegmentedControl!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +49,11 @@ class SignUpViewController: UIViewController {
         cancelButton.backgroundColor = Color.SignUpViewController.Button.background
         cancelButton.tintColor = Color.SignUpViewController.Button.tint
         cancelButton.layer.cornerRadius = 5
+
+        goalSegmentedControl.backgroundColor = Color.SignUpViewController.SegmentedControl.background
+        goalSegmentedControl.tintColor = Color.SignUpViewController.SegmentedControl.tint
+
+        goalSegmentedControl.layer.cornerRadius = 5
 
         firstNameInput.placeholder = " Imię..."
         surnameInput.placeholder = " Nazwisko..."
