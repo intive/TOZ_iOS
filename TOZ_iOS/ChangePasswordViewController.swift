@@ -50,4 +50,7 @@ class ChangePasswordViewController: UIViewController {
 //        return false
     }
 
+    @IBAction func signOut(_ sender: Any) {
+        BackendAuth.shared.deleteToken()
+    }
 }
