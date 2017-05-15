@@ -39,7 +39,7 @@ class NewsResponseMapperTest: XCTestCase {
     }
 
     func testFirstNewsContents() {
-        XCTAssertEqual(firstNews?.contents, "Piorun został odnaleziony przy piekarni na ulicy Krzemiennej, gdy samotnie błąkał")
+        XCTAssertEqual(firstNews?.contents, "Piorun został odnaleziony przy piekarni na ulicy Krzemiennej, gdzie samotnie błąkał się przez kilka godzin.")
     }
 
     func testFirstNewsPhotoUrl() {

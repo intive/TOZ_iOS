@@ -91,6 +91,7 @@
 		54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB351EA2CFD600503317 /* WeekDayControl.xib */; };
 		54FBAB381EA2CFE000503317 /* ScheduleControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB371EA2CFE000503317 /* ScheduleControl.swift */; };
 		54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB391EA2D00D00503317 /* ScheduleControl.xib */; };
+		8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */; };
 		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
@@ -204,6 +205,7 @@
 		54FBAB371EA2CFE000503317 /* ScheduleControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleControl.swift; sourceTree = "<group>"; };
 		54FBAB391EA2D00D00503317 /* ScheduleControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleControl.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellContentView.swift; sourceTree = "<group>"; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				4BB31FDB1E84512700D2E6EF /* NetworkMappers */,
 				37434B5C1E7F1B7E00336605 /* NewsEntity.swift */,
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
+				8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */,
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
@@ -723,6 +726,7 @@
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
+				8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				54D1390B1EA118BF0064BE00 /* ReservationItem.swift in Sources */,
