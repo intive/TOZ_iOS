@@ -160,4 +160,12 @@ struct Color {
             static let tint = UIColor(red: 129.0/255.0, green: 130.0/255.0, blue: 131.0/255.0, alpha: 1.0)
         }
     }
+
+    struct SignUpViewController {
+        static let background = UIColor.white
+        struct Button {
+            static let background = UIColor(red:1.00, green:0.53, blue:0.22, alpha:1.0)
+            static let tint = UIColor.white
+        }
+    }
 }
