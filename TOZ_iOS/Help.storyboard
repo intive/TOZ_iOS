@@ -428,69 +428,43 @@ ul. Przykładowa 12
                                     <constraint firstAttribute="height" constant="50" id="lBi-k1-vHc"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvl-DQ-gvd">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvl-DQ-gvd">
                                 <rect key="frame" x="46" y="383" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGX-N3-MhG">
-                                <rect key="frame" x="46" y="340" width="95" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="dEd-rl-q6r"/>
-                                    <constraint firstAttribute="width" constant="95" id="mNv-79-G5B"/>
-                                </constraints>
-                                <state key="normal" title="Wybierz cel"/>
-                                <connections>
-                                    <action selector="goalButtonTapped:" destination="Eqd-Pt-7qm" eventType="touchUpInside" id="1if-nB-ewx"/>
-                                </connections>
-                            </button>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iA-7B-YIe">
-                                <rect key="frame" x="27.5" y="412" width="320" height="73"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="7Lf-Sh-K9d"/>
-                                </constraints>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VJU-t0-xhw" firstAttribute="top" secondItem="1iA-7B-YIe" secondAttribute="bottom" constant="8" id="1Ma-fs-3dg"/>
                             <constraint firstItem="K9D-jr-BLw" firstAttribute="top" secondItem="79g-If-c5u" secondAttribute="bottom" constant="5" id="1cP-8x-KAm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tRC-1F-ZKN" secondAttribute="trailing" constant="30" id="4ZI-GO-iBY"/>
                             <constraint firstItem="K9D-jr-BLw" firstAttribute="trailing" secondItem="79g-If-c5u" secondAttribute="trailing" id="4cC-dm-AKZ"/>
                             <constraint firstItem="GOf-59-GnD" firstAttribute="trailing" secondItem="K9D-jr-BLw" secondAttribute="trailing" id="5DS-TJ-XG1"/>
-                            <constraint firstItem="1iA-7B-YIe" firstAttribute="centerX" secondItem="mJ9-zK-jrO" secondAttribute="centerX" id="ENj-9N-xI1"/>
                             <constraint firstItem="79g-If-c5u" firstAttribute="top" secondItem="Gj0-9Z-zqg" secondAttribute="bottom" constant="5" id="I4g-Lz-aeK"/>
                             <constraint firstItem="VJU-t0-xhw" firstAttribute="leading" secondItem="K9D-jr-BLw" secondAttribute="leading" id="KEB-0j-mIz"/>
                             <constraint firstItem="79g-If-c5u" firstAttribute="leading" secondItem="Gj0-9Z-zqg" secondAttribute="leading" id="MEv-Hs-QkY"/>
                             <constraint firstItem="Gj0-9Z-zqg" firstAttribute="trailing" secondItem="tRC-1F-ZKN" secondAttribute="trailing" id="MlE-Md-3mi"/>
-                            <constraint firstItem="iGX-N3-MhG" firstAttribute="top" secondItem="K9D-jr-BLw" secondAttribute="bottom" constant="5" id="MsZ-Iv-aLf"/>
                             <constraint firstItem="tRC-1F-ZKN" firstAttribute="leading" secondItem="mJ9-zK-jrO" secondAttribute="leadingMargin" constant="30" id="NI6-g8-hq5"/>
                             <constraint firstItem="GOf-59-GnD" firstAttribute="leading" secondItem="K9D-jr-BLw" secondAttribute="leading" id="RiI-LK-mFy"/>
-                            <constraint firstItem="rvl-DQ-gvd" firstAttribute="top" secondItem="iGX-N3-MhG" secondAttribute="bottom" constant="8" id="TkJ-T9-UeS"/>
+                            <constraint firstItem="GOf-59-GnD" firstAttribute="top" secondItem="VJU-t0-xhw" secondAttribute="bottom" constant="20" id="Tkt-FO-XaS"/>
+                            <constraint firstItem="VJU-t0-xhw" firstAttribute="top" secondItem="K9D-jr-BLw" secondAttribute="bottom" constant="158" id="VNT-hL-djB"/>
                             <constraint firstItem="K9D-jr-BLw" firstAttribute="leading" secondItem="79g-If-c5u" secondAttribute="leading" id="XAl-dv-FYN"/>
                             <constraint firstItem="VJU-t0-xhw" firstAttribute="trailing" secondItem="K9D-jr-BLw" secondAttribute="trailing" id="XGb-4P-cVf"/>
                             <constraint firstItem="Gj0-9Z-zqg" firstAttribute="leading" secondItem="tRC-1F-ZKN" secondAttribute="leading" id="a6L-PS-hq2"/>
-                            <constraint firstItem="rvl-DQ-gvd" firstAttribute="leading" secondItem="iGX-N3-MhG" secondAttribute="leading" id="b4b-qx-Rhc"/>
                             <constraint firstItem="tRC-1F-ZKN" firstAttribute="top" secondItem="6DJ-ab-udY" secondAttribute="bottom" constant="100" id="eKy-Wj-R6r"/>
                             <constraint firstItem="wOI-bZ-Amj" firstAttribute="centerX" secondItem="mJ9-zK-jrO" secondAttribute="centerX" id="hfQ-nB-mfe"/>
                             <constraint firstItem="79g-If-c5u" firstAttribute="trailing" secondItem="Gj0-9Z-zqg" secondAttribute="trailing" id="lks-VW-mXl"/>
-                            <constraint firstItem="1iA-7B-YIe" firstAttribute="top" secondItem="rvl-DQ-gvd" secondAttribute="bottom" constant="8" id="mqE-wA-FKR"/>
-                            <constraint firstItem="GOf-59-GnD" firstAttribute="top" secondItem="VJU-t0-xhw" secondAttribute="bottom" constant="20" id="nVc-x2-8Sf"/>
                             <constraint firstItem="Gj0-9Z-zqg" firstAttribute="top" secondItem="tRC-1F-ZKN" secondAttribute="bottom" constant="5" id="q38-UY-Y3Z"/>
                             <constraint firstItem="wOI-bZ-Amj" firstAttribute="top" secondItem="6DJ-ab-udY" secondAttribute="bottom" constant="39" id="x6K-kv-zbP"/>
-                            <constraint firstItem="iGX-N3-MhG" firstAttribute="leading" secondItem="K9D-jr-BLw" secondAttribute="leading" id="zjN-b1-QiZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="GOf-59-GnD" id="nLo-ac-63q"/>
                         <outlet property="emailInput" destination="79g-If-c5u" id="Ad2-6M-Bxl"/>
                         <outlet property="firstNameInput" destination="tRC-1F-ZKN" id="Rwj-5a-mkL"/>
-                        <outlet property="goalButton" destination="iGX-N3-MhG" id="fI8-fJ-2Y8"/>
                         <outlet property="goalLabel" destination="rvl-DQ-gvd" id="a51-HS-LrL"/>
-                        <outlet property="optionPicker" destination="1iA-7B-YIe" id="cWT-dc-EWg"/>
                         <outlet property="phoneNumberInput" destination="K9D-jr-BLw" id="njo-uW-diV"/>
                         <outlet property="sendButton" destination="VJU-t0-xhw" id="BwR-9C-r4g"/>
                         <outlet property="surnameInput" destination="Gj0-9Z-zqg" id="e6G-Uh-vP2"/>
