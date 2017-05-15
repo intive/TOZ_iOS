@@ -68,25 +68,25 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
 
     func configureView() {
-        self.view.backgroundColor = Color.LoginViewController.background
+        self.view.backgroundColor = Color.SignUpViewController.background
         firstNameInput.textChecker = NameChecker()
         surnameInput.textChecker = NameChecker()
         emailInput.textChecker = EmailChecker()
         phoneNumberInput.textChecker = PhoneNumberChecker()
 
-        sendButton.backgroundColor = Color.LoginViewController.Button.background
-        sendButton.tintColor = Color.LoginViewController.Button.tint
+        sendButton.backgroundColor = Color.SignUpViewController.Button.background
+        sendButton.tintColor = Color.SignUpViewController.Button.tint
         sendButton.layer.cornerRadius = 5
 
-        cancelButton.backgroundColor = Color.LoginViewController.Button.background
-        cancelButton.tintColor = Color.LoginViewController.Button.tint
+        cancelButton.backgroundColor = Color.SignUpViewController.Button.background
+        cancelButton.tintColor = Color.SignUpViewController.Button.tint
         cancelButton.layer.cornerRadius = 5
 
-        goalButton.backgroundColor = Color.LoginViewController.Button.background
-        goalButton.tintColor = Color.LoginViewController.Button.tint
+        goalButton.backgroundColor = Color.SignUpViewController.Button.background
+        goalButton.tintColor = Color.SignUpViewController.Button.tint
         goalButton.layer.cornerRadius = 5
 
-        optionPicker.backgroundColor = Color.LoginViewController.background
+        optionPicker.backgroundColor = Color.SignUpViewController.background
         optionPicker.tintColor = UIColor.white
 
         firstNameInput.placeholder = " Imię..."
