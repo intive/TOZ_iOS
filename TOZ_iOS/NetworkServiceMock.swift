@@ -24,7 +24,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetNews"
-                    break
                 default:
                     print("Method is not appropriate.")
                 } // organization info request
@@ -32,7 +31,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetOrganizationInfo"
-                    break
                 default:
                     print("Method is not appropriate.")
                 } // animal list request
@@ -40,7 +38,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetAnimals"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }
@@ -48,7 +45,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetSchedule"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }
@@ -56,7 +52,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostLogin"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }
@@ -64,7 +59,10 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostChangePassword"
-                    break
+            } else if url.path == "/users" {
+                switch method {
+                case .POST:
+                    nameOfFile = "PostRegistration"
                 default:
                     print("Method is not appropriate.")
                 }
