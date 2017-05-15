@@ -151,13 +151,23 @@ struct Color {
             }
         }
     }
-
     struct LoginViewController {
         static let background = UIColor.white
 
         struct Button {
             static let background = UIColor(red: 255.0/255.0, green: 134.0/255.0, blue: 55.0/255.0, alpha: 1.0)
             static let tint = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }
+    }
+    struct SignUpViewController {
+        static let background = UIColor.white
+        struct Button {
+            static let background = UIColor(red:1.00, green:0.53, blue:0.22, alpha:1.0)
+            static let tint = UIColor.white
+        }
+        struct SegmentedControl {
+            static let background = UIColor.white
+            static let tint = UIColor(red:1.00, green:0.53, blue:0.22, alpha:1.0)
         }
     }
 }

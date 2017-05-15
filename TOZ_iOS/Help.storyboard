@@ -325,6 +325,7 @@ ul. Przykładowa 12
                                 <state key="normal" title="Zarejestruj się"/>
                                 <connections>
                                     <action selector="handleSignIn:" destination="5US-Ud-5vF" eventType="touchUpInside" id="Os2-QN-QUj"/>
+                                    <segue destination="uLl-Q8-tE1" kind="show" id="opG-9P-OB6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -355,7 +356,6 @@ ul. Przykładowa 12
                         <outlet property="emailInput" destination="yI4-Jz-gyM" id="fup-bF-6d6"/>
                         <outlet property="errorLabel" destination="sl0-vm-Z13" id="kZr-G9-p19"/>
                         <outlet property="passwordInput" destination="c8I-ly-sUd" id="5ZK-uX-CEM"/>
-                        <segue destination="uLl-Q8-tE1" kind="show" id="neU-gJ-Hgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ll-8L-DQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -399,7 +399,7 @@ ul. Przykładowa 12
                                                 <rect key="frame" x="10" y="239" width="300" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-fo-TmB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zarejestruj się" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-fo-TmB">
                                                 <rect key="frame" x="10" y="25" width="300" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -419,8 +419,9 @@ ul. Przykładowa 12
                                                 </segments>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDj-Kh-JIP" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="383" width="300" height="40"/>
+                                                <rect key="frame" x="85" y="393" width="150" height="40"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="n9M-1M-OWh"/>
                                                     <constraint firstAttribute="height" constant="40" id="okp-ch-NUO"/>
                                                 </constraints>
                                                 <state key="normal" title="Wyślij"/>
@@ -429,7 +430,7 @@ ul. Przykładowa 12
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-CL-sCl" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="438" width="300" height="40"/>
+                                                <rect key="frame" x="85" y="448" width="150" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Dmq-EY-e5N"/>
                                                 </constraints>
@@ -443,12 +444,12 @@ ul. Przykładowa 12
                                         <constraints>
                                             <constraint firstItem="FWD-Dv-g8s" firstAttribute="trailing" secondItem="H7t-fb-aFc" secondAttribute="trailing" id="0mD-E9-jgj"/>
                                             <constraint firstItem="fR8-fo-TmB" firstAttribute="top" secondItem="mxG-GV-hOG" secondAttribute="top" constant="25" id="0tV-Rv-gy8"/>
+                                            <constraint firstItem="ZDj-Kh-JIP" firstAttribute="centerX" secondItem="mxG-GV-hOG" secondAttribute="centerX" id="2JM-uM-Lbw"/>
                                             <constraint firstItem="H7t-fb-aFc" firstAttribute="top" secondItem="SBM-NQ-wUG" secondAttribute="bottom" constant="15" id="33H-fJ-sdW"/>
-                                            <constraint firstItem="ZDj-Kh-JIP" firstAttribute="leading" secondItem="FWD-Dv-g8s" secondAttribute="leading" id="4V9-WC-Lpj"/>
                                             <constraint firstItem="h8q-7k-Gsu" firstAttribute="top" secondItem="HBd-qy-Dku" secondAttribute="bottom" constant="5" id="4eg-iL-Fgc"/>
                                             <constraint firstItem="HBd-qy-Dku" firstAttribute="trailing" secondItem="kTT-YP-8XX" secondAttribute="trailing" id="4k9-jv-jgi"/>
                                             <constraint firstItem="dw8-CL-sCl" firstAttribute="leading" secondItem="ZDj-Kh-JIP" secondAttribute="leading" id="AV8-Hc-4ZD"/>
-                                            <constraint firstItem="ZDj-Kh-JIP" firstAttribute="top" secondItem="FWD-Dv-g8s" secondAttribute="bottom" constant="15" id="BEB-IX-3Nc"/>
+                                            <constraint firstItem="ZDj-Kh-JIP" firstAttribute="top" secondItem="FWD-Dv-g8s" secondAttribute="bottom" constant="25" id="BEB-IX-3Nc"/>
                                             <constraint firstItem="h8q-7k-Gsu" firstAttribute="height" secondItem="HBd-qy-Dku" secondAttribute="height" id="Dv3-2E-eaG"/>
                                             <constraint firstItem="SBM-NQ-wUG" firstAttribute="top" secondItem="h8q-7k-Gsu" secondAttribute="bottom" constant="5" id="GeU-GX-l8w"/>
                                             <constraint firstItem="kTT-YP-8XX" firstAttribute="leading" secondItem="fR8-fo-TmB" secondAttribute="leading" id="I0i-Rx-Z1n"/>
@@ -466,7 +467,6 @@ ul. Przykładowa 12
                                             <constraint firstItem="dw8-CL-sCl" firstAttribute="trailing" secondItem="ZDj-Kh-JIP" secondAttribute="trailing" id="jki-bm-GyY"/>
                                             <constraint firstItem="h8q-7k-Gsu" firstAttribute="leading" secondItem="HBd-qy-Dku" secondAttribute="leading" id="muf-N1-xlW"/>
                                             <constraint firstItem="H7t-fb-aFc" firstAttribute="trailing" secondItem="SBM-NQ-wUG" secondAttribute="trailing" id="nqE-CL-E6D"/>
-                                            <constraint firstItem="ZDj-Kh-JIP" firstAttribute="trailing" secondItem="FWD-Dv-g8s" secondAttribute="trailing" id="pBy-Du-yxt"/>
                                             <constraint firstAttribute="trailing" secondItem="fR8-fo-TmB" secondAttribute="trailing" constant="10" id="t0N-Bb-ZVR"/>
                                             <constraint firstItem="FWD-Dv-g8s" firstAttribute="leading" secondItem="H7t-fb-aFc" secondAttribute="leading" id="tyr-aG-8ah"/>
                                             <constraint firstItem="h8q-7k-Gsu" firstAttribute="trailing" secondItem="HBd-qy-Dku" secondAttribute="trailing" id="uea-Lb-ex9"/>
@@ -493,9 +493,10 @@ ul. Przykładowa 12
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailInput" destination="SBM-NQ-wUG" id="g0C-Kx-3S2"/>
+                        <outlet property="emailInput" destination="h8q-7k-Gsu" id="x0f-q0-Ul0"/>
                         <outlet property="firstNameInput" destination="kTT-YP-8XX" id="foR-LL-lQa"/>
                         <outlet property="goalSegmentedControl" destination="FWD-Dv-g8s" id="84x-lU-eeF"/>
+                        <outlet property="phoneNumberInput" destination="SBM-NQ-wUG" id="af3-wS-yCQ"/>
                         <outlet property="surnameInput" destination="HBd-qy-Dku" id="DAk-9g-Q46"/>
                     </connections>
                 </viewController>

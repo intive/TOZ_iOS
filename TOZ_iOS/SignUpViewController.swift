@@ -29,9 +29,9 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "unwindToLoginView", sender: self)
-    }
+//    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+//        self.performSegue(withIdentifier: "unwindToLoginView", sender: self)
+//    }
 
     func configureView() {
         self.view.backgroundColor = Color.SignUpViewController.background
@@ -59,5 +59,5 @@ class SignUpViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
+
 }
