@@ -362,10 +362,10 @@ ul. Przykładowa 12
             </objects>
             <point key="canvasLocation" x="2724" y="-1055.6221889055473"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="5T0-GP-5zq">
             <objects>
-                <viewController id="uLl-Q8-tE1" sceneMemberID="viewController">
+                <viewController id="uLl-Q8-tE1" customClass="SignUpViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ytl-Cz-Ymp"/>
                         <viewControllerLayoutGuide type="bottom" id="gO8-Lh-4pU"/>
@@ -492,6 +492,12 @@ ul. Przykładowa 12
                             <constraint firstItem="gO8-Lh-4pU" firstAttribute="top" secondItem="9CN-g6-TUn" secondAttribute="bottom" id="g8d-qc-56j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="SBM-NQ-wUG" id="g0C-Kx-3S2"/>
+                        <outlet property="firstNameInput" destination="kTT-YP-8XX" id="foR-LL-lQa"/>
+                        <outlet property="goalSegmentedControl" destination="FWD-Dv-g8s" id="84x-lU-eeF"/>
+                        <outlet property="surnameInput" destination="HBd-qy-Dku" id="DAk-9g-Q46"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd7-K4-cWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
