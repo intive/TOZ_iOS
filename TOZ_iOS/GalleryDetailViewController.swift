@@ -15,6 +15,7 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalSex: UILabel!
     @IBOutlet weak var animalCreationDate: UILabel!
     @IBOutlet weak var animalDescription: UITextView!
+    @IBOutlet weak var pictureCaption: UILabel!
 
     var selectedCellID: String?
     var photoURL: URL?
@@ -33,6 +34,7 @@ class GalleryDetailViewController: UIViewController {
         super.viewDidLoad()
         makeAnimalOperation()
         getAnimal()
+        NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
     }
 
     func getAnimal() {
@@ -50,6 +52,7 @@ class GalleryDetailViewController: UIViewController {
                     if let photoURL = localAnimal.imageUrl {
                         self.photos.append(photoURL)
                     }
+                    self.pictureCaption.text = "Zdjęcie 1 / \(self.photos.count)"
                 }
             case .failure(let error):
                 print ("\(error)")
@@ -63,5 +66,10 @@ class GalleryDetailViewController: UIViewController {
             let GalleryDetailPhotoViewController = segue.destination as? GalleryDetailPhotoViewController
             GalleryDetailPhotoViewController?.photos = photos
         }
+    }
+
+    func updateCaption(notification: Notification) {
+        guard let index = notification.userInfo!["index"] else { return }
+        self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
     }
 }

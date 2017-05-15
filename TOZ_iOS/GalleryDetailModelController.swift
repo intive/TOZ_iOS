@@ -29,7 +29,6 @@ class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
         }
         dataViewController.dataObject = self.pageData[index]
         dataViewController.photoIndex = index + 1
-        dataViewController.photosCount = self.pageData.count
         return dataViewController
     }
 
