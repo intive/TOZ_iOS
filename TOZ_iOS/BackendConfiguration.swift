@@ -17,6 +17,5 @@ final class BackendConfiguration {
         self.baseURL = baseURL
     }
 
-    static var shared: BackendConfiguration = mockBackend ? BackendConfiguration(baseURL: URL(string: "https://i.imgur.com")!) : BackendConfiguration(baseURL: URL(string: "http://dev.patronage2017.intive-projects.com")!)
-
+    static var shared: BackendConfiguration = mockBackend ? BackendConfiguration(baseURL: URL(string: "https://i.imgur.com")!) : BackendConfiguration(baseURL: URL(string: "http://dev.patronage2017.intive-projects.com/api")!)
 }

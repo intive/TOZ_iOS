@@ -225,11 +225,11 @@
             </objects>
             <point key="canvasLocation" x="2924.6376811594205" y="-99.456521739130437"/>
         </scene>
-        <!--News-->
+        <!--AKTUALNOŚCI-->
         <scene sceneID="ge0-nh-dXU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VL-lz-GRm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="tab-bar-feed" id="VmM-Vg-2oV"/>
+                    <tabBarItem key="tabBarItem" title="AKTUALNOŚCI" image="tab-bar-feed" id="VmM-Vg-2oV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f3m-9u-fwC">
