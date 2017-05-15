@@ -59,6 +59,9 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostChangePassword"
+                default:
+                    print("Method is not appropriate.")
+                }
             } else if url.path == "/users" {
                 switch method {
                 case .POST:
