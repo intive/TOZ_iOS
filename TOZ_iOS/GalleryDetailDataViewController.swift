@@ -25,16 +25,15 @@ class GalleryDetailDataViewController: UIViewController {
     }
 
     func getAnimalPhoto() {
-            if let dataObject = self.dataObject {
-                DispatchQueue.main.async {
-                    PhotoManager.shared.getPhoto(from: dataObject, completion: { [weak self] (image) -> (Void) in
+        self.dataImage.image = #imageLiteral(resourceName: "placeholder")
+        if let dataObject = self.dataObject {
+            DispatchQueue.main.async {
+                PhotoManager.shared.getPhoto(from: dataObject, completion: { [weak self] (image) -> (Void) in
                     if let image = image {
                         self?.dataImage.image = image
                     }
                 })
-                }
-            } else {
-        self.dataImage.image = #imageLiteral(resourceName: "placeholder")
+            }
         }
     }
 }
