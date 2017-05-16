@@ -49,9 +49,14 @@ class GalleryDetailViewController: UIViewController {
                     self.animalDescription.text = localAnimal.description
                     // For now if there is a imageURL for the Animal than add it to array of photos.
                     // To be changed when backend starts to return array of urls instead of just one url.
-                    if let photoURL = localAnimal.imageUrl {
-                        self.photos.append(photoURL)
-                    }
+//                    if let photoURL = localAnimal.imageUrl {
+//                        self.photos.append(photoURL)
+//                    }
+
+                    // Add URL to random photo just to check if it is passed
+                    // forward to GalleryDetailPhotoViewController:
+                    self.photos.append(URL(string: "https://placeimg.com/640/480/animals")!)
+
                     self.pictureCaption.text = "Zdjęcie 1 / \(self.photos.count)"
                 }
             case .failure(let error):
@@ -63,8 +68,8 @@ class GalleryDetailViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "profilePhotoSegue" {
-            let GalleryDetailPhotoViewController = segue.destination as? GalleryDetailPhotoViewController
-            GalleryDetailPhotoViewController?.photos = photos
+            let galleryDetailPhotoViewController = segue.destination as? GalleryDetailPhotoViewController
+            galleryDetailPhotoViewController?.photos = photos
         }
     }
 

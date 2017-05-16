@@ -10,7 +10,7 @@ import UIKit
 class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDelegate {
 
     var galleryDetailPhotoURL: URL?
-    var photos: [URL] = []
+    var photos: [URL]?
     var pageViewController: UIPageViewController?
 
     lazy var modelController = GalleryDetailModelController()
@@ -21,7 +21,11 @@ class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDe
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController!.delegate = self
 
-        self.modelController.pageData = photos
+        if let photos = photos {
+            self.modelController.pageData = photos
+        } else {
+            self.modelController.pageData = []
+        }
 
         let startingViewController: GalleryDetailDataViewController = self.modelController.viewController(at: 0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
