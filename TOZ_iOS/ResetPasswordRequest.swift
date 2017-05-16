@@ -11,7 +11,7 @@ final class ResetPasswordRequest: BackendAPIRequest {
 
     private let email: String
 
-    init(email: String, login: String) {
+    init(email: String) {
         self.email = email
     }
 
