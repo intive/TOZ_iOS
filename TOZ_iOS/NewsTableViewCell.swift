@@ -13,19 +13,22 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var datePublishedLabel: UILabel!
     @IBOutlet weak var photoView: ProfilePhotoView!
     @IBOutlet weak var photoViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var readMoreLabel: UILabel!
+
     override func awakeFromNib() {
+
         super.awakeFromNib()
         self.backgroundColor = Color.Cell.Background.primary
         self.titleLabel.textColor = Color.Cell.Font.title
         self.datePublishedLabel.textColor = Color.Cell.Font.date
-        self.contentLabel.textColor = Color.Cell.Font.content
+        self.contentTextView.textColor = Color.Cell.Font.content
+        self.contentTextView.textContainer.maximumNumberOfLines = 2
     }
 
     func configure(with news: NewsItem) {
-
         titleLabel.text = news.title
-        contentLabel.text = news.contents
+        contentTextView.text = news.contents
         let dateToString = DateFormatter()
         dateToString.dateFormat = "yyyy-MM-dd"
         if let published = news.published {
