@@ -25,6 +25,10 @@
 		3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BD1E91932E00FF385A /* NewsItem.swift */; };
 		3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */; };
 		420FD4481EAFBC36009AC0E1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420FD4471EAFBC35009AC0E1 /* Account.storyboard */; };
+		421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */; };
+		421BB7E51ECB50FE00CE3429 /* ResetPasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E41ECB50FE00CE3429 /* ResetPasswordOperation.swift */; };
+		421BB7E71ECB535200CE3429 /* ResetPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E61ECB535200CE3429 /* ResetPasswordItem.swift */; };
+		421BB7E91ECB539100CE3429 /* ResetPasswordResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E81ECB539100CE3429 /* ResetPasswordResponseMapper.swift */; };
 		422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761D1EA95A4700C89A03 /* NameChecker.swift */; };
 		422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */; };
 		422D76221EA95A6F00C89A03 /* PhoneNumberChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */; };
@@ -42,11 +46,11 @@
 		4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */; };
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
-		4B1988501EC73A570079460C /* PostChangePassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B19884F1EC73A570079460C /* PostChangePassword.json */; };
 		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
 		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
 		4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */; };
 		4B19884E1EC7368A0079460C /* ChangePasswordResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */; };
+		4B1988501EC73A570079460C /* PostChangePassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B19884F1EC73A570079460C /* PostChangePassword.json */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
 		4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */; };
@@ -144,6 +148,10 @@
 		3777B0BD1E91932E00FF385A /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponseMapper.swift; sourceTree = "<group>"; };
 		420FD4471EAFBC35009AC0E1 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
+		421BB7E41ECB50FE00CE3429 /* ResetPasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordOperation.swift; sourceTree = "<group>"; };
+		421BB7E61ECB535200CE3429 /* ResetPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordItem.swift; sourceTree = "<group>"; };
+		421BB7E81ECB539100CE3429 /* ResetPasswordResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordResponseMapper.swift; sourceTree = "<group>"; };
 		422D761D1EA95A4700C89A03 /* NameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameChecker.swift; sourceTree = "<group>"; };
 		422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurnameChecker.swift; sourceTree = "<group>"; };
 		422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberChecker.swift; sourceTree = "<group>"; };
@@ -161,11 +169,11 @@
 		4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalRequest.swift; sourceTree = "<group>"; };
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
-		4B19884F1EC73A570079460C /* PostChangePassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostChangePassword.json; sourceTree = "<group>"; };
 		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
 		4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordItem.swift; sourceTree = "<group>"; };
 		4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordResponseMapper.swift; sourceTree = "<group>"; };
+		4B19884F1EC73A570079460C /* PostChangePassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostChangePassword.json; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLengthChecker.swift; sourceTree = "<group>"; };
@@ -338,6 +346,7 @@
 				4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */,
 				4B53F4D31EAA5EC600D894F8 /* SignInRequest.swift */,
 				4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */,
+				421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */,
 			);
 			name = NetworkRequests;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 				4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */,
 				4B53F4D91EAA665C00D894F8 /* SignInOperation.swift */,
 				4B1988491EC735290079460C /* ChangePasswordOperation.swift */,
+				421BB7E41ECB50FE00CE3429 /* ResetPasswordOperation.swift */,
 			);
 			name = NetworkOperations;
 			sourceTree = "<group>";
@@ -367,6 +377,7 @@
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
 				4B53F4D51EAA610100D894F8 /* SignInItem.swift */,
 				4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */,
+				421BB7E61ECB535200CE3429 /* ResetPasswordItem.swift */,
 			);
 			name = NetworkItems;
 			sourceTree = "<group>";
@@ -382,6 +393,7 @@
 				4B53F4D71EAA640B00D894F8 /* SignInResponseMapper.swift */,
 				4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */,
 				54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */,
+				421BB7E81ECB539100CE3429 /* ResetPasswordResponseMapper.swift */,
 			);
 			name = NetworkMappers;
 			sourceTree = "<group>";
@@ -727,6 +739,7 @@
 				4B5EBAD21EA2A7740015663C /* GalleryDetailDataViewController.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
+				421BB7E51ECB50FE00CE3429 /* ResetPasswordOperation.swift in Sources */,
 				3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */,
 				4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
@@ -744,6 +757,7 @@
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
 				05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */,
+				421BB7E91ECB539100CE3429 /* ResetPasswordResponseMapper.swift in Sources */,
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
@@ -764,11 +778,13 @@
 				422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
+				421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
 				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
 				4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */,
+				421BB7E71ECB535200CE3429 /* ResetPasswordItem.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
 				424D93D41EC4C85100A4427C /* Button.swift in Sources */,
