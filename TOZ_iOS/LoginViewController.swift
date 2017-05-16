@@ -10,7 +10,6 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailInput: TextInputView!
     @IBOutlet weak var passwordInput: TextInputView!
-    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
 
     var signInOperation: SignInOperation?
@@ -30,7 +29,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if let token = BackendAuth.shared.token {
                         print("Token >\(token)< successfully set for email \(self.emailInput.text)")
                     }
-                    _ = self.navigationController?.popToRootViewController(animated: true)
                 }
             case .failure(let error):
                 DispatchQueue.main.sync {
@@ -57,10 +55,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordInput.placeholder = "Hasło"
         passwordInput.icon = UIImage(named: "passwordIcon.png")
         passwordInput.isTextSecure = true
-
-        loginButton.backgroundColor = Color.LoginViewController.Button.background
-        loginButton.tintColor = Color.LoginViewController.Button.tint
-        loginButton.layer.cornerRadius = 5
 
         errorLabel.alpha = 0
     }
