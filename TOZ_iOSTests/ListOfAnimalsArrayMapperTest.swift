@@ -57,11 +57,12 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testFirstAnimalPublished() {
-        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968)))
+        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
     }
 
     func testFirstAnimalLastModified() {
-        XCTAssertEqual(firstAnimal?.lastModified, 1490134074968)
+        XCTAssertEqual(firstAnimal?.lastModified, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
+
     }
 
     func testFirstAnimalImage() {

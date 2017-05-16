@@ -29,10 +29,8 @@ class NewsTableViewCell: UITableViewCell {
     func configure(with news: NewsItem) {
         titleLabel.text = news.title
         contentTextView.text = news.contents
-        let dateToString = DateFormatter()
-        dateToString.dateFormat = "yyyy-MM-dd"
         if let published = news.published {
-            datePublishedLabel.text = dateToString.string(from: published)
+            datePublishedLabel.text = published.dateToFormattedString()
         }
         self.photoView.photo = nil
         let photoURL: URL? = news.photoUrl
