@@ -16,7 +16,7 @@ final class ResetPasswordRequest: BackendAPIRequest {
     }
 
     var endpoint: String {
-        return "/users/passwordReset"
+        return "/users/emails"
     }
 
     var method: NetworkService.Method {
@@ -25,7 +25,7 @@ final class ResetPasswordRequest: BackendAPIRequest {
 
     var parameters: [String: Any]? {
         return [
-            "email": email,
+            "email": email
         ]
     }
 
