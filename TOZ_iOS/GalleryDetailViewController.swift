@@ -16,11 +16,13 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalCreationDate: UILabel!
     @IBOutlet weak var animalDescription: UITextView!
     @IBOutlet weak var pictureCaption: UILabel!
+    @IBOutlet weak var photosContainer: UIView!
 
     var selectedCellID: String?
     var photoURL: URL?
     var photos: [URL] = []
     var animalOperation: AnimalOperation?
+    var galleryDetailPhotoViewController: GalleryDetailPhotoViewController?
 
     func makeAnimalOperation() {
         if let selectedCellID = selectedCellID {
@@ -32,6 +34,19 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        galleryDetailPhotoViewController = storyboard?.instantiateViewController(withIdentifier: "GalleryDetailPhotoViewController") as? GalleryDetailPhotoViewController
+        if let galleryDetailPhotoViewController = galleryDetailPhotoViewController {
+            addChildViewController(galleryDetailPhotoViewController)
+            galleryDetailPhotoViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            photosContainer.addSubview(galleryDetailPhotoViewController.view)
+            NSLayoutConstraint.activate([
+                galleryDetailPhotoViewController.view.leadingAnchor.constraint(equalTo: photosContainer.leadingAnchor),
+                galleryDetailPhotoViewController.view.trailingAnchor.constraint(equalTo: photosContainer.trailingAnchor),
+                galleryDetailPhotoViewController.view.topAnchor.constraint(equalTo: photosContainer.topAnchor),
+                galleryDetailPhotoViewController.view.bottomAnchor.constraint(equalTo: photosContainer.bottomAnchor)
+                ])
+            galleryDetailPhotoViewController.didMove(toParentViewController: self)
+        }
         makeAnimalOperation()
         getAnimal()
         NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
@@ -41,7 +56,7 @@ class GalleryDetailViewController: UIViewController {
         animalOperation?.resultCompletion = { result in
             switch result {
             case .success(let localAnimal):
-                DispatchQueue.main.async {
+                DispatchQueue.main.sync {
                     self.animalName.text = localAnimal.name
                     self.animalType.text = localAnimal.type
                     self.animalSex.text = localAnimal.sex
@@ -49,28 +64,19 @@ class GalleryDetailViewController: UIViewController {
                     self.animalDescription.text = localAnimal.description
                     // For now if there is a imageURL for the Animal than add it to array of photos.
                     // To be changed when backend starts to return array of urls instead of just one url.
-//                    if let photoURL = localAnimal.imageUrl {
-//                        self.photos.append(photoURL)
-//                    }
-
-                    // Add URL to random photo just to check if it is passed
-                    // forward to GalleryDetailPhotoViewController:
-                    self.photos.append(URL(string: "https://placeimg.com/640/480/animals")!)
-
-                    self.pictureCaption.text = "Zdjęcie 1 / \(self.photos.count)"
+                    if let photoURL = localAnimal.imageUrl {
+                        self.photos.append(photoURL)
+                        self.pictureCaption.text = "Zdjęcie 1 / \(self.photos.count)"
+                    } else {
+                        self.pictureCaption.text = "Brak zdjęcia"
+                    }
+                    self.galleryDetailPhotoViewController?.photos = self.photos
                 }
             case .failure(let error):
                 print ("\(error)")
             }
         }
         animalOperation?.start()
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "profilePhotoSegue" {
-            let galleryDetailPhotoViewController = segue.destination as? GalleryDetailPhotoViewController
-            galleryDetailPhotoViewController?.photos = photos
-        }
     }
 
     func updateCaption(notification: Notification) {
