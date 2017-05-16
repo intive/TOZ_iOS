@@ -11,6 +11,7 @@ import XCTest
 class ListOfAnimalsArrayMapperTest: XCTestCase {
 
     var animalItems: [AnimalItem]?
+    var firstAnimal: AnimalItem?
 
     override func setUp() {
         var responseData: NSData?
@@ -24,23 +25,47 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
             json = try? JSONSerialization.jsonObject(with: responseData as Data, options: [])
         }
         self.animalItems = try? ListOfAnimalsArrayMapper.process(json as AnyObject)
+        firstAnimal = (animalItems?[0])
     }
 
     func testAnimalsCount() {
-        XCTAssertEqual(animalItems?.count, 1)
+        XCTAssertEqual(animalItems?.count, 4)
     }
 
-    func testListOfAnimalsArrayMapper() {
-        let firstAnimal = self.animalItems?.first
+    func testFirstAnimalID() {
         XCTAssertEqual(firstAnimal?.animalID, "c5296892-347f-4b2e-b1c6-6faff971f767")
-        XCTAssertEqual(firstAnimal?.name, "Burek")
-        XCTAssertEqual(firstAnimal?.type, "DOG")
-        XCTAssertEqual(firstAnimal?.sex, "MALE")
-        XCTAssertEqual(firstAnimal?.description, "Jamnik niskopodłogowy")
-        XCTAssertEqual(firstAnimal?.address, "Most cłowy")
-        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
-        XCTAssertEqual(firstAnimal?.lastModified, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
-        XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("storage/a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg"))
     }
 
+    func testFirstAnimalName() {
+        XCTAssertEqual(firstAnimal?.name, "PIORUN")
+    }
+
+    func testFirstAnimalType() {
+        XCTAssertEqual(firstAnimal?.type, "PIES")
+    }
+
+    func testFirstAnimalSex() {
+        XCTAssertEqual(firstAnimal?.sex, "MALE")
+    }
+
+    func testFirstAnimalDescription() {
+        XCTAssertEqual(firstAnimal?.description, "Jamnik niskopodłogowy")
+    }
+
+    func testFirstAnimalAddress() {
+        XCTAssertEqual(firstAnimal?.address, "Most cłowy")
+    }
+
+    func testFirstAnimalPublished() {
+        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
+    }
+
+    func testFirstAnimalLastModified() {
+        XCTAssertEqual(firstAnimal?.lastModified, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
+
+    }
+
+    func testFirstAnimalImage() {
+                XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("/zMX0Gcf.jpg"))
+    }
 }
