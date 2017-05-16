@@ -38,8 +38,8 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
         XCTAssertEqual(firstAnimal?.sex, "MALE")
         XCTAssertEqual(firstAnimal?.description, "Jamnik niskopodłogowy")
         XCTAssertEqual(firstAnimal?.address, "Most cłowy")
-        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968)))
-        XCTAssertEqual(firstAnimal?.lastModified, 1490134074968)
+        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
+        XCTAssertEqual(firstAnimal?.lastModified, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
         XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("storage/a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg"))
     }
 
