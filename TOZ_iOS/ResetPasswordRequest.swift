@@ -14,7 +14,7 @@ final class ResetPasswordRequest: BackendAPIRequest {
     init(email: String) {
         self.email = email
     }
-
+//Will be changed when possible
     var endpoint: String {
         return "/users/emails"
     }
