@@ -12,10 +12,10 @@ class SignUpOperation: ServiceOperation {
     
     private let request: SignUpRequest
     
-    init(userID: String, password: String, roles: Array[String], name: String, surname: String,
+    init(userID: String, password: String, roles: [Role], name: String, surname: String,
          phoneNumber: String, email: String, passwordChangeDate: Int) {
-        request = SignUpRequest(userID: userID, password: password, roles: roles, name: name, surname: surname,
-                                phoneNumber: phoneNumber, email: email, passwordChangeDate: passwordChangeDate)
+        request = SignUpRequest(password: password, name: name, surname: surname,
+                                phoneNumber: phoneNumber, email: email)
         super.init()
     }
     

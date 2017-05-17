@@ -9,12 +9,16 @@
 import Foundation
 
 struct SignUpItem: ParsedItem {
-    let userID: String?
-    let password: String
-    let roles: Array[String]?
+    let userID: String
+    let password: String?
+    let roles: [Role]?
     let name: String
-    let surname: String
-    let phoneNumber: String
-    let email: String
+    let surname: String?
+    let phoneNumber: String?
+    let email: String?
     let passwordChangeDate: Int?
+}
+
+enum Role: String {
+    case user
 }

@@ -11,9 +11,9 @@ import Foundation
 final class SignUpResponseMapper: ResponseMapper<SignUpItem>, ResponseMapperProtocol {
     static func process(_ obj: AnyObject?) throws -> SignUpItem {
         return try process(obj, parse: { json in
-            guard let userID = json["id"] as? String? else { return nil }
+            guard let userID = json["id"] as? String else { return nil }
             guard let password = json["password"] as? String else { return nil }
-            guard let roles = json["roles"] as? Array[String]? else { return nil }
+            guard let roles = json["roles"] as? [Role]? else { return nil }
             guard let name = json["name"] as? String else { return nil }
             guard let surname = json["surname"] as? String else { return nil }
             guard let phoneNumber = json["phoneNumber"] as? String else { return nil }
