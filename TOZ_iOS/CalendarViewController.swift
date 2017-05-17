@@ -10,21 +10,45 @@ import Foundation
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var prevButton: UIButton!
-
     @IBOutlet weak var nextButton: UIButton!
-
     @IBOutlet weak var currentDateLabel: UILabel!
-
     var pageController: UIPageViewController!
     var weekPages = [WeekViewController]()
     private var indexPage = 0
+    var reservations: [ReservationItem] = []
+    var calendarHelper = CalendarHelper()
+    var weekScheduleOperation: GetScheduleWeekOperation!
+    var weekdayArray: [WeekdayItem]! {
+        didSet {
+            if weekdayArray.isEmpty {
+                currentDateLabel.text = ""
+            } else {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM"
+                let month = dateFormatter.monthSymbols[Int(weekdayArray[0].month)! - 1]
+                currentDateLabel.text = month + " " + weekdayArray[0].year
+            }
+        }
+    }
 
     @IBAction func nextWeek(_ sender: Any) {
-       pageController.setViewControllers([nextWeekController()], direction: .forward, animated: true)
+        weekdayArray = calendarHelper.nextWeek()
+        retrieveReservationsinWeek()
+
+        let currentWeekController = nextWeekController()
+        currentWeekController.weekdayArray = weekdayArray
+        currentWeekController.reservations = reservations
+        pageController.setViewControllers([currentWeekController], direction: .forward, animated: true)
     }
 
     @IBAction func previousWeek(_ sender: Any) {
-        pageController.setViewControllers([nextWeekController()], direction: .reverse, animated: true)
+        weekdayArray = calendarHelper.previousWeek()
+        retrieveReservationsinWeek()
+
+        let currentWeekController = nextWeekController()
+        currentWeekController.weekdayArray = weekdayArray
+        currentWeekController.reservations = reservations
+        pageController.setViewControllers([currentWeekController], direction: .reverse, animated: true)
     }
 
     func nextWeekController() -> WeekViewController {
@@ -45,8 +69,17 @@ class CalendarViewController: UIViewController {
 
         weekPages.append(weekBefore)
         weekPages.append(weekAfter)
+        weekBefore.delegate = self
+        weekAfter.delegate = self
+
+        weekdayArray = calendarHelper.weekdayItemArray()
+        retrieveReservationsinWeek()
+
+        weekBefore.weekdayArray = weekdayArray
+        weekBefore.reservations = reservations
         //set initial view
         pageController.setViewControllers([weekBefore], direction: .forward, animated: true)
+
     }
 
     override func viewDidLayoutSubviews() {
@@ -64,6 +97,27 @@ class CalendarViewController: UIViewController {
         pageController = segue.destination as! UIPageViewController
     }
 
+    func retrieveReservationsinWeek() {
+        weekScheduleOperation = GetScheduleWeekOperation(fromDate: weekdayArray[0].dataLabel, toDate: weekdayArray[6].dataLabel)
+        weekScheduleOperation.resultCompletion = { result in
+            switch result {
+            case .success(let listOfReservation):
+                DispatchQueue.main.async {
+                    self.reservations = listOfReservation
+                }
+            case .failure(let error):
+                print ("\(error)")
+            }
+        }
+
+        weekScheduleOperation.start()
+    }
+}
+
+extension CalendarViewController: WeekViewControllerDelegate {
+    func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ReservationItem]) {
+        self.reservations = controller.reservations
+    }
 }
 
 extension CalendarViewController: UIPageViewControllerDataSource {
