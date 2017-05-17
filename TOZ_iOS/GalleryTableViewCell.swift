@@ -10,7 +10,6 @@ import UIKit
 
 class GalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var animalImage: ProfilePhotoView!
-    @IBOutlet weak var animalImageWidth: NSLayoutConstraint!
     @IBOutlet weak var animalName: UILabel!
     @IBOutlet weak var animalType: UILabel!
 
@@ -19,7 +18,6 @@ class GalleryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = Color.Cell.Background.secondary
-        animalImageWidth.constant = self.frame.width * 0.375
         animalName.adjustsFontSizeToFitWidth = true
     }
 
