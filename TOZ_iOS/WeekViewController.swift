@@ -17,7 +17,6 @@ class WeekViewController: UIViewController {
     @IBOutlet var scheduleAfternoonLabelCollection: [ScheduleControl]!
     var weekdayArray: [WeekdayItem]!
     var reservations: [ReservationItem] = []
-    var newReservation: ReservationItem!
     weak var delegate: WeekViewControllerDelegate?
 
     @IBAction func didTapScheduleMorningButton(_ sender: ScheduleControl) {
@@ -29,7 +28,7 @@ class WeekViewController: UIViewController {
             let ownerForename = "John"
             let date = weekdayArray[index!]
 
-            let newReservation = ReservationItem(idObject: "111111-347f-4b2e-b1c6-6faff971f767", date: CalendarHelper().date(from: date), timeOfDay: .morning, ownerSurname: ownerSurname, ownerForename: ownerForename)
+            let newReservation = ReservationItem(idObject: "", date: CalendarHelper().date(from: date), timeOfDay: .morning, ownerSurname: ownerSurname, ownerForename: ownerForename)
             let alertController = UIAlertController(title: "Potwierdzasz?", message: "Zarezerwowałeś termin \(date.dataLabel)", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Tak", style: UIAlertActionStyle.default) { (_ : UIAlertAction) -> Void in
                 self.addReservation(add: newReservation, turnOn: self.scheduleMorningLabelCollection[index!])

@@ -22,6 +22,6 @@ struct ReservationItem: ParsedItem {
 extension ReservationItem: Equatable {
 
     static func == (lhs: ReservationItem, rhs: ReservationItem) -> Bool {
-        return lhs.date == rhs.date && lhs.timeOfDay == rhs.timeOfDay && lhs.ownerForename == rhs.ownerForename && lhs.ownerSurname == rhs.ownerSurname && lhs.idObject == rhs.idObject
+        return lhs.date == rhs.date && lhs.timeOfDay == rhs.timeOfDay && lhs.ownerForename == rhs.ownerForename && lhs.ownerSurname == rhs.ownerSurname
     }
 }
