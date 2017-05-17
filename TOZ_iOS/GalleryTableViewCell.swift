@@ -15,6 +15,11 @@ class GalleryTableViewCell: UITableViewCell {
 
     private var animalID: String?
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = Color.Cell.Background.secondary
+    }
+
     func configure(for animal: AnimalItem) {
         animalID = animal.animalID
         self.animalName.text = animal.name

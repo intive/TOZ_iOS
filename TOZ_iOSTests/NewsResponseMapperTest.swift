@@ -10,6 +10,7 @@ import XCTest
 
 class NewsResponseMapperTest: XCTestCase {
     var newsItems: [NewsItem]?
+    var firstNews: NewsItem?
 
     override func setUp() {
         super.setUp()
@@ -25,6 +26,7 @@ class NewsResponseMapperTest: XCTestCase {
         }
 
         self.newsItems = try? NewsResponseMapper.process(json as AnyObject)
+        firstNews = newsItems?.first
 
     }
 
@@ -32,12 +34,19 @@ class NewsResponseMapperTest: XCTestCase {
         XCTAssertEqual(self.newsItems?.count, 4)
     }
 
-    func testNewsResponseMapper() {
-        let firstNews = self.newsItems?[0]
-        XCTAssertEqual(firstNews?.title, "Do oddziału TOZ trafił nowy pies!")
-        XCTAssertEqual(firstNews?.contents, "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych.")
-        XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg"))
-        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1494352543)))
+    func testFirstNewsTitle() {
+        XCTAssertEqual(firstNews?.title, "WITAMY NOWEGO MIESZKAŃCA TOZ!")
     }
 
+    func testFirstNewsContents() {
+        XCTAssertEqual(firstNews?.contents, "Piorun został odnaleziony przy piekarni na ulicy Krzemiennej, gdzie samotnie błąkał się przez kilka godzin.")
+    }
+
+    func testFirstNewsPhotoUrl() {
+        XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("/dIvN5kA.jpg"))
+    }
+
+    func testFirstNewsPublished() {
+        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1222333444555/1000)))
+    }
 }

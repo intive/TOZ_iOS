@@ -29,7 +29,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if let token = BackendAuth.shared.token {
                         print("Token >\(token)< successfully set for email \(self.emailInput.text)")
                     }
-                    _ = self.navigationController?.popToRootViewController(animated: true)
                 }
             case .failure(let error):
                 DispatchQueue.main.sync {
