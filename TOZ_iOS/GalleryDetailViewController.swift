@@ -56,7 +56,7 @@ class GalleryDetailViewController: UIViewController {
         animalOperation?.resultCompletion = { result in
             switch result {
             case .success(let localAnimal):
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
                     self.animalType.text = localAnimal.type
                     self.animalSex.text = localAnimal.sex
@@ -80,7 +80,7 @@ class GalleryDetailViewController: UIViewController {
     }
 
     func updateCaption(notification: Notification) {
-        guard let index = notification.userInfo!["index"] else { return }
+        guard let index = notification.userInfo?["index"] else { return }
         self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
     }
 }
