@@ -10,8 +10,6 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    let options = ["Chcę zostać wolontariuszem", "Chcę zostać domem tymczasowym"]
-
     @IBOutlet weak var firstNameInput: TextInputView!
     @IBOutlet weak var surnameInput: TextInputView!
     @IBOutlet weak var emailInput: TextInputView!
@@ -26,12 +24,7 @@ class SignUpViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-//    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "unwindToLoginView", sender: self)
-//    }
 
     func configureView() {
         self.view.backgroundColor = Color.SignUpViewController.background
@@ -50,14 +43,4 @@ class SignUpViewController: UIViewController {
         emailInput.placeholder = " E-mail..."
         phoneNumberInput.placeholder = " Numer telefonu..."
     }
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
