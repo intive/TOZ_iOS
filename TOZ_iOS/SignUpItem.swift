@@ -9,12 +9,12 @@
 import Foundation
 
 struct SignUpItem: ParsedItem {
-    let userID: String
+    let userID: String?
     let password: String
-    let roles: Array<String>
+    let roles: Array[String]?
     let name: String
     let surname: String
     let phoneNumber: String
     let email: String
-    let passwordChangeDate: Int
+    let passwordChangeDate: Int?
 }
