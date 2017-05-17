@@ -34,8 +34,19 @@ class CalendarViewController: UIViewController {
         return weekPages[indexPage]
     }
 
+    func doubleClick() {
+        // swiftlint:disable:next force_cast
+        //let listVC: ListViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController ") as! ListViewController
+        let listVC = ListViewController()
+        self.show(listVC, sender: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        var tap = UITapGestureRecognizer(target: self, action: #selector(doubleClick))
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
 
         pageController.dataSource = self
         // swiftlint:disable:next force_cast
