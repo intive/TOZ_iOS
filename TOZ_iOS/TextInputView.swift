@@ -26,7 +26,6 @@ protocol TextChecker {
 fileprivate struct TextInputViewDimensions {
     static let margin: CGFloat = 0
     static let offset: CGFloat = 4
-    static let textFieldHeight: CGFloat = 40
     static let labelHeight: CGFloat = 14
 }
 
@@ -103,7 +102,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
         self.textField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -TextInputViewDimensions.margin).isActive = true
         self.textField.topAnchor.constraint(equalTo: self.topAnchor, constant: TextInputViewDimensions.offset).isActive = true
-        self.textField.heightAnchor.constraint(equalToConstant: TextInputViewDimensions.textFieldHeight).isActive = true
+        self.textField.heightAnchor.constraint(equalToConstant: self.frame.width/6.92).isActive = true
 
         self.label.translatesAutoresizingMaskIntoConstraints = false
         self.label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
