@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--NewsViewController-->
         <scene sceneID="Ic6-uI-xWc">
             <objects>
-                <viewController title="News" id="LDg-fo-A5n" userLabel="NewsViewController" customClass="NewsViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News" automaticallyAdjustsScrollViewInsets="NO" id="LDg-fo-A5n" userLabel="NewsViewController" customClass="NewsViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s1P-l8-cHA"/>
                         <viewControllerLayoutGuide type="bottom" id="nFv-2U-hRa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OtT-de-cLq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="OtT-de-cLq">
+                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="295" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-Cs-XT6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news_cell" rowHeight="295" id="Znj-NZ-fK1" customClass="NewsTableViewCell" customModule="TOZ_iOS" customModuleProvider="target">
@@ -33,7 +33,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-Ec-P3M" customClass="NewsCellContentView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="2" width="406" height="302"/>
+                                                    <rect key="frame" x="4" y="2" width="406" height="291"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-ju-0dy">
                                                             <rect key="frame" x="19" y="28" width="368" height="18"/>
@@ -59,8 +59,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Content Text View" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ajI-rK-Bzh">
-                                                            <rect key="frame" x="19" y="222" width="368" height="51"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <rect key="frame" x="19" y="222" width="368" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
@@ -103,7 +102,7 @@
                                                 <constraint firstItem="I0b-Ec-P3M" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="4" id="8Nh-6h-1gq"/>
                                                 <constraint firstItem="I0b-Ec-P3M" firstAttribute="top" secondItem="3jV-sR-T6U" secondAttribute="top" constant="2" id="FSV-88-dL2"/>
                                                 <constraint firstAttribute="trailing" secondItem="I0b-Ec-P3M" secondAttribute="trailing" constant="4" id="Whq-rf-uUW"/>
-                                                <constraint firstAttribute="bottom" secondItem="I0b-Ec-P3M" secondAttribute="bottom" constant="-9" id="hZy-t8-eJi"/>
+                                                <constraint firstAttribute="bottom" secondItem="I0b-Ec-P3M" secondAttribute="bottom" constant="2" id="hZy-t8-eJi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -123,14 +122,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="bottom" secondItem="nFv-2U-hRa" secondAttribute="top" id="4oF-yd-7pc"/>
-                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="leading" secondItem="OtT-de-cLq" secondAttribute="leading" id="FVQ-K0-7al"/>
-                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="top" secondItem="s1P-l8-cHA" secondAttribute="bottom" constant="-64" id="HLT-Si-Mpo"/>
-                            <constraint firstAttribute="trailing" secondItem="pwZ-Cs-XT6" secondAttribute="trailing" id="Jzw-GT-AH4"/>
+                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="leading" secondItem="OtT-de-cLq" secondAttribute="leading" id="Lgs-8K-Hjm"/>
+                            <constraint firstAttribute="trailing" secondItem="pwZ-Cs-XT6" secondAttribute="trailing" id="OV2-8G-Dww"/>
+                            <constraint firstItem="nFv-2U-hRa" firstAttribute="top" secondItem="pwZ-Cs-XT6" secondAttribute="bottom" id="UsA-WV-nBw"/>
+                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="top" secondItem="OtT-de-cLq" secondAttribute="top" id="Wy1-ev-nkH"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="AKTUALNOŚCI" id="ZFa-T7-Dm2">
                         <barButtonItem key="backBarButtonItem" title="Powrót" id="W5K-ee-erm"/>
                     </navigationItem>
