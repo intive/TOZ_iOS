@@ -1,0 +1,19 @@
+//
+//  NewsCellContentView.swift.swift
+//  TOZ_iOS
+//
+//  Copyright © 2017 intive. All rights reserved.
+//
+
+import UIKit
+
+class NewsCellContentView: UIView {
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var readMoreLabel: UILabel!
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let exclusionPath = UIBezierPath(rect: readMoreLabel.convert(readMoreLabel.bounds, to: contentTextView))
+        contentTextView.textContainer.exclusionPaths = [exclusionPath]
+    }
+}

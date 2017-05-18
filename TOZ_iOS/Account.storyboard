@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -136,15 +136,6 @@
                                     <constraint firstAttribute="height" constant="50" id="W3d-Zf-Rsn"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67A-dD-ESX" userLabel="organizationLabel">
-                                <rect key="frame" x="20" y="164" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="mpV-yg-xUE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-ag-GnF" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="369" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,13 +160,22 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logowanie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67A-dD-ESX" userLabel="organizationLabel">
+                                <rect key="frame" x="20" y="186" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mpV-yg-xUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="By7-hq-OoG" firstAttribute="top" secondItem="Cfk-ag-GnF" secondAttribute="bottom" constant="8" id="2zM-aB-UIS"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="height" secondItem="XbY-uz-MiS" secondAttribute="height" id="JMN-jx-Gka"/>
                             <constraint firstItem="67A-dD-ESX" firstAttribute="trailing" secondItem="Ig1-bU-lAn" secondAttribute="trailingMargin" id="JqB-iM-kK2"/>
-                            <constraint firstItem="67A-dD-ESX" firstAttribute="top" secondItem="yG0-uy-QTV" secondAttribute="bottom" constant="100" id="W8g-tX-371"/>
+                            <constraint firstItem="67A-dD-ESX" firstAttribute="top" secondItem="yG0-uy-QTV" secondAttribute="bottom" constant="122" id="W8g-tX-371"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="trailing" secondItem="XbY-uz-MiS" secondAttribute="trailing" id="aH2-SG-Nhm"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="top" secondItem="XbY-uz-MiS" secondAttribute="bottom" constant="5" id="c1C-OT-ivk"/>
                             <constraint firstAttribute="trailing" secondItem="XbY-uz-MiS" secondAttribute="trailing" constant="40" id="fHz-Gk-Ppl"/>
@@ -183,7 +183,7 @@
                             <constraint firstItem="By7-hq-OoG" firstAttribute="leading" secondItem="Cfk-ag-GnF" secondAttribute="leading" id="ktb-fN-wih"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="leading" secondItem="XbY-uz-MiS" secondAttribute="leading" id="ocS-9j-odV"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="leading" secondItem="lLb-uF-i8u" secondAttribute="leading" id="pvq-uw-fCz"/>
-                            <constraint firstItem="XbY-uz-MiS" firstAttribute="top" secondItem="67A-dD-ESX" secondAttribute="bottom" constant="30" id="uvl-GA-qGk"/>
+                            <constraint firstItem="XbY-uz-MiS" firstAttribute="top" secondItem="67A-dD-ESX" secondAttribute="bottom" constant="8" id="uvl-GA-qGk"/>
                             <constraint firstItem="XbY-uz-MiS" firstAttribute="leading" secondItem="Ig1-bU-lAn" secondAttribute="leading" constant="40" id="van-b9-OYe"/>
                             <constraint firstItem="By7-hq-OoG" firstAttribute="trailing" secondItem="Cfk-ag-GnF" secondAttribute="trailing" id="wiG-eW-eLl"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="trailing" secondItem="lLb-uF-i8u" secondAttribute="trailing" id="wki-cR-fV7"/>

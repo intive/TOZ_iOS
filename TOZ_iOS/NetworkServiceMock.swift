@@ -24,7 +24,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetNews"
-                    break
                 default:
                     print("Method is not appropriate.")
                 } // organization info request
@@ -32,7 +31,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetOrganizationInfo"
-                    break
                 default:
                     print("Method is not appropriate.")
                 } // animal list request
@@ -40,7 +38,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetAnimals"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }
@@ -48,6 +45,8 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetSchedule"
+                case .POST:
+                    nameOfFile = "AddSchedule"
                     break
                 default:
                     print("Method is not appropriate.")
@@ -56,7 +55,13 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostLogin"
-                    break
+                default:
+                    print("Method is not appropriate.")
+                }
+            } else if url.path == "/users/passwords" {
+                switch method {
+                case .POST:
+                    nameOfFile = "PostChangePassword"
                 default:
                     print("Method is not appropriate.")
                 }
@@ -64,7 +69,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostRegistration"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-Se-TZn" userLabel="HelpVolunteerView">
                                 <rect key="frame" x="12" y="12" width="296" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZOSTAŃ WOLONTARIUSZEM TOZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-Ea-gQz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZOSTAŃ WOLONTARIUSZEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-Ea-gQz">
                                         <rect key="frame" x="0.0" y="170" width="296" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="rwO-TX-Asn"/>
@@ -58,7 +58,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAa-oT-tIt" userLabel="HelpFinanceView">
                                 <rect key="frame" x="12" y="227" width="296" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WESPRZYJ TOZ FINANSOWO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-ST-Ptc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WESPRZYJ NAS FINANSOWO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-ST-Ptc">
                                         <rect key="frame" x="0.0" y="170" width="296" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="XLh-TG-9I3"/>
@@ -101,7 +101,7 @@
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="bottom" constant="15" id="xNC-Q0-Tkw"/>
                         </constraints>
                     </scrollView>
-                    <navigationItem key="navigationItem" title="CHCĘ POMÓC TOZ!" id="rEs-6D-MYl"/>
+                    <navigationItem key="navigationItem" title="CHCĘ POMÓC!" id="rEs-6D-MYl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="helpFinanceView" destination="UAa-oT-tIt" id="62W-jX-mQW"/>
@@ -285,15 +285,6 @@ ul. Przykładowa 12
                                     <constraint firstAttribute="height" constant="50" id="RlI-Dk-4Av"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yJ-br-VI7" userLabel="organizationLabel">
-                                <rect key="frame" x="16" y="120" width="288" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="bjr-9K-zmX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J18-my-cxj" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="325" width="240" height="40"/>
                                 <constraints>
@@ -317,6 +308,7 @@ ul. Przykładowa 12
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZV-F3-IoI" userLabel="signUpButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
                                 <rect key="frame" x="40" y="411" width="240" height="40"/>
                                 <constraints>
@@ -328,6 +320,17 @@ ul. Przykładowa 12
                                     <segue destination="uLl-Q8-tE1" kind="show" id="opG-9P-OB6"/>
                                 </connections>
                             </button>
+
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logowanie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yJ-br-VI7" userLabel="organizationLabel">
+                                <rect key="frame" x="16" y="142" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bjr-9K-zmX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -337,10 +340,12 @@ ul. Przykładowa 12
                             <constraint firstItem="yI4-Jz-gyM" firstAttribute="leading" secondItem="osC-rQ-mq9" secondAttribute="leading" constant="40" id="6aU-x7-MEC"/>
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="leading" secondItem="osC-rQ-mq9" secondAttribute="leadingMargin" id="Aga-Qo-UTT"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="height" secondItem="yI4-Jz-gyM" secondAttribute="height" id="Bh1-DP-i41"/>
+
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="top" secondItem="Jr2-tX-50p" secondAttribute="bottom" constant="100" id="Bpy-fs-xk9"/>
                             <constraint firstItem="yI4-Jz-gyM" firstAttribute="top" secondItem="2yJ-br-VI7" secondAttribute="bottom" constant="30" id="J19-qU-zGq"/>
                             <constraint firstItem="DZV-F3-IoI" firstAttribute="top" secondItem="sl0-vm-Z13" secondAttribute="bottom" constant="8" id="Nmy-U6-kyB"/>
                             <constraint firstItem="DZV-F3-IoI" firstAttribute="trailing" secondItem="J18-my-cxj" secondAttribute="trailing" id="Rci-pV-gMn"/>
+
                             <constraint firstAttribute="trailing" secondItem="yI4-Jz-gyM" secondAttribute="trailing" constant="40" id="SGP-Ah-ne8"/>
                             <constraint firstItem="c8I-ly-sUd" firstAttribute="leading" secondItem="yI4-Jz-gyM" secondAttribute="leading" id="SI4-3F-YYv"/>
                             <constraint firstItem="2yJ-br-VI7" firstAttribute="trailing" secondItem="osC-rQ-mq9" secondAttribute="trailingMargin" id="WYh-K2-c4j"/>
