@@ -24,6 +24,7 @@ struct Color {
         }
         struct Label {
             static let error = UIColor.red
+            static let success = UIColor.green
         }
     }
 
