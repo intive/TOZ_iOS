@@ -225,7 +225,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-xJ-hW4" userLabel="Divider">
-                                        <rect key="frame" x="12" y="465" width="351" height="1"/>
+                                        <rect key="frame" x="12" y="479" width="351" height="1"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="yrY-zu-Crj"/>
@@ -245,7 +245,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="brak" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70I-WD-RE9">
-                                        <rect key="frame" x="40" y="369" width="295" height="88"/>
+                                        <rect key="frame" x="40" y="369" width="295" height="102"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -257,7 +257,7 @@
                                     <constraint firstItem="70I-WD-RE9" firstAttribute="top" secondItem="OBG-eT-noo" secondAttribute="bottom" constant="8" id="3Ki-k1-T2C"/>
                                     <constraint firstItem="azC-3z-2nj" firstAttribute="trailing" secondItem="SIu-4K-vka" secondAttribute="trailing" id="4IZ-CX-2YP"/>
                                     <constraint firstItem="cWk-DY-oSP" firstAttribute="top" secondItem="aTI-77-iyz" secondAttribute="top" id="978-uD-sAO"/>
-                                    <constraint firstAttribute="bottom" secondItem="uZB-xJ-hW4" secondAttribute="bottom" constant="34" id="C4D-jP-oQV"/>
+                                    <constraint firstAttribute="bottom" secondItem="uZB-xJ-hW4" secondAttribute="bottom" constant="20" id="C4D-jP-oQV"/>
                                     <constraint firstItem="MIV-WZ-UTn" firstAttribute="top" secondItem="axX-nC-BLg" secondAttribute="bottom" constant="12" id="Dt8-g2-co5"/>
                                     <constraint firstItem="53a-qd-whS" firstAttribute="top" secondItem="MIV-WZ-UTn" secondAttribute="top" id="EDG-TZ-9WR"/>
                                     <constraint firstItem="EL0-GC-faf" firstAttribute="bottom" secondItem="cWk-DY-oSP" secondAttribute="bottom" id="IBa-b3-4kj"/>
