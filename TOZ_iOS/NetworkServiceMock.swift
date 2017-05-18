@@ -41,10 +41,13 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 }
-            } else if url.path == "/schedule" && method != .POST {
+            } else if url.path == "/schedule" {
                 switch method {
                 case .GET:
                     nameOfFile = "GetSchedule"
+                case .POST:
+                    nameOfFile = "AddSchedule"
+                    break
                 default:
                     print("Method is not appropriate.")
                 }
@@ -66,14 +69,6 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .POST:
                     nameOfFile = "PostRegistration"
-                default:
-                    print("Method is not appropriate.")
-                }
-            } else if url.path == "/schedule" {
-                switch method {
-                case .POST:
-                    nameOfFile = "AddSchedule"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }

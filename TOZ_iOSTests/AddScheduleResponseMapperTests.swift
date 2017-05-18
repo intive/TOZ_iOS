@@ -30,7 +30,8 @@ class AddScheduleResponseMapperTests: XCTestCase {
         XCTAssertEqual(self.reservationItem?.idObject, "111111-347f-4b2e-b1c6-6faff971f767")
     }
 
-    func testReservationItemTimeOfDay() {        XCTAssertEqual(self.reservationItem?.timeOfDay, TimeOfDay.morning)
+    func testReservationItemTimeOfDay() {
+        XCTAssertEqual(self.reservationItem?.timeOfDay, TimeOfDay.morning)
     }
 
     func testReservationItemDate() {
