@@ -13,7 +13,6 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalName: UILabel!
     @IBOutlet weak var animalType: UILabel!
     @IBOutlet weak var animalSex: UILabel!
-    @IBOutlet weak var animalCreationDate: UILabel!
     @IBOutlet weak var animalDescription: UITextView!
     @IBOutlet weak var pictureCaption: UILabel!
     @IBOutlet weak var photosContainer: UIView!
@@ -56,11 +55,10 @@ class GalleryDetailViewController: UIViewController {
         animalOperation?.resultCompletion = { result in
             switch result {
             case .success(let localAnimal):
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
                     self.animalType.text = localAnimal.type
                     self.animalSex.text = localAnimal.sex
-                    self.animalCreationDate.text = localAnimal.created?.dateToFormattedString()
                     self.animalDescription.text = localAnimal.description
                     // For now if there is a imageURL for the Animal than add it to array of photos.
                     // To be changed when backend starts to return array of urls instead of just one url.
@@ -80,7 +78,7 @@ class GalleryDetailViewController: UIViewController {
     }
 
     func updateCaption(notification: Notification) {
-        guard let index = notification.userInfo!["index"] else { return }
+        guard let index = notification.userInfo?["index"] else { return }
         self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
     }
 }
