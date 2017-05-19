@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="s1P-l8-cHA"/>
                         <viewControllerLayoutGuide type="bottom" id="nFv-2U-hRa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="OtT-de-cLq">
+                    <view key="view" contentMode="scaleToFill" id="OtT-de-cLq">
                         <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -147,7 +147,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="5Rb-gm-0Lh">
             <objects>
-                <viewController storyboardIdentifier="NewsDetailViewController" id="QIr-6d-S0g" customClass="NewsDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="QIr-6d-S0g" customClass="NewsDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mL5-VE-uXX"/>
                         <viewControllerLayoutGuide type="bottom" id="t8m-8W-cGz"/>
