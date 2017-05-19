@@ -7,19 +7,20 @@
 
 import Foundation
 
+let mockBackend = false
+
 extension Notification.Name {
     static let didPerformUnauthorizedOperation = Notification.Name("DidPerformUnauthorizedOperation")
 }
 
 /**
-Class that takes requests (*Request objects) related to the backend.
-Tries to serialize the response data to json.
-*/
+ Class that takes requests (*Request objects) related to the backend.
+ Tries to serialize the response data to json.
+ */
 class BackendService {
 
     private let conf: BackendConfiguration
-    private let service = NetworkService() // commented in order to run NetworkServiceMock
-//    private let service = NetworkServiceMock() // test of NetworkService
+    private let service = mockBackend ? NetworkServiceMock() : NetworkService()
 
     init(_ conf: BackendConfiguration) {
         self.conf = conf

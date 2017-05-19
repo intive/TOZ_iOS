@@ -42,12 +42,16 @@ class CalendarHelper {
         return components.date!
     }
 
-    func nextWeek() {
+    func nextWeek() -> [WeekdayItem] {
         currentMonday = calendar.date(byAdding: .weekOfYear, value: 1, to: currentMonday)!
+
+        return weekdayItemArray()
     }
 
-    func previousWeek() {
+    func previousWeek() -> [WeekdayItem] {
         currentMonday = calendar.date(byAdding: .weekOfYear, value: -1, to: currentMonday)!
+
+        return weekdayItemArray()
     }
 
 }

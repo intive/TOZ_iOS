@@ -1,5 +1,5 @@
 //
-//  AddScheduleOperation.swift
+//  ChangePasswordOperation.swift
 //  TOZ_iOS
 //
 //  Copyright © 2017 intive. All rights reserved.
@@ -7,15 +7,17 @@
 
 import Foundation
 
-class AddScheduleOperation: ServiceOperation {
-    private let request: AddScheduleRequest
+class ChangePasswordOperation: ServiceOperation {
 
-    private(set) var result: RequestResult<ReservationItem>?
-    var resultCompletion: ((RequestResult<ReservationItem>) -> Void)?
+    private let request: ChangePasswordRequest
 
-    public init(dataObject: ReservationItem, modificationMessage: String) {
-        self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage)
+    init(oldPassword: String, newPassword: String) {
+        request = ChangePasswordRequest(oldPassword: oldPassword, newPassword: newPassword)
+        super.init()
     }
+
+    private(set) var result: RequestResult<ChangePasswordItem>?
+    var resultCompletion: ((RequestResult<ChangePasswordItem>) -> Void)?
 
     func start() {
         service.request(request, completion: handleResponse)
@@ -25,7 +27,7 @@ class AddScheduleOperation: ServiceOperation {
         switch response {
         case .success(let object):
             do {
-                callCompletion(.success(try GetScheduleResponseMapper.process(object)))
+                callCompletion(.success(try ChangePasswordResponseMapper.process(object)))
             } catch let error {
                 callCompletion(.failure(error))
             }
@@ -34,9 +36,8 @@ class AddScheduleOperation: ServiceOperation {
         }
     }
 
-    func callCompletion(_ result: RequestResult<ReservationItem>) {
+    func callCompletion(_ result: RequestResult<ChangePasswordItem>) {
         self.result = result
         resultCompletion?(result)
     }
-
 }

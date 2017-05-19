@@ -12,6 +12,7 @@
 		052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6E1E9E5154001AE31A /* GetAnimals.json */; };
 		055A624A1EB66D8B006F8C7C /* PostLogin.json in Resources */ = {isa = PBXBuildFile; fileRef = 055A62491EB66D8B006F8C7C /* PostLogin.json */; };
 		05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */; };
+		05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */ = {isa = PBXBuildFile; fileRef = 05E74BF91EC7C4CA006805BB /* PostRegistration.json */; };
 		37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5C1E7F1B7E00336605 /* NewsEntity.swift */; };
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
 		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
@@ -41,6 +42,11 @@
 		4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */; };
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
+		4B1988501EC73A570079460C /* PostChangePassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B19884F1EC73A570079460C /* PostChangePassword.json */; };
+		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
+		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
+		4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */; };
+		4B19884E1EC7368A0079460C /* ChangePasswordResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
 		4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */; };
@@ -64,6 +70,7 @@
 		4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */; };
 		4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */; };
 		4B98B2EE1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */; };
+		4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */; };
 		4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */; };
 		4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98601E7F11E400951035 /* ServiceOperation.swift */; };
 		4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98621E7F129100951035 /* ParsedItem.swift */; };
@@ -71,6 +78,8 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */; };
+		54A2FA661EBA77990020BBAC /* AddSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54A2FA651EBA77990020BBAC /* AddSchedule.json */; };
 		54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */; };
 		54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */; };
 		54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */; };
@@ -93,6 +102,7 @@
 		54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB351EA2CFD600503317 /* WeekDayControl.xib */; };
 		54FBAB381EA2CFE000503317 /* ScheduleControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB371EA2CFE000503317 /* ScheduleControl.swift */; };
 		54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB391EA2D00D00503317 /* ScheduleControl.xib */; };
+		8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */; };
 		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
 		A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */; };
@@ -125,6 +135,7 @@
 		052E3B6E1E9E5154001AE31A /* GetAnimals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAnimals.json; sourceTree = "<group>"; };
 		055A62491EB66D8B006F8C7C /* PostLogin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostLogin.json; sourceTree = "<group>"; };
 		05D430891E9A3AAE00164205 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
+		05E74BF91EC7C4CA006805BB /* PostRegistration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostRegistration.json; sourceTree = "<group>"; };
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37434B5C1E7F1B7E00336605 /* NewsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
 		37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,6 +166,11 @@
 		4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalRequest.swift; sourceTree = "<group>"; };
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
+		4B19884F1EC73A570079460C /* PostChangePassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostChangePassword.json; sourceTree = "<group>"; };
+		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
+		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
+		4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordItem.swift; sourceTree = "<group>"; };
+		4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordResponseMapper.swift; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLengthChecker.swift; sourceTree = "<group>"; };
@@ -178,6 +194,7 @@
 		4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalItem.swift; sourceTree = "<group>"; };
 		4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsOperation.swift; sourceTree = "<group>"; };
 		4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayResponseMapper.swift; sourceTree = "<group>"; };
+		4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoOperation.swift; sourceTree = "<group>"; };
 		4BFF98601E7F11E400951035 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		4BFF98621E7F129100951035 /* ParsedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedItem.swift; sourceTree = "<group>"; };
@@ -185,6 +202,8 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleResponseMapperTests.swift; sourceTree = "<group>"; };
+		54A2FA651EBA77990020BBAC /* AddSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddSchedule.json; sourceTree = "<group>"; };
 		54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleRequest.swift; sourceTree = "<group>"; };
 		54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleOperation.swift; sourceTree = "<group>"; };
@@ -208,6 +227,7 @@
 		54FBAB371EA2CFE000503317 /* ScheduleControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleControl.swift; sourceTree = "<group>"; };
 		54FBAB391EA2D00D00503317 /* ScheduleControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleControl.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellContentView.swift; sourceTree = "<group>"; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,10 +274,13 @@
 			isa = PBXGroup;
 			children = (
 				54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */,
+				54A2FA651EBA77990020BBAC /* AddSchedule.json */,
 				052E3B681E9E4FD9001AE31A /* GetNews.json */,
 				052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */,
 				052E3B6E1E9E5154001AE31A /* GetAnimals.json */,
 				055A62491EB66D8B006F8C7C /* PostLogin.json */,
+				4B19884F1EC73A570079460C /* PostChangePassword.json */,
+				05E74BF91EC7C4CA006805BB /* PostRegistration.json */,
 			);
 			name = MockJSONFiles;
 			sourceTree = "<group>";
@@ -325,6 +348,7 @@
 				4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */,
 				4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */,
 				4B53F4D31EAA5EC600D894F8 /* SignInRequest.swift */,
+				4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */,
 			);
 			name = NetworkRequests;
 			sourceTree = "<group>";
@@ -340,6 +364,7 @@
 				4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */,
 				4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */,
 				4B53F4D91EAA665C00D894F8 /* SignInOperation.swift */,
+				4B1988491EC735290079460C /* ChangePasswordOperation.swift */,
 			);
 			name = NetworkOperations;
 			sourceTree = "<group>";
@@ -352,6 +377,7 @@
 				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
 				4B53F4D51EAA610100D894F8 /* SignInItem.swift */,
+				4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */,
 			);
 			name = NetworkItems;
 			sourceTree = "<group>";
@@ -365,6 +391,7 @@
 				4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */,
 				4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */,
 				4B53F4D71EAA640B00D894F8 /* SignInResponseMapper.swift */,
+				4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */,
 				54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */,
 			);
 			name = NetworkMappers;
@@ -439,6 +466,7 @@
 				4BB31FDB1E84512700D2E6EF /* NetworkMappers */,
 				37434B5C1E7F1B7E00336605 /* NewsEntity.swift */,
 				37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */,
+				8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */,
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
 				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
@@ -457,6 +485,7 @@
 				4B5901E31EAFD54C0050C5BB /* User.swift */,
 				4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */,
 				424D93D31EC4C85100A4427C /* Button.swift */,
+				4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */,
 				420FD4471EAFBC35009AC0E1 /* Account.storyboard */,
 				A1CABBF81E6AEB1F009A06F8 /* Main.storyboard */,
 				CE0BB3A81E9A7127006E23C7 /* News.storyboard */,
@@ -476,6 +505,7 @@
 				54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */,
 				A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */,
 				4B5901DF1EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift */,
+				54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */,
 				42345F681EB78658007CA79E /* NewsResponseMapperTest.swift */,
 				42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */,
 				424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */,
@@ -584,10 +614,13 @@
 				54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */,
 				CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */,
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
+				54A2FA661EBA77990020BBAC /* AddSchedule.json in Resources */,
 				052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */,
 				54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */,
 				420FD4481EAFBC36009AC0E1 /* Account.storyboard in Resources */,
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
+				4B1988501EC73A570079460C /* PostChangePassword.json in Resources */,
+				05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */,
 				055A624A1EB66D8B006F8C7C /* PostLogin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +758,7 @@
 				54BBE18A1EC90535009986E4 /* ListViewController.swift in Sources */,
 				54D139091EA1187B0064BE00 /* AddScheduleOperation.swift in Sources */,
 				3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */,
+				4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */,
 				4B53F4DA1EAA665C00D894F8 /* SignInOperation.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */,
@@ -740,6 +774,7 @@
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
+				8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				54D1390B1EA118BF0064BE00 /* ReservationItem.swift in Sources */,
@@ -750,7 +785,9 @@
 				42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */,
 				54F04A2D1EC1B00000CA9B97 /* WeekdayItem.swift in Sources */,
 				A1CABBF31E6AEB1F009A06F8 /* AppDelegate.swift in Sources */,
+				4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */,
 				37434B631E7F1BAA00336605 /* Color.swift in Sources */,
+				4B19884E1EC7368A0079460C /* ChangePasswordResponseMapper.swift in Sources */,
 				422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
@@ -758,6 +795,7 @@
 				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
+				4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
 				424D93D41EC4C85100A4427C /* Button.swift in Sources */,
@@ -790,6 +828,7 @@
 				4B53F4D41EAA5EC600D894F8 /* SignInRequest.swift in Sources */,
 				422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,
+				4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */,
 				54FBAB341EA2CFCC00503317 /* WeekDayControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,6 +841,7 @@
 				42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */,
 				424D93D21EC2202800A4427C /* Date+ExtensionTests.swift in Sources */,
 				A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */,
+				54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */,
 				54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */,
 				42345F691EB78658007CA79E /* NewsResponseMapperTest.swift in Sources */,
 			);
