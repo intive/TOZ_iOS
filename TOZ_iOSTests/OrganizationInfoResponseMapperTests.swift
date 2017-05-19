@@ -27,15 +27,20 @@ class OrganizationInfoResponseMapperTests: XCTestCase {
     }
 
     func testOrganizationInfoItemHeader() {
-        XCTAssertEqual(self.organizationInfoItem?.header, "Nagłówek")
-        XCTAssertEqual(self.organizationInfoItem?.description, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-        XCTAssertEqual(self.organizationInfoItem?.name, "Fundacja Towarzystwo Pomocy Zwierzętom")
-        XCTAssertEqual(self.organizationInfoItem?.branch, "Oddział FTOZ Szczecin")
-        XCTAssertEqual(self.organizationInfoItem?.addressStreet, "ul. Przykładowa")
-        XCTAssertEqual(self.organizationInfoItem?.addressHouseNumber, "12")
-        XCTAssertEqual(self.organizationInfoItem?.addressPostcode, "71-111")
-        XCTAssertEqual(self.organizationInfoItem?.addressCity, "Szczecin")
-        XCTAssertEqual(self.organizationInfoItem?.bankAccountNumber, "63 1020 4999 0000 9876 5432 1010")
-        XCTAssertEqual(self.organizationInfoItem?.bankAccountBankName, "string")
+        XCTAssertEqual(self.organizationInfoItem?.name, "POZ Szczecin")
+        XCTAssertEqual(self.organizationInfoItem?.invitationText, "Hello to POZ")
+        XCTAssertEqual(self.organizationInfoItem?.volunteerText, "POZ volunteers are people who..")
+        XCTAssertEqual(self.organizationInfoItem?.street, "ul. Przykładowa")
+        XCTAssertEqual(self.organizationInfoItem?.houseNumber, "1")
+        XCTAssertEqual(self.organizationInfoItem?.apartmentNumber, "/1")
+        XCTAssertEqual(self.organizationInfoItem?.postCode, "02-123")
+        XCTAssertEqual(self.organizationInfoItem?.city, "Szczecin")
+        XCTAssertEqual(self.organizationInfoItem?.country, "Polska")
+        XCTAssertEqual(self.organizationInfoItem?.email, "mail@example.com")
+        XCTAssertEqual(self.organizationInfoItem?.phone, "+48123123123")
+        XCTAssertEqual(self.organizationInfoItem?.fax, "+48123123123")
+        XCTAssertEqual(self.organizationInfoItem?.website, "http://example.com/")
+        XCTAssertEqual(self.organizationInfoItem?.accountNumber, "61109010140000071219812874")
+        XCTAssertEqual(self.organizationInfoItem?.bankName, "SuperBank")
     }
 }
