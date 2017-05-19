@@ -7,7 +7,7 @@
 
 import Foundation
 
-let mockBackend = false
+let mockBackend = true
 
 extension Notification.Name {
     static let didPerformUnauthorizedOperation = Notification.Name("DidPerformUnauthorizedOperation")

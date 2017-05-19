@@ -1,5 +1,5 @@
 {
-    "name": "POZ Szczecin",
+    "name": "Fundacja Pomocy Zwierzentom Wszelakim",
     "address": {
         "street": "ul. Przykładowa",
         "houseNumber": "1",
@@ -15,9 +15,9 @@
         "website": "http://example.com/"
     },
     "bankAccount": {
-        "number": "61109010140000071219812874",
+        "number": "61 1090 1014 0000 0712 1981 2874",
         "bankName": "SuperBank"
     },
-    "invitationText": "Hello to POZ",
-    "volunteerText": "POZ volunteers are people who.."
+    "invitationText": "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzentom Wszelakim...",
+    "volunteerText": "Nasi wolontariusze na codzień zajmują się... Dziękujemy za twój wkład"
 }
