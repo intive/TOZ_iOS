@@ -37,6 +37,7 @@ struct Color {
 
     struct Background {
         static let primary = UIColor(red:1.00, green:1.00, blue:1.00, alpha: 1.00)
+        static let secondary = UIColor(red: 224.0/255.0, green: 224.0/255.0, blue: 224.0/255.0, alpha: 1.0)
     }
 
     struct TitleBar {
@@ -98,7 +99,7 @@ struct Color {
     }
 
     struct HelpUIViews {
-        static let background = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.00)
+        static let background = UIColor(red: 224.0/255.0, green: 224.0/255.0, blue: 224.0/255.0, alpha: 1.0)
     }
 
     struct Calendar {

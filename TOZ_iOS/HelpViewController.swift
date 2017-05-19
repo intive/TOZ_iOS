@@ -21,10 +21,5 @@ class HelpViewController: UIViewController {
 
     func configureAsTile(_ UIView: UIView) {
         UIView.backgroundColor = Color.HelpUIViews.background
-        UIView.layer.shadowColor = UIColor.darkGray.cgColor
-        UIView.layer.shadowOffset = CGSize.zero
-        UIView.layer.shadowOpacity = 1
-        UIView.layer.shadowRadius = 3.0
-        UIView.layer.cornerRadius = 3
     }
 }
