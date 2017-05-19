@@ -22,6 +22,11 @@ class ListCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = UIColor.yellow
         //stackView = UIStackView()
         stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        stackView.axis = .horizontal
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .fill
+        stackView.spacing = 5
+        //stackView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(stackView)
 
         dateLabel = UILabel()
@@ -50,7 +55,7 @@ class ListCollectionViewCell: UICollectionViewCell {
     func OnCell(display reservation: ReservationItem) {
         //aaa()
 
-        dateLabel.text = String(describing: reservation.date)
+        dateLabel.text = WeekdayItem(from: reservation.date).dataLabel
         foreNameLabel.text = reservation.ownerForename
         surNameLabel.text = reservation.ownerSurname
 

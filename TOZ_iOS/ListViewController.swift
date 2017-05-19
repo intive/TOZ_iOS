@@ -13,6 +13,8 @@ class ListViewController: UIViewController {
     var collectionView: ListUICollectionView!
     let identifierCell = "Cell"
     var reservations: [ReservationItem] = [ReservationItem(idObject: "111", date: Date(), timeOfDay: .morning, ownerSurname: "W", ownerForename: "D")]
+    var calendarHelper = CalendarHelper()
+    var resultScheduleOperation: GetScheduleWeekOperation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,32 @@ class ListViewController: UIViewController {
 
         collectionView.backgroundColor = UIColor.green
         self.view.addSubview(collectionView)
+        reservations = []
+        retrieveReservationsinRange()
+        print(calendarHelper.rangeDateItemArray())
+    }
+
+    func retrieveReservationsinRange() {
+        let fromDate = WeekdayItem(from: Date()).dataLabel
+        let toDate = WeekdayItem(from: Date()).dataLabel
+        resultScheduleOperation = GetScheduleWeekOperation(fromDate: fromDate, toDate: "2017-05-30")
+        resultScheduleOperation.resultCompletion = { result in
+            switch result {
+            case .success(let listOfReservation):
+                DispatchQueue.main.async {
+                    self.reservations = listOfReservation
+                    self.collectionView.reloadData()
+                    if self.reservations != listOfReservation {
+                        fatalError()
+                    }
+                    print(listOfReservation)
+                }
+            case .failure(let error):
+                print ("\(error)")
+            }
+        }
+
+        resultScheduleOperation.start()
     }
 
 }
@@ -43,7 +71,7 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifierCell, for: indexPath)
         if let cell = cell as? ListCollectionViewCell {
-            cell.OnCell(display: reservations[0])
+            cell.OnCell(display: reservations[indexPath.row])
         }
 
         return cell

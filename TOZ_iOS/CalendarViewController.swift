@@ -68,7 +68,7 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var tap = UITapGestureRecognizer(target: self, action: #selector(doubleClick))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleClick))
         tap.numberOfTapsRequired = 2
         view.addGestureRecognizer(tap)
 
