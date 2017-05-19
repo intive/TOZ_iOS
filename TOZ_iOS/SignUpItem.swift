@@ -20,5 +20,6 @@ struct SignUpItem: ParsedItem {
 }
 
 enum Role: String {
-    case user
+    case TOZ
+    case VOLUNTEER
 }
