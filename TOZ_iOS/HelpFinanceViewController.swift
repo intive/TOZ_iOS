@@ -55,7 +55,7 @@ class HelpFinanceViewController: UIViewController {
                     let bankName = localOrganization.bankName ?? ""
 
                     self.financeDescription.text = description
-                    self.financeInfo.text = localOrganization.name + "\n" + street + " " + houseNumber + apartmentNumber + "\n" + postCode + " " + city
+                    self.financeInfo.text = localOrganization.name + "\n" + postCode + " " + city + "\n" + street + " " + houseNumber + apartmentNumber
                     self.accountNumberAndName.text = localOrganization.accountNumber + "\n" + bankName
                 }
             case .failure(let error):
