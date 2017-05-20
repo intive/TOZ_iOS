@@ -26,7 +26,7 @@ protocol TextChecker {
 fileprivate struct TextInputViewDimensions {
     static let margin: CGFloat = 0
     static let offset: CGFloat = 4
-    static let labelHeight: CGFloat = 14
+    static let labelHeight: CGFloat = 16
 }
 
 @IBDesignable

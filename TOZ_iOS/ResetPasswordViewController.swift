@@ -15,7 +15,6 @@ class ResetPasswordViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = Color.Background.primary
         self.emailInput.placeholder = "E-Mail"
-        self.emailInput.errorString = "Niepoprawny login"
         self.emailInput.textChecker = EmailChecker()
         self.indicatorView.activityIndicatorViewStyle = .whiteLarge
         self.indicatorView.color = Color.Cell.Button.primary
