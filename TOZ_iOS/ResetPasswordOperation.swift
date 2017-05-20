@@ -10,15 +10,14 @@ import Foundation
 class ResetPasswordOperation: ServiceOperation {
 
     private let request: ResetPasswordRequest
-    var resultCompletion: ((_ success: Bool) -> ())?
-
+    var resultCompletion: ((_ success: Bool) -> Void)?
 
     init(email: String) {
         request = ResetPasswordRequest(email: email)
         super.init()
     }
 
-    func start(completion: ((_ success: Bool)->())?) {
+    func start(completion: ((_ success: Bool) -> Void)?) {
         self.resultCompletion = completion
         service.request(request, completion: handleResponse)
     }
