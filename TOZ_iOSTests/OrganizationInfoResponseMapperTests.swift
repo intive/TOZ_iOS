@@ -27,9 +27,9 @@ class OrganizationInfoResponseMapperTests: XCTestCase {
     }
 
     func testOrganizationInfoItemHeader() {
-        XCTAssertEqual(self.organizationInfoItem?.name, "POZ Szczecin")
-        XCTAssertEqual(self.organizationInfoItem?.invitationText, "Hello to POZ")
-        XCTAssertEqual(self.organizationInfoItem?.volunteerText, "POZ volunteers are people who..")
+        XCTAssertEqual(self.organizationInfoItem?.name, "Fundacja Pomocy Zwierzentom Wszelakim")
+        XCTAssertEqual(self.organizationInfoItem?.invitationText, "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzentom Wszelakim...")
+        XCTAssertEqual(self.organizationInfoItem?.volunteerText, "Nasi wolontariusze na codzień zajmują się... Dziękujemy za twój wkład")
         XCTAssertEqual(self.organizationInfoItem?.street, "ul. Przykładowa")
         XCTAssertEqual(self.organizationInfoItem?.houseNumber, "1")
         XCTAssertEqual(self.organizationInfoItem?.apartmentNumber, "/1")
@@ -40,7 +40,7 @@ class OrganizationInfoResponseMapperTests: XCTestCase {
         XCTAssertEqual(self.organizationInfoItem?.phone, "+48123123123")
         XCTAssertEqual(self.organizationInfoItem?.fax, "+48123123123")
         XCTAssertEqual(self.organizationInfoItem?.website, "http://example.com/")
-        XCTAssertEqual(self.organizationInfoItem?.accountNumber, "61109010140000071219812874")
+        XCTAssertEqual(self.organizationInfoItem?.accountNumber, "61 1090 1014 0000 0712 1981 2874")
         XCTAssertEqual(self.organizationInfoItem?.bankName, "SuperBank")
     }
 }
