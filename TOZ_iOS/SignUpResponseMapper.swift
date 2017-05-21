@@ -13,13 +13,20 @@ final class SignUpResponseMapper: ResponseMapper<SignUpItem>, ResponseMapperProt
         return try process(obj, parse: { json in
             guard let userID = json["id"] as? String else { return nil }
             guard let password = json["password"] as? String else { return nil }
-            guard let roles = json["roles"] as? [Role]? else { return nil }
+            guard let roles = json["roles"] as? [String]? else { return nil }
             guard let name = json["name"] as? String else { return nil }
             guard let surname = json["surname"] as? String else { return nil }
             guard let phoneNumber = json["phoneNumber"] as? String else { return nil }
             guard let email = json["email"] as? String else { return nil }
             guard let passwordChangeDate = json["passwordChangeDate"] as? Int? else { return nil }
-            return SignUpItem(userID: userID, password: password, roles: roles, name: name, surname: surname, phoneNumber: phoneNumber, email: email, passwordChangeDate: passwordChangeDate)
+            var role: [Role] = []
+            var i = 0
+            if let roles = roles {
+                for r in roles {
+                    role.append(Role(rawValue: r))
+                }
+            }
+            return SignUpItem(userID: userID, password: password, roles: role, name: name, surname: surname, phoneNumber: phoneNumber, email: email, passwordChangeDate: passwordChangeDate)
         })
     }
 }

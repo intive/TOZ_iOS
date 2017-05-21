@@ -1,42 +1,43 @@
- [
-  {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "title": "Do oddziału TOZ trafił nowy pies!",
-  "contents": "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych.",
-  "type": "RELEASED",
-  "photoUrl": "storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg",
-  "created": 1494352543,
-  "lastModified": 1222333444555,
-  "published": 1494352543
-  },
-  {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f768",
-  "title": "Do oddziału TOZ trafił nowy kot!",
-  "contents": "random text",
-  "type": "RELEASED",
-  "photoUrl": "storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg",
-  "created": 1493661435,
-  "lastModified": 1222333444555,
-  "published": 1493661435
-  },
-  {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "title": "Do oddziału TOZ trafił nowy pies!",
-  "contents": "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych.",
-  "type": "RELEASED",
-  "photoUrl": "storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg",
-  "created": 1483293435,
-  "lastModified": 1222333444555,
-  "published": 1483293435
-  },
-  {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "title": "Do oddziału TOZ trafił nowy pies!",
-  "contents": "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych.",
-  "type": "RELEASED",
-  "photoUrl": "storage/a9/2c/a92ccd6a-f51c-4ff0-8645-02adff409051.jpg",
-  "created": 1488736635,
-  "lastModified": 1222333444555,
-  "published": 1488736635
-  }
-  ]
+[
+ {
+ "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+ "title": "WITAMY NOWEGO MIESZKAŃCA TOZ!",
+ "contents": "Piorun został odnaleziony przy piekarni na ulicy Krzemiennej, gdzie samotnie błąkał się przez kilka godzin.",
+ "type": "RELEASED",
+ "photoUrl": "/dIvN5kA.jpg",
+ "created": 1494982035420,
+ "lastModified": 1494982035420,
+ "published": 1494982035420
+ },
+ {
+ "id": "c5296892-347f-4b2e-b1c6-6faff971f768",
+ "title": "BUDA DLA BURKA",
+ "contents": "W tym tygodniu przekazano do siedziby TOZ trzy budy dla naszych zwierzaków. Bardzo dziękujemy naszym darczyńcom.",
+ "type": "RELEASED",
+ "photoUrl": "/yVA5KBE.jpg",
+ "created": 1494751035420,
+ "lastModified": 1494751035420,
+ "published": 1494751035420
+ },
+ {
+ "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+ "title": "KARMA DLA PSIAKA",
+ "contents": "Szkoła podstawowa nr 49 przekazała karmę dla psów. Dziękujemy serdecznie Pani Ani Nowak za przeprowadzenie zbiórki.",
+ "type": "RELEASED",
+ "photoUrl": "/bmbQayB.jpg",
+ "created": 1494651035420,
+ "lastModified": 1494651035420,
+ "published": 1494651035420
+ },
+ {
+ "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+ "title": "DO ODZIAŁU TRAFIŁ NOWY PIES!",
+ "contents": "Dzisiaj do naszej placówki w Szczecinie trafił nowy pies. Nazywa się Reksio i jest dwuletnim jamnikiem. Został znaleziony w pobliżu ogrodów działkowych ",
+ "type": "RELEASED",
+ "photoUrl": "/JAXFl6B.jpg",
+ "created": 1494351035420,
+ "lastModified": 1494351035420,
+ "published": 1494351035420
+ }
+ ]
+
