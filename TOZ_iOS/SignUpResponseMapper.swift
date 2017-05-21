@@ -20,10 +20,12 @@ final class SignUpResponseMapper: ResponseMapper<SignUpItem>, ResponseMapperProt
             guard let email = json["email"] as? String else { return nil }
             guard let passwordChangeDate = json["passwordChangeDate"] as? Int? else { return nil }
             var role: [Role] = []
-            var i = 0
             if let roles = roles {
                 for r in roles {
-                    role.append(Role(rawValue: r))
+                    guard let singleRole = Role(rawValue: r) else {
+                        continue
+                    }
+                    role.append(singleRole)
                 }
             }
             return SignUpItem(userID: userID, password: password, roles: role, name: name, surname: surname, phoneNumber: phoneNumber, email: email, passwordChangeDate: passwordChangeDate)
