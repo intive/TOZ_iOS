@@ -40,4 +40,5 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, Respon
         })
         return reservationsParsed
     }
+
 }

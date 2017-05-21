@@ -49,11 +49,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         emailInput.textChecker = EmailChecker()
         emailInput.placeholder = "Login"
-        emailInput.icon = UIImage(named: "loginIcon.png")
 
         passwordInput.textChecker = TextLengthChecker(charactersLimit: 35)
         passwordInput.placeholder = "Hasło"
-        passwordInput.icon = UIImage(named: "passwordIcon.png")
         passwordInput.isTextSecure = true
 
         errorLabel.alpha = 0

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,13 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axG-bT-WyZ" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="214" width="334" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ua5-KC-aft"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="229" width="334" height="70"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-u2-3lQ" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="329" width="334" height="40"/>
+                                <rect key="frame" x="40" y="386" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Dxv-yM-7JF"/>
@@ -46,19 +43,16 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-96-jMB" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="269" width="334" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3FT-6l-shk"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="304" width="334" height="70"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y05-6a-5Ni" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="134" width="334" height="50"/>
+                                <rect key="frame" x="40" y="134" width="334" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="foc-Pw-ePl"/>
+                                    <constraint firstAttribute="height" constant="70" id="foc-Pw-ePl"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-wK-wI9" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="389" width="334" height="40"/>
+                                <rect key="frame" x="40" y="446" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Wyloguj"/>
                                 <connections>
@@ -69,6 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="Y05-6a-5Ni" secondAttribute="leading" id="1o6-Ou-bfE"/>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="height" secondItem="Y05-6a-5Ni" secondAttribute="height" id="2VM-ok-DcV"/>
                             <constraint firstItem="fbB-wK-wI9" firstAttribute="leading" secondItem="CZh-u2-3lQ" secondAttribute="leading" id="4rp-u5-S6v"/>
                             <constraint firstItem="cLc-96-jMB" firstAttribute="top" secondItem="axG-bT-WyZ" secondAttribute="bottom" constant="5" id="4xV-OO-TDQ"/>
                             <constraint firstItem="cLc-96-jMB" firstAttribute="trailing" secondItem="axG-bT-WyZ" secondAttribute="trailing" id="9ZY-I4-N47"/>
@@ -76,9 +71,10 @@
                             <constraint firstItem="Y05-6a-5Ni" firstAttribute="top" secondItem="F47-So-QJD" secondAttribute="bottom" constant="70" id="HPk-Wt-pUI"/>
                             <constraint firstItem="fbB-wK-wI9" firstAttribute="height" secondItem="CZh-u2-3lQ" secondAttribute="height" id="PIt-hn-f8y"/>
                             <constraint firstItem="CZh-u2-3lQ" firstAttribute="leading" secondItem="cLc-96-jMB" secondAttribute="leading" id="UA6-Gs-By6"/>
-                            <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="30" id="XeH-Fw-IAU"/>
+                            <constraint firstItem="axG-bT-WyZ" firstAttribute="top" secondItem="Y05-6a-5Ni" secondAttribute="bottom" constant="25" id="XeH-Fw-IAU"/>
+                            <constraint firstItem="cLc-96-jMB" firstAttribute="height" secondItem="Y05-6a-5Ni" secondAttribute="height" id="XiM-XD-2au"/>
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" id="Y2N-2c-aFG"/>
-                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="10" id="Zar-Gr-zNI"/>
+                            <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="12" id="Zar-Gr-zNI"/>
                             <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="axG-bT-WyZ" secondAttribute="leading" id="Zxm-og-4M8"/>
                             <constraint firstItem="fbB-wK-wI9" firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" id="ohO-0x-K6l"/>
                             <constraint firstItem="fbB-wK-wI9" firstAttribute="top" secondItem="CZh-u2-3lQ" secondAttribute="bottom" constant="20" id="r26-Ar-Re8"/>
@@ -130,23 +126,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbY-uz-MiS" userLabel="emailInput" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="254" width="334" height="50"/>
+                                <rect key="frame" x="40" y="239" width="334" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="W3d-Zf-Rsn"/>
+                                    <constraint firstAttribute="height" constant="70" id="W3d-Zf-Rsn"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67A-dD-ESX" userLabel="organizationLabel">
-                                <rect key="frame" x="20" y="164" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="mpV-yg-xUE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-ag-GnF" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="369" width="334" height="40"/>
+                                <rect key="frame" x="40" y="396" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HLb-Zv-I7n"/>
@@ -157,16 +144,25 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-uF-i8u" userLabel="passwordInput" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="309" width="334" height="50"/>
+                                <rect key="frame" x="40" y="314" width="334" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="By7-hq-OoG">
-                                <rect key="frame" x="40" y="417" width="334" height="40"/>
+                                <rect key="frame" x="40" y="444" width="334" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Giw-BW-3zu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logowanie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67A-dD-ESX" userLabel="organizationLabel">
+                                <rect key="frame" x="20" y="164" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mpV-yg-xUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -179,11 +175,11 @@
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="trailing" secondItem="XbY-uz-MiS" secondAttribute="trailing" id="aH2-SG-Nhm"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="top" secondItem="XbY-uz-MiS" secondAttribute="bottom" constant="5" id="c1C-OT-ivk"/>
                             <constraint firstAttribute="trailing" secondItem="XbY-uz-MiS" secondAttribute="trailing" constant="40" id="fHz-Gk-Ppl"/>
-                            <constraint firstItem="Cfk-ag-GnF" firstAttribute="top" secondItem="lLb-uF-i8u" secondAttribute="bottom" constant="10" id="ic6-bw-UzW"/>
+                            <constraint firstItem="Cfk-ag-GnF" firstAttribute="top" secondItem="lLb-uF-i8u" secondAttribute="bottom" constant="12" id="ic6-bw-UzW"/>
                             <constraint firstItem="By7-hq-OoG" firstAttribute="leading" secondItem="Cfk-ag-GnF" secondAttribute="leading" id="ktb-fN-wih"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="leading" secondItem="XbY-uz-MiS" secondAttribute="leading" id="ocS-9j-odV"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="leading" secondItem="lLb-uF-i8u" secondAttribute="leading" id="pvq-uw-fCz"/>
-                            <constraint firstItem="XbY-uz-MiS" firstAttribute="top" secondItem="67A-dD-ESX" secondAttribute="bottom" constant="30" id="uvl-GA-qGk"/>
+                            <constraint firstItem="XbY-uz-MiS" firstAttribute="top" secondItem="67A-dD-ESX" secondAttribute="bottom" constant="15" id="uvl-GA-qGk"/>
                             <constraint firstItem="XbY-uz-MiS" firstAttribute="leading" secondItem="Ig1-bU-lAn" secondAttribute="leading" constant="40" id="van-b9-OYe"/>
                             <constraint firstItem="By7-hq-OoG" firstAttribute="trailing" secondItem="Cfk-ag-GnF" secondAttribute="trailing" id="wiG-eW-eLl"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="trailing" secondItem="lLb-uF-i8u" secondAttribute="trailing" id="wki-cR-fV7"/>

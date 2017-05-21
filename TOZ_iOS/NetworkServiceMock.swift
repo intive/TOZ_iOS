@@ -45,6 +45,9 @@ class NetworkServiceMock: NetworkService {
                 switch method {
                 case .GET:
                     nameOfFile = "GetSchedule"
+                case .POST:
+                    nameOfFile = "AddSchedule"
+                    break
                 default:
                     print("Method is not appropriate.")
                 }

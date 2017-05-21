@@ -26,7 +26,7 @@ class NewsResponseMapperTest: XCTestCase {
         }
 
         self.newsItems = try? NewsResponseMapper.process(json as AnyObject)
-        firstNews = (newsItems?[0])
+        firstNews = newsItems?.first
 
     }
 
@@ -35,7 +35,7 @@ class NewsResponseMapperTest: XCTestCase {
     }
 
     func testFirstNewsTitle() {
-        XCTAssertEqual(firstNews?.title, "WITAMY NOWEGO MIESZKAŃCA TOZ!")
+        XCTAssertEqual(firstNews?.title, "WITAMY NOWEGO MIESZKAŃCA!")
     }
 
     func testFirstNewsContents() {
@@ -47,6 +47,6 @@ class NewsResponseMapperTest: XCTestCase {
     }
 
     func testFirstNewsPublished() {
-        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1222333444555)))
+        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1494982035420/1000)))
     }
 }
