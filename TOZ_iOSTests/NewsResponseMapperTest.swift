@@ -35,7 +35,7 @@ class NewsResponseMapperTest: XCTestCase {
     }
 
     func testFirstNewsTitle() {
-        XCTAssertEqual(firstNews?.title, "WITAMY NOWEGO MIESZKAŃCA TOZ!")
+        XCTAssertEqual(firstNews?.title, "WITAMY NOWEGO MIESZKAŃCA!")
     }
 
     func testFirstNewsContents() {

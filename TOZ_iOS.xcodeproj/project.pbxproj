@@ -82,6 +82,8 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */; };
+		54A2FA661EBA77990020BBAC /* AddSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54A2FA651EBA77990020BBAC /* AddSchedule.json */; };
 		54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */; };
 		54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */; };
 		54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */; };
@@ -205,6 +207,8 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleResponseMapperTests.swift; sourceTree = "<group>"; };
+		54A2FA651EBA77990020BBAC /* AddSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddSchedule.json; sourceTree = "<group>"; };
 		54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleRequest.swift; sourceTree = "<group>"; };
 		54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleOperation.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */,
+				54A2FA651EBA77990020BBAC /* AddSchedule.json */,
 				052E3B681E9E4FD9001AE31A /* GetNews.json */,
 				052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */,
 				052E3B6E1E9E5154001AE31A /* GetAnimals.json */,
@@ -495,6 +500,7 @@
 				54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */,
 				A1CABC091E6AEB1F009A06F8 /* TOZ_iOSTests.swift */,
 				4B5901DF1EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift */,
+				54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */,
 				42345F681EB78658007CA79E /* NewsResponseMapperTest.swift */,
 				42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */,
 				424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */,
@@ -603,6 +609,7 @@
 				54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */,
 				CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */,
 				A1CABBFC1E6AEB1F009A06F8 /* Assets.xcassets in Resources */,
+				54A2FA661EBA77990020BBAC /* AddSchedule.json in Resources */,
 				052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */,
 				54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */,
 				420FD4481EAFBC36009AC0E1 /* Account.storyboard in Resources */,
@@ -830,6 +837,7 @@
 				42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */,
 				424D93D21EC2202800A4427C /* Date+ExtensionTests.swift in Sources */,
 				A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */,
+				54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */,
 				54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */,
 				42345F691EB78658007CA79E /* NewsResponseMapperTest.swift in Sources */,
 			);
