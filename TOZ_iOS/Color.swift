@@ -16,10 +16,13 @@ struct Color {
     struct LoginTextView {
         struct TextField {
             static let background = UIColor.white
-            struct BorderShadow {
-                static let passive = UIColor.lightGray.cgColor
-                static let success = UIColor.green.cgColor
-                static let error = UIColor.red.cgColor
+            struct Border {
+                static var active = UIColor(red: 48.0/255.0, green: 157.0/255.0, blue: 239.0/255.0, alpha: 1.0).cgColor
+                static let passive = UIColor(red: 221.0/255.0, green: 221.0/255.0, blue: 221.0/255.0, alpha: 1.0).cgColor
+            }
+            struct Text {
+                static let error = UIColor.red
+                static let regular = UIColor.black
             }
         }
         struct Label {

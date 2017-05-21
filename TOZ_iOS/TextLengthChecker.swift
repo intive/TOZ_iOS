@@ -19,7 +19,7 @@ class TextLengthChecker: TextChecker {
         if text.characters.count == 0 {
             return .Invalid(error: "Pole wymagane")
         } else if text.characters.count > charactersLimit {
-            return .Invalid(error: "Zawartość pola nie powinna przekraczać długości \(charactersLimit) znaków")
+            return .Invalid(error: "Przekroczono limit \(charactersLimit) znaków")
         } else {
             return .Valid
         }

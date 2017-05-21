@@ -36,10 +36,6 @@ class ChangePasswordViewController: UIViewController {
         oldPassword.placeholder = "Stare hasło"
         newPassword.placeholder = "Nowe hasło"
         confirmNewPassword.placeholder = "Powtórz nowe hasło"
-
-        oldPassword.icon = UIImage(named: "passwordIcon.png")
-        newPassword.icon = UIImage(named: "passwordIcon.png")
-        confirmNewPassword.icon = UIImage(named: "passwordIcon.png")
     }
 
     override func viewDidAppear(_ animated: Bool) {
