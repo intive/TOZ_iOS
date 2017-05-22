@@ -18,7 +18,7 @@ final class ChangePasswordRequest: BackendAPIRequest {
     }
 
     var endpoint: String {
-        return "/users/password"
+        return "/users/passwords"
     }
 
     var method: NetworkService.Method {

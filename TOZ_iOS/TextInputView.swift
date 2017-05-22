@@ -16,7 +16,6 @@ enum CheckResult {
         default: return false
         }
     }
-
 }
 
 protocol TextChecker {
@@ -26,8 +25,7 @@ protocol TextChecker {
 fileprivate struct TextInputViewDimensions {
     static let margin: CGFloat = 0
     static let offset: CGFloat = 4
-    static let textFieldHeight: CGFloat = 24
-    static let labelHeight: CGFloat = 20
+    static let labelHeight: CGFloat = 16
 }
 
 @IBDesignable
@@ -78,6 +76,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.delegate = self
         self.textField.addTarget(self, action: #selector(textFieldDidEndEditing), for: UIControlEvents.editingDidEnd)
         self.textField.addTarget(self, action: #selector(textFieldDidEndEditing), for: UIControlEvents.editingDidEndOnExit)
+        self.textField.addTarget(self, action: #selector(textFieldIsEditing), for: UIControlEvents.editingDidBegin)
 
         self.addSubview(textField)
         self.addSubview(label)
@@ -85,14 +84,16 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.label.textColor = Color.LoginTextView.Label.error
         self.label.alpha = 0
         self.label.adjustsFontSizeToFitWidth = true
+        self.label.font = UIFont.systemFont(ofSize: 14)
 
-        self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.passive
-        self.textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
-        self.textField.layer.shadowOpacity = 1.0
+        self.textField.layer.borderWidth = 1.5
+        self.textField.layer.borderColor = Color.LoginTextView.TextField.Border.passive
         self.textField.backgroundColor = Color.LoginTextView.TextField.background
-        self.textField.layer.cornerRadius = 5
-        self.layer.cornerRadius = 5
+        self.textField.layer.cornerRadius = 4
+        self.layer.cornerRadius = 4
+        self.textField.autocapitalizationType = UITextAutocapitalizationType.none
 
+        setLeftPadding()
         setupConstraints()
     }
 
@@ -101,7 +102,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
         self.textField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -TextInputViewDimensions.margin).isActive = true
         self.textField.topAnchor.constraint(equalTo: self.topAnchor, constant: TextInputViewDimensions.offset).isActive = true
-        self.textField.heightAnchor.constraint(equalToConstant: TextInputViewDimensions.textFieldHeight).isActive = true
+        self.textField.heightAnchor.constraint(equalToConstant: self.frame.width/6.92).isActive = true
 
         self.label.translatesAutoresizingMaskIntoConstraints = false
         self.label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: TextInputViewDimensions.margin).isActive = true
@@ -118,32 +119,46 @@ class TextInputView: UIView, UITextFieldDelegate {
                 case .Invalid(error: let errorString):
                     errorLayout()
                     self.label.text = errorString
-
             }
-
         }
     }
 
     private func successLayout() {
-        self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.success
+        self.icon = UIImage(named: "ok")
         self.label.alpha = 0
     }
 
     private func errorLayout() {
-        self.textField.layer.shadowColor = Color.LoginTextView.TextField.BorderShadow.error
         self.label.alpha = 1
+        self.textField.textColor = Color.LoginTextView.TextField.Text.error
+        self.icon = UIImage(named: "questionMark")
     }
 
     func textFieldDidEndEditing() {
         self.label.text = errorString
+        textField.layer.borderColor = Color.LoginTextView.TextField.Border.passive
         checkText()
     }
 
+    func textFieldIsEditing() {
+        textField.placeholder = ""
+        textField.layer.borderColor = Color.LoginTextView.TextField.Border.active
+        self.textField.textColor = Color.LoginTextView.TextField.Text.regular
+
+    }
+
     func addIconToTextField() {
-        self.textField.leftViewMode = UITextFieldViewMode.always
+        self.textField.rightViewMode = UITextFieldViewMode.always
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 16))
         imageView.image = icon
         imageView.contentMode = .scaleAspectFit
-        self.textField.leftView = imageView
+        self.textField.rightView = imageView
+        self.textField.rightView?.isUserInteractionEnabled = false
+    }
+
+    func setLeftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.frame.height))
+        textField.leftView = paddingView
+        textField.leftViewMode = UITextFieldViewMode.always
     }
 }
