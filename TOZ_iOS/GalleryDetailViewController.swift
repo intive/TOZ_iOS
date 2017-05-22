@@ -79,6 +79,10 @@ class GalleryDetailViewController: UIViewController {
 
     func updateCaption(notification: Notification) {
         guard let index = notification.userInfo?["index"] else { return }
-        self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
+        if photos.count > 0 {
+            self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
+        } else {
+            self.pictureCaption.text = "Brak zdjęcia"
+        }
     }
 }
