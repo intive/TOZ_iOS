@@ -16,7 +16,6 @@ enum CheckResult {
         default: return false
         }
     }
-
 }
 
 protocol TextChecker {
@@ -92,6 +91,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.backgroundColor = Color.LoginTextView.TextField.background
         self.textField.layer.cornerRadius = 4
         self.layer.cornerRadius = 4
+        self.textField.autocapitalizationType = UITextAutocapitalizationType.none
 
         setLeftPadding()
         setupConstraints()

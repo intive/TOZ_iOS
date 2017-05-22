@@ -13,6 +13,7 @@ class NewsCellContentView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.backgroundColor = Color.Cell.Background.secondary
         let exclusionPath = UIBezierPath(rect: readMoreLabel.convert(readMoreLabel.bounds, to: contentTextView))
         contentTextView.textContainer.exclusionPaths = [exclusionPath]
     }

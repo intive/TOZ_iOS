@@ -59,9 +59,19 @@
                                     <action selector="signOut:" destination="LMa-bv-mzV" eventType="touchUpInside" id="q76-nf-RP3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server Response" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V96-8L-wFy" userLabel="serverResponse">
+                                <rect key="frame" x="40" y="349" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cm2-jg-hIc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="V96-8L-wFy" firstAttribute="leading" secondItem="CZh-u2-3lQ" secondAttribute="leading" id="1CQ-wS-96x"/>
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="leading" secondItem="Y05-6a-5Ni" secondAttribute="leading" id="1o6-Ou-bfE"/>
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="height" secondItem="Y05-6a-5Ni" secondAttribute="height" id="2VM-ok-DcV"/>
                             <constraint firstItem="fbB-wK-wI9" firstAttribute="leading" secondItem="CZh-u2-3lQ" secondAttribute="leading" id="4rp-u5-S6v"/>
@@ -76,8 +86,10 @@
                             <constraint firstItem="axG-bT-WyZ" firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" id="Y2N-2c-aFG"/>
                             <constraint firstItem="CZh-u2-3lQ" firstAttribute="top" secondItem="cLc-96-jMB" secondAttribute="bottom" constant="12" id="Zar-Gr-zNI"/>
                             <constraint firstItem="cLc-96-jMB" firstAttribute="leading" secondItem="axG-bT-WyZ" secondAttribute="leading" id="Zxm-og-4M8"/>
+                            <constraint firstItem="V96-8L-wFy" firstAttribute="top" secondItem="CZh-u2-3lQ" secondAttribute="bottom" id="hu4-Sc-89H"/>
                             <constraint firstItem="fbB-wK-wI9" firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" id="ohO-0x-K6l"/>
-                            <constraint firstItem="fbB-wK-wI9" firstAttribute="top" secondItem="CZh-u2-3lQ" secondAttribute="bottom" constant="20" id="r26-Ar-Re8"/>
+                            <constraint firstItem="fbB-wK-wI9" firstAttribute="top" secondItem="V96-8L-wFy" secondAttribute="bottom" constant="2" id="qjh-1B-naQ"/>
+                            <constraint firstItem="V96-8L-wFy" firstAttribute="trailing" secondItem="CZh-u2-3lQ" secondAttribute="trailing" id="rtP-ci-EIl"/>
                             <constraint firstItem="Y05-6a-5Ni" firstAttribute="leading" secondItem="07D-Hb-baa" secondAttribute="leading" constant="40" id="xcY-AY-6Bt"/>
                             <constraint firstAttribute="trailing" secondItem="Y05-6a-5Ni" secondAttribute="trailing" constant="40" id="yU9-1G-E6t"/>
                         </constraints>
@@ -87,6 +99,7 @@
                         <outlet property="confirmNewPassword" destination="cLc-96-jMB" id="p14-7h-7LV"/>
                         <outlet property="newPassword" destination="axG-bT-WyZ" id="kZp-Hh-Ybj"/>
                         <outlet property="oldPassword" destination="Y05-6a-5Ni" id="PsA-vT-rBO"/>
+                        <outlet property="serverResponse" destination="V96-8L-wFy" id="JDJ-Ph-TL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzQ-79-CxA" userLabel="First Responder" sceneMemberID="firstResponder"/>

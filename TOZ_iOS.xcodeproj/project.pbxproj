@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05220A041EB3B78400998296 /* SignUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A031EB3B78400998296 /* SignUpItem.swift */; };
+		05220A061EB3B84F00998296 /* SignUpOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A051EB3B84F00998296 /* SignUpOperation.swift */; };
+		05220A081EB3B95500998296 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A071EB3B95500998296 /* SignUpRequest.swift */; };
+		05220A0A1EB3B9F600998296 /* SignUpResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A091EB3B9F600998296 /* SignUpResponseMapper.swift */; };
 		052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B681E9E4FD9001AE31A /* GetNews.json */; };
 		052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */; };
 		052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6E1E9E5154001AE31A /* GetAnimals.json */; };
@@ -26,6 +30,8 @@
 		3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */; };
 		420CD1B41ED0EDC900ACDBC3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */; };
 		420FD4481EAFBC36009AC0E1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420FD4471EAFBC35009AC0E1 /* Account.storyboard */; };
+		421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */; };
+		421BB7ED1ECB637A00CE3429 /* ResetPasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */; };
 		422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761D1EA95A4700C89A03 /* NameChecker.swift */; };
 		422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */; };
 		422D76221EA95A6F00C89A03 /* PhoneNumberChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */; };
@@ -128,6 +134,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05220A031EB3B78400998296 /* SignUpItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpItem.swift; sourceTree = "<group>"; };
+		05220A051EB3B84F00998296 /* SignUpOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOperation.swift; sourceTree = "<group>"; };
+		05220A071EB3B95500998296 /* SignUpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		05220A091EB3B9F600998296 /* SignUpResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpResponseMapper.swift; sourceTree = "<group>"; };
 		052E3B681E9E4FD9001AE31A /* GetNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetNews.json; sourceTree = "<group>"; };
 		052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetOrganizationInfo.json; sourceTree = "<group>"; };
 		052E3B6E1E9E5154001AE31A /* GetAnimals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAnimals.json; sourceTree = "<group>"; };
@@ -148,6 +158,8 @@
 		3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponseMapper.swift; sourceTree = "<group>"; };
 		420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		420FD4471EAFBC35009AC0E1 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
+		421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordOperation.swift; sourceTree = "<group>"; };
 		422D761D1EA95A4700C89A03 /* NameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameChecker.swift; sourceTree = "<group>"; };
 		422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurnameChecker.swift; sourceTree = "<group>"; };
 		422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberChecker.swift; sourceTree = "<group>"; };
@@ -344,7 +356,9 @@
 				4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */,
 				4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */,
 				4B53F4D31EAA5EC600D894F8 /* SignInRequest.swift */,
+				05220A071EB3B95500998296 /* SignUpRequest.swift */,
 				4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */,
+				421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */,
 			);
 			name = NetworkRequests;
 			sourceTree = "<group>";
@@ -360,7 +374,9 @@
 				4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */,
 				4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */,
 				4B53F4D91EAA665C00D894F8 /* SignInOperation.swift */,
+				05220A051EB3B84F00998296 /* SignUpOperation.swift */,
 				4B1988491EC735290079460C /* ChangePasswordOperation.swift */,
+				421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */,
 			);
 			name = NetworkOperations;
 			sourceTree = "<group>";
@@ -373,6 +389,7 @@
 				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
 				4B53F4D51EAA610100D894F8 /* SignInItem.swift */,
+				05220A031EB3B78400998296 /* SignUpItem.swift */,
 				4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */,
 			);
 			name = NetworkItems;
@@ -389,6 +406,7 @@
 				4B53F4D71EAA640B00D894F8 /* SignInResponseMapper.swift */,
 				4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */,
 				54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */,
+				05220A091EB3B9F600998296 /* SignUpResponseMapper.swift */,
 			);
 			name = NetworkMappers;
 			sourceTree = "<group>";
@@ -737,6 +755,7 @@
 				4B5EBAD21EA2A7740015663C /* GalleryDetailDataViewController.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
+				421BB7ED1ECB637A00CE3429 /* ResetPasswordOperation.swift in Sources */,
 				3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */,
 				4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
@@ -757,8 +776,10 @@
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
+				05220A061EB3B84F00998296 /* SignUpOperation.swift in Sources */,
 				8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
+				05220A041EB3B78400998296 /* SignUpItem.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				54D1390B1EA118BF0064BE00 /* ReservationItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
@@ -774,10 +795,12 @@
 				422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
+				421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
 				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
+				05220A081EB3B95500998296 /* SignUpRequest.swift in Sources */,
 				4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
@@ -809,6 +832,7 @@
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
 				4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */,
 				42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */,
+				05220A0A1EB3B9F600998296 /* SignUpResponseMapper.swift in Sources */,
 				4B53F4D41EAA5EC600D894F8 /* SignInRequest.swift in Sources */,
 				422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,
