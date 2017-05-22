@@ -9,13 +9,13 @@
 import Foundation
 
 final class SignUpRequest: BackendAPIRequest {
-    
+
     private let password: String
     private let name: String
     private let surname: String
     private let phoneNumber: String
     private let email: String
-    
+
     init(password: String, name: String, surname: String,
          phoneNumber: String, email: String) {
         self.password = password
