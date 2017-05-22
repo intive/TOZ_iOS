@@ -27,11 +27,13 @@ class ResetPasswordViewController: UIViewController {
             let resetPassword = ResetPasswordOperation(email: self.emailInput.text)
             self.indicatorView.startAnimating()
             resetPassword.start { success in
-                self.indicatorView.stopAnimating()
-                if success == false {
-                    let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.indicatorView.stopAnimating()
+                    if success == false {
+                        let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
                 }
             }
         }
