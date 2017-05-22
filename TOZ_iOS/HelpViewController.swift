@@ -15,11 +15,7 @@ class HelpViewController: UIViewController {
 
     override func viewDidLoad() {
         helpScrollView.backgroundColor = Color.Background.primary
-        configureAsTile(helpVolunteerView)
-        configureAsTile(helpFinanceView)
-    }
-
-    func configureAsTile(_ UIView: UIView) {
-        UIView.backgroundColor = Color.HelpUIViews.background
+        helpVolunteerView.backgroundColor = Color.HelpUIViews.background
+        helpFinanceView.backgroundColor = Color.HelpUIViews.background
     }
 }

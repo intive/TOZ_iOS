@@ -84,7 +84,6 @@
                                     <constraint firstAttribute="trailing" secondItem="sKI-ST-Ptc" secondAttribute="trailing" constant="4" id="Y8n-p9-MNm"/>
                                     <constraint firstItem="OOx-UD-p4z" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" constant="4" id="aRX-pB-mxO"/>
                                     <constraint firstAttribute="trailing" secondItem="OOx-UD-p4z" secondAttribute="trailing" constant="4" id="eI6-RA-omR"/>
-                                    <constraint firstAttribute="height" constant="227" id="f05-hE-r8r"/>
                                     <constraint firstAttribute="width" secondItem="OOx-UD-p4z" secondAttribute="height" multiplier="160:99" id="na7-VY-GDB"/>
                                     <constraint firstItem="OOx-UD-p4z" firstAttribute="top" secondItem="UAa-oT-tIt" secondAttribute="top" constant="2" id="x9s-fs-4XS"/>
                                 </constraints>
