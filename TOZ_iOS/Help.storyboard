@@ -44,7 +44,6 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="228" id="47H-1v-GJT"/>
                                     <constraint firstAttribute="width" secondItem="xII-KX-var" secondAttribute="height" multiplier="160:99" id="9W9-u4-tw8"/>
                                     <constraint firstItem="ARk-Ea-gQz" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" constant="4" id="CQB-O0-fAr"/>
                                     <constraint firstAttribute="trailing" secondItem="ARk-Ea-gQz" secondAttribute="trailing" constant="4" id="IMU-pA-oK9"/>
