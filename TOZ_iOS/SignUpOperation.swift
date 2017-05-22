@@ -9,23 +9,23 @@
 import Foundation
 
 class SignUpOperation: ServiceOperation {
-    
+
     private let request: SignUpRequest
-    
+
     init(userID: String, password: String, roles: [Role], name: String, surname: String,
          phoneNumber: String, email: String, passwordChangeDate: Int) {
         request = SignUpRequest(password: password, name: name, surname: surname,
                                 phoneNumber: phoneNumber, email: email)
         super.init()
     }
-    
+
     private(set) var result: RequestResult<SignUpItem>?
     var resultCompletion: ((RequestResult<SignUpItem>) -> Void)?
-    
+
     func start() {
         service.request(request, completion: handleResponse)
     }
-    
+
     private func handleResponse(_ response: RequestResult<AnyObject>) {
         switch response {
         case .success(let object):
@@ -38,7 +38,7 @@ class SignUpOperation: ServiceOperation {
             callCompletion(.failure(error))
         }
     }
-    
+
     func callCompletion(_ result: RequestResult<SignUpItem>) {
         self.result = result
         resultCompletion?(result)

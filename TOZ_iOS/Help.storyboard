@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,70 +19,72 @@
                         <viewControllerLayoutGuide type="top" id="Ig3-kW-Fss"/>
                         <viewControllerLayoutGuide type="bottom" id="vUo-ei-6zj"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Xym-su-N70" userLabel="HelpScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Xym-su-N70" userLabel="HelpScrollView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-Se-TZn" userLabel="HelpVolunteerView">
-                                <rect key="frame" x="12" y="12" width="296" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZOSTAŃ WOLONTARIUSZEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-Ea-gQz">
-                                        <rect key="frame" x="0.0" y="170" width="296" height="30"/>
+                                        <rect key="frame" x="4" y="201" width="312" height="25"/>
+                                        <color key="backgroundColor" red="0.99215686274509807" green="0.53725490196078429" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="rwO-TX-Asn"/>
+                                            <constraint firstAttribute="height" constant="25" id="rwO-TX-Asn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelpVolunteer" translatesAutoresizingMaskIntoConstraints="NO" id="xII-KX-var">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="170"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpV" translatesAutoresizingMaskIntoConstraints="NO" id="xII-KX-var">
+                                        <rect key="frame" x="4" y="4" width="312" height="198"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="47H-1v-GJT"/>
-                                    <constraint firstItem="ARk-Ea-gQz" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="CQB-O0-fAr"/>
-                                    <constraint firstAttribute="trailing" secondItem="ARk-Ea-gQz" secondAttribute="trailing" id="IMU-pA-oK9"/>
-                                    <constraint firstItem="xII-KX-var" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="top" id="a71-Dk-07R"/>
-                                    <constraint firstItem="xII-KX-var" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="eU6-08-9R2"/>
-                                    <constraint firstAttribute="trailing" secondItem="xII-KX-var" secondAttribute="trailing" id="gou-zi-u6T"/>
-                                    <constraint firstItem="ARk-Ea-gQz" firstAttribute="top" secondItem="xII-KX-var" secondAttribute="bottom" id="ma8-tX-wHS"/>
-                                    <constraint firstAttribute="bottom" secondItem="ARk-Ea-gQz" secondAttribute="bottom" id="tUO-Nf-ctG"/>
+                                    <constraint firstAttribute="width" secondItem="xII-KX-var" secondAttribute="height" multiplier="160:99" id="9W9-u4-tw8"/>
+                                    <constraint firstItem="ARk-Ea-gQz" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" constant="4" id="CQB-O0-fAr"/>
+                                    <constraint firstAttribute="trailing" secondItem="ARk-Ea-gQz" secondAttribute="trailing" constant="4" id="IMU-pA-oK9"/>
+                                    <constraint firstItem="xII-KX-var" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="top" constant="4" id="a71-Dk-07R"/>
+                                    <constraint firstItem="xII-KX-var" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" constant="4" id="eU6-08-9R2"/>
+                                    <constraint firstAttribute="trailing" secondItem="xII-KX-var" secondAttribute="trailing" constant="4" id="gou-zi-u6T"/>
+                                    <constraint firstItem="ARk-Ea-gQz" firstAttribute="top" secondItem="xII-KX-var" secondAttribute="bottom" constant="-1" id="ma8-tX-wHS"/>
+                                    <constraint firstAttribute="bottom" secondItem="ARk-Ea-gQz" secondAttribute="bottom" constant="2" id="tUO-Nf-ctG"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="7E9-TS-8t2" appends="YES" id="suG-DD-U3g"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAa-oT-tIt" userLabel="HelpFinanceView">
-                                <rect key="frame" x="12" y="227" width="296" height="200"/>
+                                <rect key="frame" x="0.0" y="228" width="320" height="227"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpF" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-UD-p4z">
+                                        <rect key="frame" x="4" y="2" width="312" height="198"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WESPRZYJ NAS FINANSOWO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-ST-Ptc">
-                                        <rect key="frame" x="0.0" y="170" width="296" height="30"/>
+                                        <rect key="frame" x="4" y="198" width="312" height="25"/>
+                                        <color key="backgroundColor" red="0.99215686274509807" green="0.53725490196078429" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="XLh-TG-9I3"/>
+                                            <constraint firstAttribute="height" constant="25" id="XLh-TG-9I3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpFinance" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-UD-p4z">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="170"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="sKI-ST-Ptc" secondAttribute="bottom" id="Dvt-cx-fll"/>
-                                    <constraint firstItem="sKI-ST-Ptc" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" id="EEP-kF-jW0"/>
-                                    <constraint firstItem="sKI-ST-Ptc" firstAttribute="top" secondItem="OOx-UD-p4z" secondAttribute="bottom" id="Vv9-TO-V00"/>
-                                    <constraint firstAttribute="trailing" secondItem="sKI-ST-Ptc" secondAttribute="trailing" id="Y8n-p9-MNm"/>
-                                    <constraint firstItem="OOx-UD-p4z" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" id="aRX-pB-mxO"/>
-                                    <constraint firstAttribute="trailing" secondItem="OOx-UD-p4z" secondAttribute="trailing" id="eI6-RA-omR"/>
-                                    <constraint firstAttribute="height" constant="200" id="f05-hE-r8r"/>
-                                    <constraint firstItem="OOx-UD-p4z" firstAttribute="top" secondItem="UAa-oT-tIt" secondAttribute="top" id="x9s-fs-4XS"/>
+                                    <constraint firstAttribute="bottom" secondItem="sKI-ST-Ptc" secondAttribute="bottom" constant="4" id="Dvt-cx-fll"/>
+                                    <constraint firstItem="sKI-ST-Ptc" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" constant="4" id="EEP-kF-jW0"/>
+                                    <constraint firstItem="sKI-ST-Ptc" firstAttribute="top" secondItem="OOx-UD-p4z" secondAttribute="bottom" constant="-2" id="Vv9-TO-V00"/>
+                                    <constraint firstAttribute="trailing" secondItem="sKI-ST-Ptc" secondAttribute="trailing" constant="4" id="Y8n-p9-MNm"/>
+                                    <constraint firstItem="OOx-UD-p4z" firstAttribute="leading" secondItem="UAa-oT-tIt" secondAttribute="leading" constant="4" id="aRX-pB-mxO"/>
+                                    <constraint firstAttribute="trailing" secondItem="OOx-UD-p4z" secondAttribute="trailing" constant="4" id="eI6-RA-omR"/>
+                                    <constraint firstAttribute="width" secondItem="OOx-UD-p4z" secondAttribute="height" multiplier="160:99" id="na7-VY-GDB"/>
+                                    <constraint firstItem="OOx-UD-p4z" firstAttribute="top" secondItem="UAa-oT-tIt" secondAttribute="top" constant="2" id="x9s-fs-4XS"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ss0-46-fpj" appends="YES" id="Vc5-eF-FRh"/>
@@ -91,16 +94,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="NUN-Se-TZn" firstAttribute="leading" secondItem="Xym-su-N70" secondAttribute="leading" constant="12" id="7dK-Tq-VeS"/>
-                            <constraint firstItem="NUN-Se-TZn" firstAttribute="top" secondItem="Xym-su-N70" secondAttribute="top" constant="12" id="BzB-4t-0Gh"/>
-                            <constraint firstItem="UAa-oT-tIt" firstAttribute="height" secondItem="NUN-Se-TZn" secondAttribute="height" id="CA0-pk-uHd"/>
+                            <constraint firstItem="NUN-Se-TZn" firstAttribute="leading" secondItem="Xym-su-N70" secondAttribute="leading" id="7dK-Tq-VeS"/>
+                            <constraint firstItem="NUN-Se-TZn" firstAttribute="top" secondItem="Xym-su-N70" secondAttribute="top" id="BzB-4t-0Gh"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="height" secondItem="NUN-Se-TZn" secondAttribute="height" constant="-1" id="CA0-pk-uHd"/>
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" id="Q8o-fp-kUa"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="bottom" secondItem="vUo-ei-6zj" secondAttribute="top" id="VW9-hh-gFb"/>
                             <constraint firstItem="NUN-Se-TZn" firstAttribute="centerX" secondItem="Xym-su-N70" secondAttribute="centerX" id="jPt-yW-mkQ"/>
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="l3b-nk-1BR"/>
-                            <constraint firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" constant="12" id="nz6-0s-V9b"/>
-                            <constraint firstItem="UAa-oT-tIt" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="bottom" constant="15" id="xNC-Q0-Tkw"/>
+                            <constraint firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" id="nz6-0s-V9b"/>
+                            <constraint firstItem="UAa-oT-tIt" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="bottom" id="xNC-Q0-Tkw"/>
                         </constraints>
                     </scrollView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="CHCĘ POMÓC!" id="rEs-6D-MYl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -121,7 +126,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1820" y="-734.48275862068976"/>
+            <point key="canvasLocation" x="1818.75" y="-735.21126760563379"/>
         </scene>
         <!--Help Finance View Controller-->
         <scene sceneID="l6z-wk-tat">
@@ -371,8 +376,8 @@ ul. Przykładowa 12
     </scenes>
     <resources>
         <image name="Dog-finance image" width="720" height="361"/>
-        <image name="HelpVolunteer" width="640" height="320"/>
-        <image name="helpFinance" width="640" height="320"/>
+        <image name="helpF" width="3027" height="1980"/>
+        <image name="helpV" width="5320" height="3547"/>
         <image name="tab-bar-help" width="25" height="25"/>
     </resources>
 </document>
