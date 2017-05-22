@@ -66,6 +66,6 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testFirstAnimalImage() {
-                XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("/zMX0Gcf.jpg"))
+                XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.photosURL.appendingPathComponent("/zMX0Gcf.jpg"))
     }
 }
