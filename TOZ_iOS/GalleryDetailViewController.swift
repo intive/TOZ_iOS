@@ -58,6 +58,7 @@ class GalleryDetailViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
                     self.animalType.text = localAnimal.type
+                    self.galleryDetailPhotoViewController?.animalType = localAnimal.type
                     self.animalSex.text = localAnimal.sex
                     self.animalDescription.text = localAnimal.description
                     // For now if there is a imageURL for the Animal than add it to array of photos.
