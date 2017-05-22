@@ -16,7 +16,6 @@ enum CheckResult {
         default: return false
         }
     }
-
 }
 
 protocol TextChecker {
@@ -26,7 +25,7 @@ protocol TextChecker {
 fileprivate struct TextInputViewDimensions {
     static let margin: CGFloat = 0
     static let offset: CGFloat = 4
-    static let labelHeight: CGFloat = 14
+    static let labelHeight: CGFloat = 16
 }
 
 @IBDesignable
@@ -92,6 +91,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.backgroundColor = Color.LoginTextView.TextField.background
         self.textField.layer.cornerRadius = 4
         self.layer.cornerRadius = 4
+        self.textField.autocapitalizationType = UITextAutocapitalizationType.none
 
         setLeftPadding()
         setupConstraints()
