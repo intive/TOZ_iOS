@@ -23,7 +23,6 @@ class ResetPasswordViewController: UIViewController {
 
     @IBAction func confirmReset(_ sender: Any) {
         if emailInput.isValid {
-            self.indicatorView.startAnimating()
             let resetPassword = ResetPasswordOperation(email: self.emailInput.text)
             self.indicatorView.startAnimating()
             resetPassword.start { success in
@@ -33,6 +32,11 @@ class ResetPasswordViewController: UIViewController {
                         let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
+                    } else {
+                        let alert = UIAlertController(title: "Udało się!", message: "Sprawdź swoją skrzynkę e-mail w celu zakończenia procedury resetowania hasła", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+
                     }
                 }
             }
