@@ -24,4 +24,8 @@ extension BackendAPIRequest {
     func defaultJSONHeaders() -> [String: String] {
         return ["Accept": "application/json"]
     }
+    /// Returns when JSON is sent
+    func headersWhenJSONSent() -> [String: String] {
+        return ["Accept": "application/json", "Content-Type": "application/json"]
+    }
 }

@@ -58,6 +58,6 @@ final class AddScheduleRequest: BackendAPIRequest {
         return parametersInDictionary
     }
     var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+        return headersWhenJSONSent()
     }
 }
