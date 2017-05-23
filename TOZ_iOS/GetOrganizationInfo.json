@@ -1,5 +1,5 @@
 {
-    "name": "Fundacja Pomocy Zwierzentom Wszelakim",
+    "name": "Fundacja Pomocy Zwierzętom Wszelakim",
     "address": {
         "street": "ul. Przykładowa",
         "houseNumber": "1",
@@ -18,6 +18,6 @@
         "number": "61 1090 1014 0000 0712 1981 2874",
         "bankName": "SuperBank"
     },
-    "invitationText": "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzentom Wszelakim...",
+    "invitationText": "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzętom Wszelakim...",
     "volunteerText": "Nasi wolontariusze na codzień zajmują się... Dziękujemy za twój wkład"
 }

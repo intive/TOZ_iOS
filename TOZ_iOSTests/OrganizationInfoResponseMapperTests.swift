@@ -27,8 +27,8 @@ class OrganizationInfoResponseMapperTests: XCTestCase {
     }
 
     func testOrganizationInfoItemHeader() {
-        XCTAssertEqual(self.organizationInfoItem?.name, "Fundacja Pomocy Zwierzentom Wszelakim")
-        XCTAssertEqual(self.organizationInfoItem?.invitationText, "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzentom Wszelakim...")
+        XCTAssertEqual(self.organizationInfoItem?.name, "Fundacja Pomocy Zwierzętom Wszelakim")
+        XCTAssertEqual(self.organizationInfoItem?.invitationText, "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzętom Wszelakim...")
         XCTAssertEqual(self.organizationInfoItem?.volunteerText, "Nasi wolontariusze na codzień zajmują się... Dziękujemy za twój wkład")
         XCTAssertEqual(self.organizationInfoItem?.street, "ul. Przykładowa")
         XCTAssertEqual(self.organizationInfoItem?.houseNumber, "1")
