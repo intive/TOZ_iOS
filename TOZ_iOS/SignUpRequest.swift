@@ -14,10 +14,10 @@ final class SignUpRequest: BackendAPIRequest {
     private let surname: String
     private let phoneNumber: String
     private let email: String
-    private let roles: [String]
+    private let roles: [Role.RawValue]
 
     init(name: String, surname: String,
-         phoneNumber: String, email: String, roles: [String]) {
+         phoneNumber: String, email: String, roles: [Role.RawValue]) {
         self.name = name
         self.surname = surname
         self.phoneNumber = phoneNumber

@@ -50,10 +50,10 @@ class SignUpViewController: UIViewController {
 
         goalSegmentedControl.layer.cornerRadius = 5
 
-        firstNameInput.placeholder = " Imię..."
-        surnameInput.placeholder = " Nazwisko..."
-        emailInput.placeholder = " E-mail..."
-        phoneNumberInput.placeholder = " Numer telefonu..."
+        firstNameInput.placeholder = " Imię"
+        surnameInput.placeholder = " Nazwisko"
+        emailInput.placeholder = " E-mail"
+        phoneNumberInput.placeholder = " Numer telefonu"
     }
 
     func signUp() {
