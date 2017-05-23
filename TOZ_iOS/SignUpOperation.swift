@@ -11,36 +11,27 @@ import Foundation
 class SignUpOperation: ServiceOperation {
 
     private let request: SignUpRequest
+    var resultCompletion: ((_ success: Bool) -> Void)?
 
-    init(userID: String, password: String, roles: [Role], name: String, surname: String,
-         phoneNumber: String, email: String, passwordChangeDate: Int) {
-        request = SignUpRequest(password: password, name: name, surname: surname,
-                                phoneNumber: phoneNumber, email: email)
+    init(name: String, surname: String, phoneNumber: String, email: String, roles: [String]) {
+        request = SignUpRequest(name: name, surname: surname, phoneNumber: phoneNumber, email: email, roles: roles)
         super.init()
     }
 
     private(set) var result: RequestResult<SignUpItem>?
-    var resultCompletion: ((RequestResult<SignUpItem>) -> Void)?
 
-    func start() {
+    func start(completion: ((_ success: Bool) -> Void)?) {
+        self.resultCompletion = completion
         service.request(request, completion: handleResponse)
     }
 
     private func handleResponse(_ response: RequestResult<AnyObject>) {
         switch response {
-        case .success(let object):
-            do {
-                callCompletion(.success(try SignUpResponseMapper.process(object)))
-            } catch let error {
-                callCompletion(.failure(error))
-            }
-        case .failure(let error):
-            callCompletion(.failure(error))
+        case .success:
+            resultCompletion?(true)
+            return
+        case .failure:
+            resultCompletion?(false)
         }
-    }
-
-    func callCompletion(_ result: RequestResult<SignUpItem>) {
-        self.result = result
-        resultCompletion?(result)
     }
 }
