@@ -33,7 +33,7 @@ final class AnimalResponseMapper: ResponseMapper<AnimalItem>, ResponseMapperProt
             guard let imageString = json["imageUrl"] as? String? else { return nil }
             var imageURL: URL? = nil
             if let imageString = imageString {
-                imageURL = BackendConfiguration.shared.baseURL.appendingPathComponent(imageString)
+                imageURL = BackendConfiguration.shared.photosURL.appendingPathComponent(imageString)
             }
             return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL)
         })

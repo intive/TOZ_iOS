@@ -43,7 +43,7 @@ class NewsResponseMapperTest: XCTestCase {
     }
 
     func testFirstNewsPhotoUrl() {
-        XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.baseURL.appendingPathComponent("/dIvN5kA.jpg"))
+        XCTAssertEqual(firstNews?.photoUrl, BackendConfiguration.shared.photosURL.appendingPathComponent("/dIvN5kA.jpg"))
     }
 
     func testFirstNewsPublished() {
