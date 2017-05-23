@@ -132,6 +132,7 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.label.alpha = 1
         self.textField.textColor = Color.LoginTextView.TextField.Text.error
         self.icon = UIImage(named: "questionMark")
+        self.textField.placeholder = placeholder
     }
 
     func textFieldDidEndEditing() {
