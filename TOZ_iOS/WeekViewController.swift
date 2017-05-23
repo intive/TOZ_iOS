@@ -90,7 +90,7 @@ class WeekViewController: UIViewController {
     }
 
     func addReservation(add newReservation: ReservationItem, turnOn label: ScheduleControl) {
-        let addOperation = AddScheduleOperation(dataObject: newReservation, modificationMessage: "new reservation")
+        let addOperation = AddScheduleOperation(dataObject: newReservation, modificationMessage: "new reservation", ownerId: "c5296892-347f-4b2e-b1c6-6faff971f767")
         addOperation.resultCompletion = { result in
             switch result {
             case .success(let newReservationRespond):

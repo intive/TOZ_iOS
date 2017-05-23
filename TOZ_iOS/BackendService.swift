@@ -7,7 +7,7 @@
 
 import Foundation
 
-let mockBackend = true
+let mockBackend = false
 
 extension Notification.Name {
     static let didPerformUnauthorizedOperation = Notification.Name("DidPerformUnauthorizedOperation")
@@ -54,6 +54,8 @@ class BackendService {
 
             /// Check if failure comes with "error" field as a response
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                print(data)
+                print(json)
                 let errorField = json?["error"] as? String ?? ""
                 completion(.failure(RequestError.ServerRespondedWithErrorField(errorField)))
             } else {

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var checkBox: UISwitch!
+
 class ListViewController: UIViewController {
 
     var collectionView: ListUICollectionView!
@@ -19,10 +21,19 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        checkBox = UISwitch()
+        checkBox.isOn = true
+        checkBox.backgroundColor = UIColor.purple
+        self.view.addSubview(checkBox)
+        self.view.addSubview(UILabel())
         reservations.append(ReservationItem(idObject: "111", date: Date(), timeOfDay: .morning, ownerSurname: "W", ownerForename: "S"))
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         layout.itemSize = CGSize(width: self.view.frame.width, height: 40)
+        var collectionFrame = self.view.frame
+        collectionFrame.size.height - 40
+        self.view.frame = collectionFrame
+        
         collectionView = ListUICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
