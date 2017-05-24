@@ -13,7 +13,7 @@ class SignUpOperation: ServiceOperation {
     private let request: SignUpRequest
     var resultCompletion: ((_ success: Bool) -> Void)?
 
-    init(name: String, surname: String, phoneNumber: String, email: String, roles: [Role.RawValue]) {
+    init(name: String, surname: String, phoneNumber: String, email: String, roles: [Role]) {
         request = SignUpRequest(name: name, surname: surname, phoneNumber: phoneNumber, email: email, roles: roles)
         super.init()
     }

@@ -14,10 +14,10 @@ final class SignUpRequest: BackendAPIRequest {
     private let surname: String
     private let phoneNumber: String
     private let email: String
-    private let roles: [Role.RawValue]
+    private let roles: [Role]
 
     init(name: String, surname: String,
-         phoneNumber: String, email: String, roles: [Role.RawValue]) {
+         phoneNumber: String, email: String, roles: [Role]) {
         self.name = name
         self.surname = surname
         self.phoneNumber = phoneNumber
@@ -36,7 +36,7 @@ final class SignUpRequest: BackendAPIRequest {
             "surname": surname,
             "phoneNumber": phoneNumber,
             "email": email,
-            "roles": roles
+            "roles": roles.map {$0.rawValue}
         ]
     }
     var headers: [String: String]? {

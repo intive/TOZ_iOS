@@ -17,7 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var goalSegmentedControl: UISegmentedControl!
 
-    var role: [Role.RawValue] = [Role.VOLUNTEER.rawValue]
+    var role: [Role] = [Role.VOLUNTEER]
     var signUpOperation: SignUpOperation?
 
     override func viewDidLoad() {
@@ -31,8 +31,8 @@ class SignUpViewController: UIViewController {
 
     func changeRole() {
         switch goalSegmentedControl.selectedSegmentIndex {
-        case 0: self.role = [Role.VOLUNTEER.rawValue]
-        case 1: self.role = [Role.TOZ.rawValue]
+        case 0: self.role = [Role.VOLUNTEER]
+        case 1: self.role = [Role.TOZ]
         default: break
         }
     }
@@ -61,14 +61,16 @@ class SignUpViewController: UIViewController {
             self.signUpOperation = SignUpOperation(name: self.firstNameInput.text, surname: self.surnameInput.text, phoneNumber: self.phoneNumberInput.text, email: self.emailInput.text, roles: role)
             if let signUpOperation = self.signUpOperation {
                 signUpOperation.start { succes in
-                    if succes == false {
-                        let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
-                    } else {
-                        let alert = UIAlertController(title: "Sukces", message: "Zgłoszenie zostało wysłane", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
+                    DispatchQueue.main.async {
+                        if succes == false {
+                            let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        } else {
+                            let alert = UIAlertController(title: "Sukces", message: "Zgłoszenie zostało wysłane", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
                     }
                 }
             }
