@@ -30,9 +30,9 @@ class GalleryTableViewCell: UITableViewCell {
         animalImage.contentMode = .scaleAspectFill
         animalImage.clipsToBounds = true
         switch animal.type {
-            case "CAT", "KOT", "Kot":
+            case "CAT":
                 self.animalImage.image = #imageLiteral(resourceName: "placeholder_cat")
-            case "DOG", "PIES", "Pies":
+            case "DOG":
                 self.animalImage.image = #imageLiteral(resourceName: "placeholder_dog")
             default:
                 self.animalImage.image = #imageLiteral(resourceName: "placeholder")
