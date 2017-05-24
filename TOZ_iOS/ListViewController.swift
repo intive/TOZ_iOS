@@ -9,6 +9,8 @@
 import UIKit
 
 var checkBox: UISwitch!
+var label: UILabel!
+
 
 class ListViewController: UIViewController {
 
@@ -21,20 +23,22 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        checkBox = UISwitch()
+        self.view.backgroundColor = UIColor.cyan
+        checkBox = UISwitch(frame: CGRect(x: 0, y: 90, width: self.view.frame.width, height: 20))
         checkBox.isOn = true
         checkBox.backgroundColor = UIColor.purple
+        print("AAA \(checkBox.frame)")
         self.view.addSubview(checkBox)
-        self.view.addSubview(UILabel())
+        label = UILabel(frame: CGRect(x: 70, y: 90, width: 50, height: 20))
+        label.text = "Login"
+        self.view.addSubview(label)
         reservations.append(ReservationItem(idObject: "111", date: Date(), timeOfDay: .morning, ownerSurname: "W", ownerForename: "S"))
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-        layout.itemSize = CGSize(width: self.view.frame.width, height: 40)
-        var collectionFrame = self.view.frame
-        collectionFrame.size.height - 40
-        self.view.frame = collectionFrame
-        
-        collectionView = ListUICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        layout.itemSize = CGSize(width: self.view.frame.width - 50, height: 40)
+        let collectionFrame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: self.view.frame.height)
+
+        collectionView = ListUICollectionView(frame: collectionFrame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: identifierCell)

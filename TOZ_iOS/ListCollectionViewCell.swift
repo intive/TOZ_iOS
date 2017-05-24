@@ -23,9 +23,9 @@ class ListCollectionViewCell: UICollectionViewCell {
         //stackView = UIStackView()
         stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 5
+        stackView.spacing = 1
         //stackView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(stackView)
 
