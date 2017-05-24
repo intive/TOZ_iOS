@@ -1,46 +1,150 @@
  [
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "name": "PIORUN",
-  "type": "PIES",
+  "name": "Burek",
+  "type": "DOG",
   "sex": "MALE",
-  "description": "Jamnik niskopodłogowy",
-  "address": "Most cłowy",
-  "created": 1490134074968,
-  "lastModified": 1490134074968,
+  "description": "Jamnik niskopodlogowy",
+  "address": "Most clowy",
+  "created": 1494852536847,
+  "lastModified": 1494854229092,
+  "imageUrl": "/n6aU0jt.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Leszek",
+  "type": "DOG",
+  "sex": "MALE",
+  "description": "Piesek leszek",
+  "address": "abcd",
+  "created": 1495221891590,
+  "imageUrl": "/ONUtakr.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Tozek",
+  "type": "DOG",
+  "sex": "FEMALE",
+  "description": "Pupil TOZu",
+  "address": "Tu i tam",
+  "created": 1495467059630,
+  "lastModified": 1495494381159,
+  "imageUrl": "/0kRvLPf.jpg"
+
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Kłapouchy",
+  "type": "CAT",
+  "sex": "MALE",
+  "description": "Nie do końca pies..",
+  "address": "Fantazjaland",
+  "created": 1495467257899,
+  "lastModified": 1495494416721,
+  "imageUrl": "/kqyg254.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "pieskot",
+  "type": "DOG",
+  "sex": "MALE",
+  "description": "to je opis",
+  "address": "brak",
+  "created": 1495488553054,
+  "lastModified": 1495523649038,
+  "imageUrl": "/c6GTJJZ.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Test",
+  "type": "DOG",
+  "sex": "MALE",
+  "description": "Test",
+  "address": "Test",
+  "created": 1495530775513,
+  "lastModified": 1495530800758
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Andrzej",
+  "type": "DOG",
+  "sex": "FEMALE",
+  "description": "pies jak pies",
+  "address": "Szczecin",
+  "created": 1495455140413,
+  "lastModified": 1495530964902,
+  "imageUrl": "/wKjdA9G.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "effffff",
+  "type": "DOG",
+  "sex": "FEMALE",
+  "description": "gghhhhhgggff",
+  "address": "ddfffff",
+  "created": 1495462178390,
+  "lastModified": 1495530981180,
   "imageUrl": "/zMX0Gcf.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "name": "POLA",
-  "type": "KOT",
+  "name": "Kajtek",
+  "type": "DOG",
   "sex": "MALE",
-  "description": "Jamnik niskopodłogowy",
-  "address": "Most cłowy",
-  "created": 1490134074968,
-  "lastModified": 1490134074968,
+  "description": "Taki sobie Kajtek",
+  "address": "Przykładowa",
+  "created": 1495375672965,
+  "lastModified": 1495530987221
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "TestIOS",
+  "type": "DOG",
+  "sex": "MALE",
+  "description": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali",
+  "address": "Przykładowa",
+  "created": 1495548959264,
+  "imageUrl": "/NVGyOQs.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Burek",
+  "type": "CAT",
+  "sex": "MALE",
+  "description": "Przykładowy Kot",
+  "address": "Nigdzie",
+  "created": 1495575157935,
+  "imageUrl": "/C7k2UDw.jpg"
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Test",
+  "type": "DOG",
+  "sex": "MALE",
+  "description": "Testowy piesek",
+  "address": "TOZ",
+  "created": 1495629474930
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Android 4.0 Jellybeans",
+  "type": "CAT",
+  "sex": "MALE",
+  "description": "Dobry dzik",
+  "address": "Szczecin",
+  "created": 1495454798856,
+  "lastModified": 1495629615317,
+
+  },
+  {
+  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "name": "Bonifacy",
+  "type": "CAT",
+  "sex": "FEMALE",
+  "description": "Znany zwierzak z TV",
+  "address": "TV",
+  "created": 1495467134677,
+  "lastModified": 1495652612530,
   "imageUrl": "/ukFNSlO.jpg"
-  },
-  {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "name": "ASTERIX",
-  "type": "PIES",
-  "sex": "MALE",
-  "description": "Jamnik niskopodłogowy",
-  "address": "Most cłowy",
-  "created": 1490134074968,
-  "lastModified": 1490134074968,
-  "imageUrl": "/0kRvLPf.jpg"
-  },
-  {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-  "name": "BLACKY",
-  "type": "PIES",
-  "sex": "MALE",
-  "description": "Jamnik niskopodłogowy",
-  "address": "Most cłowy",
-  "created": 1490134074968,
-  "lastModified": 1490134074968,
-  "imageUrl": "/c6GTJJZ.jpg"
   }
   ]

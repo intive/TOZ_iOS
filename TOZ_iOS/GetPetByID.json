@@ -1,11 +1,11 @@
 {
     "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-    "name": "PIORUN",
-    "type": "PIES",
+    "name": "Burek",
+    "type": "DOG",
     "sex": "MALE",
-    "description": "Jamnik niskopodłogowy",
-    "address": "Most cłowy",
-    "created": 1490134074968,
-    "lastModified": 1490134074968,
-    "imageUrl": "/zMX0Gcf.jpg"
+    "description": "Jamnik niskopodlogowy",
+    "address": "Most clowy",
+    "created": 1494852536847,
+    "lastModified": 1494854229092,
+    "imageUrl": "/n6aU0jt.jpg"
 }
