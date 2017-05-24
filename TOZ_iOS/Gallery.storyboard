@@ -59,7 +59,7 @@
                                                     <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GB3-wh-ma6" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="GB3-wh-ma6" customClass="UIImageView">
                                                     <rect key="frame" x="4" y="2" width="169" height="134"/>
                                                 </view>
                                             </subviews>

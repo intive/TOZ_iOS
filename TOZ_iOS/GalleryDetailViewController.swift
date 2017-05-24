@@ -58,6 +58,7 @@ class GalleryDetailViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
                     self.animalType.text = localAnimal.type
+                    self.galleryDetailPhotoViewController?.animalType = localAnimal.type
                     self.animalSex.text = localAnimal.sex
                     self.animalDescription.text = localAnimal.description
                     // For now if there is a imageURL for the Animal than add it to array of photos.
@@ -79,6 +80,10 @@ class GalleryDetailViewController: UIViewController {
 
     func updateCaption(notification: Notification) {
         guard let index = notification.userInfo?["index"] else { return }
-        self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
+        if photos.count > 0 {
+            self.pictureCaption.text = "Zdjęcie \(index) / \(photos.count)"
+        } else {
+            self.pictureCaption.text = "Brak zdjęcia"
+        }
     }
 }
