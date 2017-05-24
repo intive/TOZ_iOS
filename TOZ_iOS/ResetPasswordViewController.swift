@@ -19,6 +19,7 @@ class ResetPasswordViewController: UIViewController {
         self.indicatorView.activityIndicatorViewStyle = .whiteLarge
         self.indicatorView.color = Color.Cell.Button.primary
         self.indicatorView.hidesWhenStopped = true
+        self.hideKeyboard()
     }
 
     @IBAction func confirmReset(_ sender: Any) {
