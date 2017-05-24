@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,19 +44,19 @@
                                                     <rect key="frame" x="4" y="2" width="406" height="291"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-ju-0dy">
-                                                            <rect key="frame" x="19" y="28" width="368" height="18"/>
+                                                            <rect key="frame" x="19" y="30" width="368" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datePublish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id4-Wy-sQv">
-                                                            <rect key="frame" x="19" y="8" width="368" height="10"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                            <rect key="frame" x="19" y="8" width="368" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-8f-ihx" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="19" y="58" width="368" height="152"/>
+                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-8f-ihx" customClass="UIImageView">
+                                                            <rect key="frame" x="19" y="60" width="368" height="152"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="152" id="OFh-qH-Ijd"/>
                                                             </constraints>
@@ -67,12 +67,12 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Content Text View" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ajI-rK-Bzh">
-                                                            <rect key="frame" x="19" y="222" width="368" height="40"/>
+                                                            <rect key="frame" x="19" y="224" width="368" height="38"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Czytaj dalej  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twW-Wf-NT2">
-                                                            <rect key="frame" x="297" y="245" width="85" height="20"/>
+                                                            <rect key="frame" x="297" y="247" width="85" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="5fA-YJ-TY3"/>
                                                                 <constraint firstAttribute="width" constant="85" id="Kob-6W-iZa"/>
@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-3u-tug">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieT-o8-xi8">
                                         <rect key="frame" x="30" y="232" width="344" height="20"/>
@@ -173,7 +173,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="UIImageView">
                                         <rect key="frame" x="30" y="72" width="344" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="m2f-lG-zh9"/>
@@ -216,8 +216,8 @@
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="O3K-O4-qrq" secondAttribute="top" id="1GI-1N-5wx"/>
                             <constraint firstItem="LIN-3u-tug" firstAttribute="leading" secondItem="O3K-O4-qrq" secondAttribute="leading" id="C70-X7-06R"/>
+                            <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="mL5-VE-uXX" secondAttribute="bottom" id="N7l-o1-CRY"/>
                             <constraint firstAttribute="trailing" secondItem="LIN-3u-tug" secondAttribute="trailing" id="kRJ-np-g1I"/>
                             <constraint firstItem="t8m-8W-cGz" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="bottom" id="olL-VY-r0L"/>
                         </constraints>

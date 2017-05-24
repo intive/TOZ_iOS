@@ -11,7 +11,7 @@ class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePublishedLabel: UILabel!
-    @IBOutlet weak var photoView: ProfilePhotoView!
+    @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var photoViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var readMoreLabel: UILabel!
@@ -32,12 +32,15 @@ class NewsTableViewCell: UITableViewCell {
         if let published = news.published {
             datePublishedLabel.text = published.dateToFormattedString()
         }
-        self.photoView.photo = nil
+        self.photoView.contentMode = .scaleAspectFit
+        self.photoView.image = #imageLiteral(resourceName: "placeholder")
         let photoURL: URL? = news.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
                 if photoURL == news.photoUrl {
-                    self.photoView.photo = image
+                    if let image = image {
+                        self.photoView.image = image
+                    }
                 }
             })
         } else {
