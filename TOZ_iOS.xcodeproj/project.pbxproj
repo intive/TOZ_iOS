@@ -27,6 +27,7 @@
 		3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BB1E91932500FF385A /* NewsOperation.swift */; };
 		3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BD1E91932E00FF385A /* NewsItem.swift */; };
 		3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */; };
+		420CD1B41ED0EDC900ACDBC3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */; };
 		420FD4481EAFBC36009AC0E1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420FD4471EAFBC35009AC0E1 /* Account.storyboard */; };
 		421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */; };
 		421BB7ED1ECB637A00CE3429 /* ResetPasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */; };
@@ -154,6 +155,7 @@
 		3777B0BB1E91932500FF385A /* NewsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsOperation.swift; sourceTree = "<group>"; };
 		3777B0BD1E91932E00FF385A /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponseMapper.swift; sourceTree = "<group>"; };
+		420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		420FD4471EAFBC35009AC0E1 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
 		421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordOperation.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				4B5901E31EAFD54C0050C5BB /* User.swift */,
 				4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */,
+				420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */,
 				424D93D31EC4C85100A4427C /* Button.swift */,
 				4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */,
 				420FD4471EAFBC35009AC0E1 /* Account.storyboard */,
@@ -824,6 +827,7 @@
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 				54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */,
 				4B53F4D81EAA640B00D894F8 /* SignInResponseMapper.swift in Sources */,
+				420CD1B41ED0EDC900ACDBC3 /* ResetPasswordViewController.swift in Sources */,
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
 				4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */,
 				42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */,
