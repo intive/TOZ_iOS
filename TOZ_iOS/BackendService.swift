@@ -35,6 +35,7 @@ class BackendService {
         var headers = request.headers
         /// Set authentication token if available.
         headers?["X-Api-Auth-Token"] = BackendAuth.shared.token
+        headers?["Authorization"] = "Bearer " + BackendAuth.shared.token!
 
         /// Uses NetworkService class to execute HTTP request
         service.makeRequest(for: url, method: request.method, params: request.parameters, headers: headers, success: { data in

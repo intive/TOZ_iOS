@@ -13,8 +13,13 @@ class AddScheduleOperation: ServiceOperation {
     private(set) var result: RequestResult<ReservationItem>?
     var resultCompletion: ((RequestResult<ReservationItem>) -> Void)?
 
-    public init(dataObject: ReservationItem, modificationMessage: String, ownerId: String) {
-        self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage, ownerId: ownerId)
+    public init(dataObject: ReservationItem, modificationMessage: String, ownerId: String?) {
+        if let ownerId = ownerId {
+            self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage, ownerId: ownerId)
+        } else {
+            self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage)
+        }
+        super.init()
     }
 
     func start() {
