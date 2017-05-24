@@ -26,7 +26,6 @@ class GalleryTableViewCell: UITableViewCell {
         self.animalName.text = animal.name
         self.animalType.text = animal.type
         let imageUrl: URL? = animal.imageUrl
-        animalImage.image = nil
         animalImage.contentMode = .scaleAspectFill
         animalImage.clipsToBounds = true
         switch animal.type {
