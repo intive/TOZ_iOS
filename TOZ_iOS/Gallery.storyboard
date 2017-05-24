@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s9e-va-0TA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s9e-va-0TA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -131,7 +131,7 @@
             </objects>
             <point key="canvasLocation" x="4339" y="753"/>
         </scene>
-        <!--GALERIA-->
+        <!--Gallery Detail View Controller-->
         <scene sceneID="wJd-uY-Gns">
             <objects>
                 <viewController id="Edr-KM-NY0" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,7 +312,7 @@
                             <constraint firstAttribute="trailing" secondItem="aTI-77-iyz" secondAttribute="trailing" id="s7c-bR-Pkp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="GALERIA" id="T7h-RI-Ugm"/>
+                    <navigationItem key="navigationItem" id="T7h-RI-Ugm"/>
                     <connections>
                         <outlet property="animalDescription" destination="70I-WD-RE9" id="ne7-oK-5gi"/>
                         <outlet property="animalName" destination="kAU-8K-880" id="bmf-4x-Fo2"/>
