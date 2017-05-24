@@ -335,6 +335,9 @@ ul. Przykładowa 12
                                                     <constraint firstAttribute="height" constant="40" id="okp-ch-NUO"/>
                                                 </constraints>
                                                 <state key="normal" title="Wyślij"/>
+                                                <connections>
+                                                    <action selector="signUpAction:" destination="uLl-Q8-tE1" eventType="touchUpInside" id="b8L-HQ-YMc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-CL-sCl" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="538" width="150" height="40"/>
@@ -402,6 +405,7 @@ ul. Przykładowa 12
                         <outlet property="firstNameInput" destination="kTT-YP-8XX" id="foR-LL-lQa"/>
                         <outlet property="goalSegmentedControl" destination="FWD-Dv-g8s" id="84x-lU-eeF"/>
                         <outlet property="phoneNumberInput" destination="SBM-NQ-wUG" id="af3-wS-yCQ"/>
+                        <outlet property="roleLabel" destination="H7t-fb-aFc" id="PcK-tN-hxi"/>
                         <outlet property="surnameInput" destination="HBd-qy-Dku" id="DAk-9g-Q46"/>
                     </connections>
                 </viewController>
