@@ -35,6 +35,8 @@ class SignUpViewController: UIViewController {
 
         goalSegmentedControl.backgroundColor = Color.SignUpViewController.SegmentedControl.background
         goalSegmentedControl.tintColor = Color.SignUpViewController.SegmentedControl.tint
+        let font = UIFont.systemFont(ofSize: 10)
+        goalSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font], for: .normal)
 
         goalSegmentedControl.layer.cornerRadius = 5
 
