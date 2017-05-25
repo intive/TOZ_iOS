@@ -48,6 +48,7 @@
 		4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */; };
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
+		4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FB8321ED49E42004B98B8 /* GetPetByID.json */; };
 		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
 		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
 		4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */; };
@@ -176,6 +177,7 @@
 		4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalRequest.swift; sourceTree = "<group>"; };
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
+		4B0FB8321ED49E42004B98B8 /* GetPetByID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetPetByID.json; sourceTree = "<group>"; };
 		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
 		4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordItem.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				055A62491EB66D8B006F8C7C /* PostLogin.json */,
 				4B19884F1EC73A570079460C /* PostChangePassword.json */,
 				05E74BF91EC7C4CA006805BB /* PostRegistration.json */,
+				4B0FB8321ED49E42004B98B8 /* GetPetByID.json */,
 			);
 			name = MockJSONFiles;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
 				4B1988501EC73A570079460C /* PostChangePassword.json in Resources */,
 				05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */,
+				4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */,
 				055A624A1EB66D8B006F8C7C /* PostLogin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

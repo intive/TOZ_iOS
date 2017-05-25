@@ -29,7 +29,7 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testAnimalsCount() {
-        XCTAssertEqual(animalItems?.count, 4)
+        XCTAssertEqual(animalItems?.count, 14)
     }
 
     func testFirstAnimalID() {
@@ -37,11 +37,11 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testFirstAnimalName() {
-        XCTAssertEqual(firstAnimal?.name, "PIORUN")
+        XCTAssertEqual(firstAnimal?.name, "Burek")
     }
 
     func testFirstAnimalType() {
-        XCTAssertEqual(firstAnimal?.type, "PIES")
+        XCTAssertEqual(firstAnimal?.type, "DOG")
     }
 
     func testFirstAnimalSex() {
@@ -57,15 +57,15 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testFirstAnimalPublished() {
-        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
+        XCTAssertEqual(firstAnimal?.created, Date(timeIntervalSince1970: TimeInterval(1494852536847/1000)))
     }
 
     func testFirstAnimalLastModified() {
-        XCTAssertEqual(firstAnimal?.lastModified, Date(timeIntervalSince1970: TimeInterval(1490134074968/1000)))
+        XCTAssertEqual(firstAnimal?.lastModified, Date(timeIntervalSince1970: TimeInterval(1494854229092/1000)))
 
     }
 
     func testFirstAnimalImage() {
-                XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.photosURL.appendingPathComponent("/zMX0Gcf.jpg"))
+                XCTAssertEqual(firstAnimal?.imageUrl, BackendConfiguration.shared.photosURL.appendingPathComponent("/n6aU0jt.jpg"))
     }
 }
