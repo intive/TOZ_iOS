@@ -38,7 +38,7 @@
 		42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */; };
 		424D93D21EC2202800A4427C /* Date+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */; };
 		424D93D41EC4C85100A4427C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D93D31EC4C85100A4427C /* Button.swift */; };
-		426AF9961ED6479C0074DF3B /* UIViewController+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426AF9951ED6479C0074DF3B /* UIViewController+HideKeyboard.swift */; };
+		426AF9961ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */; };
 		4292CCFB1EAFC70400C08229 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */; };
 		4292CCFD1EAFF46000C08229 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */; };
 		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
@@ -167,7 +167,7 @@
 		42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayMapperTest.swift; sourceTree = "<group>"; };
 		424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionTests.swift"; sourceTree = "<group>"; };
 		424D93D31EC4C85100A4427C /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		426AF9951ED6479C0074DF3B /* UIViewController+HideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboard.swift"; sourceTree = "<group>"; };
+		426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addHideKeyboardGestureRecognizer.swift"; sourceTree = "<group>"; };
 		4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
 		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */,
-				426AF9951ED6479C0074DF3B /* UIViewController+HideKeyboard.swift */,
+				426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -803,7 +803,7 @@
 				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
-				426AF9961ED6479C0074DF3B /* UIViewController+HideKeyboard.swift in Sources */,
+				426AF9961ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift in Sources */,
 				05220A081EB3B95500998296 /* SignUpRequest.swift in Sources */,
 				4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,

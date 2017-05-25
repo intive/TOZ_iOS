@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController {
         surnameInput.placeholder = " Nazwisko"
         emailInput.placeholder = " E-mail"
         phoneNumberInput.placeholder = " Numer telefonu"
-        self.hideKeyboard()
+        self.addHideKeyboardGestureRecognizer()
     }
 
     func signUp() {

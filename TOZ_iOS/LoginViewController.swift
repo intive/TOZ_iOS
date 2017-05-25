@@ -55,6 +55,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordInput.isTextSecure = true
 
         errorLabel.alpha = 0
-        self.hideKeyboard()
+        self.addHideKeyboardGestureRecognizer()
     }
 }
