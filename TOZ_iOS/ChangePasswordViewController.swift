@@ -36,6 +36,7 @@ class ChangePasswordViewController: UIViewController {
         oldPassword.placeholder = "Stare hasło"
         newPassword.placeholder = "Nowe hasło"
         confirmNewPassword.placeholder = "Powtórz nowe hasło"
+        self.addHideKeyboardGestureRecognizer()
     }
 
     override func viewDidAppear(_ animated: Bool) {
