@@ -47,7 +47,7 @@ class SignUpViewController: UIViewController {
 
         goalSegmentedControl.backgroundColor = Color.SignUpViewController.SegmentedControl.background
         goalSegmentedControl.tintColor = Color.SignUpViewController.SegmentedControl.tint
-
+        goalSegmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 11)], for: .normal)
         goalSegmentedControl.layer.cornerRadius = 5
 
         firstNameInput.placeholder = " Imię"
