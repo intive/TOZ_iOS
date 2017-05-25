@@ -33,6 +33,6 @@ final class SignInRequest: BackendAPIRequest {
     }
 
     var headers: [String: String]? {
-        return defaultJSONHeaders()
+        return headersWhenJSONSent()
     }
 }
