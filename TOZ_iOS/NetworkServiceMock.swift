@@ -72,6 +72,13 @@ class NetworkServiceMock: NetworkService {
                 default:
                     print("Method is not appropriate.")
                 }
+            } else if url.path == "/pets/c5296892-347f-4b2e-b1c6-6faff971f767" {
+                switch method {
+                case .GET:
+                    nameOfFile = "GetPetByID"
+                default:
+                    print("Method is not appropriate.")
+                }
             }
             guard let path = Bundle.main.path(forResource: nameOfFile, ofType: "json") else {
                 failure?(nil, RequestError.InvalidRequest, 0)
