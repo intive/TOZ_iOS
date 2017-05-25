@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,6 +90,10 @@
                                     <outletCollection property="gestureRecognizers" destination="ss0-46-fpj" appends="YES" id="Vc5-eF-FRh"/>
                                 </connections>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cqc-mY-dw4">
+                                <rect key="frame" x="189" y="293" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -99,16 +103,22 @@
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="height" secondItem="NUN-Se-TZn" secondAttribute="height" constant="-1" id="CA0-pk-uHd"/>
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" id="Q8o-fp-kUa"/>
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="bottom" secondItem="vUo-ei-6zj" secondAttribute="top" id="VW9-hh-gFb"/>
+                            <constraint firstItem="Cqc-mY-dw4" firstAttribute="centerY" secondItem="Xym-su-N70" secondAttribute="centerY" id="Y88-bB-P1B"/>
+                            <constraint firstItem="Cqc-mY-dw4" firstAttribute="centerX" secondItem="Xym-su-N70" secondAttribute="centerX" id="gtM-XB-Hvi"/>
                             <constraint firstItem="NUN-Se-TZn" firstAttribute="centerX" secondItem="Xym-su-N70" secondAttribute="centerX" id="jPt-yW-mkQ"/>
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="leading" secondItem="NUN-Se-TZn" secondAttribute="leading" id="l3b-nk-1BR"/>
                             <constraint firstAttribute="trailing" secondItem="NUN-Se-TZn" secondAttribute="trailing" id="nz6-0s-V9b"/>
                             <constraint firstItem="UAa-oT-tIt" firstAttribute="top" secondItem="NUN-Se-TZn" secondAttribute="bottom" id="xNC-Q0-Tkw"/>
                         </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="SXL-2F-4vk" id="60G-bk-nLY"/>
+                        </connections>
                     </scrollView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="CHCĘ POMÓC!" id="rEs-6D-MYl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="helpActivityIndicator" destination="Cqc-mY-dw4" id="z5w-io-O0o"/>
                         <outlet property="helpFinanceView" destination="UAa-oT-tIt" id="62W-jX-mQW"/>
                         <outlet property="helpScrollView" destination="Xym-su-N70" id="3F6-YJ-z8F"/>
                         <outlet property="helpVolunteerView" destination="NUN-Se-TZn" id="PE2-bo-2DW"/>

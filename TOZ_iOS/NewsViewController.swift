@@ -9,6 +9,8 @@ import UIKit
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var newsTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     let newsOperation = NewsOperation()
     var localNewsList = [NewsItem]()
     var selectedNewsItem: NewsItem?
@@ -62,6 +64,14 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         newsOperation.start()
+    }
+
+    func viewDidStartLoad (_:UITableView) {
+        activityIndicator.startAnimating()
+    }
+
+    func viewDidFinishLoad (_:UITableView) {
+        activityIndicator.stopAnimating()
     }
 
 }

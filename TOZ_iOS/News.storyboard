@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -129,12 +129,18 @@
                                     <outlet property="delegate" destination="LDg-fo-A5n" id="g1L-IY-V7F"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7Wd-fV-fjT">
+                                <rect key="frame" x="189" y="293" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="pwZ-Cs-XT6" firstAttribute="leading" secondItem="OtT-de-cLq" secondAttribute="leading" id="Lgs-8K-Hjm"/>
                             <constraint firstAttribute="trailing" secondItem="pwZ-Cs-XT6" secondAttribute="trailing" id="OV2-8G-Dww"/>
                             <constraint firstItem="nFv-2U-hRa" firstAttribute="top" secondItem="pwZ-Cs-XT6" secondAttribute="bottom" id="UsA-WV-nBw"/>
                             <constraint firstItem="pwZ-Cs-XT6" firstAttribute="top" secondItem="OtT-de-cLq" secondAttribute="top" id="Wy1-ev-nkH"/>
+                            <constraint firstItem="7Wd-fV-fjT" firstAttribute="centerX" secondItem="OtT-de-cLq" secondAttribute="centerX" id="gsJ-Iy-Sab"/>
+                            <constraint firstItem="7Wd-fV-fjT" firstAttribute="centerY" secondItem="OtT-de-cLq" secondAttribute="centerY" id="zEq-Vn-Psv"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -142,6 +148,7 @@
                         <barButtonItem key="backBarButtonItem" title="Powrót" id="W5K-ee-erm"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="7Wd-fV-fjT" id="IsG-U1-Qzp"/>
                         <outlet property="newsTableView" destination="pwZ-Cs-XT6" id="FJy-v6-ukA"/>
                         <segue destination="QIr-6d-S0g" kind="show" identifier="newsDetailSegue" id="09z-hL-as3">
                             <nil key="action"/>
