@@ -14,11 +14,7 @@ class AddScheduleOperation: ServiceOperation {
     var resultCompletion: ((RequestResult<ReservationItem>) -> Void)?
 
     public init(dataObject: ReservationItem, modificationMessage: String, ownerId: String?) {
-        if let ownerId = ownerId {
-            self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage, ownerId: ownerId)
-        } else {
-            self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage)
-        }
+        self.request = AddScheduleRequest(dataObject: dataObject, modificationMessage: modificationMessage, ownerId: ownerId)
         super.init()
     }
 

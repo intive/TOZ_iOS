@@ -34,7 +34,6 @@ class BackendService {
 
         var headers = request.headers
         /// Set authentication token if available.
-        headers?["X-Api-Auth-Token"] = BackendAuth.shared.token
         if let token = BackendAuth.shared.token {
             headers?["Authorization"] = "Bearer " + token
         }
