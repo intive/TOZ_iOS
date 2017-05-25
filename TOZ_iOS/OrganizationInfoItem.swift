@@ -12,14 +12,19 @@ import Foundation
  */
 struct OrganizationInfoItem: ParsedItem {
 
-    let header: String
-    let description: String
     let name: String
-    let branch: String
-    let addressStreet: String
-    let addressHouseNumber: String
-    let addressPostcode: String
-    let addressCity: String
-    let bankAccountNumber: String
-    let bankAccountBankName: String
+    let invitationText: String?
+    let volunteerText: String?
+    let street: String?
+    let houseNumber: String?
+    let apartmentNumber: String?
+    let postCode: String?
+    let city: String?
+    let country: String?
+    let email: String?
+    let phone: String?
+    let fax: String?
+    let website: String?
+    let accountNumber: String
+    let bankName: String?
 }
