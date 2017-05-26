@@ -16,6 +16,9 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalDescription: UILabel!
     @IBOutlet weak var pictureCaption: UILabel!
     @IBOutlet weak var photosContainer: UIView!
+    @IBOutlet weak var helpAnimalLabel: UILabel!
+    @IBOutlet weak var helpAnimalAccount: UILabel!
+    @IBOutlet weak var helpAnimalView: UIView!
 
     var selectedCellID: String?
     var photoURL: URL?
@@ -33,6 +36,8 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        isHelpViewHidden(hidden: true)
+
         galleryDetailPhotoViewController = storyboard?.instantiateViewController(withIdentifier: "GalleryDetailPhotoViewController") as? GalleryDetailPhotoViewController
         if let galleryDetailPhotoViewController = galleryDetailPhotoViewController {
             addChildViewController(galleryDetailPhotoViewController)
@@ -49,6 +54,25 @@ class GalleryDetailViewController: UIViewController {
         makeAnimalOperation()
         getAnimal()
         NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
+    }
+
+    @IBAction func helpThisAnimalAction(_ sender: Any) {
+        isHelpViewHidden(hidden: helpViewHeight == nil)
+    }
+    var helpViewHeight: NSLayoutConstraint?
+
+    func isHelpViewHidden(hidden: Bool) {
+        if hidden == true {
+            helpViewHeight = NSLayoutConstraint(item: helpAnimalView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0)
+            if let helpViewHeight = helpViewHeight {
+                self.view.addConstraint(helpViewHeight)
+            }
+        } else {
+            if let helpViewHeight = helpViewHeight {
+                self.view.removeConstraint(helpViewHeight)
+                self.helpViewHeight = nil
+            }
+        }
     }
 
     func getAnimal() {
@@ -86,4 +110,5 @@ class GalleryDetailViewController: UIViewController {
             self.pictureCaption.text = "Brak zdjęcia"
         }
     }
+
 }

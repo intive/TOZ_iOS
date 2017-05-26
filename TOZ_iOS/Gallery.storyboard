@@ -239,8 +239,8 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnimalDescription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-HO-yZJ">
                                         <rect key="frame" x="40" y="369" width="334" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyt-aS-dWd" userLabel="Divider">
@@ -257,29 +257,32 @@
                                             <constraint firstAttribute="height" constant="40" id="5aB-1t-xbu"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="helpThisAnimalAction:" destination="Edr-KM-NY0" eventType="touchUpInside" id="Ej7-EJ-PKC"/>
+                                        </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-as-lCX">
-                                        <rect key="frame" x="40" y="451" width="334" height="75.333333333333371"/>
+                                    <view contentMode="scaleToFill" restorationIdentifier="helpAnimalView" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-as-lCX" userLabel="helpAnimalView">
+                                        <rect key="frame" x="40" y="451" width="334" height="54"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="randomText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bt-6U-LC8">
-                                                <rect key="frame" x="0.0" y="4" width="334" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="randomText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bt-6U-LC8">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-WG-fpS">
-                                                <rect key="frame" x="0.0" y="45" width="334" height="20.333333333333371"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountNumber" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-WG-fpS">
+                                                <rect key="frame" x="0.0" y="37" width="334" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="jyH-WG-fpS" secondAttribute="bottom" constant="10" id="Dvt-jL-Det"/>
+                                            <constraint firstAttribute="bottom" secondItem="jyH-WG-fpS" secondAttribute="bottom" id="Dvt-jL-Det"/>
                                             <constraint firstItem="jyH-WG-fpS" firstAttribute="leading" secondItem="7Bt-6U-LC8" secondAttribute="leading" id="OCV-9A-xUa"/>
                                             <constraint firstAttribute="trailing" secondItem="7Bt-6U-LC8" secondAttribute="trailing" id="Ugu-ra-jvo"/>
-                                            <constraint firstItem="7Bt-6U-LC8" firstAttribute="top" secondItem="xfF-as-lCX" secondAttribute="top" constant="4" id="dTT-NX-8MQ"/>
+                                            <constraint firstItem="7Bt-6U-LC8" firstAttribute="top" secondItem="xfF-as-lCX" secondAttribute="top" id="dTT-NX-8MQ"/>
                                             <constraint firstAttribute="trailing" secondItem="jyH-WG-fpS" secondAttribute="trailing" id="lM6-EO-pOM"/>
                                             <constraint firstItem="jyH-WG-fpS" firstAttribute="top" secondItem="7Bt-6U-LC8" secondAttribute="bottom" constant="20" id="pH1-A3-DJl"/>
                                             <constraint firstItem="jyH-WG-fpS" firstAttribute="leading" secondItem="xfF-as-lCX" secondAttribute="leading" id="pgJ-2s-XdL"/>
@@ -359,6 +362,9 @@
                         <outlet property="animalName" destination="kAU-8K-880" id="bmf-4x-Fo2"/>
                         <outlet property="animalSex" destination="Acp-nu-c9k" id="mCX-fR-yGs"/>
                         <outlet property="animalType" destination="SIu-4K-vka" id="lCM-p3-lEE"/>
+                        <outlet property="helpAnimalAccount" destination="jyH-WG-fpS" id="0PZ-LG-Ir7"/>
+                        <outlet property="helpAnimalLabel" destination="7Bt-6U-LC8" id="m2w-Ga-YKf"/>
+                        <outlet property="helpAnimalView" destination="xfF-as-lCX" id="T7U-W2-ycR"/>
                         <outlet property="photosContainer" destination="cWk-DY-oSP" id="gsk-bR-hsa"/>
                         <outlet property="pictureCaption" destination="KJM-vm-uZ9" id="eLR-km-W8b"/>
                     </connections>
