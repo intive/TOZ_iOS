@@ -37,14 +37,28 @@ class NetworkService {
         mutableRequest.allHTTPHeaderFields = headers
         mutableRequest.httpMethod = method.rawValue
 
+        // query parameters in GET
+        let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: false)
+        if method.rawValue == "GET" {
+            if let params = params {
+                var arrayURLQueryItem: [URLQueryItem] = []
+                for item in params {
+                    let itemQuery = NSURLQueryItem(name: item.key, value: item.value as? String)
+                    arrayURLQueryItem.append(itemQuery as URLQueryItem)
+                }
+                urlComponents?.queryItems = arrayURLQueryItem
+            }
+            mutableRequest.url = urlComponents?.url
+        } else {
         /// HTTP body data
-        if let params = params {
-            do {
-                mutableRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
-            } catch {
-                print("Serialization parameters to JSON failed")
-                failure?(nil, RequestError.FailedToSerializeJSON, 0)
-                return
+            if let params = params {
+                do {
+                    mutableRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+                } catch {
+                    print("Serialization parameters to JSON failed")
+                    failure?(nil, RequestError.FailedToSerializeJSON, 0)
+                    return
+                }
             }
         }
         /// Creates a session with default configuration
