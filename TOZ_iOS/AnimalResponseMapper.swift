@@ -35,7 +35,14 @@ final class AnimalResponseMapper: ResponseMapper<AnimalItem>, ResponseMapperProt
             if let imageString = imageString {
                 imageURL = BackendConfiguration.shared.photosURL.appendingPathComponent(imageString)
             }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL)
+            guard let gallery = json["gallery"] as? [AnimalGalleryItem]? else { return nil }
+            var galleryURLs: [URL] = []
+            if let gallery = gallery {
+                for item in gallery {
+                    galleryURLs.append(BackendConfiguration.shared.photosURL.appendingPathComponent(item.fileUrl))
+                }
+            }
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL, galleryURLs: galleryURLs)
         })
     }
 }
