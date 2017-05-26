@@ -33,4 +33,5 @@ final class ResetPasswordRequest: BackendAPIRequest {
         return defaultJSONHeaders()
     }
 
+    var queryItems: [URLQueryItem]?
 }
