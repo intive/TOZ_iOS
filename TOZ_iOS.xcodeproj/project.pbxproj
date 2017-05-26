@@ -50,6 +50,7 @@
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
 		4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FB8321ED49E42004B98B8 /* GetPetByID.json */; };
+		4B0FB8351ED87AE8004B98B8 /* AnimalGalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */; };
 		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
 		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
 		4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */; };
@@ -180,6 +181,7 @@
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
 		4B0FB8321ED49E42004B98B8 /* GetPetByID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetPetByID.json; sourceTree = "<group>"; };
+		4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGalleryItem.swift; sourceTree = "<group>"; };
 		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
 		4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordItem.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				3777B0BD1E91932E00FF385A /* NewsItem.swift */,
 				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
+				4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */,
 				4B53F4D51EAA610100D894F8 /* SignInItem.swift */,
 				05220A031EB3B78400998296 /* SignUpItem.swift */,
 				4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */,
@@ -787,6 +790,7 @@
 				8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
 				05220A041EB3B78400998296 /* SignUpItem.swift in Sources */,
+				4B0FB8351ED87AE8004B98B8 /* AnimalGalleryItem.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				54D1390B1EA118BF0064BE00 /* ReservationItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
