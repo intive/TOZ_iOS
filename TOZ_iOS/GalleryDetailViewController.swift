@@ -68,7 +68,7 @@ class GalleryDetailViewController: UIViewController {
                     } else {
                         self.pictureCaption.text = "Brak zdjęcia"
                     }
-                    // If there is a nonempty gallery, than override 'photos' with it
+                    // If there is a nonempty gallery, than overwrite 'photos' with it
                     if let galleryURLs = localAnimal.galleryURLs {
                         if !galleryURLs.isEmpty {
                             self.photos = galleryURLs
