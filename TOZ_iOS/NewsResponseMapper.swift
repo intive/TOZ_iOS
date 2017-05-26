@@ -14,7 +14,7 @@ final class NewsResponseMapper: ArrayResponseMapper<NewsItem>, ResponseMapperPro
             guard let publishDate = jsonNode["published"] as? Int? else { return nil }
             guard let title = jsonNode["title"] as? String else { return nil }
             guard let contents = jsonNode["contents"] as? String else { return nil }
-            guard let photoUrl = jsonNode["imageUrl"] as? String? else { return nil }
+            guard let photoUrl = jsonNode["photoUrl"] as? String? else { return nil }
             var published: Date? = nil
             if let publishDate = publishDate {
                 published = Date(timeIntervalSince1970: TimeInterval(publishDate/1000))
