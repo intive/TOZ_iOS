@@ -24,6 +24,7 @@ class GalleryDetailViewController: UIViewController {
     var photoURL: URL?
     var photos: [URL] = []
     var animalOperation: AnimalOperation?
+    var organizationInfoOperation = OrganizationInfoOperation()
     var galleryDetailPhotoViewController: GalleryDetailPhotoViewController?
 
     func makeAnimalOperation() {
@@ -36,8 +37,8 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.helpAnimalLabel.text = "Jeżeli chcesz pomóc temu zwierzakowi..."
         isHelpViewHidden(hidden: true)
-
         galleryDetailPhotoViewController = storyboard?.instantiateViewController(withIdentifier: "GalleryDetailPhotoViewController") as? GalleryDetailPhotoViewController
         if let galleryDetailPhotoViewController = galleryDetailPhotoViewController {
             addChildViewController(galleryDetailPhotoViewController)
@@ -53,6 +54,7 @@ class GalleryDetailViewController: UIViewController {
         }
         makeAnimalOperation()
         getAnimal()
+        getOrganizationInfo()
         NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
     }
 
@@ -66,10 +68,11 @@ class GalleryDetailViewController: UIViewController {
             helpViewHeight = NSLayoutConstraint(item: helpAnimalView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0)
             if let helpViewHeight = helpViewHeight {
                 self.view.addConstraint(helpViewHeight)
+                helpViewHeight.isActive = true
             }
         } else {
             if let helpViewHeight = helpViewHeight {
-                self.view.removeConstraint(helpViewHeight)
+                helpViewHeight.isActive = false
                 self.helpViewHeight = nil
             }
         }
@@ -97,9 +100,25 @@ class GalleryDetailViewController: UIViewController {
                 }
             case .failure(let error):
                 print ("\(error)")
+
             }
         }
         animalOperation?.start()
+    }
+
+    func getOrganizationInfo() {
+        organizationInfoOperation.resultCompletion = { result in
+            switch result {
+            case .success (let organizationInfo):
+                DispatchQueue.main.async {
+                    self.helpAnimalAccount.text = organizationInfo.accountNumber
+                }
+            case .failure(let error):
+                print ("\(error)")
+            }
+        }
+        organizationInfoOperation.start()
+
     }
 
     func updateCaption(notification: Notification) {

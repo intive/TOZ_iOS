@@ -262,7 +262,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" restorationIdentifier="helpAnimalView" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-as-lCX" userLabel="helpAnimalView">
-                                        <rect key="frame" x="40" y="451" width="334" height="54"/>
+                                        <rect key="frame" x="40" y="451" width="334" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="randomText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bt-6U-LC8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
@@ -279,8 +279,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="jyH-WG-fpS" secondAttribute="bottom" id="Dvt-jL-Det"/>
-                                            <constraint firstItem="jyH-WG-fpS" firstAttribute="leading" secondItem="7Bt-6U-LC8" secondAttribute="leading" id="OCV-9A-xUa"/>
+                                            <constraint firstAttribute="bottom" secondItem="jyH-WG-fpS" secondAttribute="bottom" constant="2" id="Dvt-jL-Det"/>
                                             <constraint firstAttribute="trailing" secondItem="7Bt-6U-LC8" secondAttribute="trailing" id="Ugu-ra-jvo"/>
                                             <constraint firstItem="7Bt-6U-LC8" firstAttribute="top" secondItem="xfF-as-lCX" secondAttribute="top" id="dTT-NX-8MQ"/>
                                             <constraint firstAttribute="trailing" secondItem="jyH-WG-fpS" secondAttribute="trailing" id="lM6-EO-pOM"/>
