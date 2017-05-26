@@ -17,4 +17,5 @@ struct AnimalItem: ParsedItem {
     let created: Date?
     let lastModified: Date?
     let imageUrl: URL?
+    let galleryURLs: [URL]?
 }
