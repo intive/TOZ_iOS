@@ -29,7 +29,7 @@ final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, Respon
                 timeOfDay = TimeOfDay.afternoon
             }
             var ownerForename: String?
-            if let ownerForenameCheck = json["ownerForename"] as? String {
+            if let ownerForenameCheck = json["ownerName"] as? String {
                 ownerForename = ownerForenameCheck
             }
             var ownerSurname: String?
