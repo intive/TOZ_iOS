@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05220A041EB3B78400998296 /* SignUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A031EB3B78400998296 /* SignUpItem.swift */; };
+		05220A061EB3B84F00998296 /* SignUpOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A051EB3B84F00998296 /* SignUpOperation.swift */; };
+		05220A081EB3B95500998296 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A071EB3B95500998296 /* SignUpRequest.swift */; };
+		05220A0A1EB3B9F600998296 /* SignUpResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05220A091EB3B9F600998296 /* SignUpResponseMapper.swift */; };
 		052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B681E9E4FD9001AE31A /* GetNews.json */; };
 		052E3B6D1E9E50A0001AE31A /* GetOrganizationInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */; };
 		052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */ = {isa = PBXBuildFile; fileRef = 052E3B6E1E9E5154001AE31A /* GetAnimals.json */; };
@@ -15,7 +19,6 @@
 		05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */ = {isa = PBXBuildFile; fileRef = 05E74BF91EC7C4CA006805BB /* PostRegistration.json */; };
 		37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5C1E7F1B7E00336605 /* NewsEntity.swift */; };
 		37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */; };
-		37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */; };
 		37434B631E7F1BAA00336605 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37434B621E7F1BAA00336605 /* Color.swift */; };
 		3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */; };
 		3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */; };
@@ -24,7 +27,10 @@
 		3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BB1E91932500FF385A /* NewsOperation.swift */; };
 		3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BD1E91932E00FF385A /* NewsItem.swift */; };
 		3777B0C01E91933700FF385A /* NewsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */; };
+		420CD1B41ED0EDC900ACDBC3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */; };
 		420FD4481EAFBC36009AC0E1 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420FD4471EAFBC35009AC0E1 /* Account.storyboard */; };
+		421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */; };
+		421BB7ED1ECB637A00CE3429 /* ResetPasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */; };
 		422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761D1EA95A4700C89A03 /* NameChecker.swift */; };
 		422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */; };
 		422D76221EA95A6F00C89A03 /* PhoneNumberChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */; };
@@ -32,6 +38,7 @@
 		42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */; };
 		424D93D21EC2202800A4427C /* Date+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */; };
 		424D93D41EC4C85100A4427C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D93D31EC4C85100A4427C /* Button.swift */; };
+		426AF9961ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */; };
 		4292CCFB1EAFC70400C08229 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */; };
 		4292CCFD1EAFF46000C08229 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */; };
 		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
@@ -42,11 +49,12 @@
 		4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */; };
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
-		4B1988501EC73A570079460C /* PostChangePassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B19884F1EC73A570079460C /* PostChangePassword.json */; };
+		4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FB8321ED49E42004B98B8 /* GetPetByID.json */; };
 		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
 		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
 		4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */; };
 		4B19884E1EC7368A0079460C /* ChangePasswordResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */; };
+		4B1988501EC73A570079460C /* PostChangePassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B19884F1EC73A570079460C /* PostChangePassword.json */; };
 		4B1ADCB91E87B8AD00F8BA37 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */; };
 		4B1ADCBB1E87B8EE00F8BA37 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */; };
 		4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */; };
@@ -78,9 +86,9 @@
 		4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98661E7F16A000951035 /* ResponseMapper.swift */; };
 		4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */; };
 		4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */; };
+		54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */; };
 		54A2FA641EBA76130020BBAC /* AddScheduleResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */; };
 		54A2FA661EBA77990020BBAC /* AddSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54A2FA651EBA77990020BBAC /* AddSchedule.json */; };
-		54A2FA621EBA40900020BBAC /* CalendarResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */; };
 		54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */; };
 		54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */; };
 		54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */; };
@@ -116,6 +124,7 @@
 		CE0BB3A51E958980006E23C7 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A41E958980006E23C7 /* Calendar.storyboard */; };
 		CE0BB3A71E9A7059006E23C7 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A61E9A7059006E23C7 /* Help.storyboard */; };
 		CE0BB3A91E9A7127006E23C7 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0BB3A81E9A7127006E23C7 /* News.storyboard */; };
+		CE2DDF5F1ECA0D3700BF7A07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DDF5E1ECA0D3700BF7A07 /* SignUpViewController.swift */; };
 		FD74D32931BCD4088F24DCF6 /* Pods_TOZ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -130,6 +139,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05220A031EB3B78400998296 /* SignUpItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpItem.swift; sourceTree = "<group>"; };
+		05220A051EB3B84F00998296 /* SignUpOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOperation.swift; sourceTree = "<group>"; };
+		05220A071EB3B95500998296 /* SignUpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		05220A091EB3B9F600998296 /* SignUpResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpResponseMapper.swift; sourceTree = "<group>"; };
 		052E3B681E9E4FD9001AE31A /* GetNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetNews.json; sourceTree = "<group>"; };
 		052E3B6C1E9E50A0001AE31A /* GetOrganizationInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetOrganizationInfo.json; sourceTree = "<group>"; };
 		052E3B6E1E9E5154001AE31A /* GetAnimals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAnimals.json; sourceTree = "<group>"; };
@@ -139,7 +152,6 @@
 		0B4DAB99C7DD09A1A743E45E /* Pods_TOZ_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37434B5C1E7F1B7E00336605 /* NewsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
 		37434B5D1E7F1B7E00336605 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
 		37434B621E7F1BAA00336605 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
 		3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFinanceViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +160,10 @@
 		3777B0BB1E91932500FF385A /* NewsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsOperation.swift; sourceTree = "<group>"; };
 		3777B0BD1E91932E00FF385A /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		3777B0BF1E91933700FF385A /* NewsResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponseMapper.swift; sourceTree = "<group>"; };
+		420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		420FD4471EAFBC35009AC0E1 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
+		421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordOperation.swift; sourceTree = "<group>"; };
 		422D761D1EA95A4700C89A03 /* NameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameChecker.swift; sourceTree = "<group>"; };
 		422D761F1EA95A5A00C89A03 /* SurnameChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurnameChecker.swift; sourceTree = "<group>"; };
 		422D76211EA95A6F00C89A03 /* PhoneNumberChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberChecker.swift; sourceTree = "<group>"; };
@@ -156,6 +171,7 @@
 		42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayMapperTest.swift; sourceTree = "<group>"; };
 		424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionTests.swift"; sourceTree = "<group>"; };
 		424D93D31EC4C85100A4427C /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addHideKeyboardGestureRecognizer.swift"; sourceTree = "<group>"; };
 		4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
 		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
@@ -166,11 +182,12 @@
 		4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalRequest.swift; sourceTree = "<group>"; };
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
-		4B19884F1EC73A570079460C /* PostChangePassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostChangePassword.json; sourceTree = "<group>"; };
+		4B0FB8321ED49E42004B98B8 /* GetPetByID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetPetByID.json; sourceTree = "<group>"; };
 		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
 		4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordItem.swift; sourceTree = "<group>"; };
 		4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordResponseMapper.swift; sourceTree = "<group>"; };
+		4B19884F1EC73A570079460C /* PostChangePassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostChangePassword.json; sourceTree = "<group>"; };
 		4B1ADCB81E87B8AD00F8BA37 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		4B1ADCBA1E87B8EE00F8BA37 /* RequestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLengthChecker.swift; sourceTree = "<group>"; };
@@ -202,9 +219,9 @@
 		4BFF98661E7F16A000951035 /* ResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF98681E7F170900951035 /* OrganizationInfoResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoResponseMapper.swift; sourceTree = "<group>"; };
 		4BFF986A1E7F186100951035 /* ArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayResponseMapper.swift; sourceTree = "<group>"; };
+		54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A2FA631EBA76130020BBAC /* AddScheduleResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A2FA651EBA77990020BBAC /* AddSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddSchedule.json; sourceTree = "<group>"; };
-		54A2FA611EBA40900020BBAC /* CalendarResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarResponseMapperTests.swift; sourceTree = "<group>"; };
 		54A48C341EA94397003AD6A5 /* GetScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleRequest.swift; sourceTree = "<group>"; };
 		54A48C361EA96795003AD6A5 /* GetScheduleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleOperation.swift; sourceTree = "<group>"; };
 		54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetScheduleResponseMapper.swift; sourceTree = "<group>"; };
@@ -245,6 +262,7 @@
 		CE0BB3A41E958980006E23C7 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		CE0BB3A61E9A7059006E23C7 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		CE0BB3A81E9A7127006E23C7 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		CE2DDF5E1ECA0D3700BF7A07 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D193989766D107F5788BF823 /* Pods-TOZ_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC024A7099B1ED00E959A5C1 /* Pods-TOZ_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOSTests/Pods-TOZ_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB010738E58D345E5DABAD84 /* Pods-TOZ_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOZ_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOZ_iOS/Pods-TOZ_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +299,7 @@
 				055A62491EB66D8B006F8C7C /* PostLogin.json */,
 				4B19884F1EC73A570079460C /* PostChangePassword.json */,
 				05E74BF91EC7C4CA006805BB /* PostRegistration.json */,
+				4B0FB8321ED49E42004B98B8 /* GetPetByID.json */,
 			);
 			name = MockJSONFiles;
 			sourceTree = "<group>";
@@ -314,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */,
+				426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -348,7 +368,9 @@
 				4B98B2E71E8C4E6C007E0D6C /* ListOfAnimalsRequest.swift */,
 				4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */,
 				4B53F4D31EAA5EC600D894F8 /* SignInRequest.swift */,
+				05220A071EB3B95500998296 /* SignUpRequest.swift */,
 				4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */,
+				421BB7E21ECB500200CE3429 /* ResetPasswordRequest.swift */,
 			);
 			name = NetworkRequests;
 			sourceTree = "<group>";
@@ -364,7 +386,9 @@
 				4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */,
 				4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */,
 				4B53F4D91EAA665C00D894F8 /* SignInOperation.swift */,
+				05220A051EB3B84F00998296 /* SignUpOperation.swift */,
 				4B1988491EC735290079460C /* ChangePasswordOperation.swift */,
+				421BB7EC1ECB637A00CE3429 /* ResetPasswordOperation.swift */,
 			);
 			name = NetworkOperations;
 			sourceTree = "<group>";
@@ -377,6 +401,7 @@
 				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
 				4B53F4D51EAA610100D894F8 /* SignInItem.swift */,
+				05220A031EB3B78400998296 /* SignUpItem.swift */,
 				4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */,
 			);
 			name = NetworkItems;
@@ -393,6 +418,7 @@
 				4B53F4D71EAA640B00D894F8 /* SignInResponseMapper.swift */,
 				4B19884D1EC7368A0079460C /* ChangePasswordResponseMapper.swift */,
 				54A48C381EA9692B003AD6A5 /* GetScheduleResponseMapper.swift */,
+				05220A091EB3B9F600998296 /* SignUpResponseMapper.swift */,
 			);
 			name = NetworkMappers;
 			sourceTree = "<group>";
@@ -469,7 +495,7 @@
 				8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */,
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
-				37434B5E1E7F1B7E00336605 /* ProfilePhotoView.swift */,
+				CE2DDF5E1ECA0D3700BF7A07 /* SignUpViewController.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
 				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
@@ -484,6 +510,7 @@
 				37434B621E7F1BAA00336605 /* Color.swift */,
 				4B5901E31EAFD54C0050C5BB /* User.swift */,
 				4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */,
+				420CD1B31ED0EDC900ACDBC3 /* ResetPasswordViewController.swift */,
 				424D93D31EC4C85100A4427C /* Button.swift */,
 				4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */,
 				420FD4471EAFBC35009AC0E1 /* Account.storyboard */,
@@ -621,6 +648,7 @@
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
 				4B1988501EC73A570079460C /* PostChangePassword.json in Resources */,
 				05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */,
+				4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */,
 				055A624A1EB66D8B006F8C7C /* PostLogin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +779,7 @@
 				4B5EBAD21EA2A7740015663C /* GalleryDetailDataViewController.swift in Sources */,
 				4BFF98671E7F16A000951035 /* ResponseMapper.swift in Sources */,
 				A1CABBF71E6AEB1F009A06F8 /* NewsViewController.swift in Sources */,
+				421BB7ED1ECB637A00CE3429 /* ResetPasswordOperation.swift in Sources */,
 				3777B0B81E8FE7FD00FF385A /* PhotoManager.swift in Sources */,
 				4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */,
 				37434B601E7F1B7E00336605 /* NewsTableViewCell.swift in Sources */,
@@ -774,8 +803,10 @@
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,
 				4B5185901E7EAD7B00CD343F /* BackendService.swift in Sources */,
 				3777B0B31E8E479C00FF385A /* GalleryTableViewCell.swift in Sources */,
+				05220A061EB3B84F00998296 /* SignUpOperation.swift in Sources */,
 				8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
+				05220A041EB3B78400998296 /* SignUpItem.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				54D1390B1EA118BF0064BE00 /* ReservationItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
@@ -791,10 +822,13 @@
 				422D761E1EA95A4700C89A03 /* NameChecker.swift in Sources */,
 				3777B0BE1E91932E00FF385A /* NewsItem.swift in Sources */,
 				3777B0BA1E91931900FF385A /* NewsRequest.swift in Sources */,
+				421BB7E31ECB500200CE3429 /* ResetPasswordRequest.swift in Sources */,
 				4B8ADB391E8AE36000EE4EB2 /* BackendConfiguration.swift in Sources */,
 				4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */,
 				3777B0B41E8E479C00FF385A /* HelpFinanceViewController.swift in Sources */,
 				54A48C391EA9692B003AD6A5 /* GetScheduleResponseMapper.swift in Sources */,
+				426AF9961ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift in Sources */,
+				05220A081EB3B95500998296 /* SignUpRequest.swift in Sources */,
 				4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */,
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
@@ -821,10 +855,12 @@
 				A1CABBF51E6AEB1F009A06F8 /* HelpViewController.swift in Sources */,
 				54D1390F1EA119520064BE00 /* GetScheduleWeekOperation.swift in Sources */,
 				4B53F4D81EAA640B00D894F8 /* SignInResponseMapper.swift in Sources */,
-				37434B611E7F1B7E00336605 /* ProfilePhotoView.swift in Sources */,
+				420CD1B41ED0EDC900ACDBC3 /* ResetPasswordViewController.swift in Sources */,
 				4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */,
 				4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */,
 				42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */,
+				05220A0A1EB3B9F600998296 /* SignUpResponseMapper.swift in Sources */,
+				CE2DDF5F1ECA0D3700BF7A07 /* SignUpViewController.swift in Sources */,
 				4B53F4D41EAA5EC600D894F8 /* SignInRequest.swift in Sources */,
 				422D76201EA95A5A00C89A03 /* SurnameChecker.swift in Sources */,
 				4BFF986B1E7F186100951035 /* ArrayResponseMapper.swift in Sources */,

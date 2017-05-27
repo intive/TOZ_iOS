@@ -11,7 +11,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var photoImageView: ProfilePhotoView!
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoImageViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     var selectedNews: NewsItem?
@@ -29,11 +29,13 @@ class NewsDetailViewController: UIViewController {
         contentLabel.textColor = Color.NewsDetailView.Font.content
         titleLabel.text = selectedNews?.title.uppercased()
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
-        photoImageView.photo = nil
+        photoImageView.image = #imageLiteral(resourceName: "placeholder")
         let photoURL: URL? = selectedNews?.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
-                self.photoImageView.photo = image
+                if let image = image {
+                    self.photoImageView.image = image
+                }
             })
         } else {
             self.photoImageViewHeight.constant = 0

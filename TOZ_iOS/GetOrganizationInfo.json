@@ -1,15 +1,12 @@
 {
-    "header": "Nagłówek",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "name": "Fundacja Towarzystwo Pomocy Zwierzętom",
-    "branch": "Oddział FTOZ Szczecin",
+    "name": "Fundacja Pomocy Zwierzętom Wszelakim",
     "address": {
         "street": "ul. Przykładowa",
-        "houseNumber": "12",
+        "houseNumber": "1",
         "apartmentNumber": "1",
-        "postCode": "71-111",
+        "postCode": "02-123",
         "city": "Szczecin",
-        "country": "Poland"
+        "country": "Polska"
     },
     "contact": {
         "email": "mail@example.com",
@@ -18,7 +15,9 @@
         "website": "http://example.com/"
     },
     "bankAccount": {
-        "number": "63 1020 4999 0000 9876 5432 1010",
-        "bankName": "string"
-    }
+        "number": "61 1090 1014 0000 0712 1981 2874",
+        "bankName": "SuperBank"
+    },
+    "invitationText": "Zapraszamy Cię do zostania naszym wolontariuszem. Wystarczy się zarejestrować i możesz zacząć pomagać uczynić życie zwierzaków lepszym. Ponadto wpłacając darowiznę dla Fundacji Pomocy Zwierzętom Wszelakim...",
+    "volunteerText": "Nasi wolontariusze na codzień zajmują się... Dziękujemy za twój wkład"
 }

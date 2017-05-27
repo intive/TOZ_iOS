@@ -11,9 +11,9 @@ final class AddScheduleRequest: BackendAPIRequest {
 
     private let dataObject: ReservationItem
     private let modificationMessage: String
-    private let ownerId: String
+    private var ownerId: String?
 
-    init(dataObject: ReservationItem, modificationMessage: String, ownerId: String) {
+    init(dataObject: ReservationItem, modificationMessage: String, ownerId: String? = nil) {
         self.dataObject = dataObject
         self.modificationMessage = modificationMessage
         self.ownerId = ownerId
@@ -46,7 +46,9 @@ final class AddScheduleRequest: BackendAPIRequest {
         parametersInDictionary["startTime"] = startTime
         parametersInDictionary["endTime"] = endTime
         parametersInDictionary["modificationMessage"] = modificationMessage
-        parametersInDictionary["ownerId"] = ownerId
+        if let ownerId = ownerId {
+            parametersInDictionary["ownerId"] = ownerId
+        }
         if let ownerSurname = dataObject.ownerSurname {
             parametersInDictionary["ownerSurname"] = ownerSurname
         }
@@ -57,7 +59,6 @@ final class AddScheduleRequest: BackendAPIRequest {
         return parametersInDictionary
     }
     var headers: [String: String]? {
-        //"Content-Type":"application/json; charset=utf8"
-        return ["Content-Type":"application/json"]
+        return headersWhenJSONSent()
     }
 }

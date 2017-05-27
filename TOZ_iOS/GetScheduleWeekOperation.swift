@@ -15,6 +15,7 @@ class GetScheduleWeekOperation: ServiceOperation {
 
     public init(fromDate: String, toDate: String) {
         self.request = CalendarWeekRequest(fromDate: fromDate, toDate: toDate)
+        super.init()
     }
 
     func start() {

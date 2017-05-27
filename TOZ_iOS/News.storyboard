@@ -1,54 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--NewsViewController-->
         <scene sceneID="Ic6-uI-xWc">
             <objects>
-                <viewController title="News" id="LDg-fo-A5n" userLabel="NewsViewController" customClass="NewsViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News" automaticallyAdjustsScrollViewInsets="NO" id="LDg-fo-A5n" userLabel="NewsViewController" customClass="NewsViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s1P-l8-cHA"/>
                         <viewControllerLayoutGuide type="bottom" id="nFv-2U-hRa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OtT-de-cLq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="295" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-Cs-XT6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Mh2-Sv-OGP" userLabel="AdditionalTopMargin">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ha7-Nd-1BB" userLabel="AdditionalBottomMargin">
+                                    <rect key="frame" x="0.0" y="325" width="414" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news_cell" rowHeight="295" id="Znj-NZ-fK1" customClass="NewsTableViewCell" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="295"/>
+                                        <rect key="frame" x="0.0" y="30" width="414" height="295"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Znj-NZ-fK1" id="3jV-sR-T6U">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-Ec-P3M" customClass="NewsCellContentView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="2" width="406" height="302"/>
+                                                    <rect key="frame" x="4" y="2" width="406" height="291"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-ju-0dy">
-                                                            <rect key="frame" x="19" y="28" width="368" height="18"/>
+                                                            <rect key="frame" x="19" y="30" width="368" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datePublish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id4-Wy-sQv">
-                                                            <rect key="frame" x="19" y="8" width="368" height="10"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                            <color key="textColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <rect key="frame" x="19" y="8" width="368" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-8f-ihx" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="19" y="58" width="368" height="152"/>
+                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-8f-ihx" customClass="UIImageView">
+                                                            <rect key="frame" x="19" y="60" width="368" height="152"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="152" id="OFh-qH-Ijd"/>
                                                             </constraints>
@@ -59,19 +67,18 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Content Text View" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ajI-rK-Bzh">
-                                                            <rect key="frame" x="19" y="222" width="368" height="51"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <rect key="frame" x="19" y="224" width="368" height="38"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Czytaj dalej  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twW-Wf-NT2">
-                                                            <rect key="frame" x="297" y="245" width="85" height="20"/>
+                                                            <rect key="frame" x="297" y="247" width="85" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="5fA-YJ-TY3"/>
                                                                 <constraint firstAttribute="width" constant="85" id="Kob-6W-iZa"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" red="0.9882352941176471" green="0.52941176470588236" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.99215686274509807" green="0.53725490196078429" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -103,7 +110,7 @@
                                                 <constraint firstItem="I0b-Ec-P3M" firstAttribute="leading" secondItem="3jV-sR-T6U" secondAttribute="leading" constant="4" id="8Nh-6h-1gq"/>
                                                 <constraint firstItem="I0b-Ec-P3M" firstAttribute="top" secondItem="3jV-sR-T6U" secondAttribute="top" constant="2" id="FSV-88-dL2"/>
                                                 <constraint firstAttribute="trailing" secondItem="I0b-Ec-P3M" secondAttribute="trailing" constant="4" id="Whq-rf-uUW"/>
-                                                <constraint firstAttribute="bottom" secondItem="I0b-Ec-P3M" secondAttribute="bottom" constant="-9" id="hZy-t8-eJi"/>
+                                                <constraint firstAttribute="bottom" secondItem="I0b-Ec-P3M" secondAttribute="bottom" constant="2" id="hZy-t8-eJi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -123,14 +130,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="bottom" secondItem="nFv-2U-hRa" secondAttribute="top" id="4oF-yd-7pc"/>
-                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="leading" secondItem="OtT-de-cLq" secondAttribute="leading" id="FVQ-K0-7al"/>
-                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="top" secondItem="s1P-l8-cHA" secondAttribute="bottom" constant="-64" id="HLT-Si-Mpo"/>
-                            <constraint firstAttribute="trailing" secondItem="pwZ-Cs-XT6" secondAttribute="trailing" id="Jzw-GT-AH4"/>
+                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="leading" secondItem="OtT-de-cLq" secondAttribute="leading" id="Lgs-8K-Hjm"/>
+                            <constraint firstAttribute="trailing" secondItem="pwZ-Cs-XT6" secondAttribute="trailing" id="OV2-8G-Dww"/>
+                            <constraint firstItem="nFv-2U-hRa" firstAttribute="top" secondItem="pwZ-Cs-XT6" secondAttribute="bottom" id="UsA-WV-nBw"/>
+                            <constraint firstItem="pwZ-Cs-XT6" firstAttribute="top" secondItem="OtT-de-cLq" secondAttribute="top" id="Wy1-ev-nkH"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="AKTUALNOŚCI" id="ZFa-T7-Dm2">
                         <barButtonItem key="backBarButtonItem" title="Powrót" id="W5K-ee-erm"/>
                     </navigationItem>
@@ -148,7 +155,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="5Rb-gm-0Lh">
             <objects>
-                <viewController storyboardIdentifier="NewsDetailViewController" id="QIr-6d-S0g" customClass="NewsDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="QIr-6d-S0g" customClass="NewsDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mL5-VE-uXX"/>
                         <viewControllerLayoutGuide type="bottom" id="t8m-8W-cGz"/>
@@ -158,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-3u-tug">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieT-o8-xi8">
                                         <rect key="frame" x="30" y="232" width="344" height="20"/>
@@ -166,7 +173,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="ProfilePhotoView" customModule="TOZ_iOS" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="UIImageView">
                                         <rect key="frame" x="30" y="72" width="344" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="m2f-lG-zh9"/>
@@ -209,8 +216,8 @@
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="O3K-O4-qrq" secondAttribute="top" id="1GI-1N-5wx"/>
                             <constraint firstItem="LIN-3u-tug" firstAttribute="leading" secondItem="O3K-O4-qrq" secondAttribute="leading" id="C70-X7-06R"/>
+                            <constraint firstItem="LIN-3u-tug" firstAttribute="top" secondItem="mL5-VE-uXX" secondAttribute="bottom" id="N7l-o1-CRY"/>
                             <constraint firstAttribute="trailing" secondItem="LIN-3u-tug" secondAttribute="trailing" id="kRJ-np-g1I"/>
                             <constraint firstItem="t8m-8W-cGz" firstAttribute="top" secondItem="LIN-3u-tug" secondAttribute="bottom" id="olL-VY-r0L"/>
                         </constraints>

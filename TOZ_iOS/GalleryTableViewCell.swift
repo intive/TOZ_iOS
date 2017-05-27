@@ -9,7 +9,7 @@
 import UIKit
 
 class GalleryTableViewCell: UITableViewCell {
-    @IBOutlet weak var animalImage: ProfilePhotoView!
+    @IBOutlet weak var animalImage: UIImageView!
     @IBOutlet weak var animalName: UILabel!
     @IBOutlet weak var animalType: UILabel!
 
@@ -26,11 +26,22 @@ class GalleryTableViewCell: UITableViewCell {
         self.animalName.text = animal.name
         self.animalType.text = animal.type
         let imageUrl: URL? = animal.imageUrl
-        animalImage.photo = nil
+        animalImage.contentMode = .scaleAspectFill
+        animalImage.clipsToBounds = true
+        switch animal.type {
+            case "CAT":
+                self.animalImage.image = #imageLiteral(resourceName: "placeholder_cat")
+            case "DOG":
+                self.animalImage.image = #imageLiteral(resourceName: "placeholder_dog")
+            default:
+                self.animalImage.image = #imageLiteral(resourceName: "placeholder")
+        }
         if let imageUrl = imageUrl {
             PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> (Void) in
                 if self.animalID == animal.animalID {
-                    self.animalImage.photo = image
+                    if let image = image {
+                        self.animalImage.image = image
+                    }
                 }
             })
         }

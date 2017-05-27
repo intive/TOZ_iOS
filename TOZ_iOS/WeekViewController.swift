@@ -23,12 +23,9 @@ class WeekViewController: UIViewController {
         let index = scheduleMorningLabelCollection.index(of: sender)
         if scheduleMorningLabelCollection[index!].scheduleSelected == false {
             //user with privilege to add operation (todo)
-            //temp login data
-            let ownerSurname = "Doe"
-            let ownerForename = "John"
             let date = weekdayArray[index!]
 
-            let newReservation = ReservationItem(idObject: "", date: CalendarHelper().date(from: date), timeOfDay: .morning, ownerSurname: ownerSurname, ownerForename: ownerForename)
+            let newReservation = ReservationItem(idObject: "", date: CalendarHelper().date(from: date), timeOfDay: .morning, ownerSurname: nil, ownerForename: nil)
             let alertController = UIAlertController(title: "Potwierdzasz?", message: "Zarezerwowałeś termin \(date.dataLabel)", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Tak", style: UIAlertActionStyle.default) { (_ : UIAlertAction) -> Void in
                 self.addReservation(add: newReservation, turnOn: self.scheduleMorningLabelCollection[index!])
@@ -47,12 +44,9 @@ class WeekViewController: UIViewController {
         let index = scheduleAfternoonLabelCollection.index(of: sender)
         if scheduleAfternoonLabelCollection[index!].scheduleSelected == false {
             //user with privilege to add operation (todo)
-            //temp login data
-            let ownerSurname = "Doe"
-            let ownerForename = "John"
             let date = weekdayArray[index!]
 
-            let newReservation = ReservationItem(idObject: "111111-347f-4b2e-b1c6-6faff971f767", date: CalendarHelper().date(from: date), timeOfDay: .afternoon, ownerSurname: ownerSurname, ownerForename: ownerForename)
+            let newReservation = ReservationItem(idObject: "", date: CalendarHelper().date(from: date), timeOfDay: .afternoon, ownerSurname: nil, ownerForename: nil)
             let alertController = UIAlertController(title: "Potwierdzasz?", message: "Zarezerwowałeś termin \(date.dataLabel)", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Tak", style: UIAlertActionStyle.default) { (_ : UIAlertAction) -> Void in
                 self.addReservation(add: newReservation, turnOn: self.scheduleAfternoonLabelCollection[index!])
@@ -90,18 +84,22 @@ class WeekViewController: UIViewController {
     }
 
     func addReservation(add newReservation: ReservationItem, turnOn label: ScheduleControl) {
-        let addOperation = AddScheduleOperation(dataObject: newReservation, modificationMessage: "new reservation", ownerId: "c5296892-347f-4b2e-b1c6-6faff971f767")
+
+        //if user role is not admin
+        let addOperation = AddScheduleOperation(dataObject: newReservation, modificationMessage: "new reservation", ownerId: nil)
         addOperation.resultCompletion = { result in
             switch result {
             case .success(let newReservationRespond):
                 DispatchQueue.main.async {
-                    if newReservation == newReservationRespond {
+                    if newReservation.date == newReservationRespond.date && newReservation.timeOfDay == newReservationRespond.timeOfDay {
                         label.scheduleSelected = true
                         self.reservations.append(newReservation)
                         self.delegate?.weekViewController(self, didUpdate: self.reservations)
                         self.updateUI()
                     } else {
-                        print("Error")
+                        print("ERRROR - objects are not equel")
+                        print("requested: \(newReservation)")
+                        print("responded: \(newReservationRespond)")
                         self.errorInfoPopUp()
                     }
                 }
