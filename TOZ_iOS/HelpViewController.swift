@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HelpViewController: UIViewController {
 
@@ -17,5 +18,15 @@ class HelpViewController: UIViewController {
         helpScrollView.backgroundColor = Color.Background.primary
         helpVolunteerView.backgroundColor = Color.HelpUIViews.background
         helpFinanceView.backgroundColor = Color.HelpUIViews.background
+        runActivityIndicator()
+    }
+
+    func runActivityIndicator() {
+        SVProgressHUD.show()
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HelpFinanceViewController: UIViewController {
 
@@ -50,4 +51,12 @@ class HelpFinanceViewController: UIViewController {
         organizationInfoOperation.start()
     }
 
+    func runActivityIndicator() {
+        SVProgressHUD.show()
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+        }
+    }
 }
