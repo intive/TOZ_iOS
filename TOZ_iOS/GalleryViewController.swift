@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import SVProgressHUD
 
 class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var galleryTableView: UITableView!
@@ -23,6 +24,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         getListOfAnimals()
+        runActivityIndicator()
     }
 
     // UITableViewDataSource
@@ -64,6 +66,14 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
                 print ("\(error)")
             }
         }
-            listOfAnimalsOperation.start()
+        listOfAnimalsOperation.start()
+    }
+    func runActivityIndicator() {
+        SVProgressHUD.show()
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
         }
     }
+}
