@@ -43,17 +43,21 @@ class CalendarViewController: UIViewController {
         currentWeekController = nextWeekController()
         retrieveReservationsinWeek(when: .reverse)
     }
-    
+
     func nextWeekController() -> WeekViewController {
         indexPage -= 1
         indexPage = abs(indexPage)
         
         return weekPages[indexPage]
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleClick))
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
+
         pageController.dataSource = self
         // swiftlint:disable:next force_cast
         let weekAfter: WeekViewController = self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as! WeekViewController
@@ -64,28 +68,28 @@ class CalendarViewController: UIViewController {
         weekPages.append(weekAfter)
         weekBefore.delegate = self
         weekAfter.delegate = self
-        
+
         weekdayArray = calendarHelper.weekdayItemArray()
         currentWeekController = weekBefore
-        
+
         retrieveReservationsinWeek(when: .forward)
     }
-    
+
     override func viewDidLayoutSubviews() {
         prevButton.setTitleColor(Color.Calendar.PreviousButton.text, for: .normal)
         prevButton.backgroundColor = Color.Calendar.PreviousButton.background
         nextButton.setTitleColor(Color.Calendar.NextButton.text, for: .normal)
         nextButton.backgroundColor = Color.Calendar.NextButton.background
-        
+
         prevButton.layer.cornerRadius = prevButton.bounds.height * 0.5
         nextButton.layer.cornerRadius = nextButton.bounds.height * 0.5
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // swiftlint:disable:next force_cast
         pageController = segue.destination as! UIPageViewController
     }
-    
+
     func retrieveReservationsinWeek(when direction: UIPageViewControllerNavigationDirection) {
         weekScheduleOperation = GetScheduleWeekOperation(fromDate: weekdayArray[0].dataLabel, toDate: weekdayArray[6].dataLabel)
         weekScheduleOperation.resultCompletion = { result in
@@ -100,7 +104,7 @@ class CalendarViewController: UIViewController {
                 print ("\(error)")
             }
         }
-        
+
         weekScheduleOperation.start()
     }
 }
@@ -112,15 +116,25 @@ extension CalendarViewController: WeekViewControllerDelegate {
 }
 
 extension CalendarViewController: UIPageViewControllerDataSource {
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
+
         return nil
     }
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
+
         return nil
     }
-    
+
+}
+
+extension CalendarViewController {
+    func doubleClick() {
+        // swiftlint:disable:next force_cast
+        //let listVC: ListViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController ") as! ListViewController
+        let listVC = ListViewController()
+        self.show(listVC, sender: self)
+    }
+
 }
