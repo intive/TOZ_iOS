@@ -25,4 +25,8 @@ final class NewsRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
+
+    var queryItems: [URLQueryItem]? {
+        return [URLQueryItem(name: "isOrdered", value: "true")]
+    }
 }
