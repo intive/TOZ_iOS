@@ -23,8 +23,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     //@IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getListOfAnimals()
         runActivityIndicator()
+        getListOfAnimals()
     }
 
     // UITableViewDataSource
@@ -72,7 +72,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         SVProgressHUD.show()
         DispatchQueue.global().async {
             DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
+                SVProgressHUD.dismiss(withDelay: 0.5)
             }
         }
     }

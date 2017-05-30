@@ -15,17 +15,17 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var helpVolunteerView: UIView!
 
     override func viewDidLoad() {
+        runActivityIndicator()
         helpScrollView.backgroundColor = Color.Background.primary
         helpVolunteerView.backgroundColor = Color.HelpUIViews.background
         helpFinanceView.backgroundColor = Color.HelpUIViews.background
-        runActivityIndicator()
     }
 
     func runActivityIndicator() {
         SVProgressHUD.show()
         DispatchQueue.global().async {
             DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
+                SVProgressHUD.dismiss(withDelay: 0.5)
             }
         }
     }

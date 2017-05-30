@@ -5,6 +5,7 @@
 //  Copyright © 2017 intive. All rights reserved.
 //
 import UIKit
+import SVProgressHUD
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,6 +16,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        runActivityIndicator()
         self.newsTableView.rowHeight = UITableViewAutomaticDimension
         self.newsTableView.estimatedRowHeight = 300
         self.newsTableView.backgroundColor = Color.Cell.Background.primary
@@ -62,6 +64,15 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         newsOperation.start()
+    }
+
+    func runActivityIndicator() {
+        SVProgressHUD.show()
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss(withDelay: 0.5)
+            }
+        }
     }
 
 }

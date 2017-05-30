@@ -19,12 +19,9 @@ class HelpFinanceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        runActivityIndicator()
         getOrganizationInfo()
         self.accountNumberAndName.adjustsFontSizeToFitWidth = true
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
 
     func getOrganizationInfo() {
@@ -55,7 +52,7 @@ class HelpFinanceViewController: UIViewController {
         SVProgressHUD.show()
         DispatchQueue.global().async {
             DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
+                SVProgressHUD.dismiss(withDelay: 0.5)
             }
         }
     }
