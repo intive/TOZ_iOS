@@ -16,6 +16,7 @@ protocol BackendAPIRequest {
     var method: NetworkService.Method { get }
     var parameters: [String: Any]? { get }
     var headers: [String: String]? { get }
+    var queryItems: [URLQueryItem]? { get }
 }
 
 extension BackendAPIRequest {

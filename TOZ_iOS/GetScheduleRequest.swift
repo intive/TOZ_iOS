@@ -28,4 +28,5 @@ final class GetScheduleRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
+    var queryItems: [URLQueryItem]?
 }
