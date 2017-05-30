@@ -286,8 +286,8 @@ Zostań społecznym inspektorem TOZ, członkiem, wolontariuszem, spacerowiczem p
                                     <constraint firstAttribute="width" secondItem="DZB-cf-wjw" secondAttribute="height" multiplier="374:303" id="jzU-2I-IkN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VsF-jH-pq9">
-                                <rect key="frame" x="35" y="158" width="303" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="VsF-jH-pq9">
+                                <rect key="frame" x="35" y="141" width="303" height="132"/>
                                 <string key="text">ZOSTAŃ 
 WOLONTARIUSZEM </string>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
@@ -305,8 +305,8 @@ WOLONTARIUSZEM </string>
                                     <segue destination="uLl-Q8-tE1" kind="show" id="hl4-1n-ob7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="care" translatesAutoresizingMaskIntoConstraints="NO" id="0Km-pm-csT">
-                                <rect key="frame" x="155" y="64" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="care" translatesAutoresizingMaskIntoConstraints="NO" id="0Km-pm-csT">
+                                <rect key="frame" x="155" y="54" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="Tbn-pQ-oor"/>
                                     <constraint firstAttribute="height" constant="64" id="wMS-aF-eMW"/>
@@ -319,8 +319,8 @@ WOLONTARIUSZEM </string>
                             <constraint firstItem="VsF-jH-pq9" firstAttribute="leading" secondItem="lsd-f1-249" secondAttribute="leadingMargin" constant="19" id="5si-NL-e60"/>
                             <constraint firstItem="DZB-cf-wjw" firstAttribute="centerX" secondItem="0Km-pm-csT" secondAttribute="centerX" id="Dba-GO-1sF"/>
                             <constraint firstItem="DZB-cf-wjw" firstAttribute="centerX" secondItem="VsF-jH-pq9" secondAttribute="centerX" constant="0.5" id="DoR-rw-Ad1"/>
-                            <constraint firstItem="VsF-jH-pq9" firstAttribute="top" secondItem="0Km-pm-csT" secondAttribute="bottom" constant="30" id="HAJ-ha-enM"/>
-                            <constraint firstItem="Q70-gu-6mG" firstAttribute="top" secondItem="VsF-jH-pq9" secondAttribute="bottom" constant="64" id="Jt7-i6-XPK"/>
+                            <constraint firstItem="VsF-jH-pq9" firstAttribute="top" secondItem="0Km-pm-csT" secondAttribute="bottom" constant="23" id="HAJ-ha-enM"/>
+                            <constraint firstItem="Q70-gu-6mG" firstAttribute="top" secondItem="VsF-jH-pq9" secondAttribute="bottom" constant="49" id="Jt7-i6-XPK"/>
                             <constraint firstItem="Q70-gu-6mG" firstAttribute="leading" secondItem="lsd-f1-249" secondAttribute="leadingMargin" constant="27" id="KcR-I8-53h"/>
                             <constraint firstItem="DZB-cf-wjw" firstAttribute="top" secondItem="lsd-f1-249" secondAttribute="top" id="QGl-e8-I1V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Km-pm-csT" secondAttribute="trailing" constant="140" id="TSa-sa-EKK"/>
@@ -328,7 +328,7 @@ WOLONTARIUSZEM </string>
                             <constraint firstItem="RrC-dN-IG2" firstAttribute="top" secondItem="Q70-gu-6mG" secondAttribute="bottom" constant="18" id="aDE-He-dpK"/>
                             <constraint firstItem="Q70-gu-6mG" firstAttribute="top" secondItem="DZB-cf-wjw" secondAttribute="bottom" constant="19" id="arc-ao-ODC"/>
                             <constraint firstItem="DZB-cf-wjw" firstAttribute="leading" secondItem="lsd-f1-249" secondAttribute="leading" id="bh4-EP-Vas"/>
-                            <constraint firstItem="0Km-pm-csT" firstAttribute="top" secondItem="3dS-bC-2AG" secondAttribute="bottom" constant="44" id="dww-X2-ysS"/>
+                            <constraint firstItem="0Km-pm-csT" firstAttribute="top" secondItem="3dS-bC-2AG" secondAttribute="bottom" constant="34" id="dww-X2-ysS"/>
                             <constraint firstItem="Q70-gu-6mG" firstAttribute="leading" secondItem="RrC-dN-IG2" secondAttribute="leading" id="fXV-ql-2z0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VsF-jH-pq9" secondAttribute="trailing" constant="21" id="fg6-bm-XJB"/>
                             <constraint firstItem="OBx-Zh-apv" firstAttribute="top" secondItem="RrC-dN-IG2" secondAttribute="bottom" constant="22" id="hqh-Er-M3z"/>
