@@ -108,6 +108,7 @@
 		54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB351EA2CFD600503317 /* WeekDayControl.xib */; };
 		54FBAB381EA2CFE000503317 /* ScheduleControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB371EA2CFE000503317 /* ScheduleControl.swift */; };
 		54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB391EA2D00D00503317 /* ScheduleControl.xib */; };
+		8F25971C1EDD8380008BAD56 /* VolunteerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25971B1EDD8380008BAD56 /* VolunteerInfoViewController.swift */; };
 		8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */; };
 		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
@@ -240,6 +241,7 @@
 		54FBAB371EA2CFE000503317 /* ScheduleControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleControl.swift; sourceTree = "<group>"; };
 		54FBAB391EA2D00D00503317 /* ScheduleControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleControl.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F25971B1EDD8380008BAD56 /* VolunteerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerInfoViewController.swift; sourceTree = "<group>"; };
 		8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellContentView.swift; sourceTree = "<group>"; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -482,6 +484,7 @@
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
 				CE2DDF5E1ECA0D3700BF7A07 /* SignUpViewController.swift */,
+				8F25971B1EDD8380008BAD56 /* VolunteerInfoViewController.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
 				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
@@ -774,6 +777,7 @@
 				3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */,
 				4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */,
 				4B53F4DA1EAA665C00D894F8 /* SignInOperation.swift in Sources */,
+				8F25971C1EDD8380008BAD56 /* VolunteerInfoViewController.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */,
 				4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */,
