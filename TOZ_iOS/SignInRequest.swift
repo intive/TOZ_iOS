@@ -35,4 +35,6 @@ final class SignInRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return headersWhenJSONSent()
     }
+
+    var queryItems: [URLQueryItem]?
 }

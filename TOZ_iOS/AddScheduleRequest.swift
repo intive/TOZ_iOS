@@ -52,8 +52,8 @@ final class AddScheduleRequest: BackendAPIRequest {
         if let ownerSurname = dataObject.ownerSurname {
             parametersInDictionary["ownerSurname"] = ownerSurname
         }
-        if let ownerForename = dataObject.ownerSurname {
-            parametersInDictionary["ownerForename"] = ownerForename
+        if let ownerForename = dataObject.ownerForename {
+            parametersInDictionary["ownerName"] = ownerForename
         }
 
         return parametersInDictionary
@@ -61,4 +61,5 @@ final class AddScheduleRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return headersWhenJSONSent()
     }
+    var queryItems: [URLQueryItem]?
 }
