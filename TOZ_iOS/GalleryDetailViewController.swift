@@ -19,6 +19,7 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var helpAnimalLabel: UILabel!
     @IBOutlet weak var helpAnimalAccount: UILabel!
     @IBOutlet weak var helpAnimalView: UIView!
+    @IBOutlet weak var helpThisAnimalButton: Button!
 
     var selectedCellID: String?
     var photoURL: URL?
@@ -69,11 +70,14 @@ class GalleryDetailViewController: UIViewController {
             if let helpViewHeight = helpViewHeight {
                 self.view.addConstraint(helpViewHeight)
                 helpViewHeight.isActive = true
+                self.helpThisAnimalButton.backgroundColor = Color.Cell.Button.primary
+
             }
         } else {
             if let helpViewHeight = helpViewHeight {
                 helpViewHeight.isActive = false
                 self.helpViewHeight = nil
+                self.helpThisAnimalButton.backgroundColor = Color.Cell.Button.pressed
             }
         }
     }

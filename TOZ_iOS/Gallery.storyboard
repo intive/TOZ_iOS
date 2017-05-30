@@ -256,7 +256,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="5aB-1t-xbu"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="WSPOMÓŻ TEGO ZWIERZAKA"/>
                                         <connections>
                                             <action selector="helpThisAnimalAction:" destination="Edr-KM-NY0" eventType="touchUpInside" id="Ej7-EJ-PKC"/>
                                         </connections>
@@ -364,6 +364,7 @@
                         <outlet property="helpAnimalAccount" destination="jyH-WG-fpS" id="0PZ-LG-Ir7"/>
                         <outlet property="helpAnimalLabel" destination="7Bt-6U-LC8" id="m2w-Ga-YKf"/>
                         <outlet property="helpAnimalView" destination="xfF-as-lCX" id="T7U-W2-ycR"/>
+                        <outlet property="helpThisAnimalButton" destination="DXG-yr-1zz" id="gb4-JY-RNj"/>
                         <outlet property="photosContainer" destination="cWk-DY-oSP" id="gsk-bR-hsa"/>
                         <outlet property="pictureCaption" destination="KJM-vm-uZ9" id="eLR-km-W8b"/>
                     </connections>
