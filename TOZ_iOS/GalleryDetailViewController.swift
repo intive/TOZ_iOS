@@ -13,14 +13,19 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var animalName: UILabel!
     @IBOutlet weak var animalType: UILabel!
     @IBOutlet weak var animalSex: UILabel!
-    @IBOutlet weak var animalDescription: UITextView!
+    @IBOutlet weak var animalDescription: UILabel!
     @IBOutlet weak var pictureCaption: UILabel!
     @IBOutlet weak var photosContainer: UIView!
+    @IBOutlet weak var helpAnimalLabel: UILabel!
+    @IBOutlet weak var helpAnimalAccount: UILabel!
+    @IBOutlet weak var helpAnimalView: UIView!
+    @IBOutlet weak var helpThisAnimalButton: Button!
 
     var selectedCellID: String?
     var photoURL: URL?
     var photos: [URL] = []
     var animalOperation: AnimalOperation?
+    var organizationInfoOperation = OrganizationInfoOperation()
     var galleryDetailPhotoViewController: GalleryDetailPhotoViewController?
 
     func makeAnimalOperation() {
@@ -33,6 +38,8 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.helpAnimalLabel.text = "Jeżeli chcesz pomóc temu zwierzakowi..."
+        isHelpViewHidden(hidden: true)
         galleryDetailPhotoViewController = storyboard?.instantiateViewController(withIdentifier: "GalleryDetailPhotoViewController") as? GalleryDetailPhotoViewController
         if let galleryDetailPhotoViewController = galleryDetailPhotoViewController {
             addChildViewController(galleryDetailPhotoViewController)
@@ -48,7 +55,31 @@ class GalleryDetailViewController: UIViewController {
         }
         makeAnimalOperation()
         getAnimal()
+        getOrganizationInfo()
         NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
+    }
+
+    @IBAction func helpThisAnimalAction(_ sender: Any) {
+        isHelpViewHidden(hidden: helpViewHeight == nil)
+    }
+    var helpViewHeight: NSLayoutConstraint?
+
+    func isHelpViewHidden(hidden: Bool) {
+        if hidden == true {
+            helpViewHeight = NSLayoutConstraint(item: helpAnimalView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0)
+            if let helpViewHeight = helpViewHeight {
+                self.view.addConstraint(helpViewHeight)
+                helpViewHeight.isActive = true
+                self.helpThisAnimalButton.backgroundColor = Color.Cell.Button.primary
+
+            }
+        } else {
+            if let helpViewHeight = helpViewHeight {
+                helpViewHeight.isActive = false
+                self.helpViewHeight = nil
+                self.helpThisAnimalButton.backgroundColor = Color.Cell.Button.pressed
+            }
+        }
     }
 
     func getAnimal() {
@@ -78,9 +109,25 @@ class GalleryDetailViewController: UIViewController {
                 }
             case .failure(let error):
                 print ("\(error)")
+
             }
         }
         animalOperation?.start()
+    }
+
+    func getOrganizationInfo() {
+        organizationInfoOperation.resultCompletion = { result in
+            switch result {
+            case .success (let organizationInfo):
+                DispatchQueue.main.async {
+                    self.helpAnimalAccount.text = organizationInfo.accountNumber
+                }
+            case .failure(let error):
+                print ("\(error)")
+            }
+        }
+        organizationInfoOperation.start()
+
     }
 
     func updateCaption(notification: Notification) {
@@ -91,4 +138,5 @@ class GalleryDetailViewController: UIViewController {
             self.pictureCaption.text = "Brak zdjęcia"
         }
     }
+
 }
