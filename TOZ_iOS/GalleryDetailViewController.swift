@@ -61,13 +61,18 @@ class GalleryDetailViewController: UIViewController {
                     self.galleryDetailPhotoViewController?.animalType = localAnimal.type
                     self.animalSex.text = localAnimal.sex
                     self.animalDescription.text = localAnimal.description
-                    // For now if there is a imageURL for the Animal than add it to array of photos.
-                    // To be changed when backend starts to return array of urls instead of just one url.
+                    // If there is an imageURL for the Animal than add it to array of photos.
                     if let photoURL = localAnimal.imageUrl {
                         self.photos.append(photoURL)
                         self.pictureCaption.text = "Zdjęcie 1 / \(self.photos.count)"
                     } else {
                         self.pictureCaption.text = "Brak zdjęcia"
+                    }
+                    // If there is a nonempty gallery, than overwrite 'photos' with it
+                    if let galleryURLs = localAnimal.galleryURLs {
+                        if !galleryURLs.isEmpty {
+                            self.photos = galleryURLs
+                        }
                     }
                     self.galleryDetailPhotoViewController?.photos = self.photos
                 }
