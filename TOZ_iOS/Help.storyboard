@@ -294,7 +294,7 @@ WOLONTARIUSZEM </string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrC-dN-IG2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrC-dN-IG2" userLabel="beVolunteerButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
                                 <rect key="frame" x="43" y="608" width="288" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="EYK-34-dAV"/>
@@ -337,10 +337,6 @@ WOLONTARIUSZEM </string>
                             <constraint firstItem="Q70-gu-6mG" firstAttribute="trailing" secondItem="RrC-dN-IG2" secondAttribute="trailing" id="se3-Ny-Hfa"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="beVolunteerButton" destination="RrC-dN-IG2" id="X60-rw-Isf"/>
-                        <outlet property="textInfo" destination="Q70-gu-6mG" id="Nfl-bd-ile"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZD-N5-iSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
