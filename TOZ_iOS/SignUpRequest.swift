@@ -42,5 +42,4 @@ final class SignUpRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
-    var queryItems: [URLQueryItem]?
 }
