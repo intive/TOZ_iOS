@@ -23,6 +23,7 @@ class NetworkService {
         case GET, POST, PUT, DELETE
     }
 
+    // swiftlint:disable function_body_length
     func makeRequest(for url: URL, method: Method,
                      params: [String: Any]? = nil,
                      headers: [String: String]? = nil,
