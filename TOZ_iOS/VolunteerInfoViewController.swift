@@ -18,9 +18,9 @@ class VolunteerInfoViewController: UIViewController {
     func getBecomeVolunteerDescription() {
         becomeVolunteerOperation.resultCompletion = { result in
             switch result {
-            case .success(let howToHelpDescription):
+            case .success(let becomeVolunteer):
                 DispatchQueue.main.async {
-                    self.howToHelpDescription.text = howToHelpDescription.howToHelpDescription
+                    self.howToHelpDescription.text = becomeVolunteer.howToHelpDescription
                 }
             case .failure(let error):
                 print ("\(error)")
