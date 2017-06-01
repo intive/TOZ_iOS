@@ -29,15 +29,15 @@ class CalendarHelper {
 
         return daysInWeek
     }
-    
+
     func rangeDateItemArray() -> [WeekdayItem] {
-        
+
         var daysInRange: [WeekdayItem] = []
         for i in 0...24 {
             let addNewItem = WeekdayItem(from: calendar.date(byAdding: .day, value: i, to: currentMonday)!)
             daysInRange.append(addNewItem)
         }
-        
+
         return daysInRange
     }
 

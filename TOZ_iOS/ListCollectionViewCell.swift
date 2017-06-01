@@ -30,22 +30,29 @@ class ListCollectionViewCell: UICollectionViewCell {
         self.addSubview(stackView)
 
         dateLabel = UILabel()
+        dateLabel.adjustsFontSizeToFitWidth = true
         dateLabel.textColor = UIColor.darkGray
         dateLabel.backgroundColor = UIColor.orange
         foreNameLabel = UILabel()
+        foreNameLabel.adjustsFontSizeToFitWidth = true
         foreNameLabel.textColor = UIColor.darkGray
         foreNameLabel.backgroundColor = UIColor.blue
         surNameLabel = UILabel()
+        surNameLabel.adjustsFontSizeToFitWidth = true
         surNameLabel.textColor = UIColor.darkGray
         surNameLabel.backgroundColor = UIColor.purple
         dayChoice = UISegmentedControl(items: ["Rano", "Popołudniu"])
-        dayChoice.backgroundColor = UIColor.red
+        dayChoice.setEnabled(false, forSegmentAt: 0)
+        dayChoice.setEnabled(false, forSegmentAt: 1)
+
         stackView.addArrangedSubview(dateLabel)
         stackView.addArrangedSubview(foreNameLabel)
         stackView.addArrangedSubview(surNameLabel)
         stackView.addArrangedSubview(dayChoice)
         //self.addSubview(dateLabel)
         //self.addSubview(daySwitch)
+
+        dayChoice.addTarget(self, action: Selector(("segmentedValueChanged:")), for: .valueChanged)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -58,6 +65,14 @@ class ListCollectionViewCell: UICollectionViewCell {
         dateLabel.text = WeekdayItem(from: reservation.date).dataLabel
         foreNameLabel.text = reservation.ownerForename
         surNameLabel.text = reservation.ownerSurname
+        if reservation.timeOfDay == .morning {
+            dayChoice.selectedSegmentIndex = 0
+        } else {
+            dayChoice.selectedSegmentIndex = 1
+        }
+    }
 
+    func segmentedValueChanged(sender: UISegmentedControl!) {
+        print("It Works, Value is --&gt;\(sender.selectedSegmentIndex)")
     }
 }

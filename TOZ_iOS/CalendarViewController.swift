@@ -47,7 +47,7 @@ class CalendarViewController: UIViewController {
     func nextWeekController() -> WeekViewController {
         indexPage -= 1
         indexPage = abs(indexPage)
-        
+
         return weekPages[indexPage]
     }
 
@@ -63,7 +63,7 @@ class CalendarViewController: UIViewController {
         let weekAfter: WeekViewController = self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as! WeekViewController
         // swiftlint:disable:next force_cast
         let weekBefore: WeekViewController = self.storyboard?.instantiateViewController(withIdentifier: "WeekViewController") as! WeekViewController
-        
+
         weekPages.append(weekBefore)
         weekPages.append(weekAfter)
         weekBefore.delegate = self

@@ -92,7 +92,7 @@ class WeekViewController: UIViewController {
             case .success(let newReservationRespond):
                 DispatchQueue.main.async {
                     if newReservation.date == newReservationRespond.date && newReservation.timeOfDay == newReservationRespond.timeOfDay {
-                        label.scheduleSelected = true
+                        //label.scheduleSelected = true
                         self.reservations.append(newReservation)
                         self.delegate?.weekViewController(self, didUpdate: self.reservations)
                         self.updateUI()
