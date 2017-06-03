@@ -13,7 +13,7 @@ class ListCollectionViewCell: UICollectionViewCell {
     var dateLabel: UILabel!
     var foreNameLabel: UILabel!
     var surNameLabel: UILabel!
-    var dayChoice: UISegmentedControl!
+    var dayChoice: UIButton!
     var stackView: UIStackView!
 
     override init(frame: CGRect) {
@@ -41,9 +41,8 @@ class ListCollectionViewCell: UICollectionViewCell {
         surNameLabel.adjustsFontSizeToFitWidth = true
         surNameLabel.textColor = UIColor.darkGray
         surNameLabel.backgroundColor = UIColor.purple
-        dayChoice = UISegmentedControl(items: ["Rano", "Popołudniu"])
-        dayChoice.setEnabled(false, forSegmentAt: 0)
-        dayChoice.setEnabled(false, forSegmentAt: 1)
+        dayChoice = UIButton()
+        dayChoice.setTitleColor(UIColor.blue, for: .normal)
 
         stackView.addArrangedSubview(dateLabel)
         stackView.addArrangedSubview(foreNameLabel)
@@ -52,7 +51,7 @@ class ListCollectionViewCell: UICollectionViewCell {
         //self.addSubview(dateLabel)
         //self.addSubview(daySwitch)
 
-        dayChoice.addTarget(self, action: Selector(("segmentedValueChanged:")), for: .valueChanged)
+        dayChoice.addTarget(self, action: Selector(("tappedDay:")), for: .touchUpInside)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -66,13 +65,13 @@ class ListCollectionViewCell: UICollectionViewCell {
         foreNameLabel.text = reservation.ownerForename
         surNameLabel.text = reservation.ownerSurname
         if reservation.timeOfDay == .morning {
-            dayChoice.selectedSegmentIndex = 0
+            dayChoice.setTitle("Rano", for: .normal)
         } else {
-            dayChoice.selectedSegmentIndex = 1
+            dayChoice.setTitle("Popołudniu", for: .normal)
         }
     }
 
-    func segmentedValueChanged(sender: UISegmentedControl!) {
-        print("It Works, Value is --&gt;\(sender.selectedSegmentIndex)")
+    func tappedDay(sender: UIButton!) {
+        print("Tapped: \(sender)")
     }
 }

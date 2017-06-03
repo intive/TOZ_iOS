@@ -95,7 +95,6 @@
 		54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */; };
 		54B11CBD1EBE266A0051C1E8 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11CBC1EBE266A0051C1E8 /* CalendarHelper.swift */; };
 		54BBE18A1EC90535009986E4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBE1891EC90535009986E4 /* ListViewController.swift */; };
-		54BBE18C1EC905DE009986E4 /* ListUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBE18B1EC905DE009986E4 /* ListUICollectionView.swift */; };
 		54BBE18E1EC90616009986E4 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBE18D1EC90616009986E4 /* ListCollectionViewCell.swift */; };
 		54BEF3EA1E84186C00FB2FE7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */; };
 		54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D139021EA118350064BE00 /* AddScheduleRequest.swift */; };
@@ -228,7 +227,6 @@
 		54ACD6611EA8C7E30097A8B5 /* GetSchedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetSchedule.json; sourceTree = "<group>"; };
 		54B11CBC1EBE266A0051C1E8 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		54BBE1891EC90535009986E4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		54BBE18B1EC905DE009986E4 /* ListUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUICollectionView.swift; sourceTree = "<group>"; };
 		54BBE18D1EC90616009986E4 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		54BEF3E91E84186C00FB2FE7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		54D139021EA118350064BE00 /* AddScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScheduleRequest.swift; sourceTree = "<group>"; };
@@ -427,7 +425,6 @@
 			isa = PBXGroup;
 			children = (
 				54BBE1891EC90535009986E4 /* ListViewController.swift */,
-				54BBE18B1EC905DE009986E4 /* ListUICollectionView.swift */,
 				54BBE18D1EC90616009986E4 /* ListCollectionViewCell.swift */,
 			);
 			name = List;
@@ -795,7 +792,6 @@
 				54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */,
-				54BBE18C1EC905DE009986E4 /* ListUICollectionView.swift in Sources */,
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
 				05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */,
