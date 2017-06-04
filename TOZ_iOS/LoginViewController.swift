@@ -25,6 +25,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             switch result {
             case .success(let successfullSignIn):
                 DispatchQueue.main.async {
+                    BackendAuth.shared.setUserId(successfullSignIn.userId)
+                    BackendAuth.shared.setName(successfullSignIn.name)
+                    BackendAuth.shared.setSurname(successfullSignIn.surname)
                     BackendAuth.shared.setToken(successfullSignIn.jwt)
                     if let token = BackendAuth.shared.token {
                         print("Token >\(token)< successfully set for email \(self.emailInput.text)")
