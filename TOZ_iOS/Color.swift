@@ -110,7 +110,7 @@ struct Color {
             //light blue
             static let secondary = UIColor(red: 50.0/255.0, green: 155.0/255.0, blue: 245.0/255.0, alpha: 1.0)
             //light blue
-            static let pressed = UIColor(red: 50.0/255.0, green: 155.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+            static let pressed = UIColor(red: 122.0/255.0, green: 122.0/255.0, blue: 122.0/255.0, alpha: 1.0)
 
             struct Icon {
                 //light blue

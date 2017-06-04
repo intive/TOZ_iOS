@@ -16,7 +16,7 @@ final class ResetPasswordRequest: BackendAPIRequest {
     }
 //Will be changed when possible
     var endpoint: String {
-        return "/users/emails"
+        return "/users/passwords/reset/send"
     }
 
     var method: NetworkService.Method {
@@ -32,5 +32,4 @@ final class ResetPasswordRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
-
 }

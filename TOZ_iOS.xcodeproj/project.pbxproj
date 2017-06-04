@@ -50,6 +50,7 @@
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
 		4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FB8321ED49E42004B98B8 /* GetPetByID.json */; };
+		4B0FB8351ED87AE8004B98B8 /* AnimalGalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */; };
 		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
 		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
 		4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */; };
@@ -107,6 +108,7 @@
 		54FBAB361EA2CFD600503317 /* WeekDayControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB351EA2CFD600503317 /* WeekDayControl.xib */; };
 		54FBAB381EA2CFE000503317 /* ScheduleControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBAB371EA2CFE000503317 /* ScheduleControl.swift */; };
 		54FBAB3A1EA2D00D00503317 /* ScheduleControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBAB391EA2D00D00503317 /* ScheduleControl.xib */; };
+		8F25971C1EDD8380008BAD56 /* VolunteerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25971B1EDD8380008BAD56 /* VolunteerInfoViewController.swift */; };
 		8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */; };
 		8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CABBFD1E6AEB1F009A06F8 /* LaunchScreen.storyboard */; };
 		8FFC8E371E8E6B1A005F5B18 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */; };
@@ -180,6 +182,7 @@
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
 		4B0FB8321ED49E42004B98B8 /* GetPetByID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetPetByID.json; sourceTree = "<group>"; };
+		4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGalleryItem.swift; sourceTree = "<group>"; };
 		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
 		4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordItem.swift; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		54FBAB371EA2CFE000503317 /* ScheduleControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleControl.swift; sourceTree = "<group>"; };
 		54FBAB391EA2D00D00503317 /* ScheduleControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleControl.xib; sourceTree = "<group>"; };
 		60D69C75206B9775799946FF /* Pods_TOZ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOZ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F25971B1EDD8380008BAD56 /* VolunteerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerInfoViewController.swift; sourceTree = "<group>"; };
 		8F2E89351ECA4005002DB1A7 /* NewsCellContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellContentView.swift; sourceTree = "<group>"; };
 		8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		A1CABBEF1E6AEB1F009A06F8 /* TOZ_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOZ_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +398,7 @@
 				3777B0BD1E91932E00FF385A /* NewsItem.swift */,
 				4BFF98641E7F133500951035 /* OrganizationInfoItem.swift */,
 				4B98B2E91E8C5176007E0D6C /* AnimalItem.swift */,
+				4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */,
 				4B53F4D51EAA610100D894F8 /* SignInItem.swift */,
 				05220A031EB3B78400998296 /* SignUpItem.swift */,
 				4B19884B1EC7362B0079460C /* ChangePasswordItem.swift */,
@@ -479,6 +484,7 @@
 				42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */,
 				4B3AFF891EB124C8000FB02E /* LoginViewController.swift */,
 				CE2DDF5E1ECA0D3700BF7A07 /* SignUpViewController.swift */,
+				8F25971B1EDD8380008BAD56 /* VolunteerInfoViewController.swift */,
 				A1CABBF21E6AEB1F009A06F8 /* AppDelegate.swift */,
 				A1CABBF41E6AEB1F009A06F8 /* HelpViewController.swift */,
 				3777B0B11E8E479C00FF385A /* HelpFinanceViewController.swift */,
@@ -771,6 +777,7 @@
 				3777B0BC1E91932500FF385A /* NewsOperation.swift in Sources */,
 				4B19884C1EC7362B0079460C /* ChangePasswordItem.swift in Sources */,
 				4B53F4DA1EAA665C00D894F8 /* SignInOperation.swift in Sources */,
+				8F25971C1EDD8380008BAD56 /* VolunteerInfoViewController.swift in Sources */,
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */,
 				4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */,
@@ -787,6 +794,7 @@
 				8F2E89361ECA4005002DB1A7 /* NewsCellContentView.swift in Sources */,
 				54D1390D1EA119240064BE00 /* ScheduleResponseMapper.swift in Sources */,
 				05220A041EB3B78400998296 /* SignUpItem.swift in Sources */,
+				4B0FB8351ED87AE8004B98B8 /* AnimalGalleryItem.swift in Sources */,
 				4BFF98651E7F133500951035 /* OrganizationInfoItem.swift in Sources */,
 				54D1390B1EA118BF0064BE00 /* ReservationItem.swift in Sources */,
 				4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */,
