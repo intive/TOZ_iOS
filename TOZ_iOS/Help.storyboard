@@ -271,11 +271,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-gu-6mG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-gu-6mG">
                                 <rect key="frame" x="43" y="322" width="288" height="268"/>
-                                <string key="text">Włącz się w realizowane przez nas działania, ale także inicjuj i realizuj własne pomysły. Dla nas liczy się przede wszystkim chęć pomocy i konsekwencja w działaniu.
-
-Zostań społecznym inspektorem TOZ, członkiem, wolontariuszem, spacerowiczem psów, które są pod naszą opieką, a może stworzysz dom tymczasowy dla kota, psa albo innego potrzebującego zwierzaka?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
