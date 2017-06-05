@@ -22,7 +22,6 @@ class NetworkService {
     enum Method: String {
         case GET, POST, PUT, DELETE
     }
-
     // swiftlint:disable function_body_length
     func makeRequest(for url: URL, method: Method,
                      params: [String: Any]? = nil,

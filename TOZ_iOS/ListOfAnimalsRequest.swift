@@ -24,6 +24,4 @@ final class ListOfAnimalsRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
-
-    var queryItems: [URLQueryItem]?
 }

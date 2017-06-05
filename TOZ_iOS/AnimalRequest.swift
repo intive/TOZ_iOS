@@ -30,6 +30,4 @@ final class AnimalRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
-
-    var queryItems: [URLQueryItem]?
 }

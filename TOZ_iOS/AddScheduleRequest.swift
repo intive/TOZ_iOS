@@ -61,5 +61,4 @@ final class AddScheduleRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return headersWhenJSONSent()
     }
-    var queryItems: [URLQueryItem]?
 }

@@ -35,6 +35,4 @@ final class ChangePasswordRequest: BackendAPIRequest {
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
-
-    var queryItems: [URLQueryItem]?
 }
