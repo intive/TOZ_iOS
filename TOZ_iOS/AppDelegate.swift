@@ -11,7 +11,7 @@ import HockeySDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var orientationLock = UIInterfaceOrientationMask.allButUpsideDown
+    var orientationLock = UIInterfaceOrientationMask.portrait
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         BITHockeyManager.shared().configure(withIdentifier: "1c4560d21290458c8ae1e5156e194155")

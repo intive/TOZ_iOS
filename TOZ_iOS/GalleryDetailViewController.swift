@@ -66,7 +66,7 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.lockOrientationAndRotate(.portrait, andRotateTo: .portrait)
+        self.lockOrientationAndRotate(orientation: .portrait, andRotateTo: .portrait)
     }
 
     @IBAction func helpThisAnimalAction(_ sender: Any) {

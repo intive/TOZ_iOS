@@ -15,9 +15,9 @@ extension UIViewController {
         }
     }
 
-    func lockOrientationAndRotate(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+    func lockOrientationAndRotate(orientation: UIInterfaceOrientationMask, andRotateTo: UIInterfaceOrientation) {
         self.lockOrientation(orientation)
-        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        UIDevice.current.setValue(andRotateTo.rawValue, forKey: "orientation")
     }
 
 }
