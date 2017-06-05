@@ -1,17 +1,16 @@
 //
-//  NewsRequest.swift
+//  BecomeVolunteerRequest.swift
 //  TOZ_iOS
 //
-//  Created by Rafal Gorczynski on 01.04.2017.
 //  Copyright © 2017 intive. All rights reserved.
 //
 
 import Foundation
 
-final class NewsRequest: BackendAPIRequest {
+final class BecomeVolunteerRequest: BackendAPIRequest {
 
     var endpoint: String {
-        return "/news"
+        return "/organization/becomevolunteer"
     }
 
     var method: NetworkService.Method {
@@ -19,10 +18,12 @@ final class NewsRequest: BackendAPIRequest {
     }
 
     var parameters: [String: Any]? {
-        return ["isOrdered": "true"]
+        return nil
     }
 
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
+
+    var queryItems: [URLQueryItem]?
 }

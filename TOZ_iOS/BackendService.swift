@@ -30,10 +30,7 @@ class BackendService {
     func request(_ request: BackendAPIRequest, completion: @escaping (RequestResult<AnyObject>) -> Void) {
 
         /// Adds endpoint to backend URL
-        let urlWithEndpoint = conf.baseURL.appendingPathComponent(request.endpoint)
-        var urlComponents = URLComponents(url: urlWithEndpoint, resolvingAgainstBaseURL: false)
-        urlComponents?.queryItems = request.queryItems
-        let url = urlComponents?.url ?? urlWithEndpoint
+        let url = conf.baseURL.appendingPathComponent(request.endpoint)
 
         var headers = request.headers
         /// Set authentication token if available.

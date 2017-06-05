@@ -24,11 +24,9 @@ final class CalendarWeekRequest: BackendAPIRequest {
         return .GET
     }
     var parameters: [String: Any]? {
-
         return ["from": fromDate, "to": toDate]
     }
     var headers: [String: String]? {
         return defaultJSONHeaders()
     }
-    var queryItems: [URLQueryItem]?
 }
