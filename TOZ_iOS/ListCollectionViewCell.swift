@@ -13,20 +13,18 @@ class ListCollectionViewCell: UICollectionViewCell {
     var dateLabel: UILabel!
     var foreNameLabel: UILabel!
     var surNameLabel: UILabel!
-    var dayChoice: UIButton!
+    var dayChoice: UILabel!
     var stackView: UIStackView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         self.backgroundColor = UIColor.yellow
-        //stackView = UIStackView()
         stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 1
-        //stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 4
         self.addSubview(stackView)
 
         dateLabel = UILabel()
@@ -41,17 +39,14 @@ class ListCollectionViewCell: UICollectionViewCell {
         surNameLabel.adjustsFontSizeToFitWidth = true
         surNameLabel.textColor = UIColor.darkGray
         surNameLabel.backgroundColor = UIColor.purple
-        dayChoice = UIButton()
-        dayChoice.setTitleColor(UIColor.blue, for: .normal)
+        dayChoice = UILabel()
+        dayChoice.backgroundColor = UIColor.blue
 
         stackView.addArrangedSubview(dateLabel)
         stackView.addArrangedSubview(foreNameLabel)
         stackView.addArrangedSubview(surNameLabel)
         stackView.addArrangedSubview(dayChoice)
-        //self.addSubview(dateLabel)
-        //self.addSubview(daySwitch)
 
-        dayChoice.addTarget(self, action: Selector(("tappedDay:")), for: .touchUpInside)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -59,19 +54,14 @@ class ListCollectionViewCell: UICollectionViewCell {
     }
 
     func OnCell(display reservation: ReservationItem) {
-        //aaa()
-
         dateLabel.text = WeekdayItem(from: reservation.date).dataLabel
         foreNameLabel.text = reservation.ownerForename
         surNameLabel.text = reservation.ownerSurname
         if reservation.timeOfDay == .morning {
-            dayChoice.setTitle("Rano", for: .normal)
+            dayChoice.text = "Rano"
         } else {
-            dayChoice.setTitle("Popołudniu", for: .normal)
+            dayChoice.text = "Popołudniu"
         }
     }
 
-    func tappedDay(sender: UIButton!) {
-        print("Tapped: \(sender)")
-    }
 }

@@ -148,6 +148,7 @@ class ListViewController: UIViewController {
                 break
             }
         }
+        reservationsFiltred.sort(by: { $0.date < $1.date })
     }
 
     func filtrReservationCheckBox() {
@@ -184,7 +185,7 @@ class ListViewController: UIViewController {
             //reservationsFiltred = reservations.filter({ $0.ownerSurname == "name" && $0.ownerName == "name" })
         //}
 
-        //reservationsFiltred.sort(by: { $0.date < $1.date })
+        reservationsFiltred.sort(by: { $0.date < $1.date })
     }
 }
 
@@ -200,6 +201,9 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifierCell, for: indexPath)
         if let cell = cell as? ListCollectionViewCell {
             cell.OnCell(display: reservationsFiltred[indexPath.row])
+            if reservationsFiltred[indexPath.row].ownerForename == BackendAuth.shared.name && reservationsFiltred[indexPath.row].ownerSurname == BackendAuth.shared.surname {
+                cell.backgroundColor = UIColor.red
+            }
         }
 
         return cell

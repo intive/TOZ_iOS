@@ -19,7 +19,7 @@ final class NewsRequest: BackendAPIRequest {
     }
 
     var parameters: [String: Any]? {
-        return nil
+        return ["isOrdered": "true"]
     }
 
     var headers: [String: String]? {
