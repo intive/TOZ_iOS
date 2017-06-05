@@ -1,4 +1,4 @@
-                                            //
+//
 //  AppDelegate.swift
 //  TOZ_iOS
 //

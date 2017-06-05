@@ -33,8 +33,8 @@ class CalendarHelper {
     func rangeDateItemArray() -> [WeekdayItem] {
 
         var daysInRange: [WeekdayItem] = []
-        for i in 0...24 {
-            let addNewItem = WeekdayItem(from: calendar.date(byAdding: .day, value: i, to: currentMonday)!)
+        for i in 0..<30 {
+            let addNewItem = WeekdayItem(from: calendar.date(byAdding: .day, value: i, to: Date())!)
             daysInRange.append(addNewItem)
         }
 

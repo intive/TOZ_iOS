@@ -37,7 +37,7 @@ class CalendarViewController: UIViewController {
         currentWeekController = nextWeekController()
         retrieveReservationsinWeek(when: .forward)
     }
-    
+
     @IBAction func previousWeek(_ sender: Any) {
         weekdayArray = calendarHelper.previousWeek()
         currentWeekController = nextWeekController()

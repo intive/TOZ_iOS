@@ -23,6 +23,7 @@ class ListViewController: UIViewController {
     }
     var reservationsFiltred: [ReservationItem] = []
     var freeReservation: [ReservationItem] = []
+    var reservationsNotFiltered: [ReservationItem] = []
     var rangeDateItemArray: [WeekdayItem] = []
     var calendarHelper = CalendarHelper()
     var resultScheduleOperation: GetScheduleWeekOperation!
@@ -32,18 +33,16 @@ class ListViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.gray
 
-        //stackFilter = UIStackView(frame: CGRect(x: 0, y: naviHeight!, width: self.view.frame.width, height: 40))
         stackFilter = UIStackView()
         stackFilter.axis = .horizontal
         stackFilter.distribution = .equalSpacing
         stackFilter.alignment = .fill
         stackFilter.spacing = 5
         stackFilter.backgroundColor = UIColor.white
-        //stackFilter.is
 
         label = UILabel()
         label.textColor = UIColor.white
-        label.text = "Dostępne"
+        label.text = "Wolne"
         label.translatesAutoresizingMaskIntoConstraints = false
         stackFilter.addArrangedSubview(label)
 
@@ -68,11 +67,9 @@ class ListViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.sectionFootersPinToVisibleBounds = true
         layout.sectionHeadersPinToVisibleBounds = true
-        //let collectionFrame = CGRect(x: 0, y: naviHeight! + 40 + 30, width: self.view.frame.width, height: self.view.frame.height - 170)
-        let collectionFrame = CGRect(x: 0, y: (self.view.frame.height)/6, width: self.view.frame.width, height: (5 * self.view.frame.height)/6)
+
+        let collectionFrame = CGRect(x: 0, y: (self.view.frame.height)/6, width: self.view.frame.width, height: (self.view.frame.height) * 0.7)
         collectionView = UICollectionView(frame: collectionFrame, collectionViewLayout: layout)
-        //collectionView = UICollectionView(
-        //collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: identifierCell)
@@ -87,11 +84,8 @@ class ListViewController: UIViewController {
         stackFilter.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5.0)
         stackFilter.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 15.0)
 
-        //NSLayoutConstraint(item: collectionView, attribute: .height   , relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 20.0).isActive = true
-        //collectionView.heightAnchor.constraint(equalToConstant: 300)
         retrieveReservationsinRange()
-        rangeDateItemArray = calendarHelper.rangeDateItemArray()
-        //print(calendarHelper.rangeDateItemArray())
+        filtrReservationSegmentDay(first: true)
     }
 
     func retrieveReservationsinRange() {
@@ -117,24 +111,22 @@ class ListViewController: UIViewController {
     }
 
     func tappedFilterDay(sender: UISegmentedControl) {
-        print("Tapped tappedFilterDay: \(sender.selectedSegmentIndex)")
-        //print(dayTime.selectedSegmentIndex)
-        //print(dayTime.selectedSegmentIndex)
-        filtrReservation()
+        filtrReservationSegmentDay()
         updateUI()
     }
 
     func checkBoxChange(sender: UISwitch!) {
-        print("Tapped: \(sender.isOn)")
-        filtrReservation()
+        filtrReservationCheckBox()
+        updateUI()
     }
 
     func updateUI() {
         self.collectionView.reloadData()
     }
 
-    func filtrReservation() {
-        switch dayTime.selectedSegmentIndex {
+    func filtrReservationSegmentDay(first: Bool = false) {
+        if first {
+            switch dayTime.selectedSegmentIndex {
             case 0, UISegmentedControlNoSegment:
                 reservationsFiltred = reservations
             case 1:
@@ -143,15 +135,48 @@ class ListViewController: UIViewController {
                 reservationsFiltred = reservations.filter({ $0.timeOfDay == .afternoon })
             default:
                 break
+            }
+        } else {
+            switch dayTime.selectedSegmentIndex {
+            case 0, UISegmentedControlNoSegment:
+                reservationsFiltred = reservationsNotFiltered.filter({ $0.timeOfDay == .morning ||  $0.timeOfDay == .afternoon })
+            case 1:
+                reservationsFiltred = reservationsFiltred.filter({ $0.timeOfDay == .morning })
+            case 2:
+                reservationsFiltred = reservationsFiltred.filter({ $0.timeOfDay == .afternoon })
+            default:
+                break
+            }
         }
+    }
 
-        //reservation is
+    func filtrReservationCheckBox() {
+        //show when true available slots
         if checkBox.isOn {
+            rangeDateItemArray = calendarHelper.rangeDateItemArray()
             for (_, rangeDateItemArrayItem) in rangeDateItemArray.enumerated() {
-                if let resevationFound = reservations.index(where: { rangeDateItemArrayItem == WeekdayItem(from: $0.date)}) {
-                    let reservationItem = ReservationItem(idObject: "", date: reservations[resevationFound].date, timeOfDay: .afternoon, ownerSurname: nil, ownerForename: nil)
+                let resevationsFound = reservations.filter({ rangeDateItemArrayItem == WeekdayItem(from: $0.date) })
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+                let date = dateFormatter.date(from: rangeDateItemArrayItem.dataLabel)
+                if nil == resevationsFound.first(where: { $0.timeOfDay == .morning }) {
+                    let reservationItem = ReservationItem(idObject: "", date: date!, timeOfDay: .morning, ownerSurname: nil, ownerForename: nil)
+                    freeReservation.append(reservationItem)
+                }
+                if nil == resevationsFound.first(where: { $0.timeOfDay == .afternoon }) {
+                    let reservationItem = ReservationItem(idObject: "", date: date!, timeOfDay: .afternoon, ownerSurname: nil, ownerForename: nil)
+                    freeReservation.append(reservationItem)
                 }
             }
+            reservationsFiltred = freeReservation
+            reservationsNotFiltered = freeReservation
+            filtrReservationSegmentDay()
+
+        } else {
+            reservationsNotFiltered = reservations
+            reservationsFiltred = reservations
+            filtrReservationSegmentDay()
         }
 
         //filter by name and surname
