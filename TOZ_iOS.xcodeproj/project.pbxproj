@@ -43,6 +43,7 @@
 		4292CCFD1EAFF46000C08229 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */; };
 		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
 		42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */; };
+		42AFF38D1EE59FF900ED901F /* UIViewController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFF38C1EE59FF900ED901F /* UIViewController+Rotation.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
 		42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */; };
 		4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00D1401E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift */; };
@@ -175,6 +176,7 @@
 		4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
 		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		42AFF38C1EE59FF900ED901F /* UIViewController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rotation.swift"; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		4B00D1401E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailPhotoViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */,
 				426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */,
+				42AFF38C1EE59FF900ED901F /* UIViewController+Rotation.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */,
 				4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */,
+				42AFF38D1EE59FF900ED901F /* UIViewController+Rotation.swift in Sources */,
 				4BFF98691E7F170900951035 /* OrganizationInfoResponseMapper.swift in Sources */,
 				05D4308A1E9A3AAE00164205 /* NetworkServiceMock.swift in Sources */,
 				54FBAB321EA2CFB600503317 /* WeekViewController.swift in Sources */,

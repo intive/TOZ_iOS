@@ -59,6 +59,16 @@ class GalleryDetailViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.lockOrientation(.allButUpsideDown)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.lockOrientationAndRotate(.portrait, andRotateTo: .portrait)
+    }
+
     @IBAction func helpThisAnimalAction(_ sender: Any) {
         isHelpViewHidden(hidden: helpViewHeight == nil)
     }
