@@ -84,6 +84,8 @@
 		4B98B2EC1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */; };
 		4B98B2EE1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */; };
 		4BB5AF871EC244EA00D38105 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */; };
+		4BC7E8EE1EE70AB7008ACBF7 /* getBecomeVolunteer.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC7E8ED1EE70AB7008ACBF7 /* getBecomeVolunteer.json */; };
+		4BC7E8F01EE70DDA008ACBF7 /* BecomeVolunteerResponseMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7E8EF1EE70DDA008ACBF7 /* BecomeVolunteerResponseMapperTests.swift */; };
 		4BFF985F1E7F11A100951035 /* OrganizationInfoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */; };
 		4BFF98611E7F11E400951035 /* ServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98601E7F11E400951035 /* ServiceOperation.swift */; };
 		4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF98621E7F129100951035 /* ParsedItem.swift */; };
@@ -220,6 +222,8 @@
 		4B98B2EB1E8C52AE007E0D6C /* ListOfAnimalsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsOperation.swift; sourceTree = "<group>"; };
 		4B98B2ED1E8C5420007E0D6C /* ListOfAnimalsArrayResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayResponseMapper.swift; sourceTree = "<group>"; };
 		4BB5AF861EC244EA00D38105 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4BC7E8ED1EE70AB7008ACBF7 /* getBecomeVolunteer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getBecomeVolunteer.json; sourceTree = "<group>"; };
+		4BC7E8EF1EE70DDA008ACBF7 /* BecomeVolunteerResponseMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BecomeVolunteerResponseMapperTests.swift; sourceTree = "<group>"; };
 		4BFF985E1E7F11A100951035 /* OrganizationInfoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoOperation.swift; sourceTree = "<group>"; };
 		4BFF98601E7F11E400951035 /* ServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceOperation.swift; sourceTree = "<group>"; };
 		4BFF98621E7F129100951035 /* ParsedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedItem.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 				4B19884F1EC73A570079460C /* PostChangePassword.json */,
 				05E74BF91EC7C4CA006805BB /* PostRegistration.json */,
 				4B0FB8321ED49E42004B98B8 /* GetPetByID.json */,
+				4BC7E8ED1EE70AB7008ACBF7 /* getBecomeVolunteer.json */,
 			);
 			name = MockJSONFiles;
 			sourceTree = "<group>";
@@ -537,6 +542,7 @@
 				42345F681EB78658007CA79E /* NewsResponseMapperTest.swift */,
 				42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */,
 				424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */,
+				4BC7E8EF1EE70DDA008ACBF7 /* BecomeVolunteerResponseMapperTests.swift */,
 				A1CABC0B1E6AEB1F009A06F8 /* Info.plist */,
 			);
 			path = TOZ_iOSTests;
@@ -650,6 +656,7 @@
 				4B1988501EC73A570079460C /* PostChangePassword.json in Resources */,
 				05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */,
 				4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */,
+				4BC7E8EE1EE70AB7008ACBF7 /* getBecomeVolunteer.json in Resources */,
 				055A624A1EB66D8B006F8C7C /* PostLogin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B5901E01EAF9C8C0050C5BB /* OrganizationInfoResponseMapperTests.swift in Sources */,
+				4BC7E8F01EE70DDA008ACBF7 /* BecomeVolunteerResponseMapperTests.swift in Sources */,
 				42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */,
 				424D93D21EC2202800A4427C /* Date+ExtensionTests.swift in Sources */,
 				A1CABC0A1E6AEB1F009A06F8 /* TOZ_iOSTests.swift in Sources */,
