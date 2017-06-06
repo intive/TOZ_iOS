@@ -87,7 +87,7 @@ class NetworkServiceMock: NetworkService {
                     print("Method is not appropriate.")
                 }
             }
-                guard let path = Bundle.main.path(forResource: nameOfFile, ofType: "json") else {
+            guard let path = Bundle.main.path(forResource: nameOfFile, ofType: "json") else {
                 failure?(nil, RequestError.InvalidRequest, 0)
                 return
             }
