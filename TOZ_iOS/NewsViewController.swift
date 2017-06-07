@@ -16,7 +16,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        runActivityIndicator()
         self.newsTableView.rowHeight = UITableViewAutomaticDimension
         self.newsTableView.estimatedRowHeight = 300
         self.newsTableView.backgroundColor = Color.Cell.Background.primary
@@ -51,6 +50,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func getNews() {
+        SVProgressHUD.show()
         newsOperation.resultCompletion = { result in
 
             switch result {
@@ -58,21 +58,13 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 DispatchQueue.main.async {
                     self.localNewsList = newsList
                     self.newsTableView.reloadData()
+                    SVProgressHUD.dismiss()
                 }
             case .failure(let error):
                 print ("\(error)")
+                SVProgressHUD.dismiss()
             }
         }
         newsOperation.start()
     }
-
-    func runActivityIndicator() {
-        SVProgressHUD.show()
-        DispatchQueue.global().async {
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss(withDelay: 0.5)
-            }
-        }
-    }
-
 }

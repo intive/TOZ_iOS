@@ -19,12 +19,12 @@ class HelpFinanceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        runActivityIndicator()
         getOrganizationInfo()
         self.accountNumberAndName.adjustsFontSizeToFitWidth = true
     }
 
     func getOrganizationInfo() {
+        SVProgressHUD.show()
         organizationInfoOperation.resultCompletion = { result in
             switch result {
             case .success(let localOrganization):
@@ -40,20 +40,13 @@ class HelpFinanceViewController: UIViewController {
                     self.financeDescription.text = "Można pomóc wpłacając darowiznę na konto Szczecińskiej Fundacji Pomocy Zwierzętom Wszelakim albo przekazując dary rzeczowe. Szczegóły poniżej:"
                     self.financeInfo.text = localOrganization.name + "\n" + postCode + " " + city + "\n" + street + " " + houseNumber + apartmentNumber
                     self.accountNumberAndName.text = localOrganization.accountNumber + "\n" + bankName
+                    SVProgressHUD.dismiss()
                 }
             case .failure(let error):
                 print ("\(error)")
+                SVProgressHUD.dismiss()
             }
         }
         organizationInfoOperation.start()
-    }
-
-    func runActivityIndicator() {
-        SVProgressHUD.show()
-        DispatchQueue.global().async {
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss(withDelay: 0.5)
-            }
-        }
     }
 }

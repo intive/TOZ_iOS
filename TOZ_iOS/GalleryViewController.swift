@@ -23,7 +23,6 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     //@IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        runActivityIndicator()
         getListOfAnimals()
     }
 
@@ -56,24 +55,19 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
 
     let listOfAnimalsOperation = ListOfAnimalsOperation()
     func getListOfAnimals() {
+        SVProgressHUD.show()
         listOfAnimalsOperation.resultCompletion = { result in
             switch result {
             case .success(let listOfAnimals):
                 DispatchQueue.main.async {
                     self.animalsArray = listOfAnimals
+                    SVProgressHUD.dismiss()
                 }
             case .failure(let error):
                 print ("\(error)")
+                SVProgressHUD.dismiss()
             }
         }
         listOfAnimalsOperation.start()
-    }
-    func runActivityIndicator() {
-        SVProgressHUD.show()
-        DispatchQueue.global().async {
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss(withDelay: 0.5)
-            }
-        }
     }
 }
