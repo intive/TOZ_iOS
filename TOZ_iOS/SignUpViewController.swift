@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignUpViewController: UIViewController {
 
@@ -58,16 +59,19 @@ class SignUpViewController: UIViewController {
     }
 
     func signUp() {
+        SVProgressHUD.show()
         if firstNameInput.isValid, surnameInput.isValid, emailInput.isValid, phoneNumberInput.isValid {
             self.signUpOperation = SignUpOperation(name: self.firstNameInput.text, surname: self.surnameInput.text, phoneNumber: self.phoneNumberInput.text, email: self.emailInput.text, roles: role)
             if let signUpOperation = self.signUpOperation {
                 signUpOperation.start { succes in
                     DispatchQueue.main.async {
                         if succes == false {
+                            SVProgressHUD.dismiss()
                             let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         } else {
+                            SVProgressHUD.dismiss()
                             let alert = UIAlertController(title: "Sukces", message: "Zgłoszenie zostało wysłane", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
@@ -75,6 +79,8 @@ class SignUpViewController: UIViewController {
                     }
                 }
             }
+        } else {
+            SVProgressHUD.dismiss()
         }
     }
 

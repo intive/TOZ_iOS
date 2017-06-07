@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailInput: TextInputView!
@@ -20,11 +21,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func handleSignIn(_ sender: Any) {
+        SVProgressHUD.show()
         signInOperation = SignInOperation(email: emailInput.text, password: passwordInput.text)
         signInOperation?.resultCompletion = { result in
             switch result {
             case .success(let successfullSignIn):
                 DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
                     BackendAuth.shared.setToken(successfullSignIn.jwt)
                     if let token = BackendAuth.shared.token {
                         print("Token >\(token)< successfully set for email \(self.emailInput.text)")
@@ -32,6 +35,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             case .failure(let error):
                 DispatchQueue.main.sync {
+                    SVProgressHUD.dismiss()
                     print(error)
                     self.errorLabel.alpha = 1
                     self.errorLabel.textColor = Color.LoginTextView.Label.error
@@ -41,6 +45,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         if self.emailInput.isValid && self.passwordInput.isValid {
             signInOperation?.start()
+        } else {
+            SVProgressHUD.dismiss()
         }
     }
 
