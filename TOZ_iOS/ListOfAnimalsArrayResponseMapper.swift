@@ -32,7 +32,7 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
             if let imageString = imageString {
                 imageURL = BackendConfiguration.shared.photosURL.appendingPathComponent(imageString)
             }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL)
+            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL, galleryURLs: nil)
         })
     }
 }
