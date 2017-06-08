@@ -8,7 +8,7 @@
   "address": "Most cłowy",
   "created": 1494852536847,
   "lastModified": 1494854229092,
-  "imageUrl": "/n6aU0jt.jpg"
+  "imageUrl": "n6aU0jt.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -18,7 +18,7 @@
   "description": "Piesek leszek",
   "address": "abcd",
   "created": 1495221891590,
-  "imageUrl": "/ONUtakr.jpg"
+  "imageUrl": "ONUtakr.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -29,7 +29,7 @@
   "address": "Tu i tam",
   "created": 1495467059630,
   "lastModified": 1495494381159,
-  "imageUrl": "/0kRvLPf.jpg"
+  "imageUrl": "0kRvLPf.jpg"
 
   },
   {
@@ -41,7 +41,7 @@
   "address": "Fantazjaland",
   "created": 1495467257899,
   "lastModified": 1495494416721,
-  "imageUrl": "/kqyg254.jpg"
+  "imageUrl": "c1sOxe0.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -52,7 +52,7 @@
   "address": "brak",
   "created": 1495488553054,
   "lastModified": 1495523649038,
-  "imageUrl": "/c6GTJJZ.jpg"
+  "imageUrl": "c6GTJJZ.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -73,7 +73,7 @@
   "address": "Szczecin",
   "created": 1495455140413,
   "lastModified": 1495530964902,
-  "imageUrl": "/wKjdA9G.jpg"
+  "imageUrl": "wKjdA9G.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -84,7 +84,7 @@
   "address": "ddfffff",
   "created": 1495462178390,
   "lastModified": 1495530981180,
-  "imageUrl": "/zMX0Gcf.jpg"
+  "imageUrl": "zMX0Gcf.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -104,7 +104,7 @@
   "description": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali",
   "address": "Przykładowa",
   "created": 1495548959264,
-  "imageUrl": "/NVGyOQs.jpg"
+  "imageUrl": "NVGyOQs.jpg"
   },
   {
   "id": "3d45a1dd-2b49-4c4a-96cb-ccbed96cae2d",
@@ -114,7 +114,7 @@
   "description": "Przykładowy Kot",
   "address": "Nigdzie",
   "created": 1495575157935,
-  "imageUrl": "/C7k2UDw.jpg"
+  "imageUrl": "C7k2UDw.jpg"
   },
   {
   "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -133,8 +133,7 @@
   "description": "Dobry dzik",
   "address": "Szczecin",
   "created": 1495454798856,
-  "lastModified": 1495629615317,
-
+  "lastModified": 1495629615317
   },
   {
   "id": "3d45a1dd-2b49-4c4a-96cb-ccbed96cae2d",
@@ -145,6 +144,6 @@
   "address": "TV",
   "created": 1495467134677,
   "lastModified": 1495652612530,
-  "imageUrl": "/ukFNSlO.jpg"
+  "imageUrl": "ukFNSlO.jpg"
   }
   ]
