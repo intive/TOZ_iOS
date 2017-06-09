@@ -7,25 +7,25 @@
     "address": "Most clowy",
     "created": 1494852536847,
     "lastModified": 1494854229092,
-    "imageUrl": "/n6aU0jt.jpg",
+    "imageUrl": "n6aU0jt.jpg",
     "gallery": [
                 {
                 "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
                 "createDate": 1490134074968,
-                "path": "/n6aU0jt.jpg",
-                "fileUrl": "/n6aU0jt.jpg"
+                "path": "n6aU0jt.jpg",
+                "fileUrl": "n6aU0jt.jpg"
                 },
                 {
                 "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
                 "createDate": 1490134074968,
                 "path": "a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg",
-                "fileUrl": "/ONUtakr.jpg"
+                "fileUrl": "ONUtakr.jpg"
                 },
                 {
                 "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
                 "createDate": 1490134074968,
                 "path": "a5/0d/4d/a50d4d4c-ccd2-4747-8dec-d6d7f521336e.jpg",
-                "fileUrl": "/NVGyOQs.jpg"
+                "fileUrl": "NVGyOQs.jpg"
                 }
                 ]
 }

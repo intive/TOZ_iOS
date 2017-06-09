@@ -49,7 +49,7 @@
 		4B04D51A1E9A401F0091DD32 /* AnimalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */; };
 		4B04D51C1E9A41DC0091DD32 /* AnimalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */; };
 		4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */; };
-		4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FB8321ED49E42004B98B8 /* GetPetByID.json */; };
+		4B0FB8331ED49E42004B98B8 /* GetDogByID.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FB8321ED49E42004B98B8 /* GetDogByID.json */; };
 		4B0FB8351ED87AE8004B98B8 /* AnimalGalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */; };
 		4B1988481EC7342B0079460C /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */; };
 		4B19884A1EC735290079460C /* ChangePasswordOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1988491EC735290079460C /* ChangePasswordOperation.swift */; };
@@ -61,6 +61,7 @@
 		4B3605391EBC6C1200AE06DE /* TextLengthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */; };
 		4B3AFF8A1EB124C8000FB02E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AFF891EB124C8000FB02E /* LoginViewController.swift */; };
 		4B3AFF8C1EB3AEF0000FB02E /* EmailChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AFF8B1EB3AEF0000FB02E /* EmailChecker.swift */; };
+		4B3C0A1A1EE9A6FF004F98F9 /* GetCatById.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C0A191EE9A6FF004F98F9 /* GetCatById.json */; };
 		4B436E6C1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */; };
 		4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858B1E7EA08C00CD343F /* NetworkService.swift */; };
 		4B51858E1E7EAC6900CD343F /* BackendAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */; };
@@ -187,7 +188,7 @@
 		4B04D5191E9A401F0091DD32 /* AnimalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalRequest.swift; sourceTree = "<group>"; };
 		4B04D51B1E9A41DC0091DD32 /* AnimalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalOperation.swift; sourceTree = "<group>"; };
 		4B04D51D1E9A42AE0091DD32 /* AnimalResponseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalResponseMapper.swift; sourceTree = "<group>"; };
-		4B0FB8321ED49E42004B98B8 /* GetPetByID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetPetByID.json; sourceTree = "<group>"; };
+		4B0FB8321ED49E42004B98B8 /* GetDogByID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetDogByID.json; sourceTree = "<group>"; };
 		4B0FB8341ED87AE8004B98B8 /* AnimalGalleryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGalleryItem.swift; sourceTree = "<group>"; };
 		4B1988471EC7342B0079460C /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
 		4B1988491EC735290079460C /* ChangePasswordOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordOperation.swift; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 		4B3605381EBC6C1200AE06DE /* TextLengthChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLengthChecker.swift; sourceTree = "<group>"; };
 		4B3AFF891EB124C8000FB02E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4B3AFF8B1EB3AEF0000FB02E /* EmailChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailChecker.swift; sourceTree = "<group>"; };
+		4B3C0A191EE9A6FF004F98F9 /* GetCatById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetCatById.json; sourceTree = "<group>"; };
 		4B436E6B1E7ECAC300AB4E55 /* OrganizationInfoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationInfoRequest.swift; sourceTree = "<group>"; };
 		4B51858B1E7EA08C00CD343F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4B51858D1E7EAC6900CD343F /* BackendAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendAPIRequest.swift; sourceTree = "<group>"; };
@@ -309,7 +311,8 @@
 				055A62491EB66D8B006F8C7C /* PostLogin.json */,
 				4B19884F1EC73A570079460C /* PostChangePassword.json */,
 				05E74BF91EC7C4CA006805BB /* PostRegistration.json */,
-				4B0FB8321ED49E42004B98B8 /* GetPetByID.json */,
+				4B0FB8321ED49E42004B98B8 /* GetDogByID.json */,
+				4B3C0A191EE9A6FF004F98F9 /* GetCatById.json */,
 				4BC7E8ED1EE70AB7008ACBF7 /* getBecomeVolunteer.json */,
 			);
 			name = MockJSONFiles;
@@ -639,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54ACD6621EA8C7E30097A8B5 /* GetSchedule.json in Resources */,
+				4B3C0A1A1EE9A6FF004F98F9 /* GetCatById.json in Resources */,
 				052E3B6F1E9E5154001AE31A /* GetAnimals.json in Resources */,
 				8FE3CA231EA0D67700C839A0 /* LaunchScreen.storyboard in Resources */,
 				052E3B691E9E4FD9001AE31A /* GetNews.json in Resources */,
@@ -655,7 +659,7 @@
 				A1CABBFA1E6AEB1F009A06F8 /* Main.storyboard in Resources */,
 				4B1988501EC73A570079460C /* PostChangePassword.json in Resources */,
 				05E74BFA1EC7C4CA006805BB /* PostRegistration.json in Resources */,
-				4B0FB8331ED49E42004B98B8 /* GetPetByID.json in Resources */,
+				4B0FB8331ED49E42004B98B8 /* GetDogByID.json in Resources */,
 				4BC7E8EE1EE70AB7008ACBF7 /* getBecomeVolunteer.json in Resources */,
 				055A624A1EB66D8B006F8C7C /* PostLogin.json in Resources */,
 			);
