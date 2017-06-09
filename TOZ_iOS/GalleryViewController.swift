@@ -57,15 +57,14 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     func getListOfAnimals() {
         SVProgressHUD.show()
         listOfAnimalsOperation.resultCompletion = { result in
+            SVProgressHUD.dismiss()
             switch result {
             case .success(let listOfAnimals):
                 DispatchQueue.main.async {
                     self.animalsArray = listOfAnimals
-                    SVProgressHUD.dismiss()
                 }
             case .failure(let error):
                 print ("\(error)")
-                SVProgressHUD.dismiss()
             }
         }
         listOfAnimalsOperation.start()
