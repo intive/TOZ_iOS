@@ -52,17 +52,15 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func getNews() {
         SVProgressHUD.show()
         newsOperation.resultCompletion = { result in
-
+            SVProgressHUD.dismiss()
             switch result {
             case .success(let newsList):
                 DispatchQueue.main.async {
                     self.localNewsList = newsList
                     self.newsTableView.reloadData()
-                    SVProgressHUD.dismiss()
                 }
             case .failure(let error):
                 print ("\(error)")
-                SVProgressHUD.dismiss()
             }
         }
         newsOperation.start()
