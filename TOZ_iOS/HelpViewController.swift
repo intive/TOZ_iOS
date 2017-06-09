@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 class HelpViewController: UIViewController {
 
