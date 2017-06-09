@@ -86,7 +86,7 @@ class CalendarViewController: UIViewController {
         pageController = segue.destination as! UIPageViewController
     }
 
-    func retrieveReservationsinWeek(when direction: UIPageViewControllerNavigationDirection) {
+    func retrieveReservationsinWeek(when direction: UIPageViewControllerNavigationDirection?, refreshOnly: Bool = false) {
         weekScheduleOperation = GetScheduleWeekOperation(fromDate: weekdayArray[0].dataLabel, toDate: weekdayArray[6].dataLabel)
         weekScheduleOperation.resultCompletion = { result in
             switch result {
@@ -94,7 +94,9 @@ class CalendarViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.currentWeekController.weekdayArray = self.weekdayArray
                     self.currentWeekController.reservations = listOfReservation
-                    self.pageController.setViewControllers([self.currentWeekController], direction: direction, animated: true)
+                    if refreshOnly == false {
+                        self.pageController.setViewControllers([self.currentWeekController], direction: direction!, animated: true)
+                    }
                 }
             case .failure(let error):
                 print ("\(error)")
@@ -108,6 +110,7 @@ class CalendarViewController: UIViewController {
 extension CalendarViewController: WeekViewControllerDelegate {
     func weekViewController(_ controller: WeekViewController, didUpdate reservations: [ReservationItem]) {
         self.reservations = controller.reservations
+        retrieveReservationsinWeek(when: nil, refreshOnly: true)
     }
 }
 
