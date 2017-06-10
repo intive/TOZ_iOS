@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignUpViewController: UIViewController {
 
@@ -61,8 +62,10 @@ class SignUpViewController: UIViewController {
         if firstNameInput.isValid, surnameInput.isValid, emailInput.isValid, phoneNumberInput.isValid {
             self.signUpOperation = SignUpOperation(name: self.firstNameInput.text, surname: self.surnameInput.text, phoneNumber: self.phoneNumberInput.text, email: self.emailInput.text, roles: role)
             if let signUpOperation = self.signUpOperation {
+                SVProgressHUD.show()
                 signUpOperation.start { succes in
                     DispatchQueue.main.async {
+                        SVProgressHUD.dismiss()
                         if succes == false {
                             let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

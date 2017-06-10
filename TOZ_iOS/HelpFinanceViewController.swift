@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HelpFinanceViewController: UIViewController {
 
@@ -22,12 +23,10 @@ class HelpFinanceViewController: UIViewController {
         self.accountNumberAndName.adjustsFontSizeToFitWidth = true
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-
     func getOrganizationInfo() {
+        SVProgressHUD.show()
         organizationInfoOperation.resultCompletion = { result in
+            SVProgressHUD.dismiss()
             switch result {
             case .success(let localOrganization):
                 DispatchQueue.main.async {
@@ -49,5 +48,4 @@ class HelpFinanceViewController: UIViewController {
         }
         organizationInfoOperation.start()
     }
-
 }

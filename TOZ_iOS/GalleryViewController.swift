@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import SVProgressHUD
 
 class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var galleryTableView: UITableView!
@@ -54,7 +55,9 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
 
     let listOfAnimalsOperation = ListOfAnimalsOperation()
     func getListOfAnimals() {
+        SVProgressHUD.show()
         listOfAnimalsOperation.resultCompletion = { result in
+            SVProgressHUD.dismiss()
             switch result {
             case .success(let listOfAnimals):
                 DispatchQueue.main.async {
@@ -64,6 +67,6 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
                 print ("\(error)")
             }
         }
-            listOfAnimalsOperation.start()
-        }
+        listOfAnimalsOperation.start()
     }
+}

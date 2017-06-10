@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailInput: TextInputView!
@@ -22,6 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func handleSignIn(_ sender: Any) {
         signInOperation = SignInOperation(email: emailInput.text, password: passwordInput.text)
         signInOperation?.resultCompletion = { result in
+            SVProgressHUD.dismiss()
             switch result {
             case .success(let successfullSignIn):
                 DispatchQueue.main.async {
@@ -40,6 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
         if self.emailInput.isValid && self.passwordInput.isValid {
+            SVProgressHUD.show()
             signInOperation?.start()
         }
     }

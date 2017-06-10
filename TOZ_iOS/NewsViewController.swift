@@ -5,6 +5,7 @@
 //  Copyright © 2017 intive. All rights reserved.
 //
 import UIKit
+import SVProgressHUD
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -49,8 +50,9 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func getNews() {
+        SVProgressHUD.show()
         newsOperation.resultCompletion = { result in
-
+            SVProgressHUD.dismiss()
             switch result {
             case .success(let newsList):
                 DispatchQueue.main.async {
@@ -63,5 +65,4 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         newsOperation.start()
     }
-
 }
