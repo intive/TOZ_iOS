@@ -21,7 +21,7 @@
   "imageUrl": "ONUtakr.jpg"
   },
   {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "id": "onephotodog-347f-4b2e-b1c6-6faff971f767",
   "name": "Tozek",
   "type": "DOG",
   "sex": "FEMALE",
@@ -30,7 +30,6 @@
   "created": 1495467059630,
   "lastModified": 1495494381159,
   "imageUrl": "0kRvLPf.jpg"
-
   },
   {
   "id": "3d45a1dd-2b49-4c4a-96cb-ccbed96cae2d",
@@ -55,7 +54,7 @@
   "imageUrl": "c6GTJJZ.jpg"
   },
   {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "id": "nophotodog-347f-4b2e-b1c6-6faff971f767",
   "name": "Test",
   "type": "DOG",
   "sex": "MALE",
@@ -87,7 +86,7 @@
   "imageUrl": "zMX0Gcf.jpg"
   },
   {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "id": "nophotodog-347f-4b2e-b1c6-6faff971f767",
   "name": "Kajtek",
   "type": "DOG",
   "sex": "MALE",
@@ -117,7 +116,7 @@
   "imageUrl": "C7k2UDw.jpg"
   },
   {
-  "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
+  "id": "nophotodog-347f-4b2e-b1c6-6faff971f767",
   "name": "Test",
   "type": "DOG",
   "sex": "MALE",
@@ -126,7 +125,7 @@
   "created": 1495629474930
   },
   {
-  "id": "3d45a1dd-2b49-4c4a-96cb-ccbed96cae2d",
+  "id": "nophotocat-2b49-4c4a-96cb-ccbed96cae2d",
   "name": "Android 4.0 Jellybeans",
   "type": "CAT",
   "sex": "MALE",
