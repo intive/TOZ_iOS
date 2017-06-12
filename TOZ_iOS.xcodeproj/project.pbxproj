@@ -38,12 +38,14 @@
 		42345F6B1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */; };
 		424D93D21EC2202800A4427C /* Date+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */; };
 		424D93D41EC4C85100A4427C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D93D31EC4C85100A4427C /* Button.swift */; };
+		426297F01EEE162A00355672 /* UIApplication+topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426297EF1EEE162A00355672 /* UIApplication+topViewController.swift */; };
 		426AF9961ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */; };
 		4292CCFB1EAFC70400C08229 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */; };
 		4292CCFD1EAFF46000C08229 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */; };
 		4298D0071EA80AE3009EDC8E /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4298D0061EA80AE3009EDC8E /* TextInputView.swift */; };
 		42ADC4341E9FA5C2002D318E /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */; };
 		42AFF38D1EE59FF900ED901F /* UIViewController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFF38C1EE59FF900ED901F /* UIViewController+Rotation.swift */; };
+		42AFF3911EE5A50E00ED901F /* GalleryDetailLandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFF3901EE5A50E00ED901F /* GalleryDetailLandscapeViewController.swift */; };
 		42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */; };
 		42FF1B101E99390200BABDE8 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */; };
 		4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00D1401E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift */; };
@@ -175,12 +177,14 @@
 		42345F6A1EB7B327007CA79E /* ListOfAnimalsArrayMapperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfAnimalsArrayMapperTest.swift; sourceTree = "<group>"; };
 		424D93D11EC2202800A4427C /* Date+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionTests.swift"; sourceTree = "<group>"; };
 		424D93D31EC4C85100A4427C /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		426297EF1EEE162A00355672 /* UIApplication+topViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+topViewController.swift"; sourceTree = "<group>"; };
 		426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addHideKeyboardGestureRecognizer.swift"; sourceTree = "<group>"; };
 		4292CCFA1EAFC70400C08229 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		4292CCFC1EAFF46000C08229 /* PasswordChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
 		4298D0061EA80AE3009EDC8E /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		42AFF38C1EE59FF900ED901F /* UIViewController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rotation.swift"; sourceTree = "<group>"; };
+		42AFF3901EE5A50E00ED901F /* GalleryDetailLandscapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailLandscapeViewController.swift; sourceTree = "<group>"; };
 		42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		42FF1B0F1E99390200BABDE8 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		4B00D1401E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailPhotoViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +347,7 @@
 				42ADC4331E9FA5C2002D318E /* Date+Formatter.swift */,
 				426AF9951ED6479C0074DF3B /* UIViewController+addHideKeyboardGestureRecognizer.swift */,
 				42AFF38C1EE59FF900ED901F /* UIViewController+Rotation.swift */,
+				426297EF1EEE162A00355672 /* UIApplication+topViewController.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				3777B0B01E8E479C00FF385A /* GalleryTableViewCell.swift */,
 				42D579CD1E6B36F1006C9A8D /* GalleryViewController.swift */,
 				8FFC8E361E8E6B1A005F5B18 /* GalleryDetailViewController.swift */,
+				42AFF3901EE5A50E00ED901F /* GalleryDetailLandscapeViewController.swift */,
 				4B00D1401E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift */,
 				4B5EBACF1EA2A7470015663C /* GalleryDetailModelController.swift */,
 				4B5EBAD11EA2A7740015663C /* GalleryDetailDataViewController.swift */,
@@ -797,6 +803,7 @@
 				37434B5F1E7F1B7E00336605 /* NewsEntity.swift in Sources */,
 				4B00D1411E9D454C00A62AFC /* GalleryDetailPhotoViewController.swift in Sources */,
 				4B04D51E1E9A42AE0091DD32 /* AnimalResponseMapper.swift in Sources */,
+				42AFF3911EE5A50E00ED901F /* GalleryDetailLandscapeViewController.swift in Sources */,
 				54A48C351EA94397003AD6A5 /* GetScheduleRequest.swift in Sources */,
 				42D579CE1E6B36F1006C9A8D /* GalleryViewController.swift in Sources */,
 				4B98B2EA1E8C5176007E0D6C /* AnimalItem.swift in Sources */,
@@ -838,6 +845,7 @@
 				54D139051EA118350064BE00 /* AddScheduleRequest.swift in Sources */,
 				54A48C371EA96795003AD6A5 /* GetScheduleOperation.swift in Sources */,
 				424D93D41EC4C85100A4427C /* Button.swift in Sources */,
+				426297F01EEE162A00355672 /* UIApplication+topViewController.swift in Sources */,
 				54B11CBD1EBE266A0051C1E8 /* CalendarHelper.swift in Sources */,
 				4B51858C1E7EA08C00CD343F /* NetworkService.swift in Sources */,
 				4BFF98631E7F129100951035 /* ParsedItem.swift in Sources */,

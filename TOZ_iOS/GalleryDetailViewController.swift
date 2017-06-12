@@ -27,6 +27,7 @@ class GalleryDetailViewController: UIViewController {
     var animalOperation: AnimalOperation?
     var organizationInfoOperation = OrganizationInfoOperation()
     var galleryDetailPhotoViewController: GalleryDetailPhotoViewController?
+    var helpViewHeight: NSLayoutConstraint?
 
     func makeAnimalOperation() {
         if let selectedCellID = selectedCellID {
@@ -52,6 +53,7 @@ class GalleryDetailViewController: UIViewController {
                 galleryDetailPhotoViewController.view.bottomAnchor.constraint(equalTo: photosContainer.bottomAnchor)
                 ])
             galleryDetailPhotoViewController.didMove(toParentViewController: self)
+
         }
         makeAnimalOperation()
         getAnimal()
@@ -66,13 +68,21 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.lockOrientationAndRotate(orientation: .portrait, andRotateTo: .portrait)
+        if (UIApplication.topViewController() is GalleryDetailLandscapeViewController) == false {
+            self.lockOrientationAndRotate(orientation: .portrait, andRotateTo: .portrait)
+        }
     }
 
     @IBAction func helpThisAnimalAction(_ sender: Any) {
         isHelpViewHidden(hidden: helpViewHeight == nil)
     }
-    var helpViewHeight: NSLayoutConstraint?
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+
+        if UIDevice.current.orientation.isLandscape {
+            performSegue(withIdentifier: "showLandscapeGallery", sender: nil)
+        }
+    }
 
     func isHelpViewHidden(hidden: Bool) {
         if hidden == true {
@@ -81,7 +91,6 @@ class GalleryDetailViewController: UIViewController {
                 self.view.addConstraint(helpViewHeight)
                 helpViewHeight.isActive = true
                 self.helpThisAnimalButton.backgroundColor = Color.Cell.Button.primary
-
             }
         } else {
             if let helpViewHeight = helpViewHeight {

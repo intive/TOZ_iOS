@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s9e-va-0TA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s9e-va-0TA">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybo-BJ-Sjg">
-                                                    <rect key="frame" x="200.33333333333337" y="69" width="173.66666666666663" height="15"/>
+                                                    <rect key="frame" x="200" y="69" width="174" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-Pe-Wah">
-                                                    <rect key="frame" x="200.33333333333337" y="45" width="173.66666666666663" height="24"/>
+                                                    <rect key="frame" x="200" y="45" width="174" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="89Q-6G-sOJ"/>
                                                     </constraints>
@@ -60,7 +60,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="GB3-wh-ma6" customClass="UIImageView">
-                                                    <rect key="frame" x="4" y="2" width="186.33333333333334" height="134"/>
+                                                    <rect key="frame" x="4" y="2" width="186" height="134"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -134,7 +134,7 @@
         <!--GALERIA-->
         <scene sceneID="wJd-uY-Gns">
             <objects>
-                <viewController id="Edr-KM-NY0" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryDetailViewController" id="Edr-KM-NY0" customClass="GalleryDetailViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qGb-td-hyb"/>
                         <viewControllerLayoutGuide type="bottom" id="gyu-ak-Jqy"/>
@@ -367,11 +367,66 @@
                         <outlet property="helpThisAnimalButton" destination="DXG-yr-1zz" id="gb4-JY-RNj"/>
                         <outlet property="photosContainer" destination="cWk-DY-oSP" id="gsk-bR-hsa"/>
                         <outlet property="pictureCaption" destination="KJM-vm-uZ9" id="eLR-km-W8b"/>
+                        <segue destination="z4B-Px-Do4" kind="show" identifier="showLandscapeGallery" id="qsX-66-fzQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdw-HA-pNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3578.2608695652175" y="750.81521739130437"/>
+        </scene>
+        <!--Gallery Detail Landscape View Controller-->
+        <scene sceneID="5RA-lc-dOo">
+            <objects>
+                <viewController storyboardIdentifier="GalleryDetailLandscapeViewController" id="z4B-Px-Do4" customClass="GalleryDetailLandscapeViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19Y-kF-MbA"/>
+                        <viewControllerLayoutGuide type="bottom" id="WQi-6Y-L6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d3S-bT-tQd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGL-LH-cgo" userLabel="ProfilePhotosContainer">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zdjecie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-VH-ays" userLabel="PictureCaption">
+                                <rect key="frame" x="0.0" y="665" width="414" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdx-aa-ZPc" userLabel="CaptionBackground">
+                                <rect key="frame" x="0.0" y="665" width="414" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="em6-Ja-akF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WQi-6Y-L6U" firstAttribute="top" secondItem="yGL-LH-cgo" secondAttribute="bottom" id="3aw-Ci-kYR"/>
+                            <constraint firstItem="Tdx-aa-ZPc" firstAttribute="leading" secondItem="yGL-LH-cgo" secondAttribute="leading" id="6wl-XU-wql"/>
+                            <constraint firstItem="yGL-LH-cgo" firstAttribute="leading" secondItem="d3S-bT-tQd" secondAttribute="leading" id="ET8-mm-cyn"/>
+                            <constraint firstAttribute="trailing" secondItem="yGL-LH-cgo" secondAttribute="trailing" id="TlD-Cw-hif"/>
+                            <constraint firstItem="5qb-VH-ays" firstAttribute="height" secondItem="Tdx-aa-ZPc" secondAttribute="height" id="W8M-ax-QOk"/>
+                            <constraint firstItem="Tdx-aa-ZPc" firstAttribute="bottom" secondItem="yGL-LH-cgo" secondAttribute="bottom" id="eFT-ZB-hWY"/>
+                            <constraint firstItem="5qb-VH-ays" firstAttribute="leading" secondItem="Tdx-aa-ZPc" secondAttribute="leading" id="fJ1-ES-7bZ"/>
+                            <constraint firstItem="5qb-VH-ays" firstAttribute="bottom" secondItem="Tdx-aa-ZPc" secondAttribute="bottom" id="jN7-Wl-55W"/>
+                            <constraint firstItem="yGL-LH-cgo" firstAttribute="top" secondItem="19Y-kF-MbA" secondAttribute="bottom" id="sah-xS-MLV"/>
+                            <constraint firstItem="5qb-VH-ays" firstAttribute="trailing" secondItem="Tdx-aa-ZPc" secondAttribute="trailing" id="si0-ch-pa8"/>
+                            <constraint firstItem="Tdx-aa-ZPc" firstAttribute="trailing" secondItem="yGL-LH-cgo" secondAttribute="trailing" id="tsi-P5-nb7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xzT-P6-Iod"/>
+                    <connections>
+                        <outlet property="photosContainer" destination="yGL-LH-cgo" id="WDj-gu-fws"/>
+                        <outlet property="pictureCaption" destination="5qb-VH-ays" id="Ogn-fp-cdE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pu7-7M-jzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3559" y="1726"/>
         </scene>
         <!--Gallery Detail Data View Controller-->
         <scene sceneID="EQo-fK-XJO">
