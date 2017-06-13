@@ -95,7 +95,7 @@ class CalendarViewController: UIViewController {
                     self.currentWeekController.weekdayArray = self.weekdayArray
                     self.currentWeekController.reservations = listOfReservation
                     if refreshOnly == false {
-                        self.pageController.setViewControllers([self.currentWeekController], direction: direction!, animated: true)
+                        self.pageController.setViewControllers([self.currentWeekController], direction: direction!, animated: false)
                     }
                 }
             case .failure(let error):
