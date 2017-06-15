@@ -24,7 +24,16 @@ class GalleryTableViewCell: UITableViewCell {
     func configure(for animal: AnimalItem) {
         animalID = animal.animalID
         self.animalName.text = animal.name
-        self.animalType.text = animal.type
+
+        switch animal.type {
+        case "DOG":
+            self.animalType.text = "Pies"
+        case "CAT":
+            self.animalType.text = "Kot"
+        default:
+            self.animalType.text = "Inne"
+        }
+
         let imageUrl: URL? = animal.imageUrl
         animalImage.contentMode = .scaleAspectFill
         animalImage.clipsToBounds = true
