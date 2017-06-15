@@ -111,7 +111,11 @@ class GalleryDetailViewController: UIViewController {
                         self.animalSex.text = "Nieznana"
                     }
 
-                    self.animalDescription.text = localAnimal.description
+                    if let localAnimalDescription = localAnimal.description {
+                        self.animalDescription.text = localAnimalDescription
+                    } else {
+                        self.animalDescription.text = "Brak opisu"
+                    }
                     // If there is an imageURL for the Animal than add it to array of photos.
                     if let photoURL = localAnimal.imageUrl {
                         self.photos.append(photoURL)
