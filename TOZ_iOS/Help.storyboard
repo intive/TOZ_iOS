@@ -459,6 +459,7 @@ WOLONTARIUSZEM </string>
                         <outlet property="goalSegmentedControl" destination="FWD-Dv-g8s" id="84x-lU-eeF"/>
                         <outlet property="phoneNumberInput" destination="SBM-NQ-wUG" id="af3-wS-yCQ"/>
                         <outlet property="roleLabel" destination="H7t-fb-aFc" id="PcK-tN-hxi"/>
+                        <outlet property="scrollView" destination="9CN-g6-TUn" id="fb6-UR-wv9"/>
                         <outlet property="surnameInput" destination="HBd-qy-Dku" id="DAk-9g-Q46"/>
                     </connections>
                 </viewController>
