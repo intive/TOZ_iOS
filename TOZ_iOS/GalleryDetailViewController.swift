@@ -82,15 +82,35 @@ class GalleryDetailViewController: UIViewController {
         }
     }
 
+    // swiftlint:disable cyclomatic_complexity
     func getAnimal() {
         animalOperation?.resultCompletion = { result in
             switch result {
             case .success(let localAnimal):
                 DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
-                    self.animalType.text = localAnimal.type
+                    self.navigationItem.title = localAnimal.name
+
+                    switch localAnimal.type {
+                    case "DOG":
+                        self.animalType.text = "Pies"
+                    case "CAT":
+                        self.animalType.text = "Kot"
+                    default:
+                        self.animalType.text = "Inne"
+                    }
+
                     self.galleryDetailPhotoViewController?.animalType = localAnimal.type
-                    self.animalSex.text = localAnimal.sex
+
+                    switch localAnimal.sex {
+                    case "MALE":
+                        self.animalSex.text = "On"
+                    case "FEMALE":
+                        self.animalSex.text = "Ona"
+                    default:
+                        self.animalSex.text = "Nieznana"
+                    }
+
                     self.animalDescription.text = localAnimal.description
                     // If there is an imageURL for the Animal than add it to array of photos.
                     if let photoURL = localAnimal.imageUrl {
