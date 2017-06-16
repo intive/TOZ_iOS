@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneNumberInput: TextInputView!
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var goalSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     var role: [Role] = [Role.VOLUNTEER]
     var signUpOperation: SignUpOperation?
@@ -24,6 +25,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     @IBAction func signUpAction(_ sender: Any) {
@@ -81,4 +84,14 @@ class SignUpViewController: UIViewController {
         }
     }
 
+    func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardStartFrame = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
+        var keyboardFrame: CGRect = keyboardStartFrame.cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        self.scrollView.contentInset.bottom = keyboardFrame.size.height
+    }
+
+    func keyboardWillHide(notification: NSNotification) {
+        self.scrollView.contentInset.bottom = self.tabBarController?.tabBar.frame.size.height ?? 0
+    }
 }

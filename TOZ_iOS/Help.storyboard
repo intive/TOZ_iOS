@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wBG-Z6-AmU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -334,6 +334,9 @@ WOLONTARIUSZEM </string>
                             <constraint firstItem="Q70-gu-6mG" firstAttribute="trailing" secondItem="RrC-dN-IG2" secondAttribute="trailing" id="se3-Ny-Hfa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="52C-gO-tgT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="hQT-Dy-sd3"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="howToHelpDescription" destination="Q70-gu-6mG" id="1Xp-Tz-RWe"/>
                     </connections>
@@ -342,7 +345,7 @@ WOLONTARIUSZEM </string>
             </objects>
             <point key="canvasLocation" x="2720.8000000000002" y="-1049.3253373313344"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--REJESTRACJA-->
         <scene sceneID="5T0-GP-5zq">
             <objects>
                 <viewController id="uLl-Q8-tE1" customClass="SignUpViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -358,41 +361,35 @@ WOLONTARIUSZEM </string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTT-YP-8XX" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="69" width="295" height="70"/>
+                                        <rect key="frame" x="40" y="30" width="295" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="T28-cS-ZoS"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-qy-Dku" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="154" width="295" height="70"/>
+                                        <rect key="frame" x="40" y="115" width="295" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-NQ-wUG" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="324" width="295" height="70"/>
+                                        <rect key="frame" x="40" y="285" width="295" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zarejestruj się" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-fo-TmB">
-                                        <rect key="frame" x="124.5" y="30" width="126" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chcę zostać:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7t-fb-aFc">
-                                        <rect key="frame" x="30" y="424" width="315" height="21"/>
+                                        <rect key="frame" x="30" y="365" width="315" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FWD-Dv-g8s">
-                                        <rect key="frame" x="30" y="455" width="315" height="29"/>
+                                        <rect key="frame" x="30" y="396" width="315" height="29"/>
                                         <segments>
                                             <segment title="Wolontariuszem"/>
                                             <segment title="Domem tymczasowym"/>
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDj-Kh-JIP" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="112.5" y="503" width="150" height="40"/>
+                                        <rect key="frame" x="112.5" y="459" width="150" height="40"/>
                                         <color key="backgroundColor" red="0.99215686270000003" green="0.53725490200000003" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Bqj-0N-RCE"/>
@@ -405,22 +402,13 @@ WOLONTARIUSZEM </string>
                                             <action selector="signUpAction:" destination="uLl-Q8-tE1" eventType="touchUpInside" id="b8L-HQ-YMc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-CL-sCl" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="112.5" y="563" width="150" height="40"/>
-                                        <color key="backgroundColor" red="0.99215686270000003" green="0.53725490200000003" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Dmq-EY-e5N"/>
-                                        </constraints>
-                                        <state key="normal" title="Anuluj"/>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8q-7k-Gsu" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="239" width="295" height="70"/>
+                                        <rect key="frame" x="40" y="200" width="295" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SBM-NQ-wUG" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="01P-9x-feR"/>
-                                    <constraint firstAttribute="bottom" secondItem="dw8-CL-sCl" secondAttribute="bottom" constant="20" id="3ip-FC-07p"/>
                                     <constraint firstItem="h8q-7k-Gsu" firstAttribute="width" secondItem="HBd-qy-Dku" secondAttribute="width" id="5Pe-Tj-AVB"/>
                                     <constraint firstItem="HBd-qy-Dku" firstAttribute="height" secondItem="kTT-YP-8XX" secondAttribute="height" id="5iP-1L-mXZ"/>
                                     <constraint firstItem="h8q-7k-Gsu" firstAttribute="top" secondItem="HBd-qy-Dku" secondAttribute="bottom" constant="15" id="5qr-wx-VGI"/>
@@ -428,37 +416,31 @@ WOLONTARIUSZEM </string>
                                     <constraint firstItem="H7t-fb-aFc" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="7ey-Qz-4DF"/>
                                     <constraint firstItem="HBd-qy-Dku" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="9bk-Vs-YUd"/>
                                     <constraint firstAttribute="trailing" secondItem="h8q-7k-Gsu" secondAttribute="trailing" constant="40" id="BC6-7a-jOI"/>
+                                    <constraint firstItem="kTT-YP-8XX" firstAttribute="top" secondItem="9CN-g6-TUn" secondAttribute="top" constant="30" id="BxY-Cm-u8F"/>
                                     <constraint firstItem="HBd-qy-Dku" firstAttribute="leading" secondItem="9CN-g6-TUn" secondAttribute="leading" constant="40" id="CKd-jI-edh"/>
                                     <constraint firstAttribute="trailing" secondItem="kTT-YP-8XX" secondAttribute="trailing" constant="40" id="D4z-r8-ozj"/>
                                     <constraint firstAttribute="trailing" secondItem="HBd-qy-Dku" secondAttribute="trailing" constant="40" id="H1M-ml-blP"/>
-                                    <constraint firstItem="dw8-CL-sCl" firstAttribute="height" secondItem="ZDj-Kh-JIP" secondAttribute="height" id="KGo-eC-uYw"/>
                                     <constraint firstItem="FWD-Dv-g8s" firstAttribute="leading" secondItem="9CN-g6-TUn" secondAttribute="leading" constant="30" id="KQJ-ha-gyj"/>
                                     <constraint firstAttribute="trailing" secondItem="FWD-Dv-g8s" secondAttribute="trailing" constant="30" id="KsK-6l-Zhx"/>
                                     <constraint firstItem="ZDj-Kh-JIP" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="L4l-cc-HFq"/>
-                                    <constraint firstItem="fR8-fo-TmB" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="LCm-yK-ahM"/>
                                     <constraint firstItem="ZDj-Kh-JIP" firstAttribute="centerX" secondItem="FWD-Dv-g8s" secondAttribute="centerX" id="NtX-1L-pJc"/>
-                                    <constraint firstItem="H7t-fb-aFc" firstAttribute="top" secondItem="SBM-NQ-wUG" secondAttribute="bottom" constant="30" id="OGU-MA-YgF"/>
-                                    <constraint firstItem="ZDj-Kh-JIP" firstAttribute="top" secondItem="FWD-Dv-g8s" secondAttribute="bottom" constant="20" id="Rdm-pR-UyJ"/>
+                                    <constraint firstItem="H7t-fb-aFc" firstAttribute="top" secondItem="SBM-NQ-wUG" secondAttribute="bottom" constant="10" id="OGU-MA-YgF"/>
+                                    <constraint firstItem="ZDj-Kh-JIP" firstAttribute="top" secondItem="FWD-Dv-g8s" secondAttribute="bottom" constant="35" id="Rdm-pR-UyJ"/>
                                     <constraint firstAttribute="trailing" secondItem="H7t-fb-aFc" secondAttribute="trailing" constant="30" id="TXl-G2-1m3"/>
                                     <constraint firstItem="h8q-7k-Gsu" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="V55-Ml-eAb"/>
-                                    <constraint firstItem="dw8-CL-sCl" firstAttribute="top" secondItem="ZDj-Kh-JIP" secondAttribute="bottom" constant="20" id="WdU-DG-TCh"/>
-                                    <constraint firstItem="dw8-CL-sCl" firstAttribute="width" secondItem="ZDj-Kh-JIP" secondAttribute="width" id="XRZ-So-TFQ"/>
-                                    <constraint firstItem="dw8-CL-sCl" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="Ypy-rd-yCt"/>
-                                    <constraint firstItem="fR8-fo-TmB" firstAttribute="top" secondItem="9CN-g6-TUn" secondAttribute="top" constant="30" id="Z08-dp-0WF"/>
                                     <constraint firstItem="FWD-Dv-g8s" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="ZhP-zh-lHj"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZDj-Kh-JIP" secondAttribute="bottom" constant="20" id="adx-WU-9MQ"/>
                                     <constraint firstItem="kTT-YP-8XX" firstAttribute="centerX" secondItem="9CN-g6-TUn" secondAttribute="centerX" id="hSe-2H-bbD"/>
                                     <constraint firstItem="SBM-NQ-wUG" firstAttribute="width" secondItem="h8q-7k-Gsu" secondAttribute="width" id="iOk-Le-aTv"/>
                                     <constraint firstItem="HBd-qy-Dku" firstAttribute="top" secondItem="kTT-YP-8XX" secondAttribute="bottom" constant="15" id="ipF-kY-AsF"/>
                                     <constraint firstItem="kTT-YP-8XX" firstAttribute="leading" secondItem="9CN-g6-TUn" secondAttribute="leading" constant="40" id="loV-Hf-2xP"/>
                                     <constraint firstItem="h8q-7k-Gsu" firstAttribute="height" secondItem="HBd-qy-Dku" secondAttribute="height" id="mnS-UN-cCb"/>
                                     <constraint firstItem="H7t-fb-aFc" firstAttribute="leading" secondItem="9CN-g6-TUn" secondAttribute="leading" constant="30" id="oKE-Tz-bcV"/>
-                                    <constraint firstItem="kTT-YP-8XX" firstAttribute="top" secondItem="fR8-fo-TmB" secondAttribute="bottom" constant="15" id="oPe-Q0-2Ch"/>
                                     <constraint firstItem="SBM-NQ-wUG" firstAttribute="height" secondItem="h8q-7k-Gsu" secondAttribute="height" id="s0I-Ae-0Mk"/>
                                     <constraint firstItem="SBM-NQ-wUG" firstAttribute="leading" secondItem="9CN-g6-TUn" secondAttribute="leading" constant="40" id="sfs-1T-Efg"/>
                                     <constraint firstItem="SBM-NQ-wUG" firstAttribute="top" secondItem="h8q-7k-Gsu" secondAttribute="bottom" constant="15" id="tpW-2x-mmv"/>
                                     <constraint firstAttribute="trailing" secondItem="SBM-NQ-wUG" secondAttribute="trailing" constant="40" id="vJy-Om-j5T"/>
                                     <constraint firstItem="h8q-7k-Gsu" firstAttribute="leading" secondItem="9CN-g6-TUn" secondAttribute="leading" constant="40" id="vpb-8G-Ktq"/>
-                                    <constraint firstItem="dw8-CL-sCl" firstAttribute="centerX" secondItem="ZDj-Kh-JIP" secondAttribute="centerX" id="zcV-qu-tbp"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -470,12 +452,14 @@ WOLONTARIUSZEM </string>
                             <constraint firstAttribute="bottom" secondItem="9CN-g6-TUn" secondAttribute="bottom" id="pJG-Ht-meu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="REJESTRACJA" id="gBi-k7-viI"/>
                     <connections>
                         <outlet property="emailInput" destination="h8q-7k-Gsu" id="x0f-q0-Ul0"/>
                         <outlet property="firstNameInput" destination="kTT-YP-8XX" id="foR-LL-lQa"/>
                         <outlet property="goalSegmentedControl" destination="FWD-Dv-g8s" id="84x-lU-eeF"/>
                         <outlet property="phoneNumberInput" destination="SBM-NQ-wUG" id="af3-wS-yCQ"/>
                         <outlet property="roleLabel" destination="H7t-fb-aFc" id="PcK-tN-hxi"/>
+                        <outlet property="scrollView" destination="9CN-g6-TUn" id="fb6-UR-wv9"/>
                         <outlet property="surnameInput" destination="HBd-qy-Dku" id="DAk-9g-Q46"/>
                     </connections>
                 </viewController>
