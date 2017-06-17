@@ -17,7 +17,7 @@ class GalleryDetailDataViewController: UIViewController {
 
     var dataObject: URL?
     var photoIndex: Int = 0
-    var animalType: String?
+    var animalType: AnimalType?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,12 +28,10 @@ class GalleryDetailDataViewController: UIViewController {
     func getAnimalPhoto() {
         if let animalType = animalType {
             switch animalType {
-                case "DOG":
+                case .DOG:
                     self.dataImage.image = #imageLiteral(resourceName: "placeholder_dog")
-                case "CAT":
+                case .CAT:
                     self.dataImage.image = #imageLiteral(resourceName: "placeholder_cat")
-                default:
-                    self.dataImage.image = #imageLiteral(resourceName: "placeholder")
             }
         } else {
             self.dataImage.image = #imageLiteral(resourceName: "placeholder")

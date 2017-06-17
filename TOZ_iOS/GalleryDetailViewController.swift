@@ -20,6 +20,7 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var helpAnimalAccount: UILabel!
     @IBOutlet weak var helpAnimalView: UIView!
     @IBOutlet weak var helpThisAnimalButton: Button!
+    @IBOutlet weak var animalDescriptionDivider: UIView!
 
     var selectedCellID: String?
     var photoURL: URL?
@@ -90,31 +91,19 @@ class GalleryDetailViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
                     self.navigationItem.title = localAnimal.name
-
-                    switch localAnimal.type {
-                    case "DOG":
-                        self.animalType.text = "Pies"
-                    case "CAT":
-                        self.animalType.text = "Kot"
-                    default:
-                        self.animalType.text = "Inne"
-                    }
-
+                    self.animalType.text = localAnimal.type.localizedType
                     self.galleryDetailPhotoViewController?.animalType = localAnimal.type
 
-                    switch localAnimal.sex {
-                    case "MALE":
-                        self.animalSex.text = "On"
-                    case "FEMALE":
-                        self.animalSex.text = "Ona"
-                    default:
+                    if let localAnimalSex = localAnimal.sex {
+                        self.animalSex.text = localAnimalSex.localizedSex
+                    } else {
                         self.animalSex.text = "Nieznana"
                     }
 
                     if let localAnimalDescription = localAnimal.description {
                         self.animalDescription.text = localAnimalDescription
                     } else {
-                        self.animalDescription.text = "Brak opisu"
+                        self.animalDescriptionDivider.layer.isHidden = true
                     }
                     // If there is an imageURL for the Animal than add it to array of photos.
                     if let photoURL = localAnimal.imageUrl {

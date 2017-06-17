@@ -24,26 +24,16 @@ class GalleryTableViewCell: UITableViewCell {
     func configure(for animal: AnimalItem) {
         animalID = animal.animalID
         self.animalName.text = animal.name
-
-        switch animal.type {
-        case "DOG":
-            self.animalType.text = "Pies"
-        case "CAT":
-            self.animalType.text = "Kot"
-        default:
-            self.animalType.text = "Inne"
-        }
+        self.animalType.text = animal.type.localizedType
 
         let imageUrl: URL? = animal.imageUrl
         animalImage.contentMode = .scaleAspectFill
         animalImage.clipsToBounds = true
         switch animal.type {
-            case "CAT":
+            case .CAT:
                 self.animalImage.image = #imageLiteral(resourceName: "placeholder_cat")
-            case "DOG":
+            case .DOG:
                 self.animalImage.image = #imageLiteral(resourceName: "placeholder_dog")
-            default:
-                self.animalImage.image = #imageLiteral(resourceName: "placeholder")
         }
         if let imageUrl = imageUrl {
             PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> (Void) in
