@@ -237,21 +237,21 @@
                                         <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnimalDescription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-HO-yZJ">
-                                        <rect key="frame" x="40" y="369" width="334" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-HO-yZJ">
+                                        <rect key="frame" x="40" y="369" width="334" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyt-aS-dWd" userLabel="Divider">
-                                        <rect key="frame" x="12" y="394" width="390" height="1"/>
+                                        <rect key="frame" x="12" y="377" width="390" height="1"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="VXS-vy-89d"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXG-yr-1zz" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="403" width="390" height="40"/>
+                                        <rect key="frame" x="12" y="386" width="390" height="40"/>
                                         <color key="backgroundColor" red="0.99215686270000003" green="0.53725490200000003" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="5aB-1t-xbu"/>
@@ -262,7 +262,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" restorationIdentifier="helpAnimalView" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-as-lCX" userLabel="helpAnimalView">
-                                        <rect key="frame" x="40" y="451" width="334" height="56"/>
+                                        <rect key="frame" x="40" y="434" width="334" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="randomText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bt-6U-LC8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
@@ -358,6 +358,7 @@
                     <navigationItem key="navigationItem" title="GALERIA" id="T7h-RI-Ugm"/>
                     <connections>
                         <outlet property="animalDescription" destination="8DW-HO-yZJ" id="a04-6Y-RBn"/>
+                        <outlet property="animalDescriptionDivider" destination="wyt-aS-dWd" id="Ygi-aD-Jy6"/>
                         <outlet property="animalName" destination="kAU-8K-880" id="bmf-4x-Fo2"/>
                         <outlet property="animalSex" destination="Acp-nu-c9k" id="mCX-fR-yGs"/>
                         <outlet property="animalType" destination="SIu-4K-vka" id="lCM-p3-lEE"/>
