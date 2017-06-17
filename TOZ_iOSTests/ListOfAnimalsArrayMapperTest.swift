@@ -41,11 +41,11 @@ class ListOfAnimalsArrayMapperTest: XCTestCase {
     }
 
     func testFirstAnimalType() {
-        XCTAssertEqual(firstAnimal?.type, "DOG")
+        XCTAssertEqual(firstAnimal?.type, .DOG)
     }
 
     func testFirstAnimalSex() {
-        XCTAssertEqual(firstAnimal?.sex, "MALE")
+        XCTAssertEqual(firstAnimal?.sex, .MALE)
     }
 
     func testFirstAnimalDescription() {
