@@ -32,7 +32,8 @@ class NewsTableViewCell: UITableViewCell {
         if let published = news.published {
             datePublishedLabel.text = published.dateToFormattedString()
         }
-        self.photoView.contentMode = .scaleAspectFit
+        self.photoView.contentMode = .scaleAspectFill
+        self.photoView.clipsToBounds = true
         self.photoView.image = #imageLiteral(resourceName: "placeholder")
         let photoURL: URL? = news.photoUrl
         if let photoURL = photoURL {
