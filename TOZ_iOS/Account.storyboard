@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QM9-m6-VAq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="-231.19999999999999" y="184.85757121439281"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Logowanie-->
         <scene sceneID="Jet-xl-gjO">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="wWv-EI-pVH" customClass="LoginViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,14 +139,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbY-uz-MiS" userLabel="emailInput" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="169" width="334" height="70"/>
+                                <rect key="frame" x="40" y="124" width="334" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="W3d-Zf-Rsn"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-ag-GnF" userLabel="loginButton" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="365" width="334" height="40"/>
+                                <rect key="frame" x="40" y="320" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HLb-Zv-I7n"/>
@@ -157,20 +157,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-uF-i8u" userLabel="passwordInput" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="244" width="334" height="70"/>
+                                <rect key="frame" x="40" y="199" width="334" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logowanie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67A-dD-ESX" userLabel="organizationLabel">
-                                <rect key="frame" x="20" y="94" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="mpV-yg-xUE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOk-yU-68S" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="413" width="334" height="40"/>
+                                <rect key="frame" x="40" y="368" width="334" height="40"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.53725490200000003" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Zresetuj hasło"/>
                                 <connections>
@@ -178,7 +169,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="By7-hq-OoG">
-                                <rect key="frame" x="40" y="317" width="334" height="40"/>
+                                <rect key="frame" x="40" y="272" width="334" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Giw-BW-3zu"/>
                                 </constraints>
@@ -192,8 +183,7 @@
                             <constraint firstItem="By7-hq-OoG" firstAttribute="top" secondItem="lLb-uF-i8u" secondAttribute="bottom" constant="3" id="9oG-8s-6ay"/>
                             <constraint firstItem="AOk-yU-68S" firstAttribute="top" secondItem="Cfk-ag-GnF" secondAttribute="bottom" constant="8" id="BsF-iI-Iv7"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="height" secondItem="XbY-uz-MiS" secondAttribute="height" id="JMN-jx-Gka"/>
-                            <constraint firstItem="67A-dD-ESX" firstAttribute="trailing" secondItem="Ig1-bU-lAn" secondAttribute="trailingMargin" id="JqB-iM-kK2"/>
-                            <constraint firstItem="67A-dD-ESX" firstAttribute="top" secondItem="yG0-uy-QTV" secondAttribute="bottom" constant="30" id="W8g-tX-371"/>
+                            <constraint firstItem="XbY-uz-MiS" firstAttribute="top" secondItem="yG0-uy-QTV" secondAttribute="bottom" constant="60" id="XOd-MI-MG3"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="trailing" secondItem="XbY-uz-MiS" secondAttribute="trailing" id="aH2-SG-Nhm"/>
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="top" secondItem="XbY-uz-MiS" secondAttribute="bottom" constant="5" id="c1C-OT-ivk"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="top" secondItem="By7-hq-OoG" secondAttribute="bottom" constant="8" id="cYT-sV-Osc"/>
@@ -205,14 +195,12 @@
                             <constraint firstItem="lLb-uF-i8u" firstAttribute="leading" secondItem="XbY-uz-MiS" secondAttribute="leading" id="ocS-9j-odV"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="leading" secondItem="lLb-uF-i8u" secondAttribute="leading" id="pvq-uw-fCz"/>
                             <constraint firstItem="AOk-yU-68S" firstAttribute="height" secondItem="Cfk-ag-GnF" secondAttribute="height" id="ueN-YJ-99I"/>
-                            <constraint firstItem="XbY-uz-MiS" firstAttribute="top" secondItem="67A-dD-ESX" secondAttribute="bottom" constant="15" id="uvl-GA-qGk"/>
                             <constraint firstItem="XbY-uz-MiS" firstAttribute="leading" secondItem="Ig1-bU-lAn" secondAttribute="leading" constant="40" id="van-b9-OYe"/>
                             <constraint firstItem="By7-hq-OoG" firstAttribute="trailing" secondItem="Cfk-ag-GnF" secondAttribute="trailing" id="wiG-eW-eLl"/>
                             <constraint firstItem="Cfk-ag-GnF" firstAttribute="trailing" secondItem="lLb-uF-i8u" secondAttribute="trailing" id="wki-cR-fV7"/>
-                            <constraint firstItem="67A-dD-ESX" firstAttribute="leading" secondItem="Ig1-bU-lAn" secondAttribute="leadingMargin" id="y9l-Jg-omW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OjJ-da-nhf"/>
+                    <navigationItem key="navigationItem" title="Logowanie" id="OjJ-da-nhf"/>
                     <connections>
                         <outlet property="emailInput" destination="XbY-uz-MiS" id="NCu-q8-qGh"/>
                         <outlet property="errorLabel" destination="By7-hq-OoG" id="wim-f6-L6z"/>
@@ -223,7 +211,7 @@
             </objects>
             <point key="canvasLocation" x="707" y="958"/>
         </scene>
-        <!--Reset Password View Controller-->
+        <!--Reset hasła-->
         <scene sceneID="lRF-VT-Tp8">
             <objects>
                 <viewController id="eif-ef-lkf" customClass="ResetPasswordViewController" customModule="TOZ_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,24 +223,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset hasła" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGU-xH-2xC" userLabel="organizationLabel">
-                                <rect key="frame" x="20" y="94" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="hdK-zm-xke"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-fm-Onw" customClass="TextInputView" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="187" width="334" height="70"/>
+                                <rect key="frame" x="40" y="153" width="334" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="vKC-1u-MTu"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO2-bz-hny" customClass="Button" customModule="TOZ_iOS" customModuleProvider="target">
-                                <rect key="frame" x="40" y="265" width="334" height="40"/>
+                                <rect key="frame" x="40" y="231" width="334" height="40"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.53725490200000003" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HUq-PJ-z43"/>
@@ -263,40 +242,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W celu zresetowania hasła podaj swój login (adres e-mail)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-Oe-ucI">
-                                <rect key="frame" x="20" y="158" width="374" height="21"/>
+                                <rect key="frame" x="20" y="124" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eAk-1l-Leq">
-                                <rect key="frame" x="187" y="187" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="lzs-TC-NBL"/>
-                                    <constraint firstAttribute="width" constant="40" id="rQ5-WU-g7o"/>
-                                </constraints>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mTV-fm-Onw" firstAttribute="leading" secondItem="xVk-l0-6oY" secondAttribute="leading" constant="40" id="6dp-eF-GhX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZGU-xH-2xC" secondAttribute="trailing" id="8AM-FE-xiP"/>
-                            <constraint firstItem="ZGU-xH-2xC" firstAttribute="leading" secondItem="xVk-l0-6oY" secondAttribute="leadingMargin" id="8WL-pk-dd7"/>
                             <constraint firstItem="mO2-bz-hny" firstAttribute="top" secondItem="mTV-fm-Onw" secondAttribute="bottom" constant="8" id="ANK-rC-rUl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uc5-Oe-ucI" secondAttribute="trailing" id="KVh-kb-oGL"/>
-                            <constraint firstItem="Uc5-Oe-ucI" firstAttribute="top" secondItem="ZGU-xH-2xC" secondAttribute="bottom" constant="4" id="PYc-Tk-I9J"/>
-                            <constraint firstItem="eAk-1l-Leq" firstAttribute="centerX" secondItem="xVk-l0-6oY" secondAttribute="centerX" id="W5g-es-fxM"/>
                             <constraint firstItem="mO2-bz-hny" firstAttribute="centerX" secondItem="mTV-fm-Onw" secondAttribute="centerX" id="X4d-zF-b41"/>
                             <constraint firstAttribute="trailing" secondItem="mTV-fm-Onw" secondAttribute="trailing" constant="40" id="bvs-6o-OVg"/>
                             <constraint firstItem="mTV-fm-Onw" firstAttribute="top" secondItem="Uc5-Oe-ucI" secondAttribute="bottom" constant="8" id="fPq-ra-KWa"/>
-                            <constraint firstItem="ZGU-xH-2xC" firstAttribute="top" secondItem="McW-F3-7jA" secondAttribute="bottom" constant="30" id="km7-UD-mDn"/>
+                            <constraint firstItem="Uc5-Oe-ucI" firstAttribute="top" secondItem="McW-F3-7jA" secondAttribute="bottom" constant="60" id="fhB-yb-dGp"/>
                             <constraint firstItem="Uc5-Oe-ucI" firstAttribute="leading" secondItem="xVk-l0-6oY" secondAttribute="leadingMargin" id="nMA-8Z-uwd"/>
                             <constraint firstItem="mO2-bz-hny" firstAttribute="width" secondItem="mTV-fm-Onw" secondAttribute="width" id="qoe-YW-w7H"/>
-                            <constraint firstItem="eAk-1l-Leq" firstAttribute="top" secondItem="Uc5-Oe-ucI" secondAttribute="bottom" constant="8" id="sQe-cF-waG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Reset hasła" id="w9x-2q-y3U"/>
                     <connections>
                         <outlet property="emailInput" destination="mTV-fm-Onw" id="8r1-xd-k0i"/>
-                        <outlet property="indicatorView" destination="eAk-1l-Leq" id="4nc-p5-upn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZ3-kp-eir" userLabel="First Responder" sceneMemberID="firstResponder"/>
