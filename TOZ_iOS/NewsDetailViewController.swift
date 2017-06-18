@@ -12,7 +12,6 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var photoImageViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     var selectedNews: NewsItem?
 
@@ -38,7 +37,8 @@ class NewsDetailViewController: UIViewController {
                 }
             })
         } else {
-            self.photoImageViewHeight.constant = 0
+            let photoImageViewHeightConstraint = NSLayoutConstraint(item: photoImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0)
+            self.photoImageView.addConstraint(photoImageViewHeightConstraint)
         }
 
         let atributedContentString = NSMutableAttributedString(string: selectedNews?.contents ?? "")
