@@ -173,11 +173,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="UIImageView">
+                                    <view clipsSubviews="YES" contentMode="scaleAspectFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="150" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="UIImageView">
                                         <rect key="frame" x="0.0" y="72" width="414" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="m2f-lG-zh9"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
@@ -227,7 +224,6 @@
                         <outlet property="contentLabel" destination="ieT-o8-xi8" id="VHX-gh-8eh"/>
                         <outlet property="dateLabel" destination="AJQ-Bf-YG3" id="N6c-2c-auA"/>
                         <outlet property="photoImageView" destination="sYB-le-XH6" id="elb-JL-2NZ"/>
-                        <outlet property="photoImageViewHeight" destination="m2f-lG-zh9" id="YJp-MV-Fcd"/>
                         <outlet property="scrollView" destination="LIN-3u-tug" id="dZl-eV-Dp4"/>
                         <outlet property="titleLabel" destination="Mxm-Qm-aM7" id="FtJ-0y-9im"/>
                     </connections>
