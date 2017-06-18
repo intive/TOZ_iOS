@@ -20,13 +20,15 @@ enum AnimalType {
 }
 
 enum AnimalSex {
-    case MALE, FEMALE
+    case MALE, FEMALE, UNKNOWN
     var localizedSex: String {
         switch self {
         case .MALE:
             return "On"
         case .FEMALE:
             return "Ona"
+        case .UNKNOWN:
+            return "Nieznana"
         }
     }
 }
@@ -35,7 +37,7 @@ struct AnimalItem: ParsedItem {
     let animalID: String
     let name: String
     let type: AnimalType
-    let sex: AnimalSex?
+    let sex: AnimalSex
     let description: String?
     let address: String?
     let created: Date?
