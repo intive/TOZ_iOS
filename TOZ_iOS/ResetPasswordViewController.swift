@@ -6,29 +6,26 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var emailInput: TextInputView!
-    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Color.Background.primary
         self.emailInput.placeholder = "E-Mail"
         self.emailInput.textChecker = EmailChecker()
-        self.indicatorView.activityIndicatorViewStyle = .whiteLarge
-        self.indicatorView.color = Color.Cell.Button.primary
-        self.indicatorView.hidesWhenStopped = true
         self.addHideKeyboardGestureRecognizer()
     }
 
     @IBAction func confirmReset(_ sender: Any) {
         if emailInput.isValid {
             let resetPassword = ResetPasswordOperation(email: self.emailInput.text)
-            self.indicatorView.startAnimating()
+            SVProgressHUD.show()
             resetPassword.start { success in
                 DispatchQueue.main.async {
-                    self.indicatorView.stopAnimating()
+                    SVProgressHUD.dismiss()
                     if success == false {
                         let alert = UIAlertController(title: "Ups", message: "Wystąpił błąd, spróbuj ponownie później.", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
