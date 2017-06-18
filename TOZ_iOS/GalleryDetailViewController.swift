@@ -93,13 +93,7 @@ class GalleryDetailViewController: UIViewController {
                     self.navigationItem.title = localAnimal.name
                     self.animalType.text = localAnimal.type.localizedType
                     self.galleryDetailPhotoViewController?.animalType = localAnimal.type
-
-                    if let localAnimalSex = localAnimal.sex {
-                        self.animalSex.text = localAnimalSex.localizedSex
-                    } else {
-                        self.animalSex.text = "Nieznana"
-                    }
-
+                    self.animalSex.text = localAnimal.sex.localizedSex
                     if let localAnimalDescription = localAnimal.description {
                         self.animalDescription.text = localAnimalDescription
                     } else {
