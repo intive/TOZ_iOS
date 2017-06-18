@@ -14,7 +14,7 @@ import UIKit
 class GalleryDetailModelController: NSObject, UIPageViewControllerDataSource {
 
     var pageData: [URL] = []
-    var animalType: String?
+    var animalType: AnimalType?
 
     func viewController(at index: Int, storyboard: UIStoryboard) -> GalleryDetailDataViewController? {
         guard (self.pageData.count > 0) || (index <= self.pageData.count) else {

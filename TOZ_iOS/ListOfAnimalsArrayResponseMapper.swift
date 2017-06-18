@@ -14,7 +14,29 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
             guard let animalID = jsonNode["id"] as? String else { throw ResponseMapperError.responseParsingFailed }
             guard let name = jsonNode["name"] as? String else { throw ResponseMapperError.responseParsingFailed }
             guard let type = jsonNode["type"] as? String else { throw ResponseMapperError.responseParsingFailed }
-            guard let sex = jsonNode["sex"] as? String else { throw ResponseMapperError.responseParsingFailed }
+            let animalType: AnimalType
+            switch type {
+            case "DOG":
+                animalType = .DOG
+            case "CAT":
+                animalType = .CAT
+            default:
+                throw ResponseMapperError.responseParsingFailed
+            }
+            guard let sex = jsonNode["sex"] as? String? else { throw ResponseMapperError.responseParsingFailed }
+            var animalSex: AnimalSex
+            if let sex = sex {
+                switch sex {
+                case "MALE":
+                    animalSex = .MALE
+                case "FEMALE":
+                    animalSex = .FEMALE
+                default:
+                    throw ResponseMapperError.responseParsingFailed
+                }
+            } else {
+                animalSex = .UNKNOWN
+            }
             guard let description = jsonNode["description"] as? String? else { throw ResponseMapperError.responseParsingFailed }
             guard let address = jsonNode["address"] as? String? else { throw ResponseMapperError.responseParsingFailed }
             guard let createdInt = jsonNode["created"] as? Int? else { throw ResponseMapperError.responseParsingFailed }
@@ -32,7 +54,7 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
             if let imageString = imageString {
                 imageURL = BackendConfiguration.shared.photosURL.appendingPathComponent(imageString)
             }
-            return AnimalItem(animalID: animalID, name: name, type: type, sex: sex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL, galleryURLs: nil)
+            return AnimalItem(animalID: animalID, name: name, type: animalType, sex: animalSex, description: description, address: address, created: createdDate, lastModified: lastModifiedDate, imageUrl: imageURL, galleryURLs: nil)
         })
     }
 }

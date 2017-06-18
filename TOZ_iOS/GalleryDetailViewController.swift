@@ -20,6 +20,7 @@ class GalleryDetailViewController: UIViewController {
     @IBOutlet weak var helpAnimalAccount: UILabel!
     @IBOutlet weak var helpAnimalView: UIView!
     @IBOutlet weak var helpThisAnimalButton: Button!
+    @IBOutlet weak var animalDescriptionDivider: UIView!
 
     var selectedCellID: String?
     var photoURL: URL?
@@ -82,16 +83,22 @@ class GalleryDetailViewController: UIViewController {
         }
     }
 
+    // swiftlint:disable cyclomatic_complexity
     func getAnimal() {
         animalOperation?.resultCompletion = { result in
             switch result {
             case .success(let localAnimal):
                 DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
-                    self.animalType.text = localAnimal.type
+                    self.navigationItem.title = localAnimal.name
+                    self.animalType.text = localAnimal.type.localizedType
                     self.galleryDetailPhotoViewController?.animalType = localAnimal.type
-                    self.animalSex.text = localAnimal.sex
-                    self.animalDescription.text = localAnimal.description
+                    self.animalSex.text = localAnimal.sex.localizedSex
+                    if let localAnimalDescription = localAnimal.description {
+                        self.animalDescription.text = localAnimalDescription
+                    } else {
+                        self.animalDescriptionDivider.layer.isHidden = true
+                    }
                     // If there is an imageURL for the Animal than add it to array of photos.
                     if let photoURL = localAnimal.imageUrl {
                         self.photos.append(photoURL)

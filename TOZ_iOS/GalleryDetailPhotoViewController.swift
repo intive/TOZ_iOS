@@ -32,7 +32,7 @@ class GalleryDetailPhotoViewController: UIViewController, UIPageViewControllerDe
             self.pageViewController!.didMove(toParentViewController: self)
         }
     }
-    var animalType: String? {
+    var animalType: AnimalType? {
         didSet {
             self.modelController.animalType = animalType
         }
