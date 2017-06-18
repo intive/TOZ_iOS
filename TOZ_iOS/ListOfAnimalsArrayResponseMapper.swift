@@ -24,7 +24,7 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
                 throw ResponseMapperError.responseParsingFailed
             }
             guard let sex = jsonNode["sex"] as? String? else { throw ResponseMapperError.responseParsingFailed }
-            var animalSex: AnimalSex?
+            var animalSex: AnimalSex
             if let sex = sex {
                 switch sex {
                 case "MALE":
@@ -34,6 +34,8 @@ final class ListOfAnimalsArrayMapper: ArrayResponseMapper<AnimalItem>, ResponseM
                 default:
                     throw ResponseMapperError.responseParsingFailed
                 }
+            } else {
+                animalSex = .UNKNOWN
             }
             guard let description = jsonNode["description"] as? String? else { throw ResponseMapperError.responseParsingFailed }
             guard let address = jsonNode["address"] as? String? else { throw ResponseMapperError.responseParsingFailed }
