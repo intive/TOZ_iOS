@@ -175,6 +175,9 @@
                                     </label>
                                     <view clipsSubviews="YES" contentMode="scaleAspectFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="150" translatesAutoresizingMaskIntoConstraints="NO" id="sYB-le-XH6" customClass="UIImageView">
                                         <rect key="frame" x="0.0" y="72" width="414" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="G08-Ff-YJP"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
@@ -224,6 +227,7 @@
                         <outlet property="contentLabel" destination="ieT-o8-xi8" id="VHX-gh-8eh"/>
                         <outlet property="dateLabel" destination="AJQ-Bf-YG3" id="N6c-2c-auA"/>
                         <outlet property="photoImageView" destination="sYB-le-XH6" id="elb-JL-2NZ"/>
+                        <outlet property="photoImageViewHeight" destination="G08-Ff-YJP" id="Jhz-mK-NJ9"/>
                         <outlet property="scrollView" destination="LIN-3u-tug" id="dZl-eV-Dp4"/>
                         <outlet property="titleLabel" destination="Mxm-Qm-aM7" id="FtJ-0y-9im"/>
                     </connections>
