@@ -29,16 +29,14 @@ class NewsDetailViewController: UIViewController {
         contentLabel.textColor = Color.NewsDetailView.Font.content
         titleLabel.text = selectedNews?.title.uppercased()
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
-        photoImageView.image = #imageLiteral(resourceName: "placeholder")
         let photoURL: URL? = selectedNews?.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
                 if let image = image {
                     self.photoImageView.image = image
+                    self.view.setNeedsLayout()
                 }
             })
-        } else {
-            self.photoImageViewHeight.constant = 0
         }
 
         let atributedContentString = NSMutableAttributedString(string: selectedNews?.contents ?? "")
@@ -47,6 +45,16 @@ class NewsDetailViewController: UIViewController {
         atributedContentString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: atributedContentString.length))
 
         contentLabel.attributedText = atributedContentString
+    }
+
+    override func viewDidLayoutSubviews() {
+        if let image = self.photoImageView.image {
+            let newImageHeight = self.photoImageView.frame.width * image.size.height / image.size.width
+            if newImageHeight != self.photoImageViewHeight.constant {
+                self.photoImageViewHeight.constant = newImageHeight
+                self.view.setNeedsLayout()
+            }
+        }
     }
 
 }
