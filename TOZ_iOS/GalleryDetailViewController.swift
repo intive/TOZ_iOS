@@ -39,7 +39,7 @@ class GalleryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.helpAnimalLabel.text = "Jeżeli chcesz pomóc temu zwierzakowi..."
+        self.helpAnimalLabel.text = "Jeżeli chcesz pomóc temu zwierzakowi wyślij przelew na podany numer konta w tytule wpisując jego imię"
         isHelpViewHidden(hidden: true)
         galleryDetailPhotoViewController = storyboard?.instantiateViewController(withIdentifier: "GalleryDetailPhotoViewController") as? GalleryDetailPhotoViewController
         if let galleryDetailPhotoViewController = galleryDetailPhotoViewController {
@@ -90,6 +90,7 @@ class GalleryDetailViewController: UIViewController {
             case .success(let localAnimal):
                 DispatchQueue.main.async {
                     self.animalName.text = localAnimal.name
+                    self.helpAnimalLabel.text = "Jeżeli chcesz pomóc temu zwierzakowi wyślij przelew na podany numer konta w tytule wpisując \"\(localAnimal.name)\""
                     self.navigationItem.title = localAnimal.name
                     self.animalType.text = localAnimal.type.localizedType
                     self.galleryDetailPhotoViewController?.animalType = localAnimal.type
