@@ -27,6 +27,6 @@ class BecomeVolunteerResponseMapperTests: XCTestCase {
     }
 
     func testBecomeVolunteerHeader() {
-        XCTAssertEqual(self.becomeVolunteerItem?.howToHelpDescription, "Zostań wolontariuszem, spacerowiczem psów, a może stworzysz dom tymczasowy?")
+        XCTAssertEqual(self.becomeVolunteerItem?.howToHelpDescription, "Włącz się w realizowane przez nas działania, ale także inicjuj i realizuj własne pomysły. Dla nas liczy się przede wszystkim chęć pomocy i konsekwencja w działaniu. \n\nZostań społecznym inspektorem TOZ, członkiem, wolontariuszem, spacerowiczem psów, które są pod naszą opieką, a może stworzysz dom tymczasowy dla kota, psa albo innego potrzebującego zwierzaka?")
     }
 }
