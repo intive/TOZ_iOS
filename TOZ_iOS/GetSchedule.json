@@ -14,7 +14,7 @@
     "reservations": [
                      {
                      "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-                     "date": "2017-05-20",
+                     "date": "2017-06-20",
                      "startTime": "08:00",
                      "endTime": "17:00",
                      "ownerId": "c5296892-347f-4b2e-b1c6-6faff971f767",
@@ -25,18 +25,18 @@
                      },
                      {
                      "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-                     "date": "2017-05-20",
+                     "date": "2017-06-20",
                      "startTime": "12:00",
                      "endTime": "17:00",
                      "ownerId": "c5296892-347f-4b2e-b1c6-6faff971f767",
-                     "ownerName": "1",
-                     "ownerSurname": "2",
+                     "ownerName": "Pan",
+                     "ownerSurname": "Tadeusz",
                      "created": 1490134074968,
                      "lastModified": 1490134074968
                      },
                      {
                      "id": "c5296892-347f-4b2e-b1c6-6faff971f767",
-                     "date": "2017-05-29",
+                     "date": "2017-06-29",
                      "startTime": "12:00",
                      "endTime": "17:00",
                      "ownerId": "c5296892-347f-4b2e-b1c6-6faff971f767",

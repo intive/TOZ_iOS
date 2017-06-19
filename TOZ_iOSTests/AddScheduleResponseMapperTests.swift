@@ -38,7 +38,7 @@ class AddScheduleResponseMapperTests: XCTestCase {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.timeZone = TimeZone(abbreviation: "UTC")
-        XCTAssertEqual(formatter.string(from: (self.reservationItem!.date)), "2017-05-25")
+        XCTAssertEqual(formatter.string(from: (self.reservationItem!.date)), "2017-06-25")
     }
 
     func testReservationItemOwnerForename() {
