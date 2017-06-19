@@ -24,6 +24,8 @@ class NewsTableViewCell: UITableViewCell {
         self.contentTextView.textColor = Color.Cell.Font.content
         self.contentTextView.textContainer.maximumNumberOfLines = 2
         self.contentTextView.isUserInteractionEnabled = false
+        self.photoView.contentMode = .scaleAspectFill
+        self.photoView.clipsToBounds = true
     }
 
     func configure(with news: NewsItem) {
@@ -32,9 +34,6 @@ class NewsTableViewCell: UITableViewCell {
         if let published = news.published {
             datePublishedLabel.text = published.dateToFormattedString()
         }
-        self.photoView.contentMode = .scaleAspectFill
-        self.photoView.clipsToBounds = true
-        self.photoView.image = #imageLiteral(resourceName: "placeholder")
         let photoURL: URL? = news.photoUrl
         if let photoURL = photoURL {
             PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
@@ -47,5 +46,9 @@ class NewsTableViewCell: UITableViewCell {
         } else {
             self.photoViewHeight.constant = 0
         }
+    }
+
+    override func prepareForReuse() {
+        self.photoView.image = nil
     }
 }

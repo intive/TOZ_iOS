@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jlU-tS-pfP" id="LEQ-Rv-5bk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybo-BJ-Sjg">
@@ -102,7 +102,7 @@
                             <constraint firstAttribute="trailing" secondItem="1wV-q0-plX" secondAttribute="trailing" id="pWC-bO-yuU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="k09-5J-qq5"/>
+                    <navigationItem key="navigationItem" title="GALERIA" id="k09-5J-qq5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="galleryTableView" destination="1wV-q0-plX" id="EVT-oJ-f16"/>
@@ -144,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTI-77-iyz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWk-DY-oSP" userLabel="ProfilePhotosContainer">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
@@ -264,13 +264,13 @@
                                     <view contentMode="scaleToFill" restorationIdentifier="helpAnimalView" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-as-lCX" userLabel="helpAnimalView">
                                         <rect key="frame" x="40" y="434" width="334" height="56"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="randomText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bt-6U-LC8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="randomText" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bt-6U-LC8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountNumber" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-WG-fpS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-WG-fpS">
                                                 <rect key="frame" x="0.0" y="37" width="334" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -316,7 +316,7 @@
                                     <constraint firstItem="xfF-as-lCX" firstAttribute="top" secondItem="DXG-yr-1zz" secondAttribute="bottom" constant="8" id="Q9R-PY-zIm"/>
                                     <constraint firstItem="azC-3z-2nj" firstAttribute="leading" secondItem="SIu-4K-vka" secondAttribute="leading" id="Q9e-7j-35J"/>
                                     <constraint firstItem="8DW-HO-yZJ" firstAttribute="top" secondItem="OBG-eT-noo" secondAttribute="bottom" constant="8" id="QtR-Mm-z5V"/>
-                                    <constraint firstAttribute="bottom" secondItem="xfF-as-lCX" secondAttribute="bottom" id="U0q-HS-leK"/>
+                                    <constraint firstAttribute="bottom" secondItem="xfF-as-lCX" secondAttribute="bottom" constant="10" id="U0q-HS-leK"/>
                                     <constraint firstItem="53a-qd-whS" firstAttribute="leading" secondItem="SIu-4K-vka" secondAttribute="trailing" constant="10" id="VCs-Dd-v3g"/>
                                     <constraint firstItem="axX-nC-BLg" firstAttribute="trailing" secondItem="kAU-8K-880" secondAttribute="trailing" id="W1W-dB-nej"/>
                                     <constraint firstItem="KJM-vm-uZ9" firstAttribute="trailing" secondItem="EL0-GC-faf" secondAttribute="trailing" id="WtC-sU-WKQ"/>
@@ -351,8 +351,8 @@
                         <constraints>
                             <constraint firstItem="aTI-77-iyz" firstAttribute="top" secondItem="yxC-T0-ejg" secondAttribute="top" id="0wd-MI-Ub0"/>
                             <constraint firstItem="aTI-77-iyz" firstAttribute="leading" secondItem="yxC-T0-ejg" secondAttribute="leading" id="NNc-Kb-Eye"/>
-                            <constraint firstItem="gyu-ak-Jqy" firstAttribute="top" secondItem="aTI-77-iyz" secondAttribute="bottom" id="V1E-jK-6JJ"/>
                             <constraint firstAttribute="trailing" secondItem="aTI-77-iyz" secondAttribute="trailing" id="s7c-bR-Pkp"/>
+                            <constraint firstAttribute="bottom" secondItem="aTI-77-iyz" secondAttribute="bottom" id="sfb-aZ-DzR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GALERIA" id="T7h-RI-Ugm"/>
