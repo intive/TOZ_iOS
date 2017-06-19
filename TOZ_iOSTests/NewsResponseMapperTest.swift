@@ -47,6 +47,6 @@ class NewsResponseMapperTest: XCTestCase {
     }
 
     func testFirstNewsPublished() {
-        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: TimeInterval(1494982035420/1000)))
+        XCTAssertEqual(firstNews?.published, Date(timeIntervalSince1970: 1494982035.0))
     }
 }
