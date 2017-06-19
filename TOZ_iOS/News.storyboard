@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VL-lz-GRm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -226,6 +227,7 @@
                         <outlet property="contentLabel" destination="ieT-o8-xi8" id="VHX-gh-8eh"/>
                         <outlet property="dateLabel" destination="AJQ-Bf-YG3" id="N6c-2c-auA"/>
                         <outlet property="photoImageView" destination="sYB-le-XH6" id="elb-JL-2NZ"/>
+                        <outlet property="photoImageViewHeight" destination="G08-Ff-YJP" id="Jhz-mK-NJ9"/>
                         <outlet property="scrollView" destination="LIN-3u-tug" id="dZl-eV-Dp4"/>
                         <outlet property="titleLabel" destination="Mxm-Qm-aM7" id="FtJ-0y-9im"/>
                     </connections>
