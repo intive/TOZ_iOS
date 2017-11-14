@@ -9,7 +9,6 @@ import Foundation
 
 final class ScheduleResponseMapper: ArrayResponseMapper<ReservationItem>, ResponseMapperProtocol {
 
-    // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> [ReservationItem] {
         guard let reservationsNode = obj?["reservations"] as? [[String: AnyObject]] else {
             return [] }

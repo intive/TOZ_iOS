@@ -12,10 +12,9 @@ class NetworkServiceMock: NetworkService {
     // swiftlint:disable cyclomatic_complexity function_body_length
     override func makeRequest(for url: URL,
                               method: NetworkService.Method,
-                              params: [String : Any]?,
-                              headers: [String : String]?,
+                              params: [String: Any]?,
+                              headers: [String: String]?,
                               success: ((Data?) -> Void)?,
-                              // swiftlint:disable large_tuple
                               failure: ((_ data: Data?, _ error: RequestError, _ responseCode: Int) -> Void)? = nil) {
         DispatchQueue.global().async {
             var nameOfFile: String?
@@ -47,7 +46,6 @@ class NetworkServiceMock: NetworkService {
                     nameOfFile = "GetSchedule"
                 case .POST:
                     nameOfFile = "AddSchedule"
-                    break
                 default:
                     print("Method is not appropriate.")
                 }
@@ -116,11 +114,11 @@ class NetworkServiceMock: NetworkService {
                 }
             }
             guard let path = Bundle.main.path(forResource: nameOfFile, ofType: "json") else {
-                failure?(nil, RequestError.InvalidRequest, 0)
+                failure?(nil, RequestError.invalidRequest, 0)
                 return
             }
             guard let jsonObj = try? NSData(contentsOfFile: path, options: []) else {
-                failure?(nil, RequestError.InvalidRequest, 0)
+                failure?(nil, RequestError.invalidRequest, 0)
                 return
             }
             success?(jsonObj as Data)

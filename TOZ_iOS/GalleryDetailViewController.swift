@@ -57,7 +57,7 @@ class GalleryDetailViewController: UIViewController {
         makeAnimalOperation()
         getAnimal()
         getOrganizationInfo()
-        NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
+        _ = NotificationCenter.default.addObserver(forName: .pictureChanged, object: nil, queue: nil, using: updateCaption)
     }
 
     @IBAction func helpThisAnimalAction(_ sender: Any) {
@@ -83,7 +83,6 @@ class GalleryDetailViewController: UIViewController {
         }
     }
 
-    // swiftlint:disable cyclomatic_complexity
     func getAnimal() {
         animalOperation?.resultCompletion = { result in
             switch result {

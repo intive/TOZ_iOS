@@ -36,7 +36,7 @@ class NewsTableViewCell: UITableViewCell {
         }
         let photoURL: URL? = news.photoUrl
         if let photoURL = photoURL {
-            PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
+            PhotoManager.shared.getPhoto(from: photoURL, completion: { (image) -> Void in
                 if photoURL == news.photoUrl {
                     if let image = image {
                         self.photoView.image = image

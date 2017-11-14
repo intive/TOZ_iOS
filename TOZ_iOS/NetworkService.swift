@@ -27,7 +27,6 @@ class NetworkService {
                      params: [String: Any]? = nil,
                      headers: [String: String]? = nil,
                      success: ((Data?) -> Void)? = nil,
-                     // swiftlint:disable large_tuple
                      failure: ((_ data: Data?, _ error: RequestError, _ responseCode: Int) -> Void)? = nil) {
 
         /// Details about request
@@ -56,7 +55,7 @@ class NetworkService {
                     mutableRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
                 } catch {
                     print("Serialization parameters to JSON failed")
-                    failure?(nil, RequestError.FailedToSerializeJSON, 0)
+                    failure?(nil, RequestError.failedToSerializeJSON, 0)
                     return
                 }
             }
@@ -67,13 +66,13 @@ class NetworkService {
         /// Creates task object within the session. Returns data as an Data object
         task = session.dataTask(with: mutableRequest as URLRequest, completionHandler: { (data, response, error) in
             guard let httpResponse = response as? HTTPURLResponse else {
-                failure?(data, RequestError.InvalidResponse, 0)
+                failure?(data, RequestError.invalidResponse, 0)
                 return
             }
 
             if let error = error {
                 // Request failed, might be internet connection issue
-                failure?(data, RequestError.ConnectionError(error), httpResponse.statusCode)
+                failure?(data, RequestError.connectionError(error), httpResponse.statusCode)
                 return
             }
 
@@ -82,14 +81,14 @@ class NetworkService {
                 success?(data)
             } else if self.failureCodes.contains(httpResponse.statusCode) {
                 print("Request finished with failure.")
-                failure?(data, RequestError.InvalidRequest, httpResponse.statusCode)
+                failure?(data, RequestError.invalidRequest, httpResponse.statusCode)
             } else {
                 // Server returned response with status code different than
                 // expected `successCodes`
                 print("Request finished with serious failure.")
                 print("Request failed with code \(httpResponse.statusCode)")
                 print("Wrong handling logic, wrong endpoint mapping or backend bug.")
-                failure?(data, RequestError.UnexpectedNetworkError, httpResponse.statusCode)
+                failure?(data, RequestError.unexpectedNetworkError, httpResponse.statusCode)
             }
         })
         task?.resume()

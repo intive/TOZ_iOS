@@ -25,15 +25,15 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     @IBAction func signUpAction(_ sender: Any) {
         signUp()
     }
 
-    func changeRole() {
+    @objc func changeRole() {
         switch goalSegmentedControl.selectedSegmentIndex {
         case 0: self.role = [Role.VOLUNTEER]
         case 1: self.role = [Role.TOZ]
@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController {
 
         goalSegmentedControl.backgroundColor = Color.SignUpViewController.SegmentedControl.background
         goalSegmentedControl.tintColor = Color.SignUpViewController.SegmentedControl.tint
-        goalSegmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 11)], for: .normal)
+        goalSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 11)], for: .normal)
         goalSegmentedControl.layer.cornerRadius = 5
 
         firstNameInput.placeholder = " Imię"
@@ -84,14 +84,14 @@ class SignUpViewController: UIViewController {
         }
     }
 
-    func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardStartFrame = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
         var keyboardFrame: CGRect = keyboardStartFrame.cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
         self.scrollView.contentInset.bottom = keyboardFrame.size.height
     }
 
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         self.scrollView.contentInset.bottom = self.tabBarController?.tabBar.frame.size.height ?? 0
     }
 }

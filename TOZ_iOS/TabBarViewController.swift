@@ -15,7 +15,7 @@ final class TabBarViewController: UITabBarController {
         switchAccountTab()
     }
 
-    func switchAccountTab() {
+    @objc func switchAccountTab() {
         // When user signs in/out remove last viewcontroller(s) from viewControllers
         // so the correct one(s) can be added later
         if self.viewControllers?.count == 5 {

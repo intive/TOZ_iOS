@@ -126,12 +126,12 @@ class WeekViewController: UIViewController {
             var firstCharForenameString, firstCharSurnameString: String
             let reserversionInTheSameDay = reservations.filter({ item == WeekdayItem(from: $0.date) })
             for res in reserversionInTheSameDay {
-                if let firstCharForename = res.ownerForename?.characters.first {
+                if let firstCharForename = res.ownerForename?.first {
                     firstCharForenameString = String(firstCharForename)
                 } else {
                     firstCharForenameString = ""
                 }
-                if let firstCharSurname = res.ownerSurname?.characters.first {
+                if let firstCharSurname = res.ownerSurname?.first {
                     firstCharSurnameString = String(firstCharSurname)
                 } else {
                     firstCharSurnameString = ""
