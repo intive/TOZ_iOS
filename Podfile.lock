@@ -1,9 +1,9 @@
 PODS:
-  - HockeySDK (4.1.4):
-    - HockeySDK/DefaultLib (= 4.1.4)
-  - HockeySDK/DefaultLib (4.1.4)
-  - SVProgressHUD (2.1.2)
-  - SwiftLint (0.16.1)
+  - HockeySDK (5.0.0):
+    - HockeySDK/DefaultLib (= 5.0.0)
+  - HockeySDK/DefaultLib (5.0.0)
+  - SVProgressHUD (2.2.2)
+  - SwiftLint (0.24.0)
 
 DEPENDENCIES:
   - HockeySDK
@@ -11,10 +11,10 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC CHECKSUMS:
-  HockeySDK: 78a3f8bb9100277b531defc56c970369a3ca267a
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
+  HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
 
-PODFILE CHECKSUM: 344dfde922510c02cb4f2b95481871530d374cc7
+PODFILE CHECKSUM: 7486f99cba2063ca678ee994c65141ffa1967bbb
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.4.0.beta.2

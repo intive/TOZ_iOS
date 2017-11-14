@@ -16,12 +16,12 @@ class TextLengthChecker: TextChecker {
     }
 
     func check(text: String) -> CheckResult {
-        if text.characters.count == 0 {
-            return .Invalid(error: "Pole wymagane")
-        } else if text.characters.count > charactersLimit {
-            return .Invalid(error: "Przekroczono limit \(charactersLimit) znaków")
+        if text.count == 0 {
+            return .invalid(error: "Pole wymagane")
+        } else if text.count > charactersLimit {
+            return .invalid(error: "Przekroczono limit \(charactersLimit) znaków")
         } else {
-            return .Valid
+            return .valid
         }
     }
 }

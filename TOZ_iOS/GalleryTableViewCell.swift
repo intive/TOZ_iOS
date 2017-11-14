@@ -30,13 +30,13 @@ class GalleryTableViewCell: UITableViewCell {
         animalImage.contentMode = .scaleAspectFill
         animalImage.clipsToBounds = true
         switch animal.type {
-            case .CAT:
-                self.animalImage.image = #imageLiteral(resourceName: "placeholder_cat")
-            case .DOG:
-                self.animalImage.image = #imageLiteral(resourceName: "placeholder_dog")
+        case .CAT:
+            self.animalImage.image = #imageLiteral(resourceName: "placeholder_cat")
+        case .DOG:
+            self.animalImage.image = #imageLiteral(resourceName: "placeholder_dog")
         }
         if let imageUrl = imageUrl {
-            PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> (Void) in
+            PhotoManager.shared.getPhoto(from: imageUrl, completion: {(image) -> Void in
                 if self.animalID == animal.animalID {
                     if let image = image {
                         self.animalImage.image = image

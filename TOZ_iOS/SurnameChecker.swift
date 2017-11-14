@@ -9,12 +9,12 @@ import Foundation
 
 class SurnameChecker: TextChecker {
     func check(text: String) -> CheckResult {
-        if text.characters.count == 0 {
-            return .Invalid(error: "Pole wymagane")
-        } else if text.characters.count > 35 {
-            return .Invalid(error: "Wpisz poprawne Nazwisko")
+        if text.count == 0 {
+            return .invalid(error: "Pole wymagane")
+        } else if text.count > 35 {
+            return .invalid(error: "Wpisz poprawne Nazwisko")
         } else {
-            return .Valid
+            return .valid
         }
     }
 }

@@ -31,7 +31,7 @@ class NewsDetailViewController: UIViewController {
         dateLabel.text = selectedNews?.published?.dateToFormattedString()
         let photoURL: URL? = selectedNews?.photoUrl
         if let photoURL = photoURL {
-            PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> (Void) in
+            PhotoManager.shared.getPhoto(from: photoURL, completion: {(image) -> Void in
                 if let image = image {
                     self.photoImageView.image = image
                     self.view.setNeedsLayout()
@@ -42,7 +42,7 @@ class NewsDetailViewController: UIViewController {
         let atributedContentString = NSMutableAttributedString(string: selectedNews?.contents ?? "")
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 8
-        atributedContentString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: atributedContentString.length))
+        atributedContentString.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSRange(location: 0, length: atributedContentString.length))
 
         contentLabel.attributedText = atributedContentString
     }

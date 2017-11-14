@@ -8,7 +8,6 @@
 import Foundation
 
 final class GetScheduleResponseMapper: ResponseMapper<ReservationItem>, ResponseMapperProtocol {
-    // swiftlint:disable cyclomatic_complexity
     static func process(_ obj: AnyObject?) throws -> ReservationItem {
         return try process(obj, parse: { json in
             guard let idObject = json["id"] as? String else { return nil }

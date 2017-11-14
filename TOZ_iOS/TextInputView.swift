@@ -7,12 +7,12 @@
 import UIKit
 
 enum CheckResult {
-    case Valid
-    case Invalid(error: String)
+    case valid
+    case invalid(error: String)
 
     func isValid() -> Bool {
         switch self {
-        case .Valid: return true
+        case .valid: return true
         default: return false
         }
     }
@@ -22,7 +22,7 @@ protocol TextChecker {
     func check(text: String) -> CheckResult
 }
 
-fileprivate struct TextInputViewDimensions {
+private struct TextInputViewDimensions {
     static let margin: CGFloat = 0
     static let offset: CGFloat = 4
     static let labelHeight: CGFloat = 16
@@ -114,11 +114,11 @@ class TextInputView: UIView, UITextFieldDelegate {
     private func checkText() {
         if let textChecker = self.textChecker {
             switch textChecker.check(text: self.text) {
-                case .Valid:
-                    successLayout()
-                case .Invalid(error: let errorString):
-                    errorLayout()
-                    self.label.text = errorString
+            case .valid:
+                successLayout()
+            case .invalid(error: let errorString):
+                errorLayout()
+                self.label.text = errorString
             }
         }
     }
@@ -135,13 +135,13 @@ class TextInputView: UIView, UITextFieldDelegate {
         self.textField.placeholder = placeholder
     }
 
-    func textFieldDidEndEditing() {
+    @objc func textFieldDidEndEditing() {
         self.label.text = errorString
         textField.layer.borderColor = Color.LoginTextView.TextField.Border.passive
         checkText()
     }
 
-    func textFieldIsEditing() {
+    @objc func textFieldIsEditing() {
         textField.placeholder = ""
         textField.layer.borderColor = Color.LoginTextView.TextField.Border.active
         self.textField.textColor = Color.LoginTextView.TextField.Text.regular

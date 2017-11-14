@@ -12,16 +12,16 @@ class PasswordChecker: TextChecker {
     weak var confirmView: TextInputView?
 
     func check(text: String) -> CheckResult {
-        if text.characters.count == 0 {
-            return .Invalid(error: "Pole wymagane")
-        } else if text.characters.count > 30 || text.characters.count < 6 {
-            return .Invalid(error: "Niepoprawne hasło")
+        if text.count == 0 {
+            return .invalid(error: "Pole wymagane")
+        } else if text.count > 30 || text.count < 6 {
+            return .invalid(error: "Niepoprawne hasło")
         }
         if let confirmView = confirmView, confirmView.text != text {
-            return .Invalid(error: "Wprowadzone hasła są różne")
+            return .invalid(error: "Wprowadzone hasła są różne")
 
         }
-        return .Valid
+        return .valid
     }
 
 }

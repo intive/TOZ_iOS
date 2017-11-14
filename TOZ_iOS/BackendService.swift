@@ -43,7 +43,7 @@ class BackendService {
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as AnyObject {
                 completion(.success(json))
             } else {
-                completion(.failure(RequestError.FailedToSerializeJSON))
+                completion(.failure(RequestError.failedToSerializeJSON))
             }
 
         }, failure: { data, error, statusCode in
@@ -57,7 +57,7 @@ class BackendService {
             /// Check if failure comes with "error" field as a response
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                 let errorField = json?["error"] as? String ?? ""
-                completion(.failure(RequestError.ServerRespondedWithErrorField(errorField)))
+                completion(.failure(RequestError.serverRespondedWithErrorField(errorField)))
             } else {
                 completion(.failure(error))
             }
